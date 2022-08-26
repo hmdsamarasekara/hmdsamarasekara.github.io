@@ -6,9 +6,9 @@ baseurl:            ""
 url:                "https://hmdsamarasekara.github.io"
 
 # Social Profiles
-twitter_username:   https://twitter.com/hmdsamarasekara
-github_username:    hmdsamarasekara.github.io
-facebook_username:  https://www.facebook.com/dilusha.samarasekara.3
+twitter_username:   hmdsamarasekara
+github_username:    hmdsamarasekara
+facebook_username:  dilusha.samarasekara.3
 
 # Add your google-analytics ID here to activate google analytics
 google_analytics:   UA-XXXXXXXXX-X # out your google-analytics code
