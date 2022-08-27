@@ -1,0 +1,21 @@
+---
+layout: post
+title: "Decoding Local Analog-TV Broadcasts with SDRSharp"
+subtitle: "because they lacked opposable thumbs and the brainpower to build a space program."
+date:
+background: '/img/Analog-TV/bg.png'
+---
+
+<p>Since i first started experimenting with SDRs, I manage to receive quite a lot of different signal bands varying from HF, NOAA APT, Meteor LRPT, AIS and all the way to L-Band & C-Band. I was intrigued to try as much of them as i can mostly out of curiosity to experience them myself. But i always had interference issues beyond Broadcast FM band mostly from that same FM stations and other terrestrial signals. So i didn't gave much thought about exploring VHF/UHF bands for a long time.</p>
+
+<p>I have made a "End Fed Half-Wave" for 80m-10m few months back and it worked great beyond my all my expectations. I was able to  receive wide range of interesting signals including local fisherman chatter on 40m/20m, daily rag chew of the local radio society on 40m, CW weather stations from Japan on 60m and also few DRM stations from romania with it. Recently i was bored listening to more or less the same stuff on HF and finally desided to explore the world of VHF/UHF.</p>
+
+<p>I didn't had a suitable antenna for VHF/UHF bands so i desided to build one myself. I did some research on best VHF/UHF antennas and there were so much options. I also asked a friend about his thoughts and he suggested i should build a Log-Periodic and try my luck with it. So i got to work...</p>
+
+<p>I used this online calculator to calculate the mesuerments for my antenna and desided to make it for 100MHz - 950MHz.</p>
+
+<p>I desided to make it entirely out of aluminum because i need it to be sturdy but light weight. I got some 3/8 inch aluminum tubes for the elements and 1 inch aluminum box bars for the two booms. I was able to make it quite accurately and using aluminum pop reverts to secure everything in place was a great choice which made it much stronger than i anticipated.</p>
+
+<p>After that i mounted it horizontally 30 feet high on a pole and scanned through bands to see what can i receive. I was able to receive some encrypted police communications, some faint VHF activity towards the sea, narrow telemetry beacons which i believe from some cubesats and at one time NOAA APT and Meteor_M2 LRPT...</p>
+
+<p>Then as i going up in bands suddenly i stumbled upon a much wider signal, which i thought was interference or electrical noise at first. When I switched to 10Msps on my Airspy R2 to see it clearly, i could see two FM downlinks right beside that signal. So i tuned to one of them and i could hear the sound of a TV commercial very clearly. As it turned out it was from a local Analog TV station and lucky for me there was already a plug-in for decoding them on SDRSharp called PAL/NTSC Decoder. So i launched the plug-in, tuned in to video signal and sure enough as i checked the video check box it started decoding video. Then i tuned back in to FM audio signal and i had both video and sound...</p>
