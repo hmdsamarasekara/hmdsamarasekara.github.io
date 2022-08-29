@@ -1,0 +1,40 @@
+---
+layout: post
+title: "My Experience with HRPT"
+subtitle: "This is how I received HRPT Imagery"
+background: '/img/Analog-TV/bg.jpg'
+---
+
+<h1 style="text-align:left;">Introduction</h1>
+
+<p style="text-align:justify;">I was obsessed with satellite communication for as long as I can remember. Especially earth observation satellites. We even read about the man, Sir Arthur C Clarke, who first theorized the idea of geostationary satellites, now living in our country,  from the school textbooks when we were kids. In fact, trying to receive NOAA APT was the first thing I attempted when I first got my RTL-SDR dongle. I've lost count of how many hours I spent tweaking little things on WXtoimg, trying to get the next one a little better than the last one even though they were very low quality, two-channel images, usually very susceptible to local VHF noise and more often than not end up being a big mess...</p>
+
+<p style="text-align:justify;">Since then I search for more ways to get higher-quality satellite images. Fortunately for me, I have several geo stationary satellites that I can receive and get full disk images. Namely Korean GK-2A, Russian Elektro-L3 & Chinese Fengyun-2h, and obviously Goes-13. I got myself a used 6-foot prime focus dish and successfully received them all but Goes-13. I couldn't receive Goes-13 because of some inescapable obstacles towards it. I've seen people receive HRPT but didn't think to try it because it required tracking, need a special RF-Filter+LNA, and had little to no documentation about it. Then Derekcz published his excellent "Beginner's guide to HRPT Reception" and after reading it, I finally decided to try it myself. This is how I managed to receive HRPT and some thoughts about my experience...</p>
+
+<h1 style="text-align:left;">My Setup</h1>
+
+<p style="text-align:justify;">First and foremost I recommend anyone who's thinking about trying to receive HRPT should read <a href="https://sgcderek.github.io/blog/beginner-hrpt-guide.html">Derekcz's guide</a>. He really has an in-depth guide over at his blog and you won't find anything better than that. Having said that, This is my setup...</p>
+
+<h6>Dish :-</h6> <p style="text-align:justify;">A minimum 80cm or bigger dish is recommended for HRPT, the bigger the dish higher the SNR but it harder to manually hand track. I got a used 105cm offset dish from a scrapyard.</p>
+
+<h6>Feed :-</h6> <p style="text-align:justify;">HRPT is RHCP so when used with a dish LHCP heliacal feed is required. Derekcz Thingiverse page has a 3D print heliacal Scaffolding sketch designed for 1700mhz and its relatively easy and more accurate to build a heliacal feed using that. "1700L_5.5T_0.14S_4D_10-90M.stl" is the correct file.</p>
+
+<h6>Filter & LNA :-</h6> <p style="text-align:justify;">RF filter and an LNA are pretty much mandatory for receiving HRPT. I've seen people get good results using just two cascaded spf5129z LNAs without any sort of filter but you'll get better results with Nooelec's Sawbird GOES or Sawbird+GOES Filter+LNA units. The only difference between them being plus version draws about 180mA instead of 30mA and provides 30db of gain instead of 20db provided by the regular version. You should check if your SDRs bias tee power can handle that much current before you buy the plus version or you can always power it externally. Be sure to use a DC block between LNA and the SDR if you chose to power it externally.</p>
+
+<h6>Feedline :-</h6> <p style="text-align:justify;">Using good quality shielded coax is crucial to minimize the feedline loss and reduce environmental noise, but RG6 is just fine for shorter lengths. Unfortunately, I don't own a laptop so I had to use more than 15m of RG6 to connect the antenna to my PC. I had to use a second LNA(RTL-SDR Wideband LNA) behind the Sawbird+Goes as a line amplifier to reduce signal loss. It's also worth mentioning reducing the number of adaptors or convertors used along the feedline would minimize the signal loss. I used to have BNC connectors for every cable and had to use a bunch of BNC to SMA adaptors along the feed line. When I started using SMA crimp connectors to make my own cables & pigtails and got rid of all those adaptors, I got a nice 2-3db SNR boost.</p>
+
+<h6>Receiver :-</h6> <P style="text-align:justify;">I have both the RTL-SDR V3 dongle and the Airspy R2. I prefer using Airspy R2 for HRPT because it has a relatively lower noise figure than the RTL-SDR V3. Also for Airspy R2, 6Msps is the best possible sample rate to use.</P>
+
+<h6>Mounting Dish and Tracking :-</h6> <p style="text-align:justify;">There are many ways to mount the dish. Basically, it needs to be movable along the azimuth and elevation plains. I kept it simple and just put a single bolt across the existing dish mount and a rotatable pole. I also attached a short 1/2 inch aluminum pole as a handle to the existing dish mount. It's easier to move to dish around that way and track more accurately...
+
+    Hand tracking is the tricky part, I just find the satellite's general direction from a satellite tracking software and use my phone's compass app to find where would the satellite come up in the sky, flip the dish upside down (so I can reach the lower elevation better) and point towards that direction. Then I try to find the signal by slowly moving the dish up and down, left and right. When I first see the faint signal in the decoder, I can adjust the dish alignment based on the SNR to get the best reception. After that, I just have to follow the satellite slowly along the sky until it goes down beyond the horizon.</p>
+
+<h6>Demodulator & Decoder :-</h6> <p style="text-align:justify;">When it comes to HRPT signal processing Satdump is a pretty straightforward option, you just select the satellite, set frequency, enter the correct sample rate and start. It will spit out the images when finished. But LeanHRPT Demod & Decoder has been the preferred choice for me. It's more user-friendly, easy to set up, and more sensitive as per my experience. LeanHRPT Demod is more forgiving for the occasional SNR drops and more responsive to the actual signal. LeanHRPT Decode on the other hand provides way more processing options than Satdump. I can really edit and tweak what the final image looks like. The only thing it was missing was a live SNR counter on the LeanHRPT Demod, But when I contact them and ask for a Live SNR counter, they were kind enough to add it within the same day(This version). So I guess I can add better user support to the "Pros" list as well.</p>
+
+<h1 style="text-align:left;">About Satellites</h1>
+
+<p style="text-align:justify;">Out of three POES satellites, I could get great results with NOAA 18 & NOAA 19. They are transmitting very strong signals. But NOAA 15 was very weak and I couldn't get any good results from it. Meteor-M2 has orientation problems from time to time, otherwise, both Meteor-M2 & Meteor-M2_2 are transmitting very strongly too. Metop-B & Metop-C are transmitting strongly without any issues. They were a bit hard to track and find the signal at the beginning of the pass at first because they don't have a center carrier like NOAA or Meteor. Fengyun-3B is disabled now and Fengyun-3C only transmits over china. I tried to receive it several times, but it stops transmitting when it reach the higher part of India. Nonetheless, I managed to receive a small part of it one time.</p>
+
+<h1 style="text-align:left;">This is an example of How I decoded NOAA-19 HRPT Pass...</h1>
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/QUjJ6IseaDc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
