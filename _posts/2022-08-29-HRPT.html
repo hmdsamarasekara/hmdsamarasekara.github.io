@@ -13,11 +13,23 @@ background: '/img/HRPT/HRPT.jpg'
 
 <h1 style="text-align:left;">My Setup</h1>
 
+<figure>
+    <img src="/img/HRPT/My-Setup.JPG" alt="My Setup" style="width: 100%; height: auto;">
+    <figcaption style="text-align: center;"><i>Dish Setup</i></figcaption>
+</figure>
+
 <p style="text-align:justify;">First and foremost I recommend anyone who's thinking about trying to receive HRPT should read <a href="https://sgcderek.github.io/blog/beginner-hrpt-guide.html">Derekcz's guide</a>. He really has an in-depth guide over at his blog and you won't find anything better than that. Having said that, This is my setup...</p>
 
 <h4>Dish :-</h4> <p style="text-align:justify;">A minimum 80cm or bigger dish is recommended for HRPT, the bigger the dish higher the SNR but it harder to manually hand track. I got a used 105cm offset dish from a scrapyard.</p>
 
-<h4>Feed :-</h4> <p style="text-align:justify;">HRPT is RHCP so when used with a dish LHCP heliacal feed is required. Derekcz's <a href="https://hmdsamarasekara.github.io/2022/08/27/HRPT.html">Thingiverse</a> page has a 3D print heliacal Scaffolding sketch designed for 1700mhz and its relatively easy and more accurate to build a heliacal feed using that. "1700L_5.5T_0.14S_4D_10-90M.stl" is the correct file.</p>
+<h4>Feed :-</h4>
+
+<figure>
+    <img src="/img/HRPT/Feed.png" alt="My Feed" style="width: 100%; height: auto;">
+    <figcaption style="text-align: center;"><i>This is My Feed for Reference</i></figcaption>
+</figure>
+
+<p style="text-align:justify;">HRPT is RHCP so when used with a dish LHCP heliacal feed is required. Derekcz's <a href="https://hmdsamarasekara.github.io/2022/08/27/HRPT.html">Thingiverse</a> page has a 3D print heliacal Scaffolding sketch designed for 1700mhz and its relatively easy and more accurate to build a heliacal feed using that. "1700L_5.5T_0.14S_4D_10-90M.stl" is the correct file.</p>
 
 <h4>Filter & LNA :-</h4> <p style="text-align:justify;">RF filter and an LNA are pretty much mandatory for receiving HRPT. I've seen people get good results using just two cascaded spf5129z LNAs without any sort of filter but you'll get better results with Nooelec's Sawbird GOES or Sawbird+GOES Filter+LNA units. The only difference between them being plus version draws about 180mA instead of 30mA and provides 30db of gain instead of 20db provided by the regular version. You should check if your SDRs bias tee power can handle that much current before you buy the plus version or you can always power it externally. Be sure to use a DC block between LNA and the SDR if you chose to power it externally.</p>
 
@@ -29,7 +41,26 @@ background: '/img/HRPT/HRPT.jpg'
 
 <p style="text-align:justify;">Hand tracking is the tricky part, I just find the satellite's general direction from a satellite tracking software and use my phone's compass app to find where would the satellite come up in the sky, flip the dish upside down (so I can reach the lower elevation better) and point towards that direction. Then I try to find the signal by slowly moving the dish up and down, left and right. When I first see the faint signal in the decoder, I can adjust the dish alignment based on the SNR to get the best reception. After that, I just have to follow the satellite slowly along the sky until it goes down beyond the horizon.</p>
 
-<h4>Demodulator & Decoder :-</h4> <p style="text-align:justify;">When it comes to HRPT signal processing Satdump is a pretty straightforward option, you just select the satellite, set frequency, enter the correct sample rate and start. It will spit out the images when finished. But LeanHRPT Demod & Decoder has been the preferred choice for me. It's more user-friendly, easy to set up, and more sensitive as per my experience. LeanHRPT Demod is more forgiving for the occasional SNR drops and more responsive to the actual signal. LeanHRPT Decode on the other hand provides way more processing options than Satdump. I can really edit and tweak what the final image looks like. The only thing it was missing was a live SNR counter on the LeanHRPT Demod, But when I contact them and ask for a Live SNR counter, they were kind enough to add it within the same day(This version). So I guess I can add better user support to the "Pros" list as well.</p>
+<h4>Satellite Frequencies :-</h4>
+
+<ul style="list-style:square;">
+    <li>NOAA-18:        1707.0 MHz</li>
+    <li>NOAA-19:        1698.0 MHz</li>
+    <li>Meteor-M-2:     1700 MHz</li>
+    <li>Meteor-M-2_2:   1700 MHz</li>
+    <li>MetOp-B:        1701.3 MHz</li>
+    <li>MetOp-C:        1701.3 MHz</li>
+    <li>FengYun-3C:     1701.4 MHz</li>
+</ul>
+
+<h4>Demodulator & Decoder :-</h4>
+
+<figure>
+    <img src="/img/HRPT/Satdump.jpg" alt="Satdump" style="width: 100%; height: auto;">
+    <figcaption style="text-align: center;"><i>NOAA-19 Live Processing with Satdump</i></figcaption>
+</figure>
+
+<p style="text-align:justify;">When it comes to HRPT signal processing Satdump is a pretty straightforward option, you just select the satellite, set frequency, enter the correct sample rate and start. It will spit out the images when finished. But LeanHRPT Demod & Decoder has been the preferred choice for me. It's more user-friendly, easy to set up, and more sensitive as per my experience. LeanHRPT Demod is more forgiving for the occasional SNR drops and more responsive to the actual signal. LeanHRPT Decode on the other hand provides way more processing options than Satdump. I can really edit and tweak what the final image looks like. The only thing it was missing was a live SNR counter on the LeanHRPT Demod, But when I contact them and ask for a Live SNR counter, they were kind enough to add it within the same day(This version). So I guess I can add better user support to the "Pros" list as well.</p>
 
 <h1 style="text-align:left;">About Available Satellites</h1>
 
@@ -37,7 +68,7 @@ background: '/img/HRPT/HRPT.jpg'
 
 <figure>
     <img src="/img/HRPT/FengYun-3C.png" alt="Fengyun-3C" style="width: 100%; height: auto;">
-    <figcaption style="text-align: center;"><b>A Partial FengYun-3C Image</b></figcaption>
+    <figcaption style="text-align: center;"><i>A Partial FengYun-3C Image</i></figcaption>
 </figure>
 <br>
 
