@@ -8,13 +8,14 @@ background: '/img/GK-2A/GK-2A.jpg'
 <p style="text-align:justify;">GEO-KOMPSAT-2A is a Korean earth observation satellite that transmits weather satellite images and other meteorological data on L-Band(1692.14MHz). It has a considerably large footprint and covers Asia, Australia, New Zealand, and eastern Russia. Its LRIT transmission can be easily received from Sri Lanka with a small Ku band dish and an SDR. Although it also transmits HRIT on L-Band(1695.4Mhz), a larger dish is required to receive it successfully. There is a very comprehensive guide written by <a href="https://twitter.com/sam210723?s=20">@sam210723</a> on <a href="https://vksdr.com/xrit-rx">his website</a> & another one on <a href="https://www.rtl-sdr.com/rtl-sdr-com-goes-16-17-and-gk-2a-weather-satellite-reception-comprehensive-tutorial/">RTL-SDR-Blog</a> which covers everything you need to know about how to receive the GK-2A LRIT downlink.</p>
 
 <h4>Hardware Setup</h4>
+<br>
 
 <figure>
     <img src="/img/HRPT/My-Setup.JPG" alt="My Setup" class="center" style="width: 75%; height: auto;">
     <figcaption style="text-align: center;"><i>Dish Setup</i></figcaption>
 </figure>
 
-<p style="text-align:justify;">An RTL-SDR V3 dongle can be used to receive the GK-2A LRIT downlink and Sawbird+Goes is a good LNA choice. Although a linear feed is preferred for receiving it, When I pointed my existing HRPT dish setup (with an LHCP helical feed and a Sawbird+Goes) at it, I got a very strong signal from it to my surprise.</p>
+<p style="text-align:justify;">An RTL-SDR V3 dongle can be used to receive the GK-2A LRIT downlink and Sawbird+Goes is a good LNA choice. Although a linear feed is preferred for receiving it, When I pointed my existing HRPT dish setup (with an LHCP helical feed and a Sawbird+Goes) at it, I was able to get a good signal.</p>
 
 <figure>
     <img src="/img/GK-2A/GK-2A-LRIT-Downlink.png" alt="GK-2A LRIT" style="width: 100%; height: auto;">
@@ -23,7 +24,7 @@ background: '/img/GK-2A/GK-2A.jpg'
 
 <h4>Goesrecv & Xrit-rx</h4>
 
-<p style="text-align:justify;">So I installed <a href="https://github.com/sam210723/goestools">"goesrecv"</a> and <a href="https://github.com/sam210723/xrit-rx">"xrit-rx"</a> on a Raspberry Pi4, Edited the goesrecv configuration file for the RTL-SDR V3 dongle, Downloaded "EncryptionKeyMessage_001F2904C905.bin" from the <a href="http://nmsc.kma.go.kr/enhome/html/base/cmm/selectPage.do?page=satellite.coms.operOverview">NMSC page,</a> Decrypted it, Configured xrit-rx to work with "EncryptionKeyMessage.bin", Execute "goesrecv -v -i 1 -c goesrecv.conf" in the goesrecv directory to start it, Opened a new terminal, navigated to xrit-rx directory and execute "python3 xrit-rx.py" to start it as well. Then I could see the image reception started.</p>
+<p style="text-align:justify;">So I installed <a href="https://github.com/sam210723/goestools">"goesrecv"</a> and <a href="https://github.com/sam210723/xrit-rx">"xrit-rx"</a> on a Raspberry Pi-4, Edited the goesrecv configuration file for the RTL-SDR V3 dongle, Downloaded "EncryptionKeyMessage_001F2904C905.bin" from the <a href="http://nmsc.kma.go.kr/enhome/html/base/cmm/selectPage.do?page=satellite.coms.operOverview">NMSC page,</a> Decrypted it, Configured xrit-rx to work with "EncryptionKeyMessage.bin", Execute "goesrecv -v -i 1 -c goesrecv.conf" in the goesrecv directory to start it, Opened a new terminal, navigated to xrit-rx directory and execute "python3 xrit-rx.py" to start it as well. Then I could see the image reception started.</p>
 
 <figure>
     <img src="/img/GK-2A/Side-by-Side.png" alt="goesrecv-&-xrit-rx" style="width: 100%; height: auto;">
@@ -73,6 +74,11 @@ background: '/img/GK-2A/GK-2A.jpg'
     <figcaption style="text-align: center;"><i>Global Wave Model Animation</i></figcaption>
 </figure>
 <br>
+
+<figure>
+    <img src="/img/GK-2A/Surface Pressure.gif" alt="Surface Pressure" style="width: 100%; height: auto;">
+    <figcaption style="text-align: center;"><i>Surface Pressure</i></figcaption>
+</figure>
 
 <p style="text-align:justify;">Both goesrecv & xrit-rx were very well optimized so this setup can be run 24x7 without worrying about overeating or thermal throttling the Raspberry Pi</p>
 
