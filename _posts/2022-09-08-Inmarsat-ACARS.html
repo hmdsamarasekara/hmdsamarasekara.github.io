@@ -1,0 +1,86 @@
+---
+layout: post
+title: "UHF Satcom Piracy"
+subtitle: "Radio Pirates Heard on UHF Satcom Satellites"
+background: '/img/UHF-Satcom/UHF-Satcom.jpg'
+---
+
+<h4 style="text-align:left;">Introduction</h4>
+
+<p style="text-align:justify;">INMARSAT is a satellite communicationservice provider which uses geo stationary satellite networks to cover the entire globe. They mostly provide their services to maritime and aviation industries which include satellite phone communications, text messaging & data transmission. Airlines use Inmarsat transponders to send and receive messages between airplanes and ground stations. These are called AERO ACARS (Aircraft Communications Addressing and Reporting System) and ground-to-aircraft transmissions are broadcasted on L-Band and aircraft-to-ground transmissions are broadcasted on C-Band. Ground-to-Aircraft transmissions which are around 1.5GHz are relatively easy to receive using inexpensive hardware.</p>
+
+<figure>
+    <img src="/img/Inmarsat-ACARS/Inmarsat coverage.jpg" alt="Inmarsat Coverage" style="width: 100%; height: auto; align-content:center;">
+    <figcaption style="text-align: center;"><i>Inmarsat Coverage</i></figcaption>
+</figure>
+<br> 
+
+<h4 style="text-align:left;">AERO ACARS Channels</h4>
+
+<p style="text-align:justify;">There are four types of ACARS channels on L-Band. which are 600bps, 1200bps, 8400bps, and 10500bps. Higher the bitrate, the busier the channel, and the more massages you get. But 8400bps channels are exclusively reserved for voice transmissions. All frequencies for the IOR (Indian Ocean Region) can be found in the chart below and 8400bps channels do not seem to have fixed frequencies and they pop up everywhere between 1546125000Hz - 1546200000Hz, even overlapping each other sometimes.
+</p>
+
+<figure>
+    <img src="/img/Inmarsat-ACARS/AERO-Low-Channels.jpg" alt="600bps & 1200bps Channels" style="width: 100%; height: auto; align-content:center;">
+    <figcaption style="text-align: center;"><i>600bps & 1200bps Channels</i></figcaption>
+</figure>
+<br>
+
+<figure>
+    <img src="/img/Inmarsat-ACARS/AERO-High-Channels.jpg" alt="8400bps & 10500bps Channels" style="width: 100%; height: auto; align-content:center;">
+    <figcaption style="text-align: center;"><i>8400bps & 10500bps Channels</i></figcaption>
+</figure>
+<br>
+
+<h4 style="text-align:left;">AERO ACARS Frequencies</h4>
+
+<ul>
+    <li style="list-style:square;"><pre>600bps-01 - 1545003200Hz</pre></li>
+    <li style="list-style:square;"><pre>600bps-02 - 1545113100Hz</pre></li>
+    <li style="list-style:square;"><pre>600bps-03 - 1545118200Hz</pre></li>
+    <li style="list-style:square;"><pre>600bps-04 - 1545128300Hz</pre></li>
+    <li style="list-style:square;"><pre>600bps-05 - 1545158200Hz</pre></li>
+    <li style="list-style:square;"><pre>600bps-06 - 1545163400Hz</pre></li>
+    <li style="list-style:square;"><pre>600bps-07 - 1545183400Hz</pre></li>
+    <li style="list-style:square;"><pre>600bps-08 - 1545188400Hz</pre></li>
+    <li style="list-style:square;"><pre>600bps-09 - 1545213100Hz</pre></li>
+    <li style="list-style:square;"><pre>600bps-10 - 1545218200Hz</pre></li>
+    <li style="list-style:square;"><pre>600bps-11 - 1545223200Hz</pre></li>
+
+    <li style="list-style:square;"><pre>1200bps-01 - 1545123300Hz</pre></li>
+
+    <li style="list-style:square;"><pre>8400bps - 1546125000Hz - 1546200000Hz</pre></li>
+
+    <li style="list-style:square;"><pre>10500bps-01 - 1546004900Hz</pre></li>
+    <li style="list-style:square;"><pre>10500bps-02 - 1546020500Hz</pre></li>
+    <li style="list-style:square;"><pre>10500bps-03 - 1546035300Hz</pre></li>
+    <li style="list-style:square;"><pre>10500bps-04 - 1546084800Hz</pre></li>
+    <li style="list-style:square;"><pre>10500bps-05 - 1546100400Hz</pre></li>
+    <li style="list-style:square;"><pre>10500bps-06 - 1546114900Hz</pre></li>
+</ul>
+
+<h4 style="text-align:left;">Antenna Setup</h4>
+
+<figure>
+    <img src="/img/Inmarsat-ACARS/Inmarsat-Setup.JPG" alt="Antenna Setup" style="width: 100%; height: auto; align-content:center;">
+    <figcaption style="text-align: center;"><i>Antenna Setup</i></figcaption>
+</figure>
+<br>
+
+<p style="text-align:justify;">A suitable directional L-band antenna is needed to receive these signals. RTL-SDR L-Band Active Patch Antenna is an excellent premade antenna for getting started. It's an active antenna which means it needs to be powered with bias-tee power from the SDR since it does not have external power input. It's great for decoding 600bps & 1200bps channels but in my experience not that great for 8400bps & 10500bps channels. I couldn't get enough SNR to decode them with it. The next best choice would be using a reliable feed with a dish and Inmarsat signals are right-hand circular polarized so a left-hand circular polarized helical feed is required when shooting into a dish. As I mentioned before in a previous post Derekcz has a great collection of 3D printable heliacal scaffoldings, and for Inmarsat "1700L_5.5T_0.14S_4D_10-90M.stl" would be the correct one. It would be best if you can use an LNA right at the feed to mitigate cable loss. An RF filter centered around those frequencies would further improve reception because it would help reduce out-of-the-band interference. Fortunately, Nooelec has their filtered LNA units specially designed for Inmarsat called Sawbird IO & Sawbird+IO. They provide 20db - 30db gain and filter out any out-of-the-band interference.</p>
+
+<h4 style="text-align:left;">Software Setup</h4>
+
+<p style="text-align:justify;">Three open source software are required to decode ACARS channels. First, the SDR Client software to receive the ACARS signals, Both "SDRSharp" & "SDR++" would be great choices, Then the "Virtual Audio Cable" software is needed to route audio from the SDR Client software to the ACARS decoder. Lastly, the actual ACARS decoder itself is called "JAERO". Then I just connected my SDR to the PC, Started SDRSharp, and in the "Audio" tab selected "Cable Input(VB-Audio Cable Input)" from the drop-down list, Tuned to one of ACARS downlinks,s and adjusted the bandwidth accordingly (4KHz for 600/1200bps channels, 10KHz for 8400bps channels, 15KHz for 10500bps channels). Then I opened JAERO and selected "Cable Output(VB-Audio Cable Input)" from the audio source drop-down list in the settings and it started decoding and populating the ACARS messages immediately.</p>
+
+<p style="text-align:justify;"><b>Note: Sometimes I had to manually click on the spectrum bump in the FFT Window in order to get a signal lock.</b></p>
+
+<h4 style="text-align:left;">Decoding Multiple Channels Simultaneously</h4>
+
+<p style="text-align:justify;">Before mentioned method is great for decoding one ACARS channel at a time but It's not ideal for decoding more than one channel simultaneously. I needed to find a way to possibly decode all of the channels simultaneously. Fortunately, thebaldgeek has a great guide on how to do exactly that using yet another great open-source software called "SDRReceiver". There was no correct 143E.ini file for the IOR region in his repository so I had to modify one of the .ini files with the correct frequencies myself. One thing to note is that considerable processing power is going to be needed to decode more and more channels simultaneously. My I7 8th gen PC was able to handle all twelve of 600/1200bps channels but I was not successful when I tried to add 10500bps channels as well. I recommend anyone to read up on other posts on his blog as he has quite a lot of useful information and thorough guides regarding Inmarsat.</p>
+
+<figure>
+    <img src="/img/Inmarsat-ACARS/SDRReceiver.jpg" alt="Decoding Multiple Channels Simultaneously" style="width: 100%; height: auto; align-content:center;">
+    <figcaption style="text-align: center;"><i>Decoding Multiple Channels Simultaneously Using SDRReceiver</i></figcaption>
+</figure>
+<br>
