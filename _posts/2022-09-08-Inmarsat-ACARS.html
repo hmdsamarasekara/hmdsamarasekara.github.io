@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "UHF Satcom Piracy"
-subtitle: "Radio Pirates Heard on UHF Satcom Satellites"
-background: '/img/UHF-Satcom/UHF-Satcom.jpg'
+title: "Inmarsat AERO ACARS Reception"
+subtitle: "Inmarsat AERO Aircraft Communications Addressing and Reporting System"
+background: '/img/Inmarsat-ACARS/ACARS.jpg'
 ---
 
 <h4 style="text-align:left;">Introduction</h4>
@@ -67,17 +67,144 @@ background: '/img/UHF-Satcom/UHF-Satcom.jpg'
 </figure>
 <br>
 
-<p style="text-align:justify;">A suitable directional L-band antenna is needed to receive these signals. RTL-SDR L-Band Active Patch Antenna is an excellent premade antenna for getting started. It's an active antenna which means it needs to be powered with bias-tee power from the SDR since it does not have external power input. It's great for decoding 600bps & 1200bps channels but in my experience not that great for 8400bps & 10500bps channels. I couldn't get enough SNR to decode them with it. The next best choice would be using a reliable feed with a dish and Inmarsat signals are right-hand circular polarized so a left-hand circular polarized helical feed is required when shooting into a dish. As I mentioned before in a previous post Derekcz has a great collection of 3D printable heliacal scaffoldings, and for Inmarsat "1700L_5.5T_0.14S_4D_10-90M.stl" would be the correct one. It would be best if you can use an LNA right at the feed to mitigate cable loss. An RF filter centered around those frequencies would further improve reception because it would help reduce out-of-the-band interference. Fortunately, Nooelec has their filtered LNA units specially designed for Inmarsat called Sawbird IO & Sawbird+IO. They provide 20db - 30db gain and filter out any out-of-the-band interference.</p>
+<p style="text-align:justify;">A suitable directional L-band antenna is needed to receive these signals. <a href="https://www.rtl-sdr.com/rtl-sdr-blog-active-l-band-patch-antenna-for-inmarsat-iridium-gps-back-in-stock/">RTL-SDR L-Band Active Patch Antenna</a> is an excellent premade antenna for getting started. It's an active antenna which means it needs to be powered with bias-tee power from the SDR since it does not have external power input. It's great for decoding 600bps & 1200bps channels but in my experience not that great for 8400bps & 10500bps channels. I couldn't get enough SNR to decode them with it. The next best choice would be using a heliacal feed with a dish and Inmarsat signals are right-hand circular polarized so a left-hand circular polarized helical feed is required when shooting into a dish. As I mentioned before in a previous post Derekcz has a great collection of <a href="https://www.thingiverse.com/thing:4980180/files">3D printable heliacal scaffoldings,</a> and for Inmarsat "1700L_5.5T_0.14S_4D_10-90M.stl" would be the correct one. It would be best if you can use an LNA right at the feed to mitigate cable loss. An RF filter centered around those frequencies would further improve reception because it would help reduce out-of-the-band interference. Fortunately, Nooelec has their filtered LNA units specially designed for Inmarsat called <a href="https://www.nooelec.com/store/sdr/sdr-addons/sawbird/sawbird-io.html">Sawbird IO</a> & <a href="https://www.nooelec.com/store/sdr/sdr-addons/sawbird/sawbird-plus-io-303.html">Sawbird+IO</a>. They provide 20db - 30db gain and filter out any out-of-the-band interference.</p>
 
 <h4 style="text-align:left;">Software Setup</h4>
 
-<p style="text-align:justify;">Three open source software are required to decode ACARS channels. First, the SDR Client software to receive the ACARS signals, Both "SDRSharp" & "SDR++" would be great choices, Then the "Virtual Audio Cable" software is needed to route audio from the SDR Client software to the ACARS decoder. Lastly, the actual ACARS decoder itself is called "JAERO". Then I just connected my SDR to the PC, Started SDRSharp, and in the "Audio" tab selected "Cable Input(VB-Audio Cable Input)" from the drop-down list, Tuned to one of ACARS downlinks,s and adjusted the bandwidth accordingly (4KHz for 600/1200bps channels, 10KHz for 8400bps channels, 15KHz for 10500bps channels). Then I opened JAERO and selected "Cable Output(VB-Audio Cable Input)" from the audio source drop-down list in the settings and it started decoding and populating the ACARS messages immediately.</p>
+<p style="text-align:justify;">Three open source software are required to decode ACARS channels. First, the SDR Client software to receive the ACARS signals, Both <a href="https://airspy.com/download/">"SDRSharp"</a> & <a href="https://www.sdrpp.org/">"SDR++"</a> would be great choices, Then the <a href="https://vb-audio.com/Cable/">"Virtual Audio Cable"</a> software is needed to route audio from the SDR Client software to the ACARS decoder. Lastly, the actual ACARS decoder itself is called <a href="https://github.com/jontio/JAERO/releases">"JAERO".</a> Then I just connected my SDR to the PC, Started SDRSharp, and in the "Audio" tab selected "Cable Input(VB-Audio Cable Input)" from the drop-down list, Tuned to one of ACARS downlinks,s and adjusted the bandwidth accordingly (4KHz for 600/1200bps channels, 10KHz for 8400bps channels, 15KHz for 10500bps channels). Then I opened JAERO and selected "Cable Output(VB-Audio Cable Input)" from the audio source drop-down list in the settings and it started decoding and populating the ACARS messages immediately.</p>
 
 <p style="text-align:justify;"><b>Note: Sometimes I had to manually click on the spectrum bump in the FFT Window in order to get a signal lock.</b></p>
 
 <h4 style="text-align:left;">Decoding Multiple Channels Simultaneously</h4>
 
-<p style="text-align:justify;">Before mentioned method is great for decoding one ACARS channel at a time but It's not ideal for decoding more than one channel simultaneously. I needed to find a way to possibly decode all of the channels simultaneously. Fortunately, thebaldgeek has a great guide on how to do exactly that using yet another great open-source software called "SDRReceiver". There was no correct 143E.ini file for the IOR region in his repository so I had to modify one of the .ini files with the correct frequencies myself. One thing to note is that considerable processing power is going to be needed to decode more and more channels simultaneously. My I7 8th gen PC was able to handle all twelve of 600/1200bps channels but I was not successful when I tried to add 10500bps channels as well. I recommend anyone to read up on other posts on his blog as he has quite a lot of useful information and thorough guides regarding Inmarsat.</p>
+<p style="text-align:justify;">Before mentioned method is great for decoding one ACARS channel at a time but It's not ideal for decoding more than one channel simultaneously. I needed to find a way to possibly decode all of the channels simultaneously. Fortunately, <a href="https://twitter.com/thebaldgeek">@thebaldgeek</a> has a great <a href="https://thebaldgeek.github.io/SDRReceiver.html">Guide</a> on how to do exactly that using yet another great open-source software called <a href="https://github.com/jeroenbeijer/SDRReceiver">"SDRReceiver".</a> There was no correct 143E.ini file for the IOR region in his repository so I had to modify one of the .ini files with the correct frequencies myself.</p>
+
+<label for="143E.ini">143E.ini</label>
+
+<textarea id="143E.ini"><pre>
+#Main sample rate, do not change basically
+sample_rate=1536000
+#Tuning freq for the dongle, probably no reason to modify
+center_frequency=1545600000
+#This is the address ZMQ will band to for sending audio to jaero
+zmq_address=tcp://*:6003
+#Enable this to remove the annoying spike in the middle of the spectrum
+correct_dc_bias=1
+
+#valid tuner gains r82xx_gains[] = { 0, 9, 14, 27, 37, 77, 87, 125, 144, 157, 166, 197, 207, 229, 254, 280, 297, 328, 338, 364, 372, 386, 402, 421, 434, 439, 445, 480, 496 };
+tuner_gain=496
+
+#to raise or lower the center frequency of each VFO set a value here, i.e. -1000 to lower each VFO with 1000hz or 2000 to increase by 2000 hz. Useful when swichting dongles for instance.
+mix_offset=0
+
+#to start the SDR automatically set to 1
+#auto_start=0
+#auto_start_tuner_idx=0
+
+#typically not needed to modify the below block. It is used to mix down the lower data rate and higher rate channels into into different chunks to improve decimatation performance
+[main_vfos]
+size=2
+1\frequency=1545000000
+1\out_rate=384000
+2\frequency=1546002000
+2\out_rate=198000
+#Actual VFO's. When adding more just increase the size value on top. Ensure to keep the numbering sequence and formatting of variables, the application will probably crash otherwise
+[vfos]
+size=18
+1\frequency=1545003200
+1\gain=15
+1\data_rate=600
+1\filter_bandwidth=0
+1\topic=VFO01
+2\frequency=1545113100
+2\gain=15
+2\data_rate=600
+2\filter_bandwidth=0
+2\topic=VFO02
+3\frequency=1545118200
+3\gain=15
+3\data_rate=600
+3\filter_bandwidth=0
+3\topic=VFO03
+4\frequency=1545123300
+4\gain=15
+4\data_rate=1200
+4\filter_bandwidth=0
+4\topic=VFO04
+5\frequency=1545128300
+5\gain=15
+5\data_rate=600
+5\filter_bandwidth=0
+5\topic=VFO05
+6\frequency=1545158200
+6\gain=15
+6\data_rate=1200
+6\filter_bandwidth=0
+6\topic=VFO06
+7\frequency=1545162800
+7\gain=20
+7\data_rate=600
+7\filter_bandwidth=0
+7\topic=VFO07
+8\frequency=1545183400
+8\gain=15
+8\data_rate=600
+8\filter_bandwidth=0
+8\topic=VFO08
+9\frequency=1545188400
+9\gain=15
+9\data_rate=600
+9\filter_bandwidth=0
+9\topic=VFO09
+10\frequency=1545213100
+10\gain=20
+10\data_rate=600
+10\filter_bandwidth=0
+10\topic=VFO10
+11\frequency=1545218200
+11\gain=20
+11\data_rate=600
+11\filter_bandwidth=0
+11\topic=VFO11
+12\frequency=1545223200
+12\gain=20
+12\data_rate=600
+12\filter_bandwidth=0
+12\topic=VFO12
+#10500 channels
+13\frequency=1546004900
+13\gain=20
+13\data_rate=10500
+13\filter_bandwidth=0
+13\topic=VFO13
+14\frequency=1546021800
+14\gain=20
+14\data_rate=10500
+14\filter_bandwidth=0
+14\topic=VFO14
+15\frequency=1546036600
+15\gain=20
+15\data_rate=10500
+15\filter_bandwidth=0
+15\topic=VFO15
+16\frequency=1546086000
+16\gain=23
+16\data_rate=10500
+16\filter_bandwidth=0
+16\topic=VFO16
+17\frequency=1546100600
+17\gain=23
+17\data_rate=10500
+17\filter_bandwidth=0
+17\topic=VFO17
+18\frequency=1546116000
+18\gain=23
+18\data_rate=10500
+18\filter_bandwidth=0
+18\topic=VFO18
+</pre></textarea>
+
+<p style="text-align:justify;">One thing to note is that considerable processing power is going to be needed to decode more and more channels simultaneously. My I7 8th gen PC was able to handle all twelve of 600/1200bps channels but I was not successful when I tried to add 10500bps channels as well. I recommend anyone to read up on other posts on his blog as he has quite a lot of useful information and thorough guides regarding Inmarsat.</p>
 
 <figure>
     <img src="/img/Inmarsat-ACARS/SDRReceiver.jpg" alt="Decoding Multiple Channels Simultaneously" style="width: 100%; height: auto; align-content:center;">
