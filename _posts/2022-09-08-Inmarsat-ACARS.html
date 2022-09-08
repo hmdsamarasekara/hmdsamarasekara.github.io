@@ -79,9 +79,7 @@ background: '/img/Inmarsat-ACARS/ACARS.jpg'
 
 <p style="text-align:justify;">Before mentioned method is great for decoding one ACARS channel at a time but It's not ideal for decoding more than one channel simultaneously. I needed to find a way to possibly decode all of the channels simultaneously. Fortunately, <a href="https://twitter.com/thebaldgeek">@thebaldgeek</a> has a great <a href="https://thebaldgeek.github.io/SDRReceiver.html">Guide</a> on how to do exactly that using yet another great open-source software called <a href="https://github.com/jeroenbeijer/SDRReceiver">"SDRReceiver".</a> There was no correct 143E.ini file for the IOR region in his repository so I had to modify one of the .ini files with the correct frequencies myself.</p>
 
-<label for="143E.ini">143E.ini</label>
-
-<textarea id="143E.ini"><pre>
+<pre><code>
 #Main sample rate, do not change basically
 sample_rate=1536000
 #Tuning freq for the dongle, probably no reason to modify
@@ -202,7 +200,7 @@ size=18
 18\data_rate=10500
 18\filter_bandwidth=0
 18\topic=VFO18
-</pre></textarea>
+</code></pre>
 
 <p style="text-align:justify;">One thing to note is that considerable processing power is going to be needed to decode more and more channels simultaneously. My I7 8th gen PC was able to handle all twelve of 600/1200bps channels but I was not successful when I tried to add 10500bps channels as well. I recommend anyone to read up on other posts on his blog as he has quite a lot of useful information and thorough guides regarding Inmarsat.</p>
 
