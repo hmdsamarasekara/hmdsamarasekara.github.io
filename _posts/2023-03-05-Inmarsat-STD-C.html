@@ -41,6 +41,11 @@ background: '/img/Inmarsat-STD-C/STD-C_Background.jpg'
 <br>
 
 <figure>
+    <img src="/img/Inmarsat-STD-C/RTL-SDR L-BAND Patch Antenna.jpg" alt="Antenna Setup" style="width: 50%; height: auto; align-content:center;">
+    <figcaption style="text-align: center;"><i>Antenna Setup</i></figcaption>
+</figure>
+
+<figure>
     <img src="/img/Inmarsat-ACARS/Inmarsat-Setup.JPG" alt="Antenna Setup" style="width: 100%; height: auto; align-content:center;">
     <figcaption style="text-align: center;"><i>Antenna Setup</i></figcaption>
 </figure>
@@ -56,7 +61,7 @@ background: '/img/Inmarsat-STD-C/STD-C_Background.jpg'
 </b></p>
 
 <figure>
-    <img src="/img/Inmarsat-STD-C/Skytale-C-SDR#-Setup.png" alt="Skytale-C SDR# Setup" style="width: 100%; height: auto; align-content:center;">
+    <img src="/img/Inmarsat-STD-C/Skytale-C-SDR#-Setup.png" alt="Skytale-C SDR# Setup" style="width: 35%; height: auto; align-content:center;">
     <figcaption style="text-align: center;"><i>Skytale-C SDR# Configuration</i></figcaption>
 </figure>
 
@@ -65,14 +70,14 @@ background: '/img/Inmarsat-STD-C/STD-C_Background.jpg'
 <p style="text-align:justify;">It's possible to decode all the STD-C channels simultaneously and there are a few ways to do it but using SDR++ built-in audio routing method is by far the most efficient use of hardware. First <a href="https://bitbucket.org/scytalec/scytalec/downloads/">Skytale-C and Skytale-C Quick UI</a> need to be downloaded separately. Both can be downloaded for this link. Then open SDR++, go to the "Module Manager" tab and select the "Radio" option from the dropdown menu, give it a unique name such as CH1, and click on plus sign to add it.</p>
 
 <figure>
-    <img src="/img/Inmarsat-STD-C/SDR++ Radio Setup.png" alt="SDR++ Radio Setup" style="width: 100%; height: auto; align-content:center;">
+    <img src="/img/Inmarsat-STD-C/SDR++ Radio Setup.png" alt="SDR++ Radio Setup" style="width: 35%; height: auto; align-content:center;">
     <figcaption style="text-align: center;"><i>SDR++ Radio Setup</i></figcaption>
 </figure>
 
 <p style="text-align:justify;">Then go to the "Sinks" tab and select the newly created VFO, select "Network" from the first dropdown menu, type in localhost IP(127.0.0.1) in the first field, and type in a unique port number on the second field. The "Protocol" need to be set as TCP. Finally, click on the "Start" button to start the stream. This will start streaming the IQ data through that TCP port to the Skytale-C.</p>
 
 <figure>
-    <img src="/img/Inmarsat-STD-C/SDR++ Sinks Setup.png" alt="SDR++ Sinks Setup" style="width: 100%; height: auto; align-content:center;">
+    <img src="/img/Inmarsat-STD-C/SDR++ Sinks Setup.png" alt="SDR++ Sinks Setup" style="width: 35%; height: auto; align-content:center;">
     <figcaption style="text-align: center;"><i>SDR++ Sinks Configuration</i></figcaption>
 </figure>
 
@@ -80,17 +85,23 @@ background: '/img/Inmarsat-STD-C/STD-C_Background.jpg'
 
 <figure>
     <img src="/img/Inmarsat-STD-C/LES-Channels.png" alt="LES-Channels" style="width: 100%; height: auto; align-content:center;">
-    <figcaption style="text-align: center;"><i>It Should look like this</i></figcaption>
+    <figcaption style="text-align: center;"><i>It Should Look Like This</i></figcaption>
 </figure>
 <br>
 
 <p style="text-align:justify;">Extract the Skytale-C archive inside a new folder and rename it to the same name as the first VFO. Open Skytale-C, On the "Source" tab, click on the "TCP" switch, type in the localhost IP(127.0.0.1) and the port number for the first VFO. This will allow the Skytale-C to connect to the IQ stream from the SDR++.</p>
 
-<p style="text-align:justify;">Then on the "Destination UDP" again type in the localhost IP(127.0.0.1) and a unique port. Also, make sure the "Transmit" check box is selected as well. This configuration will send the decoded messages through the UDP port over to the Skytale-C Quick UI interface. Finally, Click on the blue play button to start decoding. The same process needs to be done for all VFOs.</p>
-
 <figure>
     <img src="/img/Inmarsat-STD-C/Skytale-C-Setup.png" alt="Skytale-C-Setup" style="width: 100%; height: auto; align-content:center;">
     <figcaption style="text-align: center;"><i>Skytale-C Configuration</i></figcaption>
+</figure>
+<br>
+
+<p style="text-align:justify;">Then on the "Destination UDP" again type in the localhost IP(127.0.0.1) and a unique port. Also, make sure the "Transmit" check box is selected as well. This configuration will send the decoded messages through the UDP port over to the Skytale-C Quick UI interface. Finally, Click on the blue play button to start decoding. The same process needs to be done for all VFOs.</p>
+
+<figure>
+    <img src="/img/Inmarsat-STD-C/Folder Structure.png" alt="Folder Structure" style="width: 100%; height: auto; align-content:center;">
+    <figcaption style="text-align: center;"><i>Folder Structure Should Look Like This</i></figcaption>
 </figure>
 <br>
 
