@@ -16,12 +16,12 @@ background: '/img/Inmarsat-STD-C/STD-C_Background.jpg'
 <br> 
 
 <h4 style="text-align:left;">STD-C Channels</h4>
+<br>
 
 <figure>
     <img src="/img/Inmarsat-STD-C/STD-C-Full-Range.jpg" alt="STD-C Full Channel Range" style="width: 100%; height: auto; align-content:center;">
     <figcaption style="text-align: center;"><i>STD-C Full Channel Range</i></figcaption>
 </figure>
-<br>
 
 <p style="text-align:justify;">There are mainly two types of channels, the first one being the NCS (Network Control Station) channel dedicated to EGC (Enhanced Group Call) messages. This allows broadcasting certain messages to certain groups of ships and vessels within the satellite footprint. There are two types of ECG services,
 </p>
@@ -41,7 +41,7 @@ background: '/img/Inmarsat-STD-C/STD-C_Background.jpg'
 <br>
 
 <figure>
-    <img src="/img/Inmarsat-STD-C/Antenna-Setup.jpg" alt="Antenna Setup" style="width: 50%; height: auto; align-content:center;">
+    <img src="/img/Inmarsat-STD-C/Antenna-Setup.jpg" alt="Antenna Setup" style="width: 100%; height: auto; align-content:center;">
     <figcaption style="text-align: center;"><i>Dish Setup or L-Band Patch</i></figcaption>
 </figure>
 
@@ -52,13 +52,13 @@ background: '/img/Inmarsat-STD-C/STD-C_Background.jpg'
 
 <p style="text-align:justify;">There are quite a few software choices out there when it comes to deciding STD-C but most of them are not open-sourced and paid software. Skytale-C by microp11 is great free software that works on par with any other paid alternative, is easy to set up, and comes bundled with the SDRSharp community package. Just tune in to any STD-C channel, set the bandwidth to 4KHz, open the Skytale-C from the plugins menu, and click on the "Enabled" and "Auto Tracking" checkboxes. It will say "Locked" on the top right corner when it properly locked on to the signal and the constellation window will show it too. Then it will start decoding SDT-C messages immediately, Click on the "Quick UI" button will open a new window, and there you can see all decoded messages.</p>
 
+<figure>
+    <img src="/img/Inmarsat-STD-C/Skytale-C-SDR#-Setup.png" alt="Skytale-C-SDR#-Setup" style="width: 40%; height: auto; align-items: center;">
+    <figcaption style="text-align: center;"><i>Skytale-C Configuration on SDRSharp</i></figcaption>
+</figure>
+
 <p style="text-align:justify;"><b>Note: microp11 has a <a href="https://youtube.com/playlist?list=PLk83tyATRBZC1KNG00BTIB7GomjpekWzk/">youtube playlist</a> explaining the software setup and features.
 </b></p>
-
-<figure>
-    <img src="/img/Inmarsat-STD-C/Skytale-C-SDR#-Setup.png" alt="Skytale-C SDR# Setup" style="width: 35%; height: auto; align-content:center;">
-    <figcaption style="text-align: center;"><i>Skytale-C SDR# Configuration</i></figcaption>
-</figure>
 
 <h4 style="text-align:left;">Decoding Multiple Channels Simultaneously</h4>
 
