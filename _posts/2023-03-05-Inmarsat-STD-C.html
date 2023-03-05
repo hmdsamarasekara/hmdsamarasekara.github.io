@@ -7,7 +7,7 @@ background: ''
 
 <h2 style="text-align:left;">Introduction</h2>
 
-<p style="text-align:justify;">As I mentioned in m previous post  "Inmarsat AERO ACARS Reception" INMARSAT is a geostationary satellite communication service provider widespread among aviation and maritime industries. Their STD-C service is widely used in the marine sector to send text, emails, or data messages. These signals are transmitted in the L-Band which is 1.5Ghz and the exact frequencies depend on the satellite you have access to in your region.</p>
+<p style="text-align:justify;">As I mentioned in my previous post  "Inmarsat AERO ACARS Reception" INMARSAT is a geostationary satellite communication service provider widespread among aviation and maritime industries. Their STD-C service is widely used in the marine sector to send text, emails, or data messages. These signals are transmitted in the L-Band which is 1.5Ghz and the exact frequencies depend on the satellite you have access to in your region.</p>
 
 <figure>
     <img src="/img/Inmarsat-ACARS/Inmarsat coverage.jpg" alt="Inmarsat Coverage" style="width: 100%; height: auto; align-content:center;">
@@ -18,7 +18,7 @@ background: ''
 <h4 style="text-align:left;">STD-C Channels</h4>
 
 <figure>
-    <img src="img\Inmarsat-STD-C\STD-C-Full-Range.jpg" alt="STD-C Full Channel Range" style="width: 100%; height: auto; align-content:center;">
+    <img src="img/Inmarsat-STD-C/STD-C-Full-Range.jpg" alt="STD-C Full Channel Range" style="width: 100%; height: auto; align-content:center;">
     <figcaption style="text-align: center;"><i>STD-C Full Channel Range</i></figcaption>
 </figure>
 <br>
@@ -56,7 +56,7 @@ background: ''
 </b></p>
 
 <figure>
-    <img src="img\Inmarsat-STD-C\Skytale-C SDR# Setup.png" alt="Skytale-C SDR# Setup" style="width: 100%; height: auto; align-content:center;">
+    <img src="img/Inmarsat-STD-C/Skytale-C SDR# Setup.png" alt="Skytale-C SDR# Setup" style="width: 100%; height: auto; align-content:center;">
     <figcaption style="text-align: center;"><i>Skytale-C SDR# Setup</i></figcaption>
 </figure>
 
@@ -65,21 +65,21 @@ background: ''
 <p style="text-align:justify;">It's possible to decode all the STD-C channels simultaneously and there are a few ways to do it but using SDR++ built-in audio routing method is by far the most efficient use of hardware. First <a href="https://bitbucket.org/scytalec/scytalec/downloads/">Skytale-C and Skytale-C Quick UI</a> need to be downloaded separately. Both can be downloaded for this link. Then open SDR++, go to the "Module Manager" tab and select the "Radio" option from the dropdown menu, give it a unique name such as CH1, and click on plus sign to add it.</p>
 
 <figure>
-    <img src="img\Inmarsat-STD-C\SDR++ Radio Setup.png" alt="SDR++ Radio Setup" style="width: 100%; height: auto; align-content:center;">
+    <img src="img/Inmarsat-STD-C/SDR++ Radio Setup.png" alt="SDR++ Radio Setup" style="width: 100%; height: auto; align-content:center;">
     <figcaption style="text-align: center;"><i>SDR++ Radio Setup</i></figcaption>
 </figure>
 
 <p style="text-align:justify;">Then go to the "Sinks" tab and select the newly created VFO, select "Network" from the first dropdown menu, type in localhost IP(127.0.0.1) in the first field, and type in a unique port number on the second field. The "Protocol" need to be set as TCP. Finally, click on the "Start" button to start the stream. This will start streaming the IQ data through that TCP port to the Skytale-C.</p>
 
 <figure>
-    <img src="img\Inmarsat-STD-C\SDR++ Sinks Setup.png" alt="SDR++ Sinks Setup" style="width: 100%; height: auto; align-content:center;">
+    <img src="img/Inmarsat-STD-C/SDR++ Sinks Setup.png" alt="SDR++ Sinks Setup" style="width: 100%; height: auto; align-content:center;">
     <figcaption style="text-align: center;"><i>SDR++ Sinks Setup</i></figcaption>
 </figure>
 
 <p style="text-align:justify;">Then click on that newly created VFO and tune it to the first SDT-C channel. This process needs to be done for all available channels.</p>
 
 <figure>
-    <img src="img\Inmarsat-STD-C\LES-Channels.png" alt="LES-Channels" style="width: 100%; height: auto; align-content:center;">
+    <img src="img/Inmarsat-STD-C/LES-Channels.png" alt="LES-Channels" style="width: 100%; height: auto; align-content:center;">
     <figcaption style="text-align: center;"><i>LES-Channels</i></figcaption>
 </figure>
 <br>
@@ -92,7 +92,7 @@ background: ''
 <p style="text-align:justify;">Then, extract the Skytale-C Quick UI archive and open the Quick UI software. On the "Sources" tab type in the port numbers previously configured in the "Destination UDP" section in the Skytale-C. Optionally "Log Messages" is available to save the decoded messages to a text file. Finally, Click on the blue play button and it will start populating with messages from all STD-C channels. Connected channel IDs can be seen on the top field.</p>
 
 <figure>
-    <img src="img\Inmarsat-STD-C\STD-C.png" alt="STD-C Interface" style="width: 100%; height: auto; align-content:center;">
+    <img src="img/Inmarsat-STD-C/STD-C.png" alt="STD-C Interface" style="width: 100%; height: auto; align-content:center;">
     <figcaption style="text-align: center;"><i>STD-C Interface</i></figcaption>
 </figure>
 <br>
