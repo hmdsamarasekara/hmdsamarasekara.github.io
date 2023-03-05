@@ -56,8 +56,8 @@ background: '/img/Inmarsat-STD-C/STD-C_Background.jpg'
 </b></p>
 
 <figure>
-    <img src="/img/Inmarsat-STD-C/Skytale-C SDR# Setup.png" alt="Skytale-C SDR# Setup" style="width: 100%; height: auto; align-content:center;">
-    <figcaption style="text-align: center;"><i>Skytale-C SDR# Setup</i></figcaption>
+    <img src="/img/Inmarsat-STD-C/Skytale-C-SDR#-Setup.png" alt="Skytale-C SDR# Setup" style="width: 100%; height: auto; align-content:center;">
+    <figcaption style="text-align: center;"><i>Skytale-C SDR# Configuration</i></figcaption>
 </figure>
 
 <h4 style="text-align:left;">Decoding Multiple Channels Simultaneously</h4>
@@ -73,23 +73,34 @@ background: '/img/Inmarsat-STD-C/STD-C_Background.jpg'
 
 <figure>
     <img src="/img/Inmarsat-STD-C/SDR++ Sinks Setup.png" alt="SDR++ Sinks Setup" style="width: 100%; height: auto; align-content:center;">
-    <figcaption style="text-align: center;"><i>SDR++ Sinks Setup</i></figcaption>
+    <figcaption style="text-align: center;"><i>SDR++ Sinks Configuration</i></figcaption>
 </figure>
 
 <p style="text-align:justify;">Then click on that newly created VFO and tune it to the first SDT-C channel. This process needs to be done for all available channels.</p>
 
 <figure>
     <img src="/img/Inmarsat-STD-C/LES-Channels.png" alt="LES-Channels" style="width: 100%; height: auto; align-content:center;">
-    <figcaption style="text-align: center;"><i>LES-Channels</i></figcaption>
+    <figcaption style="text-align: center;"><i>It Should look like this</i></figcaption>
 </figure>
 <br>
 
 <p style="text-align:justify;">Extract the Skytale-C archive inside a new folder and rename it to the same name as the first VFO. Open Skytale-C, On the "Source" tab, click on the "TCP" switch, type in the localhost IP(127.0.0.1) and the port number for the first VFO. This will allow the Skytale-C to connect to the IQ stream from the SDR++.</p>
-<br>
 
 <p style="text-align:justify;">Then on the "Destination UDP" again type in the localhost IP(127.0.0.1) and a unique port. Also, make sure the "Transmit" check box is selected as well. This configuration will send the decoded messages through the UDP port over to the Skytale-C Quick UI interface. Finally, Click on the blue play button to start decoding. The same process needs to be done for all VFOs.</p>
 
+<figure>
+    <img src="/img/Inmarsat-STD-C/Skytale-C-Setup.png" alt="Skytale-C-Setup" style="width: 100%; height: auto; align-content:center;">
+    <figcaption style="text-align: center;"><i>Skytale-C Configuration</i></figcaption>
+</figure>
+<br>
+
 <p style="text-align:justify;">Then, extract the Skytale-C Quick UI archive and open the Quick UI software. On the "Sources" tab type in the port numbers previously configured in the "Destination UDP" section in the Skytale-C. Optionally "Log Messages" is available to save the decoded messages to a text file. Finally, Click on the blue play button and it will start populating with messages from all STD-C channels. Connected channel IDs can be seen on the top field.</p>
+
+<figure>
+    <img src="/img/Inmarsat-STD-C/Skytale-C-Quick-UI-Setup.png" alt="Skytale-C Quick UI Setup" style="width: 100%; height: auto; align-content:center;">
+    <figcaption style="text-align: center;"><i>Skytale-C Quick UI Configuration</i></figcaption>
+</figure>
+<br>
 
 <figure>
     <img src="/img/Inmarsat-STD-C/STD-C.png" alt="STD-C Interface" style="width: 100%; height: auto; align-content:center;">
