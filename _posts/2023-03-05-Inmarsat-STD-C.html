@@ -8,7 +8,7 @@ background: '/img/Inmarsat-STD-C/STD-C_Background.jpg'
 <h2 style="text-align:left;">Introduction</h2>
 <br>
 
-<p style="text-align:justify;">As I mentioned in my previous post  "Inmarsat AERO ACARS Reception" INMARSAT is a geostationary satellite communication service provider widespread among aviation and maritime industries. Their STD-C service is widely used in the marine sector to send text, emails, or data messages. These signals are transmitted in the L-Band which is 1.5Ghz and the exact frequencies depend on the satellite you have access to in your region.</p>
+<p style="text-align:justify;">As I mentioned in my previous post  "Inmarsat AERO ACARS Reception" INMARSAT is a geostationary satellite communication service provider widespread among aviation and maritime industries. Their STD-C service is widely used in the marine sector to send text, emails, or data messages. These signals are transmitted in the L-Band which is around 1.5Ghz and the exact frequencies depend on the satellite you have access to in your region.</p>
 
 <figure>
     <img src="/img/Inmarsat-ACARS/Inmarsat coverage.jpg" alt="Inmarsat Coverage" style="width: 100%; height: auto; align-content:center;">
@@ -31,85 +31,79 @@ background: '/img/Inmarsat-STD-C/STD-C_Background.jpg'
     <li style="list-style:square;">Fleet NET	- Commercial text messaging service</li>
 </ul>
 
-<p style="text-align:justify;">The second one is the LES (Land Earth Station) Channels and which are used to send messages to specific ships or vessels from ground stations (Ship to Shore), from one ship to another (Ship to Ship), or for the Ship Security Alert System (SSAS).
+<p style="text-align:justify;">The second one is the LES (Land Earth Station) Channels and which are used to send messages to or from specific ships/vessels from ground stations (Ship to Shore), from one ship to another (Ship to Ship), or for the Ship Security Alert System (SSAS).
 </p>
 
-<p style="text-align:justify;">It's worth mentioning all these channels are 1200bps and more information can be found on the <a href="https://www.sigidwiki.com/wiki/Inmarsat-C_TDM/">Sigiwiki</a> page.
+<p style="text-align:justify;">It's worth mentioning all these channels are 1200bps and more information on them can be found on the <a href="https://www.sigidwiki.com/wiki/Inmarsat-C_TDM/">Sigiwiki</a> page.
 </p>
 
 <h4 style="text-align:left;">Antenna Setup</h4>
 <br>
 
-<p style="text-align:justify;">STD-C channels are relatively strong and therefore easier to receive with modest hardware. "RTL-SDR Blog's L-BAND Patch Antenna" is a great choice, easy to deploy and can run off of the bias-t current from a suitable SDR and it can be left to run 24x7 outside since it is properly weather shielded. Better results can be achieved by using a small dish and an L-Band helical feed. Additionally using an L-Band filtered LNA unit such as Nooelec's Sawbird IO & Sawbird+IO will further improve reception.</p>
+<p style="text-align:justify;">STD-C channels are relatively strong and therefore easier to receive with modest hardware. "RTL-SDR Blog's L-BAND Patch Antenna" is a great choice, easy to deploy and can run off of the bias-t current from a suitable SDR and it can be left to run 24x7 outside since it is properly weather shielded. Better results can be achieved by using a small dish and an L-Band helical feed. Additionally using an L-Band filtered LNA unit such as Nooelec's Sawbird IO or Sawbird+IO will further improve reception.</p>
 
 <figure>
     <img src="/img/Inmarsat-STD-C/Antenna-Setup.jpg" alt="Antenna Setup" style="width: 100%; height: auto; align-content:center;">
     <figcaption style="text-align: center;"><i>Dish Setup or L-Band Patch</i></figcaption>
 </figure>
 
-<p style="text-align:justify;"><b>Note: See my previous post about "Inmarsat AERO ACARS Reception" for more information.
+<p style="text-align:justify;"><b>Note: See my previous post "Inmarsat AERO ACARS Reception" for more information about antenna configuration.
 </b></p>
 
 <h4 style="text-align:left;">Software Setup</h4>
 <br>
 
-<p style="text-align:justify;">There are quite a few software choices out there when it comes to deciding STD-C but most of them are not open-sourced and paid software. Skytale-C by microp11 is great free software that works on par with any other paid alternative, is easy to set up, and comes bundled with the SDRSharp community package.</p>
+<p style="text-align:justify;">There are quite a few software choices out there when it comes to deciding STD-C, but most of them are not open-sourced and paid software. Skytale-C by microp11 is great free software that works on par with any other paid alternative, is easy to set up, and comes preloaded with the SDRSharp community package.</p>
 
 <img src="/img/Inmarsat-STD-C/Skytale-C-SDRSharp-Setup.png" alt="Skytale-C-SDRSharp-Setup" style="width: 40%; height: auto; float: left; padding-right:50px;">
 
-<p style="text-align:justify;">Just tune in to any STD-C channel, set the bandwidth to 4KHz, open the Skytale-C from the plugins menu, and click on the "Enabled" and "Auto Tracking" checkboxes. It will say "Locked" on the top right corner when it properly locked on to the signal and the constellation window will show it too. Then it will start decoding SDT-C messages immediately, Click on the "Quick UI" button will open a new window, and there you can see all decoded messages.</p>
+<p style="text-align:justify;">Download <a href="https://airspy.com/?ddownload=5544/">SDRSharp community package</a>, tune in to any STD-C channel, set the bandwidth to 4KHz, open the Skytale-C from the plugins menu, and click on the "Enabled" and "Auto Tracking" checkboxes. It will say "Locked" on the top right corner when it properly locked on to the signal and the constellation window will show it too. Then it will start decoding SDT-C messages immediately, Then click on the "Quick UI" button will open a new window, and there you can see all decoded messages.</p>
 <br>
 
 <p style="text-align:justify;"><b>Note: microp11 has a excellent youtube playlist explaining the software setup and features.
 </b></p>
 
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/videoseries?list=PLk83tyATRBZC1KNG00BTIB7GomjpekWzk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br>
 
 <h4 style="text-align:left;">Decoding Multiple Channels Simultaneously</h4>
 <br>
 
-<p style="text-align:justify;">It's possible to decode all the STD-C channels simultaneously and there are a few ways to do it but using SDR++ built-in audio routing method is by far the most efficient use of hardware. Although advanced SDR is needed because RTL-SDR type devices simply do not have the bandwidth to fit all STD-C channels. I've used an Airspy-R2 for this demonstration. First <a href="https://bitbucket.org/scytalec/scytalec/downloads/">Skytale-C and Skytale-C Quick UI</a> need to be downloaded separately. Both can be downloaded for this link. Then open SDR++, go to the "Module Manager" tab and select the "Radio" option from the dropdown menu, give it a unique name such as CH1, and click on plus sign to add it.</p>
+<p style="text-align:justify;">It's possible to decode all the STD-C channels simultaneously and there are a few ways to do it, but using SDR++ built-in audio routing method is by far the most efficient use of computer resources. Although advanced SDR is needed because RTL-SDR type devices simply do not have the bandwidth to fit all STD-C channels. I've used an Airspy-R2 for this demonstration.</p>
 
 <img src="/img/Inmarsat-STD-C/SDR++ Radio Setup.png" alt="SDR++ Radio Setup" style="width: 40%; height: auto; float: left; padding-right:50px;">
 
-<p style="text-align:justify;">First <a href="https://bitbucket.org/scytalec/scytalec/downloads/">Skytale-C and Skytale-C Quick UI</a> need to be downloaded separately. Both can be downloaded for this link. Then open SDR++, go to the "Module Manager" tab and select the "Radio" option from the dropdown menu, give it a unique name such as CH1, and click on plus sign to add it.</p>
+<p style="text-align:justify;">First <a href="https://bitbucket.org/scytalec/scytalec/downloads/">Skytale-C and Skytale-C Quick UI</a> need to be downloaded separately. First download and open <a href="https://www.sdrpp.org/">SDR++</a>, go to the "Module Manager" tab and select the "Radio" option from the dropdown menu, give it a unique name such as CH01, and click on plus sign to add it. A new VFO will apear on the spectrum window, click on the VFO and tune it to the first SDT-C channel.</p>
 
 <img src="/img/Inmarsat-STD-C/SDR++ Sinks Setup.png" alt="SDR++ Sinks Setup" style="width: 40%; height: auto; float: left; padding-right:50px;">
 
 <p style="text-align:justify;">Then go to the "Sinks" tab and select the newly created VFO, select "Network" from the first dropdown menu, type in localhost IP(127.0.0.1) in the first field, and type in a unique port number on the second field. The "Protocol" need to be set as TCP. Finally, click on the "Start" button to start the stream. This will start streaming the IQ data through that TCP port to the Skytale-C.</p>
 
-<p style="text-align:justify;">Then click on that newly created VFO and tune it to the first SDT-C channel. This process needs to be done for all available channels.</p>
+<p style="text-align:justify;">This process needs to be done for all available channels. See the figure below.</p>
 
 <figure>
     <img src="/img/Inmarsat-STD-C/LES-Channels.png" alt="LES-Channels" style="width: 100%; height: auto; align-content:center;">
     <figcaption style="text-align: center;"><i>It Should Look Like This</i></figcaption>
 </figure>
 
-<img src="/img/Inmarsat-STD-C/Skytale-C-Setup.png" alt="Skytale-C-Setup" style="width: 35%; height: auto; float: left; padding-right:50px; padding: top 20px;">
+<img src="/img/Inmarsat-STD-C/Skytale-C-Setup.png" alt="Skytale-C-Setup" style="width: 40%; height: auto; float: left; padding-right:50px; padding: top 20px;">
 
-<p style="text-align:justify;">Extract the Skytale-C archive inside a new folder and rename it to the same name as the first VFO. Open Skytale-C, On the "Source" tab, click on the "TCP" switch, type in the localhost IP(127.0.0.1) and the port number for the first VFO. This will allow the Skytale-C to connect to the IQ stream from the SDR++.</p>
+<p style="text-align:justify;">Then extract the Skytale-C archive inside a new folder and rename it to the same name as the first VFO. Open Skytale-C, On the "Source" tab, click on the "TCP" switch, type in the localhost IP(127.0.0.1) and the port number used for the first VFO. This will allow the Skytale-C to connect to the IQ stream from the SDR++.</p>
 
-<p style="text-align:justify;">Then on the "Destination UDP" again type in the localhost IP(127.0.0.1) and a unique port. Also, make sure the "Transmit" check box is selected as well. This configuration will send the decoded messages through the UDP port over to the Skytale-C Quick UI interface. Finally, Click on the blue play button to start decoding. The same process needs to be done for all VFOs.</p>
+<p style="text-align:justify;">Then on the "Destination UDP" section again type in the localhost IP(127.0.0.1) and a unique port. Also, make sure the "Transmit" check box is selected as well. This configuration will send the decoded messages through the UDP port over to the Skytale-C Quick UI interface. Finally, Click on the blue play button to start decoding. The same process needs to be done for all VFOs.</p>
 
 <p style="text-align:center;"><img src="/img/Inmarsat-STD-C/Folder Structure.png" alt="Folder Structure" style="width: 40%; height: auto;"></p>
 
 <p style="text-align:justify;"><i>Creating a Folder Structure Like This will Help Identify each Skytale-C Instance.</i></p>
 
-<img src="/img/Inmarsat-STD-C/Skytale-C-Quick-UI-Setup.png" alt="Skytale-C Quick UI Setup" style="width: 35%; height: auto; float: left; padding-right:50px;">
+<img src="/img/Inmarsat-STD-C/Skytale-C-Quick-UI-Setup.png" alt="Skytale-C Quick UI Setup" style="width: 40%; height: auto; float: left; padding-right:50px; padding-bottom:50px;">
 
-<p style="text-align:justify;">Then, extract the Skytale-C Quick UI archive and open the Quick UI software. On the "Sources" tab type in the port numbers previously configured in the "Destination UDP" section in the Skytale-C. Optionally "Log Messages" is available to save the decoded messages to a text file. Finally, Click on the blue play button and it will start populating with messages from all STD-C channels. Connected channel IDs can be seen on the top field.</p>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+<p style="text-align:justify;">Then, extract the Skytale-C Quick UI archive and open the Quick UI App. On the "Sources" tab type in the port numbers previously configured in the "Destination UDP" section on the Skytale-C. Also "Log Messages" option is available to save the decoded messages to a text file. Finally, Click on the blue play button and it will start receiving decoded messages from Skytale-C. Connected STD-C channel IDs can be seen on the top field.</p>
 <br>
 
 <h4 style="text-align:left;">Final Thoughts...</h4>
 
-<p style="text-align:justify;">If everything is configured correctly you should see Skytale-C Quick UI populating with messages soon. I had access to 11 STD-C channels in the IOR region(10 LES channels and the NCS channel). I was able to decode all LES channels simultaneously but the NCS channel was too far apart from the LES channels so I couldn't get it to work. Maybe It's possible with a more advanced SDR like a Hackrf or a PlutoSDR, where more sample rate and more instantaneous bandwidth are present.</p>
+<p style="text-align:justify;">If everything is configured correctly you should see Skytale-C Quick UI populating with messages soon. I had access to 11 STD-C channels in the IOR region(The NCS channel and 10 LES channels). I was able to decode all LES channels simultaneously but the NCS channel was too far apart from the LES channels and I couldn't get it to work with the rest. Maybe It's possible with a more advanced SDR like a Hackrf or a PlutoSDR, where more sample rate and more instantaneous bandwidth are present.</p>
 
 <figure>
     <img src="/img/Inmarsat-STD-C/Multiple Skytale Instances.png" alt="Multiple Skytale Instances" style="width: 100%; height: auto; align-content:center;">
