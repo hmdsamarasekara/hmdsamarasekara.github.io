@@ -1,0 +1,38 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span>📻</span>
+          <span>Noise Floor Nomad</span>
+        </div>
+        <p>Documenting practical ham radio, SDR, and satellite reception experiments from imperfect setups and real RF environments.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Navigation</h4>
+        <ul>
+          {% for link in site.theme_settings.nav_links %}
+            <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul>
+          <li>Callsign: <a href="{{ site.theme_settings.qrz_url }}" target="_blank" rel="noopener">{{ site.theme_settings.callsign }}</a></li>
+          <li>QRZ: <a href="{{ site.theme_settings.qrz_url }}" target="_blank" rel="noopener">qrz.com/db/{{ site.theme_settings.callsign }}</a></li>
+          {% if site.theme_settings.github %}
+            <li>GitHub: <a href="https://github.com/{{ site.theme_settings.github }}" target="_blank" rel="noopener">@{{ site.theme_settings.github }}</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p class="copyright">&copy; {{ site.time | date: '%Y' }} {{ site.theme_settings.callsign }} | {{ site.title }}</p>
+      <p class="footer-quote">"In the noise, we find signals"</p>
+    </div>
+  </div>
+</footer>
