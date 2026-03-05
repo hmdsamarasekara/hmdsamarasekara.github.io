@@ -1,4 +1,4 @@
-'''---
+---
 layout: post
 title: "UHF Satcom Database"
 date: 2025-03-06 12:00:00 +0530
@@ -209,4 +209,3 @@ document.getElementById('searchBox').addEventListener('input', function(e) {
 - **FltSatCom F8 (125.7°W)** has a very wide 575 kHz channel at 262.3 MHz
 
 *Last updated: March 2025*
-'''
