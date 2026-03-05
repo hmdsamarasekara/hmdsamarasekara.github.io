@@ -1,0 +1,58 @@
+---
+layout: default
+title: Frequency Bands
+permalink: /categories/
+---
+
+<div class="container">
+  <div class="post-hero" style="margin-bottom: 2rem;">
+    <h1 class="post-title">Frequency Bands</h1>
+    <p class="post-subtitle">Browse transmissions by category</p>
+  </div>
+
+  {% assign sorted_categories = site.categories | sort %}
+  {% for category in sorted_categories %}
+  <section id="{{ category[0] | slugify }}" style="margin-bottom: 3rem;">
+    <h2 style="color: var(--accent-primary); margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem;">
+      <span style="font-size: 1.5rem;">📡</span>
+      {{ category[0] }}
+      <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: normal;">({{ category[1] | size }} posts)</span>
+    </h2>
+
+    <div class="posts-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));">
+      {% for post in category[1] %}
+      <article class="post-card">
+        <div class="post-card-meta">
+          <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%b %d, %Y" }}
+          </time>
+        </div>
+
+        <h3 class="post-card-title" style="font-size: 1.1rem;">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h3>
+
+        <div class="post-card-footer" style="margin-top: 1rem;">
+          <span class="reading-time" style="font-size: 0.8rem;">
+            {% assign words = post.content | number_of_words %}
+            {% if words < 360 %}
+              1 min
+            {% else %}
+              {{ words | divided_by: 180 }} mins
+            {% endif %}
+          </span>
+          <a href="{{ post.url | relative_url }}" class="read-more" style="font-size: 0.85rem;">Read →</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+
+  {% if sorted_categories.size == 0 %}
+  <div style="text-align: center; padding: 4rem 0; color: var(--text-muted);">
+    <p style="font-size: 1.25rem; margin-bottom: 1rem;">No categories found yet.</p>
+    <p>Start adding categories to your posts to organize them here!</p>
+  </div>
+  {% endif %}
+</div>
