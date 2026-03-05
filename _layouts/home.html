@@ -1,0 +1,109 @@
+---
+layout: default
+---
+
+<div class="hero">
+    <div class="hero-content">
+        <div class="hero-icon">
+            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Noise Floor Nomad" class="site-logo-img">
+        </div>
+
+        <h1 class="hero-title">{{ site.title }}</h1>
+
+        <!-- Spectrum Analyzer Animation -->
+        <div class="spectrum-container">
+            <div class="spectrum-display">
+                <div class="spectrum-line"></div>
+                <div class="spectrum-bars">
+                    <div class="bar" style="--height: 20%; --delay: 0s"></div>
+                    <div class="bar" style="--height: 45%; --delay: 0.1s"></div>
+                    <div class="bar" style="--height: 80%; --delay: 0.2s"></div>
+                    <div class="bar" style="--height: 60%; --delay: 0.3s"></div>
+                    <div class="bar" style="--height: 90%; --delay: 0.4s"></div>
+                    <div class="bar" style="--height: 40%; --delay: 0.5s"></div>
+                    <div class="bar" style="--height: 70%; --delay: 0.6s"></div>
+                    <div class="bar" style="--height: 30%; --delay: 0.7s"></div>
+                    <div class="bar" style="--height: 85%; --delay: 0.8s"></div>
+                    <div class="bar" style="--height: 50%; --delay: 0.9s"></div>
+                    <div class="bar" style="--height: 65%; --delay: 1.0s"></div>
+                    <div class="bar" style="--height: 35%; --delay: 1.1s"></div>
+                    <div class="bar" style="--height: 75%; --delay: 1.2s"></div>
+                    <div class="bar" style="--height: 55%; --delay: 1.3s"></div>
+                    <div class="bar" style="--height: 95%; --delay: 1.4s"></div>
+                    <div class="bar" style="--height: 25%; --delay: 1.5s"></div>
+                    <div class="bar" style="--height: 60%; --delay: 1.6s"></div>
+                    <div class="bar" style="--height: 85%; --delay: 1.7s"></div>
+                    <div class="bar" style="--height: 40%; --delay: 1.8s"></div>
+                    <div class="bar" style="--height: 70%; --delay: 1.9s"></div>
+                </div>
+                <div class="spectrum-grid"></div>
+                <div class="spectrum-labels">
+                    <span>0</span>
+                    <span>50</span>
+                    <span>100</span>
+                    <span>150</span>
+                    <span>200</span>
+                    <span>250</span>
+                    <span>300</span>
+                </div>
+            </div>
+            <div class="spectrum-info">
+                <span class="freq-range">0.0 - 300.0 MHz</span>
+                <span class="mode">FFT Spectrum</span>
+            </div>
+        </div>
+
+        <p class="hero-subtitle">{{ site.description }}</p>
+    </div>
+</div>
+
+<div class="container">
+    <section class="recent-transmissions">
+        <div class="section-header">
+            <h2 class="section-title">
+                <span class="title-icon">📡</span>
+                Recent Posts
+            </h2>
+            <a href="/posts/" class="view-all">View All →</a>
+        </div>
+
+        <div class="posts-grid">
+            {% for post in site.posts limit:6 %}
+            <article class="post-card">
+                <div class="post-card-meta">
+                    <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+                        {{ post.date | date: "%b %d, %Y" }}
+                    </time>
+                    {% if post.categories %}
+                    <span class="post-category">{{ post.categories[0] }}</span>
+                    {% endif %}
+                </div>
+
+                <h3 class="post-card-title">
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h3>
+
+                {% if post.excerpt %}
+                <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                {% endif %}
+
+                <div class="post-card-footer">
+                    <span class="reading-time">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        {% assign words = post.content | number_of_words %}
+                        {% if words < 360 %}
+                            1 min read
+                        {% else %}
+                            {{ words | divided_by: 180 }} mins read
+                        {% endif %}
+                    </span>
+                    <a href="{{ post.url | relative_url }}" class="read-more">Read →</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </section>
+</div>
