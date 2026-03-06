@@ -4,7 +4,7 @@ title: "UHF Satcom Database"
 date: 2026-03-01 12:00:00 +0530
 categories: [UHF Satcom]
 tags: [uhf, satcom, military, database, reference]
-excerpt: "Comprehensive database of Military Satellite Communications in the 240-270 MHz range"
+excerpt: "Comprehensive database of Military Satellite Communications"
 ---
 
 <style>
@@ -209,3 +209,4 @@ document.getElementById('searchBox').addEventListener('input', function(e) {
 - **FltSatCom F8 (125.7°W)** has a very wide 575 kHz channel at 262.3 MHz
 
 *Last updated: March 2026*
+
