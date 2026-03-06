@@ -2,10 +2,9 @@
 layout: post
 title: "Complete Satellite Reception Guide from Sri Lanka"
 date: 2026-03-07 12:00:00 +0530
-author: A65KJ
-categories: [satellite, tv-reception, sri-lanka]
-tags: [satellite-tv, fta, c-band, ku-band]
-description: "Comprehensive database of TV satellites receivable from Sri Lanka"
+categories: [Satellite TV]
+tags: [satellite, tv-reception, fta, c-band, ku-band, sri-lanka, card-sharing]
+excerpt: "Comprehensive database of TV satellites receivable from Sri Lanka with orbital positions and server compatibility"
 ---
 
 # 🛰️ Complete Satellite Reception Guide from Sri Lanka
@@ -587,3 +586,4 @@ This database is based on my personal reception experiments from **Colombo, Sri 
 
 
 *73 de A65KJ* 📡
+
