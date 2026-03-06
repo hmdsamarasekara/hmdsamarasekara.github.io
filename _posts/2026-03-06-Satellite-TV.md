@@ -31,6 +31,7 @@ Living in Sri Lanka puts us in a unique position to receive signals from a wide 
 ## 🌏 Eastern Arc (100°E - 138°E)
 
 ### [Telstar 18 Vantage](https://www.lyngsat.com/Telstar-18-Vantage.html) @ 138.0°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 138.0°E |
@@ -45,6 +46,7 @@ Living in Sri Lanka puts us in a unique position to receive signals from a wide 
 ---
 
 ### [Apstar 6C](https://www.lyngsat.com/Apstar-6C.html) @ 134.0°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 134.0°E |
@@ -58,6 +60,7 @@ Living in Sri Lanka puts us in a unique position to receive signals from a wide 
 ---
 
 ### [LaoSat 1](https://www.lyngsat.com/LaoSat-1.html) @ 128.5°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 128.5°E |
@@ -71,6 +74,7 @@ Living in Sri Lanka puts us in a unique position to receive signals from a wide 
 ---
 
 ### [ChinaSat 6D](https://www.lyngsat.com/ChinaSat-6D.html) @ 125.0°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 125.0°E |
@@ -84,6 +88,7 @@ Living in Sri Lanka puts us in a unique position to receive signals from a wide 
 ---
 
 ### [AsiaSat 9](https://www.lyngsat.com/AsiaSat-9.html) @ 122.0°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 122.0°E |
@@ -97,6 +102,7 @@ Living in Sri Lanka puts us in a unique position to receive signals from a wide 
 ---
 
 ### [AsiaSat 6 / Thaicom 7](https://www.lyngsat.com/AsiaSat-6.html) @ 120.0°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 120.0°E |
@@ -110,6 +116,7 @@ Living in Sri Lanka puts us in a unique position to receive signals from a wide 
 ---
 
 ### [Thaicom 4 / BBH 1](https://www.lyngsat.com/Thaicom-4.html) @ 119.3°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 119.3°E |
@@ -123,6 +130,7 @@ Living in Sri Lanka puts us in a unique position to receive signals from a wide 
 ---
 
 ### [ChinaSat 6E](https://www.lyngsat.com/ChinaSat-6E.html) @ 115.5°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 115.5°E |
@@ -136,6 +144,7 @@ Living in Sri Lanka puts us in a unique position to receive signals from a wide 
 ---
 
 ### [ChinaSat 10](https://www.lyngsat.com/ChinaSat-10.html) @ 110.5°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 110.5°E |
@@ -149,6 +158,7 @@ Living in Sri Lanka puts us in a unique position to receive signals from a wide 
 ---
 
 ### [SES 7 / Telkom 4](https://www.lyngsat.com/SES-7.html) @ 108.1°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 108.1°E |
@@ -166,6 +176,7 @@ Living in Sri Lanka puts us in a unique position to receive signals from a wide 
 ## 🎯 Prime South Asian Arc (90°E - 105°E)
 
 ### [AsiaSat 7](https://www.lyngsat.com/AsiaSat-7.html) @ 105.5°E ⭐
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 105.5°E |
@@ -188,6 +199,7 @@ Many channels are FTA, while others work with **Forever IKS server**. This is a 
 ---
 
 ### [Express AMU3](https://www.lyngsat.com/Express-AMU3.html) @ 103.0°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 103.0°E |
@@ -201,6 +213,7 @@ Many channels are FTA, while others work with **Forever IKS server**. This is a 
 ---
 
 ### [AsiaSat 5](https://www.lyngsat.com/AsiaSat-5.html) @ 100.5°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 100.5°E |
@@ -214,6 +227,7 @@ Many channels are FTA, while others work with **Forever IKS server**. This is a 
 ---
 
 ### [SES 8 / SES 12](https://www.lyngsat.com/SES-8.html) @ 95.0°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 95.0°E |
@@ -228,6 +242,7 @@ Many channels are FTA, while others work with **Forever IKS server**. This is a 
 ---
 
 ### [G-Sat 15 / G-Sat 17](https://www.lyngsat.com/G-Sat-15.html) @ 93.5°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 93.5°E |
@@ -242,6 +257,7 @@ Many channels are FTA, while others work with **Forever IKS server**. This is a 
 ---
 
 ### [Measat 3B / Measat 3D](https://www.lyngsat.com/Measat-3B.html) @ 91.5°E ⭐
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 91.5°E |
@@ -256,6 +272,7 @@ Many channels are FTA, while others work with **Forever IKS server**. This is a 
 ---
 
 ### [ST 2](https://www.lyngsat.com/ST-2.html) @ 88.0°E ⭐
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 88.0°E |
@@ -270,6 +287,7 @@ Many channels are FTA, while others work with **Forever IKS server**. This is a 
 ---
 
 ### [G-Sat 10 / G-Sat 24 / G-Sat 30](https://www.lyngsat.com/G-Sat-10.html) @ 83.0°E ⭐
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 83.0°E |
@@ -292,6 +310,7 @@ Being only 3° east of Sri Lanka\\'s longitude, this satellite has excellent ele
 ## 🏠 Central Arc (75°E - 83°E)
 
 ### [Express 80](https://www.lyngsat.com/Express-80.html) @ 80.0°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 80.0°E |
@@ -304,6 +323,7 @@ Being only 3° east of Sri Lanka\\'s longitude, this satellite has excellent ele
 ---
 
 ### [Thaicom 6 / Thaicom 8](https://www.lyngsat.com/Thaicom-6.html) @ 78.5°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 78.5°E |
@@ -319,6 +339,7 @@ Being only 3° east of Sri Lanka\\'s longitude, this satellite has excellent ele
 ---
 
 ### [Apstar 7](https://www.lyngsat.com/Apstar-7.html) @ 76.5°E ⭐
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 76.5°E |
@@ -334,6 +355,7 @@ Being only 3° east of Sri Lanka\\'s longitude, this satellite has excellent ele
 ---
 
 ### [ABS 2 / ABS 2A](https://www.lyngsat.com/ABS-2.html) @ 75.0°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 75.0°E |
@@ -347,6 +369,7 @@ Being only 3° east of Sri Lanka\\'s longitude, this satellite has excellent ele
 ---
 
 ### [G-Sat 18](https://www.lyngsat.com/G-Sat-18.html) @ 74.0°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 74.0°E |
@@ -360,6 +383,7 @@ Being only 3° east of Sri Lanka\\'s longitude, this satellite has excellent ele
 ---
 
 ### [Eutelsat 70B](https://www.lyngsat.com/Eutelsat-70B.html) @ 70.5°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 70.5°E |
@@ -376,6 +400,7 @@ Being only 3° east of Sri Lanka\\'s longitude, this satellite has excellent ele
 ## 🌍 Western Arc (38°E - 68°E)
 
 ### [Intelsat 20 / Intelsat 36](https://www.lyngsat.com/Intelsat-20.html) @ 68.5°E ⭐
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 68.5°E |
@@ -389,6 +414,7 @@ Being only 3° east of Sri Lanka\\'s longitude, this satellite has excellent ele
 ---
 
 ### [Intelsat 17](https://www.lyngsat.com/Intelsat-17.html) @ 66.0°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 66.0°E |
@@ -402,6 +428,7 @@ Being only 3° east of Sri Lanka\\'s longitude, this satellite has excellent ele
 ---
 
 ### [NSS 12](https://www.lyngsat.com/NSS-12.html) @ 57.0°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 57.0°E |
@@ -415,6 +442,7 @@ Being only 3° east of Sri Lanka\\'s longitude, this satellite has excellent ele
 ---
 
 ### [Intelsat 38](https://www.lyngsat.com/Intelsat-38.html) @ 45.0°E ⭐
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 45.0°E |
@@ -435,6 +463,7 @@ Being Ku-band, it requires only a 90cm dish and has excellent signal strength na
 ---
 
 ### [Express AM7](https://www.lyngsat.com/Express-AM7.html) @ 40.0°E
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 40.0°E |
@@ -448,6 +477,7 @@ Being Ku-band, it requires only a 90cm dish and has excellent signal strength na
 ---
 
 ### [Paksat 1R](https://www.lyngsat.com/Paksat-1R.html) @ 38.0°E ⭐
+
 | Parameter | Details |
 |-----------|---------|
 | **Position** | 38.0°E |
@@ -568,5 +598,6 @@ This database is based on my personal reception experiments from **Colombo, Sri 
 - [KingOfSat](https://www.kingofsat.net) - European satellite information
 
 ---
+
 
 *73 de A65KJ* 📡
