@@ -564,7 +564,7 @@ Many channels are FTA, and some encrypted ones work with **Forever IKS**. Essent
 
 **Recommended Receivers:**
 - **HelloBox** - Scam+ server support
-- **Tiger/Starsat** - Forever server support
+- **Tiger/Starsat/Mediastar** - Forever server support
 - **Funcam compatible boxes**
 
 ---
@@ -572,21 +572,6 @@ Many channels are FTA, and some encrypted ones work with **Forever IKS**. Essent
 ## ⚠️ Legal Notice
 
 *Card sharing and IKS (Internet Key Sharing) exist in legal gray areas in many jurisdictions. This guide is for educational purposes only. Please ensure you comply with local laws and service provider terms of service. FTA (Free-to-Air) channels are legal to receive without subscription.*
-
----
-
-## 📝 Updates & Corrections
-
-This database is based on my personal reception experiments from **Colombo, Sri Lanka** using a 1.8m C-band dish and 90cm Ku-band dish. Signal strengths and availability may vary based on:
-- Exact location within Sri Lanka
-- Dish size and quality
-- LNB noise figure
-- Cable quality
-- Weather conditions
-
-**Last Updated:** March 2026  
-**Callsign:** A65KJ  
-**Blog:** [Noise Floor Nomad](https://hmdsamarasekara.github.io)
 
 ---
 
