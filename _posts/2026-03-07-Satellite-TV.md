@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Complete Satellite Reception Guide from Sri Lanka"
-date: 2026-03-07
+date: 2026-03-07 12:00:00 +0530
 author: A65KJ
 categories: [satellite, tv-reception, sri-lanka]
-tags: [satellite-tv, fta, c-band, ku-band, card-sharing, hellobox, tiger, starsat]
-description: "Comprehensive database of 30+ TV satellites receivable from Sri Lanka with orbital positions, FTA availability, encryption status, and card-sharing server compatibility"
+tags: [satellite-tv, fta, c-band, ku-band]
+description: "Comprehensive database of TV satellites receivable from Sri Lanka"
 ---
 
 # 🛰️ Complete Satellite Reception Guide from Sri Lanka
@@ -584,5 +584,6 @@ This database is based on my personal reception experiments from **Colombo, Sri 
 - [KingOfSat](https://www.kingofsat.net) - European satellite information
 
 ---
+
 
 *73 de A65KJ* 📡
