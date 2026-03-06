@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Complete Satellite Reception Guide from Sri Lanka"
-date: 2026-03-06
+date: 2026-03-07
 author: A65KJ
 categories: [satellite, tv-reception, sri-lanka]
 tags: [satellite-tv, fta, c-band, ku-band, card-sharing, hellobox, tiger, starsat]
@@ -13,7 +13,7 @@ description: "Comprehensive database of 30+ TV satellites receivable from Sri La
 *A comprehensive database of geostationary satellites visible from the Pearl of the Indian Ocean*
 
 ![Satellite Arc Visualization](/assets/images/sri_lanka_satellite_arc.png)
-*Geostationary arc visible from Sri Lanka (40°E - 140°E). Color coding: Green = FTA Available, Orange = Encrypted (IKS/CS supported), Blue = Encrypted (No CS available)*
+*Geostationary arc visible from Sri Lanka (38°E - 140°E). Color coding: Green = FTA Available, Orange = Encrypted (IKS/CS supported), Blue = Encrypted (No CS available)*
 
 ## Introduction
 
@@ -21,9 +21,10 @@ Living in Sri Lanka (approximately **7°N, 80°E**) puts us in a unique position
 
 **Key:**
 - ✅ **FTA** = Free-to-air channels available
-- 🔓 **Forever** = Forever IKS server compatible (Tiger/Starsat)
-- 🔓 **Scam+** = Scam+ server compatible (HelloBox)
-- 🔓 **F&S** = Funcam server compatible
+- 🔓 **Forever** = Forever IKS server (Tiger/Starsat/Geant receivers)
+- 🔓 **Scam+** = Scam+ server (HelloBox receivers)
+- 🔓 **Funcam** = Funcam server (Mediastar/Tiger/Starsat receivers)
+- 🔓 **F&S** = Both Forever and Scam+ servers supported
 - 📡 **C-Band** = Requires 1.8m+ dish typically
 - 📡 **Ku-Band** = Receivable on 60cm-90cm dish
 
@@ -156,11 +157,11 @@ Living in Sri Lanka (approximately **7°N, 80°E**) puts us in a unique position
 | **Band** | Ku-Band |
 | **FTA** | ❌ No |
 | **Encryption** | Various |
-| **CS/IKS** | 🔓 F&S Server |
+| **CS/IKS** | 🔓 Funcam |
 | **Provider** | Airtel TV |
 | **Dish Size** | 90cm+ |
 
-**Description:** This Ku-band satellite carries **Airtel TV** services for the Indian subcontinent. While encrypted, it\\'s accessible via **Funcam (F&S) server** on compatible boxes. Good selection of Indian entertainment and sports channels. Being Ku-band, it requires a smaller dish than C-band satellites.
+**Description:** This Ku-band satellite carries **Airtel TV** services for the Indian subcontinent. While encrypted, it's accessible via **Funcam server** on compatible boxes. Good selection of Indian entertainment and sports channels. Being Ku-band, it requires a smaller dish than C-band satellites.
 
 ---
 
@@ -172,7 +173,7 @@ Living in Sri Lanka (approximately **7°N, 80°E**) puts us in a unique position
 | **Position** | 105.5°E |
 | **Band** | C-Band |
 | **FTA** | ✅ Yes |
-| **CS/IKS** | 🔓 Forever Server |
+| **CS/IKS** | 🔓 Forever |
 | **Notable** | Major FTA hub |
 | **Dish Size** | 1.8m+ |
 
@@ -184,7 +185,7 @@ Living in Sri Lanka (approximately **7°N, 80°E**) puts us in a unique position
 - **International news** (CNN, BBC, Al Jazeera)
 - **Religious channels**
 
-Many channels are FTA, while others work with **Forever IKS server**. This is a must-have satellite for any serious satellite enthusiast in Sri Lanka. The C-band signal is strong and stable.
+Many channels are FTA, while others work with **Forever IKS server** on compatible receivers like Tiger, Starsat, and Geant. This is a must-have satellite for any serious satellite enthusiast in Sri Lanka. The C-band signal is strong and stable.
 
 ---
 
@@ -238,7 +239,7 @@ Many channels are FTA, while others work with **Forever IKS server**. This is a 
 | **Provider** | Dish TV India & DD Free Dish |
 | **Dish Size** | C: 1.8m+, Ku: 90cm |
 
-**Description:** Indian national satellites carrying **DD Free Dish** (India\\'s free DTH service) and **Dish TV** encrypted services. Excellent FTA selection including all Doordarshan channels, Indian news, movies, and regional content. The **DD Free Dish** service alone makes this satellite essential. Strong signals on both bands.
+**Description:** Indian national satellites carrying **DD Free Dish** (India's free DTH service) and **Dish TV** encrypted services. Excellent FTA selection including all Doordarshan channels, Indian news, movies, and regional content. The **DD Free Dish** service alone makes this satellite essential. Strong signals on both bands.
 
 ---
 
@@ -248,11 +249,11 @@ Many channels are FTA, while others work with **Forever IKS server**. This is a 
 | **Position** | 91.5°E |
 | **Band** | C/Ku-Band |
 | **FTA** | ❌ No |
-| **CS/IKS** | 🔓 Forever Server |
+| **CS/IKS** | 🔓 Forever |
 | **Provider** | Sun Direct |
 | **Dish Size** | C: 1.8m+, Ku: 90cm |
 
-**Description:** Malaysian satellite that hosts **Sun Direct** DTH service for South India and Sri Lanka. While encrypted, it works with **Forever IKS server**. Excellent for Tamil, Telugu, Malayalam, and Kannada content. The Ku-band signal is particularly strong in Sri Lanka.
+**Description:** Malaysian satellite that hosts **Sun Direct** DTH service for South India and Sri Lanka. While encrypted, it works with **Forever IKS server** on Tiger/Starsat/Geant receivers. Excellent for Tamil, Telugu, Malayalam, and Kannada content. The Ku-band signal is particularly strong in Sri Lanka.
 
 ---
 
@@ -262,11 +263,11 @@ Many channels are FTA, while others work with **Forever IKS server**. This is a 
 | **Position** | 88.0°E |
 | **Band** | C/Ku-Band |
 | **FTA** | ✅ Yes |
-| **CS/IKS** | 🔓 Scam+ Server |
+| **CS/IKS** | 🔓 Scam+ |
 | **Provider** | Videocon D2H |
 | **Dish Size** | C: 1.8m+, Ku: 90cm |
 
-**Description:** Singapore-based satellite carrying **Videocon D2H** services. Has both encrypted (accessible via **Scam+ server** on HelloBox) and some FTA channels. Good mix of Hindi and regional Indian content. Strong signal footprint over Sri Lanka.
+**Description:** Singapore-based satellite carrying **Videocon D2H** services. Has both encrypted (accessible via **Scam+ server** on HelloBox receivers) and some FTA channels. Good mix of Hindi and regional Indian content. Strong signal footprint over Sri Lanka.
 
 ---
 
@@ -276,17 +277,17 @@ Many channels are FTA, while others work with **Forever IKS server**. This is a 
 | **Position** | 83.0°E |
 | **Band** | C/Ku-Band |
 | **FTA** | ❌ No |
-| **CS/IKS** | 🔓 Forever Server |
+| **CS/IKS** | 🔓 Forever |
 | **Provider** | Tata Sky / Tata Play |
 | **Dish Size** | C: 1.8m+, Ku: 90cm |
 
-**Description:** One of the **most important satellites** for premium Indian content! Carries **Tata Sky** (now Tata Play), India\\'s largest DTH platform. Accessible via **Forever IKS server**. Massive channel selection including:
+**Description:** One of the **most important satellites** for premium Indian content! Carries **Tata Sky** (now Tata Play), India's largest DTH platform. Accessible via **Forever IKS server** on compatible receivers. Massive channel selection including:
 - All major Hindi entertainment
 - Premium sports (Star Sports, Sony Sports)
 - International channels
 - HD channels
 
-Being only 3° east of Sri Lanka\\'s longitude, this satellite has excellent elevation and signal strength.
+Being only 3° east of Sri Lanka's longitude, this satellite has excellent elevation and signal strength.
 
 ---
 
@@ -325,12 +326,12 @@ Being only 3° east of Sri Lanka\\'s longitude, this satellite has excellent ele
 | **Position** | 76.5°E |
 | **Band** | C/Ku-Band |
 | **FTA** | ✅ Yes |
-| **CS/IKS** | 🔓 Forever Server |
+| **CS/IKS** | 🔓 Forever |
 | **Provider** | Sky Net (Myanmar) |
 | **Dish Size** | C: 1.8m+, Ku: 90cm |
 | **Notes** | 6ft dish recommended |
 
-**Description:** Important satellite for Myanmar and Southeast Asian content. Carries **Sky Net** DTH service accessible via **Forever IKS**. Also has FTA channels. The 6ft dish recommendation suggests tight beam focus, but content includes Myanmar channels and some international feeds.
+**Description:** Important satellite for Myanmar and Southeast Asian content. Carries **Sky Net** DTH service accessible via **Forever IKS** on Tiger/Starsat/Geant receivers. Also has FTA channels. The 6ft dish recommendation suggests tight beam focus, but content includes Myanmar channels and some international feeds.
 
 ---
 
@@ -370,7 +371,7 @@ Being only 3° east of Sri Lanka\\'s longitude, this satellite has excellent ele
 | **Provider** | Dish TV India |
 | **Dish Size** | 90cm+ |
 
-**Description:** European satellite operator\\'s presence in the Indian Ocean region. Carries some Dish TV India services. Ku-band only.
+**Description:** European satellite operator's presence in the Indian Ocean region. Carries some Dish TV India services. Ku-band only.
 
 ---
 
@@ -382,10 +383,10 @@ Being only 3° east of Sri Lanka\\'s longitude, this satellite has excellent ele
 | **Position** | 68.5°E |
 | **Band** | C-Band |
 | **FTA** | ❌ No |
-| **CS/IKS** | 🔓 Forever Server |
+| **CS/IKS** | 🔓 Forever |
 | **Dish Size** | 1.8m+ |
 
-**Description:** Major satellite for African and Indian Ocean region. While primarily encrypted, accessible via **Forever IKS server**. Carries various international and African channels. Good signal strength in Sri Lanka.
+**Description:** Major satellite for African and Indian Ocean region. While primarily encrypted, accessible via **Forever IKS server** on Tiger/Starsat/Geant receivers. Carries various international and African channels. Good signal strength in Sri Lanka.
 
 ---
 
@@ -421,11 +422,11 @@ Being only 3° east of Sri Lanka\\'s longitude, this satellite has excellent ele
 | **Position** | 45.0°E |
 | **Band** | Ku-Band |
 | **FTA** | ❌ No |
-| **CS/IKS** | 🔓 F&S Server |
+| **CS/IKS** | 🔓 Funcam |
 | **Provider** | Dialog TV (Sri Lanka) |
 | **Dish Size** | 90cm+ |
 
-**Description:** **Sri Lanka\\'s primary DTH satellite!** Intelsat 38 carries **Dialog TV**, the country\\'s largest satellite TV provider. Accessible via **Funcam (F&S) server** on compatible boxes. This is the most important satellite for local content including:
+**Description:** **Sri Lanka's primary DTH satellite!** Intelsat 38 carries **Dialog TV**, the country's largest satellite TV provider. Accessible via **Funcam server** on compatible receivers (Mediastar, Tiger, Starsat with Funcam support). This is the most important satellite for local content including:
 - All local Sri Lankan channels
 - Indian channels
 - International sports
@@ -454,11 +455,11 @@ Being Ku-band, it requires only a 90cm dish and has excellent signal strength na
 | **Position** | 38.0°E |
 | **Band** | C-Band |
 | **FTA** | ✅ Yes |
-| **CS/IKS** | 🔓 Forever Server |
+| **CS/IKS** | 🔓 Forever |
 | **Content** | Pakistani channels |
 | **Dish Size** | 1.8m+ |
 
-**Description:** Pakistan\\'s national satellite and one of the **best sources of FTA content**! Carries extensive Pakistani channel lineup including:
+**Description:** Pakistan's national satellite and one of the **best sources of FTA content**! Carries extensive Pakistani channel lineup including:
 - **PTV** channels
 - **ARY** channels (FTA versions)
 - **Geo** channels (FTA versions)
@@ -466,7 +467,7 @@ Being Ku-band, it requires only a 90cm dish and has excellent signal strength na
 - **Masala TV** (FTA)
 - Numerous news and entertainment channels
 
-Many channels are FTA, and some encrypted ones work with **Forever IKS**. Essential for Urdu/Hindi content enthusiasts. This is the westernmost satellite in the list, requiring a clear western horizon.
+Many channels are FTA, and some encrypted ones work with **Forever IKS** on compatible receivers. Essential for Urdu/Hindi content enthusiasts. This is the westernmost satellite in the list, requiring a clear western horizon.
 
 ---
 
@@ -483,7 +484,7 @@ Many channels are FTA, and some encrypted ones work with **Forever IKS**. Essent
 | [Thaicom 4/BBH 1](https://www.lyngsat.com/Thaicom-4.html) | 119.3°E | C | ❌ | - | Low |
 | [ChinaSat 6E](https://www.lyngsat.com/ChinaSat-6E.html) | 115.5°E | C | ✅ | - | Medium |
 | [ChinaSat 10](https://www.lyngsat.com/ChinaSat-10.html) | 110.5°E | C | ✅ | - | Medium |
-| [SES 7/9/Telkom 4](https://www.lyngsat.com/SES-7.html) | 108.1°E | Ku | ❌ | F&S | High |
+| [SES 7/9/Telkom 4](https://www.lyngsat.com/SES-7.html) | 108.1°E | Ku | ❌ | Funcam | High |
 | [AsiaSat 7](https://www.lyngsat.com/AsiaSat-7.html) ⭐ | 105.5°E | C | ✅ | Forever | **Essential** |
 | [Express AMU3](https://www.lyngsat.com/Express-AMU3.html) | 103.0°E | C | ❌ | - | Low |
 | [AsiaSat 5](https://www.lyngsat.com/AsiaSat-5.html) | 100.5°E | C/Ku | ✅ | - | Medium |
@@ -501,7 +502,7 @@ Many channels are FTA, and some encrypted ones work with **Forever IKS**. Essent
 | [Intelsat 20/36](https://www.lyngsat.com/Intelsat-20.html) ⭐ | 68.5°E | C | ❌ | Forever | High |
 | [Intelsat 17](https://www.lyngsat.com/Intelsat-17.html) | 66.0°E | C | ✅ | - | Medium |
 | [NSS 12](https://www.lyngsat.com/NSS-12.html) | 57.0°E | C/Ku | ❌ | - | Low |
-| [Intelsat 38](https://www.lyngsat.com/Intelsat-38.html) ⭐ | 45.0°E | Ku | ❌ | F&S | **Essential** |
+| [Intelsat 38](https://www.lyngsat.com/Intelsat-38.html) ⭐ | 45.0°E | Ku | ❌ | Funcam | **Essential** |
 | [Express AM7](https://www.lyngsat.com/Express-AM7.html) | 40.0°E | Ku | ✅ | - | Medium |
 | [Paksat 1R](https://www.lyngsat.com/Paksat-1R.html) ⭐ | 38.0°E | C | ✅ | Forever | **Essential** |
 
@@ -510,25 +511,25 @@ Many channels are FTA, and some encrypted ones work with **Forever IKS**. Essent
 ## 🎯 Recommended Setup for Sri Lanka
 
 ### Essential Satellites (Must-Have)
-1. **[Intelsat 38](https://www.lyngsat.com/Intelsat-38.html) @ 45.0°E** - Dialog TV (local content)
-2. **[G-Sat 10/24/30](https://www.lyngsat.com/G-Sat-10.html) @ 83.0°E** - Tata Sky (premium Indian)
-3. **[AsiaSat 7](https://www.lyngsat.com/AsiaSat-7.html) @ 105.5°E** - Major FTA hub
-4. **[G-Sat 15/17](https://www.lyngsat.com/G-Sat-15.html) @ 93.5°E** - DD Free Dish (FTA Indian)
-5. **[Paksat 1R](https://www.lyngsat.com/Paksat-1R.html) @ 38.0°E** - Pakistani FTA
+1. **[Intelsat 38](https://www.lyngsat.com/Intelsat-38.html) @ 45.0°E** - Dialog TV (Funcam server)
+2. **[G-Sat 10/24/30](https://www.lyngsat.com/G-Sat-10.html) @ 83.0°E** - Tata Sky (Forever server)
+3. **[AsiaSat 7](https://www.lyngsat.com/AsiaSat-7.html) @ 105.5°E** - Major FTA hub (Forever server)
+4. **[G-Sat 15/17](https://www.lyngsat.com/G-Sat-15.html) @ 93.5°E** - DD Free Dish (FTA)
+5. **[Paksat 1R](https://www.lyngsat.com/Paksat-1R.html) @ 38.0°E** - Pakistani FTA (Forever server)
 
 ### High Value Additions
-- **[Measat 3B/3D](https://www.lyngsat.com/Measat-3B.html) @ 91.5°E** - Sun Direct (South Indian)
-- **[ST 2](https://www.lyngsat.com/ST-2.html) @ 88.0°E** - Videocon D2H
-- **[Apstar 7](https://www.lyngsat.com/Apstar-7.html) @ 76.5°E** - Sky Net (Myanmar)
-- **[Intelsat 20/36](https://www.lyngsat.com/Intelsat-20.html) @ 68.5°E** - African/International
-- **[SES 7/9](https://www.lyngsat.com/SES-7.html) @ 108.1°E** - Airtel TV
+- **[Measat 3B/3D](https://www.lyngsat.com/Measat-3B.html) @ 91.5°E** - Sun Direct (Forever server)
+- **[ST 2](https://www.lyngsat.com/ST-2.html) @ 88.0°E** - Videocon D2H (Scam+ server)
+- **[Apstar 7](https://www.lyngsat.com/Apstar-7.html) @ 76.5°E** - Sky Net (Forever server)
+- **[Intelsat 20/36](https://www.lyngsat.com/Intelsat-20.html) @ 68.5°E** - African/International (Forever server)
+- **[SES 7/9](https://www.lyngsat.com/SES-7.html) @ 108.1°E** - Airtel TV (Funcam server)
 
 ### Equipment Recommendations
 
 **For Ku-Band (Dialog, Tata Sky, etc.):**
 - 90cm - 1.2m offset dish
 - Universal LNB (9.75/10.6 GHz)
-- HD DVB-S2 receiver with IKS support
+- HD DVB-S2 receiver with server support
 
 **For C-Band (AsiaSat, Paksat, etc.):**
 - 1.8m - 2.4m prime focus dish
@@ -536,9 +537,21 @@ Many channels are FTA, and some encrypted ones work with **Forever IKS**. Essent
 - High-quality coaxial cable (RG6 or better)
 
 **Recommended Receivers:**
-- **HelloBox V5/V6** - Scam+ server support
-- **Tiger/Starsat** - Forever IKS support
+- **HelloBox V5/V6/V8** - Scam+ server support
+- **Tiger/Starsat/Geant** - Forever IKS support
+- **Mediastar** - Funcam server support
 - **Funcam compatible boxes** - For Dialog TV
+
+---
+
+## ⚠️ Important Notes on Card-Sharing Servers
+
+**Server Compatibility:**
+- **Forever IKS**: Works on Tiger, Starsat, Geant, and similar receivers. Supports major satellites like AsiaSat 7, Paksat 1R, Intelsat 20/36, Measat 3B/3D, G-Sat 10/24/30, Apstar 7.
+- **Scam+**: HelloBox specific server. Limited satellite support, primarily ST 2 (Videocon D2H).
+- **Funcam**: Works on Mediastar, some Tiger/Starsat models, and other Gshare-compatible receivers. Supports Dialog TV (Intelsat 38) and Airtel TV (SES 7/9).
+
+**Disclaimer**: Server availability and supported satellites change frequently. This information is based on general knowledge of the satellite reception community and may not reflect current server status. Card-sharing exists in legal gray areas in many jurisdictions. This guide is for educational purposes only.
 
 ---
 
