@@ -1246,9 +1246,6 @@ excerpt: "Complete interactive guide to DSDPlus setup, protocols, and trunk trac
         <p style="color: #6b7280; font-size: 0.875rem;">
             Based on DSDPlus v2.547 Release Notes. Always refer to <a href="https://www.dsdplus.com" style="color: #00f3ff; text-decoration: none;">dsdplus.com</a> for official updates.
         </p>
-        <p style="color: #4b5563; font-size: 0.75rem; margin-top: 1rem;">
-            Compiled from official documentation. Remove -t, -T, -E, -dr, -dh, -mp from old scripts.
-        </p>
     </div>
 </footer>
 
@@ -1641,5 +1638,6 @@ REM Note: CC DSD+ auto-tunes VC FMP24 via TCP`
         });
     });
 </script>
+
 
 
