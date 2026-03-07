@@ -466,7 +466,7 @@ excerpt: "Complete interactive guide to DSDPlus setup, protocols, and trunk trac
 </section>
 
 <!-- Protocols Section -->
-<section id="protocols" style="padding: 5rem 1rem; background: rgba(0,0,0,0.2);">
+<section id="protocols" style="padding: 1rem 1rem; background: rgba(0,0,0,0.2);">
     <div style="max-width: 1200px; margin: 0 auto;">
         <h2 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
             <span class="text-green">〰️</span>
@@ -588,7 +588,7 @@ excerpt: "Complete interactive guide to DSDPlus setup, protocols, and trunk trac
 </section>
 
 <!-- Trunking Section -->
-<section id="trunking" style="padding: 5rem 1rem;">
+<section id="trunking" style="padding: 1rem 1rem;">
     <div style="max-width: 1200px; margin: 0 auto;">
         <h2 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 3rem; display: flex; align-items: center; gap: 1rem;">
             <span class="text-amber">🌐</span>
@@ -664,7 +664,7 @@ excerpt: "Complete interactive guide to DSDPlus setup, protocols, and trunk trac
 </section>
 
 <!-- Configuration Files Section -->
-<section id="config" style="padding: 5rem 1rem; background: rgba(0,0,0,0.2);">
+<section id="config" style="padding: 1rem 1rem; background: rgba(0,0,0,0.2);">
     <div style="max-width: 1200px; margin: 0 auto;">
         <h2 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
             <span class="text-purple">📄</span>
@@ -859,7 +859,7 @@ excerpt: "Complete interactive guide to DSDPlus setup, protocols, and trunk trac
 </section>
 
 <!-- Advanced Features -->
-<section id="advanced" style="padding: 5rem 1rem;">
+<section id="advanced" style="padding: 1rem 1rem;">
     <div style="max-width: 1200px; margin: 0 auto;">
         <h2 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 3rem; display: flex; align-items: center; gap: 1rem;">
             <span class="text-cyan">⚙️</span>
@@ -1095,7 +1095,7 @@ excerpt: "Complete interactive guide to DSDPlus setup, protocols, and trunk trac
 </section>
 
 <!-- FMPx Specific Controls -->
-<section style="padding: 5rem 1rem; background: rgba(0,0,0,0.2);">
+<section style="padding: 1rem 1rem; background: rgba(0,0,0,0.2);">
     <div style="max-width: 1200px; margin: 0 auto;">
         <h2 style="font-size: 1.875rem; font-weight: 700; margin-bottom: 2rem; display: flex; align-items: center; gap: 1rem;">
             <span class="text-green">🎛️</span>
@@ -1204,7 +1204,7 @@ excerpt: "Complete interactive guide to DSDPlus setup, protocols, and trunk trac
 </section>
 
 <!-- System Configuration Generator -->
-<section style="padding: 5rem 1rem; background: rgba(0,0,0,0.4);">
+<section style="padding: 1rem 1rem; background: rgba(0,0,0,0.4);">
     <div style="max-width: 800px; margin: 0 auto;">
         <h2 style="font-size: 1.875rem; font-weight: 700; margin-bottom: 2rem; text-align: center;">System Configuration Generator</h2>
         <div class="glass-panel">
@@ -1641,4 +1641,5 @@ REM Note: CC DSD+ auto-tunes VC FMP24 via TCP`
         });
     });
 </script>
+
 
