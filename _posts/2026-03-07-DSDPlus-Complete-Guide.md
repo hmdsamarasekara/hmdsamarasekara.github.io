@@ -274,6 +274,31 @@ excerpt: "Complete interactive guide to DSDPlus setup, protocols, and trunk trac
         font-family: 'JetBrains Mono', monospace;
         font-size: 0.875rem;
     }
+
+    .dsd-guide table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.875rem;
+    }
+
+    .dsd-guide th {
+        background: rgba(0, 243, 255, 0.1);
+        color: #00f3ff;
+        padding: 0.75rem;
+        text-align: left;
+        font-weight: 700;
+        border-bottom: 2px solid rgba(0, 243, 255, 0.3);
+    }
+
+    .dsd-guide td {
+        padding: 0.75rem;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        color: #d1d5db;
+    }
+
+    .dsd-guide tr:hover {
+        background: rgba(255,255,255,0.05);
+    }
 </style>
 
 <div class="dsd-guide grid-bg">
@@ -306,83 +331,17 @@ excerpt: "Complete interactive guide to DSDPlus setup, protocols, and trunk trac
     
     <div style="max-width: 1200px; margin: 0 auto; position: relative; z-index: 10;">
         <div class="glass-panel neon-border" style="padding: 3rem;">
-            <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
-                <div style="flex: 1; width: 100%;">
-                    <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">
-                        Digital Speech Decoder Plus
-                    </h2>
-                    <p style="font-size: 1.25rem; color: #9ca3af; margin-bottom: 2rem; line-height: 1.6;">
-                        The ultimate interactive guide to decoding P25, DMR, NXDN, D-Star, and more. 
-                        From single-conventional monitoring to complex multi-site trunk tracking.
-                    </p>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <a href="#setup" class="btn-primary">
-                            <span>🚀</span> Quick Start
-                        </a>
-                        <a href="#protocols" class="btn-secondary">
-                            <span>📡</span> Explore Protocols
-                        </a>
-                    </div>
+            <div style="text-align: center;">
+                <div style="display: inline-block; padding: 0.25rem 1rem; background: rgba(0, 243, 255, 0.1); border: 1px solid rgba(0, 243, 255, 0.3); color: #00f3ff; font-size: 0.875rem; font-family: 'JetBrains Mono', monospace; border-radius: 9999px; margin-bottom: 1rem;">
+                    v2.547 • PUBLIC RELEASE • FAST LANE
                 </div>
-                <div style="flex: 1; width: 100%; max-width: 400px;">
-                    <div class="glass-panel" style="border: 1px solid rgba(0, 243, 255, 0.3);">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                            <span style="font-size: 0.875rem; font-family: 'JetBrains Mono', monospace; color: #00f3ff;">SYSTEM STATUS</span>
-                            <span style="font-size: 0.75rem; color: #0aff0a;">● READY</span>
-                        </div>
-                        <div style="display: flex; flex-direction: column; gap: 0.75rem;">
-                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: rgba(0,0,0,0.3); border-radius: 6px;">
-                                <span style="color: #9ca3af;">Version</span>
-                                <span style="color: #00f3ff; font-family: 'JetBrains Mono', monospace;">2.547</span>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: rgba(0,0,0,0.3); border-radius: 6px;">
-                                <span style="color: #9ca3af;">TCP Link</span>
-                                <span style="color: #0aff0a; font-family: 'JetBrains Mono', monospace;">DIRECT</span>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: rgba(0,0,0,0.3); border-radius: 6px;">
-                                <span style="color: #9ca3af;">Decoder</span>
-                                <span style="color: #ffaa00; font-family: 'JetBrains Mono', monospace;">AUTO</span>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: rgba(0,0,0,0.3); border-radius: 6px;">
-                                <span style="color: #9ca3af;">Voice Synth</span>
-                                <span style="color: #0aff0a; font-family: 'JetBrains Mono', monospace;">ENABLED</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Critical Warnings Section -->
-<section style="padding: 2.5rem 1rem;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-        <div class="warning-box" style="margin-bottom: 1.5rem; border-left: 4px solid #ffaa00;">
-            <div style="display: flex; align-items: flex-start; gap: 1rem;">
-                <span style="font-size: 1.5rem;">⚠️</span>
-                <div>
-                    <h3 style="color: #ffaa00; font-weight: 700; font-size: 1.125rem; margin-bottom: 0.5rem;">CRITICAL: Data Preservation</h3>
-                    <p style="color: #d1d5db; margin-bottom: 0.5rem;">
-                        <strong>Always backup your DSD+ folder before updating.</strong> Periodically backup your data files (networks, sites, frequencies, groups, radios).
-                    </p>
-                    <p style="color: #f87171; font-weight: 700;">
-                        Version 1.101 users: DO NOT install to your existing 1.101 folder! You WILL lose all data. Create a new folder (recommended: C:\DSDPlus).
-                    </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="warning-box" style="border-left: 4px solid #ef4444;">
-            <div style="display: flex; align-items: flex-start; gap: 1rem;">
-                <span style="font-size: 1.5rem;">🚫</span>
-                <div>
-                    <h3 style="color: #ef4444; font-weight: 700; font-size: 1.125rem; margin-bottom: 0.5rem;">Fast Lane Member Warning</h3>
-                    <p style="color: #d1d5db;">
-                        If you are a Fast Lane member using version newer than 1.101: <strong>Do not install this public version</strong> to your Fast Lane folder. 
-                        If you want to test it, create a <em>separate new folder</em>. Wait for your next Fast Lane update instead.
-                    </p>
-                </div>
+                <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">
+                    Digital Speech Decoder <span class="text-cyan">Plus</span>
+                </h2>
+                <p style="font-size: 1.25rem; color: #9ca3af; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+                    The ultimate interactive guide to decoding P25, DMR, NXDN, D-Star, and more. 
+                    From single-conventional monitoring to complex multi-site trunk tracking.
+                </p>
             </div>
         </div>
     </div>
@@ -685,28 +644,6 @@ excerpt: "Complete interactive guide to DSDPlus setup, protocols, and trunk trac
                     </div>
                 </div>
                 <button onclick="showTrunkingMode('dual')" style="width: 100%; padding: 0.5rem; background: rgba(10, 255, 10, 0.2); color: #0aff0a; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; transition: all 0.3s;">
-                    View Setup
-                </button>
-            </div>
-
-            <!-- Passive Mode -->
-            <div class="glass-panel" style="border-top: 4px solid #6b7280;">
-                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
-                    <span style="font-size: 1.5rem; color: #6b7280;">🎧</span>
-                    <h3 style="font-size: 1.25rem; font-weight: 700;">Passive Monitor</h3>
-                </div>
-                <p style="font-size: 0.875rem; color: #9ca3af; margin-bottom: 1rem;">External audio source (discriminator tap or SDR#). No trunk tracking available.</p>
-                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; font-size: 0.875rem;">
-                    <div style="display: flex; justify-content: space-between;">
-                        <span style="color: #6b7280;">Source:</span>
-                        <span style="color: #9ca3af;">Any receiver</span>
-                    </div>
-                    <div style="display: flex; justify-content: space-between;">
-                        <span style="color: #6b7280;">Setup:</span>
-                        <span style="color: #9ca3af;">Menu selection</span>
-                    </div>
-                </div>
-                <button onclick="showTrunkingMode('passive')" style="width: 100%; padding: 0.5rem; background: rgba(107, 114, 128, 0.2); color: #9ca3af; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; transition: all 0.3s;">
                     View Setup
                 </button>
             </div>
@@ -1079,59 +1016,80 @@ excerpt: "Complete interactive guide to DSDPlus setup, protocols, and trunk trac
             </div>
         </div>
 
-        <!-- Keyboard Shortcuts -->
+        <!-- Keyboard Shortcuts - Table Format -->
         <div class="glass-panel" style="margin-top: 2rem;">
             <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; color: #00f3ff;">Essential Keyboard Shortcuts</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem;">
-                <div style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 0.75rem; text-align: center;">
-                    <kbd style="font-size: 1.5rem; color: #00f3ff; font-weight: 700;">L</kbd>
-                    <div style="font-size: 0.75rem; color: #9ca3af; margin-top: 0.25rem;">Site Loader</div>
-                </div>
-                <div style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 0.75rem; text-align: center;">
-                    <kbd style="font-size: 1.5rem; color: #00f3ff; font-weight: 700;">C</kbd>
-                    <div style="font-size: 0.75rem; color: #9ca3af; margin-top: 0.25rem;">Toggle CC Hunt</div>
-                </div>
-                <div style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 0.75rem; text-align: center;">
-                    <kbd style="font-size: 1.5rem; color: #00f3ff; font-weight: 700;">E</kbd>
-                    <div style="font-size: 0.75rem; color: #9ca3af; margin-top: 0.25rem;">Mute Encrypted</div>
-                </div>
-                <div style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 0.75rem; text-align: center;">
-                    <kbd style="font-size: 1.5rem; color: #00f3ff; font-weight: 700;">V</kbd>
-                    <div style="font-size: 0.75rem; color: #9ca3af; margin-top: 0.25rem;">Call Alerts</div>
-                </div>
-                <div style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 0.75rem; text-align: center;">
-                    <kbd style="font-size: 1.5rem; color: #00f3ff; font-weight: 700;">T/t</kbd>
-                    <div style="font-size: 0.75rem; color: #9ca3af; margin-top: 0.25rem;">Threshold +/-</div>
-                </div>
-                <div style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 0.75rem; text-align: center;">
-                    <kbd style="font-size: 1.5rem; color: #00f3ff; font-weight: 700;">↑/↓</kbd>
-                    <div style="font-size: 0.75rem; color: #9ca3af; margin-top: 0.25rem;">Audio Volume</div>
-                </div>
-                <div style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 0.75rem; text-align: center;">
-                    <kbd style="font-size: 1.5rem; color: #00f3ff; font-weight: 700;">P</kbd>
-                    <div style="font-size: 0.75rem; color: #9ca3af; margin-top: 0.25rem;">Invert Polarity</div>
-                </div>
-                <div style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 0.75rem; text-align: center;">
-                    <kbd style="font-size: 1.5rem; color: #00f3ff; font-weight: 700;">B</kbd>
-                    <div style="font-size: 0.75rem; color: #9ca3af; margin-top: 0.25rem;">Hide Traffic Mode</div>
-                </div>
-                <div style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 0.75rem; text-align: center;">
-                    <kbd style="font-size: 1.5rem; color: #00f3ff; font-weight: 700;">G</kbd>
-                    <div style="font-size: 0.75rem; color: #9ca3af; margin-top: 0.25rem;">New Tg High Priority</div>
-                </div>
-                <div style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 0.75rem; text-align: center;">
-                    <kbd style="font-size: 1.5rem; color: #00f3ff; font-weight: 700;">U</kbd>
-                    <div style="font-size: 0.75rem; color: #9ca3af; margin-top: 0.25rem;">Check Updates</div>
-                </div>
-                <div style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 0.75rem; text-align: center;">
-                    <kbd style="font-size: 1.5rem; color: #00f3ff; font-weight: 700;">H</kbd>
-                    <div style="font-size: 0.75rem; color: #9ca3af; margin-top: 0.25rem;">High Contrast</div>
-                </div>
-                <div style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 0.75rem; text-align: center;">
-                    <kbd style="font-size: 1.5rem; color: #00f3ff; font-weight: 700;">?</kbd>
-                    <div style="font-size: 0.75rem; color: #9ca3af; margin-top: 0.25rem;">Help</div>
-                </div>
-            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Key</th>
+                        <th>Function</th>
+                        <th>Context</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><kbd class="kbd">L</kbd></td>
+                        <td>Open Site Loader</td>
+                        <td>Quick tuning to sites/channels</td>
+                    </tr>
+                    <tr>
+                        <td><kbd class="kbd">C</kbd></td>
+                        <td>Toggle CC Hunt</td>
+                        <td>Switch between CC-only and voice following</td>
+                    </tr>
+                    <tr>
+                        <td><kbd class="kbd">E</kbd></td>
+                        <td>Mute Encrypted</td>
+                        <td>Silence encrypted transmissions</td>
+                    </tr>
+                    <tr>
+                        <td><kbd class="kbd">V</kbd></td>
+                        <td>Call Alerts</td>
+                        <td>Toggle call alert sounds</td>
+                    </tr>
+                    <tr>
+                        <td><kbd class="kbd">T</kbd> / <kbd class="kbd">t</kbd></td>
+                        <td>Threshold +/-</td>
+                        <td>Adjust decoding threshold</td>
+                    </tr>
+                    <tr>
+                        <td><kbd class="kbd">↑</kbd> / <kbd class="kbd">↓</kbd></td>
+                        <td>Audio Volume</td>
+                        <td>Increase/decrease output volume</td>
+                    </tr>
+                    <tr>
+                        <td><kbd class="kbd">P</kbd></td>
+                        <td>Invert Polarity</td>
+                        <td>Flip signal polarity manually</td>
+                    </tr>
+                    <tr>
+                        <td><kbd class="kbd">B</kbd></td>
+                        <td>Hide Traffic Mode</td>
+                        <td>Toggle traffic display filtering</td>
+                    </tr>
+                    <tr>
+                        <td><kbd class="kbd">G</kbd></td>
+                        <td>New Tg High Priority</td>
+                        <td>Set new talkgroups to high priority</td>
+                    </tr>
+                    <tr>
+                        <td><kbd class="kbd">U</kbd></td>
+                        <td>Check Updates</td>
+                        <td>Verify current version online</td>
+                    </tr>
+                    <tr>
+                        <td><kbd class="kbd">H</kbd></td>
+                        <td>High Contrast</td>
+                        <td>Toggle high contrast display mode</td>
+                    </tr>
+                    <tr>
+                        <td><kbd class="kbd">?</kbd></td>
+                        <td>Help</td>
+                        <td>Show keyboard shortcut reference</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </section>
@@ -1622,37 +1580,6 @@ REM FMP24-VC.bat
 FMP24 -i2 -o20002 -rv
 
 REM Note: CC DSD+ auto-tunes VC FMP24 via TCP`
-        },
-        passive: {
-            title: 'Passive Monitor Mode',
-            content: `
-                <div style="display: flex; flex-direction: column; gap: 1rem;">
-                    <p style="color: #d1d5db;">Use external signal sources without trunk tracking. Select "Passive Digital Monitor" in DSD+ Input menu.</p>
-                    <div style="background: rgba(0,0,0,0.3); padding: 1rem; border-radius: 8px;">
-                        <h4 style="font-weight: 700; color: #ffaa00; margin-bottom: 0.5rem;">Setup Steps:</h4>
-                        <ol style="list-style: decimal; padding-left: 1.5rem; font-size: 0.875rem; color: #d1d5db;">
-                            <li>Select audio input device carrying digital audio</li>
-                            <li>Ensure flat audio from discriminator tap</li>
-                            <li>Monitor conventional analog/digital signals</li>
-                            <li>No trunk tracking available</li>
-                        </ol>
-                    </div>
-                    <div style="background: rgba(255,255,255,0.05); padding: 0.75rem; border-radius: 6px; font-size: 0.875rem;">
-                        <strong>Tip:</strong> For analog channels, select "Monitor Source Audio if No Sync and Signal Present" in Input menu.
-                    </div>
-                </div>
-            `,
-            code: `REM No batch files needed
-REM Configure via DSD+ menus:
-REM Input → Passive Digital Monitor
-REM Select audio input device
-
-REM For SDR# users:
-REM Use VB-Cable to route audio
-REM Set DSD+ input to Cable Output
-
-REM For analog monitoring:
-REM Input → Monitor Source Audio if No Sync...`
         }
     };
 
@@ -1713,5 +1640,4 @@ REM Input → Monitor Source Audio if No Sync...`
             }
         });
     });
-
 </script>
