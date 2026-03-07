@@ -5,7 +5,7 @@ date: 2023-09-26 12:00:00 +0530
 categories: [sdr, tutorial, sdrsharp]
 tags: [rtl-sdr, airspy, frequency-scanner, radio, scanning, guide]
 excerpt: "Transform your SDR into a comprehensive frequency scanner using SDRSharp and the Frequency Scanner Plugin. From hardware setup to advanced scanning techniques."
-image: /assets/images/sdr-scanner-hero.jpg
+image: /assets/images/sdr-scanner-hero.png
 ---
 
 <div class="post-hero">
@@ -88,7 +88,7 @@ Rather than wrestling with individual plugins, grab the **SDRSharp Community Bun
 
 ### Step 2: Enable the Plugin
 
-![Frequency Scanner Plugin Location](/assets/images/freq-scanner-plugin-location.jpg)
+![Frequency Scanner Plugin Location](/assets/images/freq-scanner-plugin-location.png)
 *Figure 1: Accessing the Frequency Scanner via the Plugins menu*
 
 1. Click the **hamburger menu** (☰) top-left
@@ -99,7 +99,7 @@ Rather than wrestling with individual plugins, grab the **SDRSharp Community Bun
 
 ## Interface Deep Dive
 
-![Full Scanner Interface](/assets/images/freq-scanner-full-interface.jpg)
+![Full Scanner Interface](/assets/images/freq-scanner-full-interface.png)
 *Figure 2: Complete Frequency Scanner interface with Channel Analyzer visible*
 
 ### Understanding the Layout
@@ -129,7 +129,7 @@ The interface breaks down into four functional zones:
 
 ## Scanning Modes Explained
 
-![Scan Mode Selector](/assets/images/scan-modes-dropdown.jpg)
+![Scan Mode Selector](/assets/images/scan-modes-dropdown.png)
 *Figure 3: The five scanning modes available*
 
 Choose your strategy based on what you're hunting:
@@ -148,7 +148,7 @@ Choose your strategy based on what you're hunting:
 
 ## Setting Up Scan Ranges
 
-![Scan Range Editor](/assets/images/scan-range-editor.jpg)
+![Scan Range Editor](/assets/images/scan-range-editor.png)
 *Figure 4: The Scan Range Editor dialog*
 
 ### Creating Your First Range
@@ -183,7 +183,7 @@ Create separate ranges for:
 
 ## Configuration Mastery
 
-![Scanner Configuration Tab](/assets/images/scanner-config-tab.jpg)
+![Scanner Configuration Tab](/assets/images/scanner-config-tab.png)
 *Figure 5: Scanner tab with detection settings*
 
 ### Detection Modes: The Critical Choice
@@ -233,7 +233,7 @@ Create separate ranges for:
 
 ## Channel Analyzer Visualization
 
-![Channel Analyzer Detail](/assets/images/channel-analyzer-detail.jpg)
+![Channel Analyzer Detail](/assets/images/channel-analyzer-detail.png)
 *Figure 6: Channel Analyzer showing active signals and lockout status*
 
 The Channel Analyzer is your **spectrum cockpit**. Understanding the visual language:
@@ -280,7 +280,7 @@ The Channel Analyzer is your **spectrum cockpit**. Understanding the visual lang
 
 ## Trigger and Hysteresis
 
-![Trigger Levels](/assets/images/trigger-hysteresis-levels.jpg)
+![Trigger Levels](/assets/images/trigger-hysteresis-levels.png)
 *Figure 7: Red (trigger) and Yellow (hysteresis) threshold lines*
 
 These two lines control the scanner's behavior:
@@ -352,7 +352,7 @@ Auto Skip: Disabled (record everything)
 
 ## Logging and Analysis
 
-![Logging Settings](/assets/images/logging-configuration.jpg)
+![Logging Settings](/assets/images/logging-configuration.png)
 *Figure 8: Session logging configuration*
 
 Enable **"Log Totals at the End of Each Session"** to generate CSV files containing:
@@ -452,20 +452,3 @@ The Frequency Scanner Plugin transforms SDRSharp from a manual tuning tool into 
 Start with conservative settings, observe behavior, then optimize for your specific environment. The best scanner configuration is the one that catches what you're looking for while ignoring what you're not.
 
 **In the noise, we find signals.**
-
----
-
-<div class="qsl-card">
-  <div class="qsl-header">
-    <span class="callsign">A65KJ</span>
-    <span class="date">{{ page.date | date: "%Y-%m-%d" }}</span>
-  </div>
-  <div class="qsl-content">
-    <p>Questions? Corrections? Heard something interesting on your scanner?</p>
-    <p>Drop me a line via QRZ or GitHub issues.</p>
-  </div>
-  <div class="qsl-footer">
-    <span>73 de A65KJ</span>
-  </div>
-</div>
-
