@@ -348,7 +348,7 @@ excerpt: "Complete interactive guide to DSDPlus setup, protocols, and trunk trac
 </section>
 
 <!-- Setup Section -->
-<section id="setup" style="padding: 5rem 1rem;">
+<section id="setup" style="padding: 1rem 1rem;">
     <div style="max-width: 1200px; margin: 0 auto;">
         <h2 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 3rem; display: flex; align-items: center; gap: 1rem;">
             <span class="text-cyan">📥</span>
@@ -1641,3 +1641,4 @@ REM Note: CC DSD+ auto-tunes VC FMP24 via TCP`
         });
     });
 </script>
+
