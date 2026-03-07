@@ -308,11 +308,8 @@ excerpt: "Complete interactive guide to DSDPlus setup, protocols, and trunk trac
         <div class="glass-panel neon-border" style="padding: 3rem;">
             <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
                 <div style="flex: 1; width: 100%;">
-                    <div style="display: inline-block; padding: 0.25rem 1rem; background: rgba(0, 243, 255, 0.1); border: 1px solid rgba(0, 243, 255, 0.3); color: #00f3ff; font-size: 0.875rem; font-family: 'JetBrains Mono', monospace; border-radius: 9999px; margin-bottom: 1rem;">
-                        v2.547 • PUBLIC RELEASE • FAST LANE
-                    </div>
                     <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 1.5rem; line-height: 1.2;">
-                        Digital Speech Decoder <span class="text-cyan">Plus</span>
+                        Digital Speech Decoder Plus
                     </h2>
                     <p style="font-size: 1.25rem; color: #9ca3af; margin-bottom: 2rem; line-height: 1.6;">
                         The ultimate interactive guide to decoding P25, DMR, NXDN, D-Star, and more. 
@@ -1716,4 +1713,5 @@ REM Input → Monitor Source Audio if No Sync...`
             }
         });
     });
+
 </script>
