@@ -304,15 +304,15 @@ excerpt: "Complete interactive guide to DSDPlus setup, protocols, and trunk trac
 <div class="dsd-guide grid-bg">
 
 <!-- Navigation -->
-<nav style="position: sticky; top: 0; z-index: 50; background: rgba(18, 18, 26, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 243, 255, 0.2); padding: 1rem 0; margin-bottom: 2rem;">
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem; display: flex; align-items: center; justify-content: space-between;">
+<nav style="position: sticky; top: 0; z-index: 50; background: rgba(18, 18, 26, 0.9); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(0, 243, 255, 0.2); padding: 0.75rem 0; margin-bottom: 2rem;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 1rem; display: flex; align-items: center; justify-content: space-between; height: 100%;">
         <div style="display: flex; align-items: center; gap: 0.75rem;">
             <div class="pulse-dot"></div>
-            <h1 style="font-size: 1.5rem; font-weight: 800; background: linear-gradient(to right, #00f3ff, #0aff0a); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            <h1 style="font-size: 1.5rem; font-weight: 800; background: linear-gradient(to right, #00f3ff, #0aff0a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin: 0;">
                 DSD<span style="color: white;">PLUS</span> GUIDE
             </h1>
         </div>
-        <div style="display: flex; gap: 1.5rem;">
+        <div style="display: flex; gap: 1.5rem; align-items: center;">
             <a href="#setup" class="nav-link">SETUP</a>
             <a href="#protocols" class="nav-link">PROTOCOLS</a>
             <a href="#trunking" class="nav-link">TRUNKING</a>
@@ -1638,6 +1638,7 @@ REM Note: CC DSD+ auto-tunes VC FMP24 via TCP`
         });
     });
 </script>
+
 
 
 
