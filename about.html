@@ -6,32 +6,20 @@ permalink: /about/
 
 <!-- Animated Callsign Header -->
 <div class="callsign-container" style="text-align: center; margin-bottom: 3rem; padding: 2rem 0;">
-  <div class="callsign-flipper" style="display: inline-block; position: relative; height: 4rem; overflow: hidden;">
-    <span class="callsign" style="display: block; font-size: 3.5rem; font-weight: bold; letter-spacing: 4px; color: #fff; text-shadow: 0 0 20px rgba(0,212,170,0.5);">A65KJ</span>
-    <span class="callsign" style="display: block; font-size: 3.5rem; font-weight: bold; letter-spacing: 4px; color: #fff; text-shadow: 0 0 20px rgba(255,107,53,0.5);">NH2OD</span>
+  <div class="callsign-wrapper" style="position: relative; height: 4rem; width: 200px; margin: 0 auto;">
+    <span class="callsign" style="position: absolute; top: 0; left: 0; right: 0; font-size: 3.5rem; font-weight: bold; letter-spacing: 4px; color: #fff; text-shadow: 0 0 20px rgba(0,212,170,0.5); animation: fadeCallsign1 6s ease-in-out infinite;">A65KJ</span>
+    <span class="callsign" style="position: absolute; top: 0; left: 0; right: 0; font-size: 3.5rem; font-weight: bold; letter-spacing: 4px; color: #fff; text-shadow: 0 0 20px rgba(255,107,53,0.5); opacity: 0; animation: fadeCallsign2 6s ease-in-out infinite;">NH2OD</span>
   </div>
   <style>
-    .callsign-flipper {
-      animation: flipCallsign 6s ease-in-out infinite;
-    }
-    .callsign-flipper .callsign {
-      animation: fadeCallsign 6s ease-in-out infinite;
-    }
-    .callsign-flipper .callsign:nth-child(1) {
-      animation-delay: 0s;
-    }
-    .callsign-flipper .callsign:nth-child(2) {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      opacity: 0;
-      animation-delay: 3s;
-    }
-    @keyframes fadeCallsign {
+    @keyframes fadeCallsign1 {
       0%, 45% { opacity: 1; }
       50%, 95% { opacity: 0; }
       100% { opacity: 1; }
+    }
+    @keyframes fadeCallsign2 {
+      0%, 45% { opacity: 0; }
+      50%, 95% { opacity: 1; }
+      100% { opacity: 0; }
     }
   </style>
   <p style="color: #888; margin-top: 1rem; font-size: 1.1rem; letter-spacing: 2px;">AMATEUR RADIO OPERATOR</p>
