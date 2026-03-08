@@ -268,8 +268,16 @@ Remember: the spectrum is always changing. What you find today might be gone tom
 
 ---
 
-&lt;div class="post-footer" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #333; text-align: center; color: #666; font-size: 0.9rem;"&gt;
-  &lt;p&gt;&lt;em&gt;Last updated: March 2026&lt;/em&gt;&lt;/p&gt;
-  &lt;p&gt;Questions or comments? Reach out via &lt;a href="https://www.qrz.com/db/A65KJ" target="_blank"&gt;QRZ&lt;/a&gt; or check out more articles on &lt;a href="{{ site.baseurl }}"&gt;Noise Floor Nomad&lt;/a&gt;.&lt;/p&gt;
-  &lt;p style="margin-top: 1rem; font-style: italic; color: #ff6b35;"&gt;"In the noise, we find signals"&lt;/p&gt;
-&lt;/div&gt;
+<div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color, #333); text-align: center;">
+
+<p style="color: var(--text-muted, #888); font-size: 0.9rem;"><em>Last updated: March 2026</em></p>
+
+<p style="color: var(--text-muted, #888); font-size: 0.9rem;">
+  Questions or comments? Reach out via <a href="https://www.qrz.com/db/A65KJ" style="color: var(--accent-cyan, #00d4aa);">QRZ</a> or check out more articles on <a href="{{ site.baseurl }}" style="color: var(--accent-cyan, #00d4aa);">Noise Floor Nomad</a>.
+</p>
+
+<p style="margin-top: 1rem; font-style: italic; color: var(--accent-orange, #ff6b35); font-size: 0.9rem;">
+  "In the noise, we find signals"
+</p>
+
+</div>
