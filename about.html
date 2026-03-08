@@ -4,125 +4,92 @@ title: "About"
 permalink: /about/
 ---
 
-<div class="about-header" style="text-align: center; margin-bottom: 3rem;">
-  <div class="callsign-badge" style="display: inline-block; background: linear-gradient(135deg, #00d4aa 0%, #ff6b35 100%); padding: 2px; border-radius: 50%; margin-bottom: 1.5rem;">
-    <div style="background: #0d1117; border-radius: 50%; padding: 1.5rem 2rem;">
-      <span style="font-size: 2rem; font-weight: bold; color: #fff; letter-spacing: 2px;">A65KJ</span>
-    </div>
+<!-- Animated Callsign Header -->
+<div class="callsign-container" style="text-align: center; margin-bottom: 3rem; padding: 2rem 0;">
+  <div class="callsign-flipper" style="display: inline-block; position: relative; height: 4rem; overflow: hidden;">
+    <span class="callsign" style="display: block; font-size: 3.5rem; font-weight: bold; letter-spacing: 4px; color: #fff; text-shadow: 0 0 20px rgba(0,212,170,0.5);">A65KJ</span>
+    <span class="callsign" style="display: block; font-size: 3.5rem; font-weight: bold; letter-spacing: 4px; color: #fff; text-shadow: 0 0 20px rgba(255,107,53,0.5);">NH2OD</span>
   </div>
-  <h1 style="margin: 0; font-size: 2.5rem; color: #fff;">Noise Floor Nomad</h1>
-  <p style="color: #888; margin-top: 0.5rem; font-size: 1.1rem;">Amateur Radio Operator · Signal Hunter · SDR Enthusiast</p>
+  <style>
+    .callsign-flipper {
+      animation: flipCallsign 6s ease-in-out infinite;
+    }
+    .callsign-flipper .callsign {
+      animation: fadeCallsign 6s ease-in-out infinite;
+    }
+    .callsign-flipper .callsign:nth-child(1) {
+      animation-delay: 0s;
+    }
+    .callsign-flipper .callsign:nth-child(2) {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      animation-delay: 3s;
+    }
+    @keyframes fadeCallsign {
+      0%, 45% { opacity: 1; }
+      50%, 95% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+  <p style="color: #888; margin-top: 1rem; font-size: 1.1rem; letter-spacing: 2px;">AMATEUR RADIO OPERATOR</p>
+  <div style="width: 60px; height: 2px; background: linear-gradient(90deg, #00d4aa, #ff6b35); margin: 1rem auto;"></div>
 </div>
 
-<h2>The Operator</h2>
+<h2>About Me</h2>
 
-<p>I'm <strong>A65KJ</strong> (also holding <strong>NH2OD</strong>), an amateur radio operator originally from <span style="color: #00d4aa;">Sri Lanka</span> and currently operating from the <span style="color: #ff6b35;">UAE</span>.</p>
+<p>I'm <strong style="color: #00d4aa;">A65KJ</strong> / <strong style="color: #ff6b35;">NH2OD</strong>, an amateur radio operator originally from <span style="color: #ccc;">Sri Lanka</span> and currently operating from the <span style="color: #ccc;">UAE</span>.</p>
 
-<p>My journey into radio wasn't through a traditional ham shack or elaborate antenna farm—it started with a cheap <strong>RTL-SDR dongle</strong> and an insatiable curiosity about the invisible signals filling the air around me.</p>
+<h3>Getting Into Radio</h3>
 
-<hr>
+<p>My interest in radio started long before I became licensed. Like many people in the SDR generation, my entry point into the RF world was a cheap <strong>RTL-SDR dongle</strong> and a lot of curiosity.</p>
 
-<h2>From SDR to Licensed Operator</h2>
+<p>What began as simple shortwave listening quickly turned into exploring everything I could receive or decode.</p>
 
-<p>Like many in the SDR generation, I began as a listener. What started as casual shortwave exploration quickly spiraled into late-night sessions decoding everything the spectrum had to offer.</p>
+<h3>Experimenting Across the Spectrum</h3>
 
-<p>The RTL-SDR was my gateway drug. That tiny USB stick opened doors to:</p>
+<p>Over time that curiosity grew into experiments across the radio spectrum:</p>
 
-<div class="experiment-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 2rem 0;">
-
-<div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.5rem;">
-  <h4 style="color: #00d4aa; margin-top: 0;">🛰️ Satellite Reception</h4>
-  <p style="color: #c9d1d9; margin-bottom: 0; font-size: 0.9rem;">Weather satellites, amateur radio satellites, and orbital imagery</p>
+<div class="spectrum-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin: 1.5rem 0;">
+  <div style="background: rgba(0,212,170,0.1); border-left: 3px solid #00d4aa; padding: 1rem; border-radius: 0 8px 8px 0;">
+    <span style="color: #00d4aa; font-size: 1.2rem;">🛰️</span>
+    <span style="color: #c9d1d9; margin-left: 0.5rem;">Weather satellite reception</span>
+  </div>
+  <div style="background: rgba(255,107,53,0.1); border-left: 3px solid #ff6b35; padding: 1rem; border-radius: 0 8px 8px 0;">
+    <span style="color: #ff6b35; font-size: 1.2rem;">✈️</span>
+    <span style="color: #c9d1d9; margin-left: 0.5rem;">Aircraft and maritime signals</span>
+  </div>
+  <div style="background: rgba(0,212,170,0.1); border-left: 3px solid #00d4aa; padding: 1rem; border-radius: 0 8px 8px 0;">
+    <span style="color: #00d4aa; font-size: 1.2rem;">📡</span>
+    <span style="color: #c9d1d9; margin-left: 0.5rem;">Amateur radio satellites</span>
+  </div>
+  <div style="background: rgba(255,107,53,0.1); border-left: 3px solid #ff6b35; padding: 1rem; border-radius: 0 8px 8px 0;">
+    <span style="color: #ff6b35; font-size: 1.2rem;">📻</span>
+    <span style="color: #c9d1d9; margin-left: 0.5rem;">Digital modes and signal decoding</span>
+  </div>
 </div>
 
-<div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.5rem;">
-  <h4 style="color: #ff6b35; margin-top: 0;">✈️ Aviation & Maritime</h4>
-  <p style="color: #c9d1d9; margin-bottom: 0; font-size: 0.9rem;">ADS-B aircraft tracking, ACARS, and maritime AIS signals</p>
+<p>At different times I've experimented with everything from HF digital decoding and ADS-B aircraft tracking to receiving satellite imagery from orbit.</p>
+
+<h3>Operating Environment</h3>
+
+<p>These days I operate mostly from an apartment in the UAE, dealing with high urban noise floors and limited antenna space.</p>
+
+<div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0; position: relative; overflow: hidden;">
+  <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: linear-gradient(180deg, #00d4aa, #ff6b35);"></div>
+  <p style="margin: 0; color: #c9d1d9; font-style: italic;">That constraint has become part of the challenge — figuring out what can still be received and decoded using creative antenna setups and practical hardware.</p>
 </div>
 
-<div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.5rem;">
-  <h4 style="color: #00d4aa; margin-top: 0;">📡 Digital Modes</h4>
-  <p style="color: #c9d1d9; margin-bottom: 0; font-size: 0.9rem;">HF digital decoding, PSK31, FT8, and proprietary signal analysis</p>
-</div>
+<h3>This Blog</h3>
 
-<div style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.5rem;">
-  <h4 style="color: #ff6b35; margin-top: 0;">🔍 Signal Intelligence</h4>
-  <p style="color: #c9d1d9; margin-bottom: 0; font-size: 0.9rem;">Military satellite monitoring, unidentified signals, and spectrum analysis</p>
-</div>
+<p>This blog documents those experiments — <strong style="color: #00d4aa;">what works</strong>, <strong style="color: #ff6b35;">what fails</strong>, and the occasional <strong style="color: #fff;">strange signal hiding in the noise</strong>.</p>
 
-</div>
-
-<p>Each new discovery led to another question. Each decoded signal revealed another layer of the RF ecosystem. Eventually, listening wasn't enough—I needed to transmit, to participate, to join the conversation. That's when I pursued my amateur radio license.</p>
-
-<hr>
-
-<h2>The Challenge: Urban Noise, Limited Space</h2>
-
-<p>Today I operate from an apartment in the UAE, facing the classic urban radio operator's dilemma:</p>
-
-<blockquote>
-  <strong>High noise floors.</strong> Limited antenna space. Restrictive environments.
-</blockquote>
-
-<p>But constraints breed creativity. Instead of tower-mounted Yagis and acres of land, I've learned to work with:</p>
-
-<ul>
-  <li><strong>Balcony-mounted antennas</strong> disguised as everyday objects</li>
-  <li><strong>Active loops</strong> and small magnetic loops for HF</li>
-  <li><strong>Discone antennas</strong> tucked into corners</li>
-  <li><strong>Creative grounding</strong> solutions in concrete jungles</li>
-  <li><strong>Software-defined filtering</strong> to dig signals out of the noise</li>
-</ul>
-
-<p>This blog is a chronicle of those experiments—<strong>what works, what fails spectacularly, and the occasional strange signal hiding in the noise</strong>.</p>
-
-<hr>
-
-<h2>Equipment & Setup</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Category</th>
-      <th>Gear</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Primary SDR</strong></td>
-      <td>Airspy R2, RTL-SDR Blog V4</td>
-    </tr>
-    <tr>
-      <td><strong>Transceiver</strong></td>
-      <td>Xiegu G90, Yaesu FT-818ND</td>
-    </tr>
-    <tr>
-      <td><strong>Antennas</strong></td>
-      <td>Homebrew discone, MLA-30+ active loop, various dipoles</td>
-    </tr>
-    <tr>
-      <td><strong>Software</strong></td>
-      <td>SDR#, SDR++, GNU Radio, WSJT-X, SatDump</td>
-    </tr>
-    <tr>
-      <td><strong>Location</strong></td>
-      <td>Dubai, UAE (LL56)</td>
-    </tr>
-  </tbody>
-</table>
-
-<hr>
-
-<h2>Get In Touch</h2>
-
-<ul>
-  <li><strong>QRZ:</strong> <a href="https://www.qrz.com/db/A65KJ" target="_blank">A65KJ</a></li>
-  <li><strong>GitHub:</strong> <a href="https://github.com/hmdsamarasekara">hmdsamarasekara</a></li>
-</ul>
-
-<p>I'm always happy to exchange signal reports, discuss antenna designs for small spaces, or decode mysterious signals together.</p>
-
-<div style="text-align: center; margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, rgba(0,212,170,0.1) 0%, rgba(255,107,53,0.1) 100%); border-radius: 8px; border: 1px solid #30363d;">
-  <p style="font-size: 1.5rem; margin: 0; color: #fff; font-weight: bold;">73 de A65KJ / NH2OD</p>
-  <p style="color: #888; margin-top: 0.5rem; margin-bottom: 0; font-style: italic;">"In the noise, we find signals"</p>
+<!-- Footer -->
+<div style="text-align: center; margin-top: 4rem; padding: 2.5rem 2rem; background: linear-gradient(135deg, rgba(0,212,170,0.05) 0%, rgba(255,107,53,0.05) 100%); border-radius: 12px; border: 1px solid #30363d; position: relative;">
+  <div style="position: absolute; top: -1px; left: 50%; transform: translateX(-50%); width: 100px; height: 2px; background: linear-gradient(90deg, transparent, #00d4aa, #ff6b35, transparent);"></div>
+  <p style="font-size: 1.3rem; margin: 0 0 0.5rem 0; color: #fff; font-weight: 600; letter-spacing: 1px;">73</p>
+  <p style="font-size: 1rem; margin: 0; color: #888;">A65KJ / NH2OD</p>
+  <p style="margin-top: 1.5rem; font-style: italic; color: #ff6b35; font-size: 0.95rem; opacity: 0.9;">"In the noise, we find signals"</p>
 </div>
