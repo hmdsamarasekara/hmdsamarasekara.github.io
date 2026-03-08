@@ -41,22 +41,34 @@ To simplify the installation process of all required software components in one 
 
 After the installation is finished, launch SDRSharp by clicking on its icon. Within the application, access the plug-ins by selecting the dropdown menu at the upper left corner. From there, navigate to the "Plug-ins" tab, and click on "Frequency Scanner Entry." This action will open the Frequency Scanner plugin as a new tab window at your convenience.
 
-![Frequency Scanner Plugin Location]({{ site.baseurl }}/assets/images/frequency-scanner-plugin-location.png)
-*It Should Look Like This...*
+<figure style="text-align: center; margin: 2rem 0;">
+  <img src="{{ site.baseurl }}/assets/images/frequency-scanner-plugin-location.png" alt="Frequency Scanner Plugin Location" style="max-width: 100%; border-radius: 4px;">
+  <figcaption style="font-size: 0.85rem; color: #888; font-style: italic; margin-top: 0.75rem; font-family: Georgia, serif;">
+    It Should Look Like This...
+  </figcaption>
+</figure>
 
 ---
 
 ## Understanding the Frequency Scanner Interface
 
-![Frequency Scanner UI Breakdown]({{ site.baseurl }}/assets/images/frequency-scanner-ui-breakdown.png)
-*Frequency Scanner UI Breakdown*
+<figure style="text-align: center; margin: 2rem 0;">
+  <img src="{{ site.baseurl }}/assets/images/frequency-scanner-ui-breakdown.png" alt="Frequency Scanner UI Breakdown" style="max-width: 100%; border-radius: 4px;">
+  <figcaption style="font-size: 0.85rem; color: #888; font-style: italic; margin-top: 0.75rem; font-family: Georgia, serif;">
+    Frequency Scanner UI Breakdown
+  </figcaption>
+</figure>
 
 ### Scanning Modes
 
 At the top of the plug-in window, you can choose the **"Scanning Mode"** depending on your specific use case. The Frequency Scanner Plug-in offers various scan modes, allowing you to tailor your scanning experience:
 
-![Scan Modes]({{ site.baseurl }}/assets/images/scan-modes.png)
-*Scan Modes*
+<figure style="text-align: center; margin: 2rem 0;">
+  <img src="{{ site.baseurl }}/assets/images/scan-modes.png" alt="Scan Modes" style="max-width: 100%; border-radius: 4px;">
+  <figcaption style="font-size: 0.85rem; color: #888; font-style: italic; margin-top: 0.75rem; font-family: Georgia, serif;">
+    Scan Modes
+  </figcaption>
+</figure>
 
 | Mode | Description |
 |------|-------------|
@@ -70,8 +82,12 @@ At the top of the plug-in window, you can choose the **"Scanning Mode"** dependi
 
 Next, you can see the **"Scan Ranges"** tab, you can maintain multiple scanning ranges and switch between them whenever you want. To edit or create a new scanning range, click on the "Edit Scan Ranges" button and it will open up a separate window.
 
-![Setting Up Scan Ranges]({{ site.baseurl }}/assets/images/setting-up-scan-ranges.png)
-*Setting Up Scan Ranges*
+<figure style="text-align: center; margin: 2rem 0;">
+  <img src="{{ site.baseurl }}/assets/images/setting-up-scan-ranges.png" alt="Setting Up Scan Ranges" style="max-width: 100%; border-radius: 4px;">
+  <figcaption style="font-size: 0.85rem; color: #888; font-style: italic; margin-top: 0.75rem; font-family: Georgia, serif;">
+    Setting Up Scan Ranges
+  </figcaption>
+</figure>
 
 Be sure to input the correct values into the fields to define a scan range entry. Any incorrect entries will be highlighted in red, and you won't be able to move on from the field until it's corrected. All values should be specified in Hz, except for "Name," "Detector," and "Group":
 
@@ -93,8 +109,12 @@ Subsequently, locate the **"Configure"** button, and upon clicking it, a new win
 
 ### Scanner Tab
 
-![Scanner Tab Configuration]({{ site.baseurl }}/assets/images/scanner-tab-configuration.png)
-*Scanner Tab Configuration*
+<figure style="text-align: center; margin: 2rem 0;">
+  <img src="{{ site.baseurl }}/assets/images/scanner-tab-configuration.png" alt="Scanner Tab Configuration" style="max-width: 100%; border-radius: 4px;">
+  <figcaption style="font-size: 0.85rem; color: #888; font-style: italic; margin-top: 0.75rem; font-family: Georgia, serif;">
+    Scanner Tab Configuration
+  </figcaption>
+</figure>
 
 Frequency Scanner utilizes two modes to identify active signals, each with its own advantages and drawbacks:
 
@@ -118,8 +138,12 @@ Frequency Scanner utilizes two modes to identify active signals, each with its o
 
 ### Channel Analyser Tab
 
-![Channel Analyser Tab Configuration]({{ site.baseurl }}/assets/images/channel-analyser-tab-configuration.png)
-*Channel Analyser Tab Configuration*
+<figure style="text-align: center; margin: 2rem 0;">
+  <img src="{{ site.baseurl }}/assets/images/channel-analyser-tab-configuration.png" alt="Channel Analyser Tab Configuration" style="max-width: 100%; border-radius: 4px;">
+  <figcaption style="font-size: 0.85rem; color: #888; font-style: italic; margin-top: 0.75rem; font-family: Georgia, serif;">
+    Channel Analyser Tab Configuration
+  </figcaption>
+</figure>
 
 | Setting | Description |
 |---------|-------------|
@@ -133,8 +157,12 @@ Frequency Scanner utilizes two modes to identify active signals, each with its o
 
 ### General Tab
 
-![General Tab Configuration]({{ site.baseurl }}/assets/images/general-tab-configuration.png)
-*General Tab Configuration*
+<figure style="text-align: center; margin: 2rem 0;">
+  <img src="{{ site.baseurl }}/assets/images/general-tab-configuration.png" alt="General Tab Configuration" style="max-width: 100%; border-radius: 4px;">
+  <figcaption style="font-size: 0.85rem; color: #888; font-style: italic; margin-top: 0.75rem; font-family: Georgia, serif;">
+    General Tab Configuration
+  </figcaption>
+</figure>
 
 | Setting | Description |
 |---------|-------------|
@@ -207,8 +235,12 @@ Zooming within the Channel Analyzer panel can be accomplished using the mouse sc
 
 ## Configuring Trigger and Hysteresis Levels
 
-![Configuring Trigger and Hysteresis Levels]({{ site.baseurl }}/assets/images/trigger-and-hysteresis.png)
-*Configuring Trigger and Hysteresis Levels*
+ <figure style="text-align: center; margin: 2rem 0;">
+  <img src="{{ site.baseurl }}/assets/images/trigger-and-hysteresis.png" alt="Configuring Trigger and Hysteresis Levels" style="max-width: 100%; border-radius: 4px;">
+  <figcaption style="font-size: 0.85rem; color: #888; font-style: italic; margin-top: 0.75rem; font-family: Georgia, serif;">
+    Configuring Trigger and Hysteresis Levels
+  </figcaption>
+</figure>
 
 These two parameters govern when the scanner suspends scanning and when it resumes its scanning operation. The red button adjusts the detection trigger level, while the yellow button adjusts the hysteresis level.
 
@@ -270,14 +302,8 @@ Remember: the spectrum is always changing. What you find today might be gone tom
 
 <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border-color, #333); text-align: center;">
 
-<p style="color: var(--text-muted, #888); font-size: 0.9rem;"><em>Last updated: March 2026</em></p>
-
 <p style="color: var(--text-muted, #888); font-size: 0.9rem;">
   Questions or comments? Reach out via <a href="https://www.qrz.com/db/A65KJ" style="color: var(--accent-cyan, #00d4aa);">QRZ</a> or check out more articles on <a href="{{ site.baseurl }}" style="color: var(--accent-cyan, #00d4aa);">Noise Floor Nomad</a>.
-</p>
-
-<p style="margin-top: 1rem; font-style: italic; color: var(--accent-orange, #ff6b35); font-size: 0.9rem;">
-  "In the noise, we find signals"
 </p>
 
 </div>
