@@ -5,450 +5,271 @@ date: 2023-09-26 12:00:00 +0530
 categories: [sdr, tutorial, sdrsharp]
 tags: [rtl-sdr, airspy, frequency-scanner, radio, scanning, guide]
 excerpt: "Transform your SDR into a comprehensive frequency scanner using SDRSharp and the Frequency Scanner Plugin. From hardware setup to advanced scanning techniques."
-image: /assets/images/sdr-scanner-hero.png
 ---
 
-<div class="post-hero">
-  <div class="spectrum-animation">
-    <div class="bar"></div><div class="bar"></div><div class="bar"></div>
-    <div class="bar"></div><div class="bar"></div><div class="bar"></div>
-    <div class="bar"></div><div class="bar"></div><div class="bar"></div>
-    <div class="bar"></div><div class="bar"></div><div class="bar"></div>
-  </div>
-  <p class="hero-text">From static to signals — mastering the art of automated frequency scanning</p>
-</div>
+## Introduction
 
-## The Scanner's Mindset
+In an increasingly interconnected world, the radio frequency spectrum is densely populated with a wide range of transmissions, including broadcast radio, public safety communications, aviation traffic, satellite links, and various specialized or unidentified signals. To the untrained listener, this electromagnetic environment may appear as little more than noise or random static. However, with the appropriate tools and technical understanding, the spectrum reveals a highly structured and fascinating ecosystem of radio communications.
 
-In our increasingly interconnected world, the airwaves are abuzz with a symphony of signals — from broadcast radio stations and emergency services to aviation communications and those mysterious clandestine transmissions that keep us up at night. This invisible realm of electromagnetic waves remains a mystery to the untrained ear, a cacophony of static and signals.
+This guide explores how to convert a Software Defined Radio (SDR) receiver into an efficient frequency scanning platform using **SDRSharp (SDR#)** together with the **Frequency Scanner Plugin**. When integrated, these tools provide powerful scanning capabilities comparable to dedicated radio scanners, allowing users to automatically search, monitor, and log active signals across wide portions of the spectrum.
 
-However, for those armed with the right tools and knowledge, it presents a captivating vista into radio communications.
-
-In this guide, we'll transform your SDR into a **comprehensive frequency scanner** using **SDRSharp** and the **Frequency Scanner Plugin**. Whether you're monitoring public safety, hunting for satellite downlinks, or just exploring the spectrum, automated scanning changes everything.
+Whether you are an amateur radio operator interested in exploring new bands, a hobbyist monitoring aviation or public safety channels, or an experienced radio enthusiast seeking to expand your SDR workflow, this article provides the technical foundation needed to configure and operate an SDR-based scanning system effectively.
 
 ---
 
-## Hardware Considerations
+## Getting Started
 
-<details class="hardware-section">
-<summary><span class="icon">📡</span> Antenna Selection</summary>
+Frequency scanning is a versatile technique used to explore and analyze activity across the radio frequency (RF) spectrum. It involves systematically tuning a receiver across a predefined range of frequencies in order to detect active transmissions. These signals may carry voice communications, digital data, telemetry, or other forms of information. By continuously sweeping through frequency ranges and identifying signal activity, frequency scanning enables users to monitor and study a wide variety of radio services operating within the electromagnetic spectrum.
 
-For optimal scanning results, your antenna choice is critical:
+### Antenna Considerations
 
-### The Discone Advantage
-A **wideband omni-directional discone antenna** is the scanner's best friend. Unlike directional antennas that require constant adjustment, a discone captures signals from **25-1300 MHz** (or more) across all directions.
+A critical component of any effective scanning setup is the antenna system. For general-purpose scanning and wide spectrum coverage, a **wideband omnidirectional antenna** is strongly recommended. One of the most popular choices is the **discone antenna**, which is specifically designed to provide extremely broad frequency coverage with relatively consistent performance across multiple bands. 
 
-**Why it matters for scanning:**
-- No tuning required as you hop bands
-- 360° coverage means you won't miss that distant transmission
-- Wide impedance matching across VHF/UHF
+The primary advantage of a discone antenna is its ability to receive signals over a large frequency range without the need for retuning or switching between multiple antennas. Additionally, its omnidirectional radiation pattern allows it to receive signals from all directions simultaneously, making it well suited for monitoring diverse services such as public safety communications, aviation traffic, and amateur radio transmissions.
 
-**Alternatives:**
-- **Diamond D130J**: Premium option, excellent build quality
-- **Homebrew Discone**: Copper wire + aluminum cone, ~$20 in parts
-- **RTL-SDR Dipole Kit**: Good starter, but limited VHF performance
+### SDR Hardware Options
 
-</details>
+On the hardware side, an **RTL-SDR USB dongle** provides an inexpensive and highly accessible entry point into the world of software defined radio. Despite its low cost, the RTL-SDR is capable of covering a substantial portion of the RF spectrum and is supported by a large ecosystem of software tools and plugins. 
 
-<details class="hardware-section">
-<summary><span class="icon">🔌</span> SDR Hardware Tiers</summary>
-
-| Tier | Device | Sample Rate | Best For | Price Range |
-|------|--------|-------------|----------|-------------|
-| **Entry** | RTL-SDR Blog V4 | 2.56 MSPS | General scanning, beginners | $25-35 |
-| **Mid** | Airspy Mini | 6 MSPS | Bandwidth-intensive modes | $100-120 |
-| **Pro** | Airspy R2 | 10 MSPS | Wideband monitoring, precision | $170-190 |
-| **HackRF** | HackRF One | 20 MSPS | Full-duplex, transmit capability | $300+ |
-
-**My Recommendation:** Start with the RTL-SDR Blog V4. The improved thermal design and TCXO make it surprisingly capable for scanner duty. Upgrade to Airspy R2 when you need that 10 MHz bandwidth for trunked systems.
-
-</details>
+For users seeking improved performance, higher-end SDR platforms such as the **Airspy R2** or **HackRF** offer significant advantages. These devices provide greater instantaneous bandwidth, higher sampling rates, and improved dynamic range, allowing users to observe and analyze wider segments of the spectrum simultaneously. This expanded capability is particularly valuable when investigating complex digital modulation schemes, monitoring wideband signals, or performing more advanced RF analysis.
 
 ---
 
-## Installation
+## Installing Frequency Scanner Plugin
 
-### Step 1: SDRSharp Community Bundle
+To simplify the installation process of all required software components in one go, you can opt for the SDRSharp Community Bundle, available for download from the [SDR Chile website](https://sdrchile.cl/en/). Once downloaded, run the installer by double-clicking it, and then follow the on-screen instructions to choose your preferred installation location.
 
-Rather than wrestling with individual plugins, grab the **SDRSharp Community Bundle** from [SDR Chile](https://sdrchile.cl/en/){:target="_blank"}. This includes:
-- SDRSharp base application
-- Frequency Scanner Plugin (pre-configured)
-- Community plugin pack
-- RTL-SDR drivers
+After the installation is finished, launch SDRSharp by clicking on its icon. Within the application, access the plug-ins by selecting the dropdown menu at the upper left corner. From there, navigate to the "Plug-ins" tab, and click on "Frequency Scanner Entry." This action will open the Frequency Scanner plugin as a new tab window at your convenience.
 
-<div class="terminal-block">
-<code>
-1. Download SDRSharp_Community_Bundle_x86.exe
-2. Extract to C:\SDRSharp (avoid Program Files!)
-3. Run install-rtlsdr.bat
-4. Plug in your dongle
-5. Launch SDRSharp.dotnet8.exe
-</code>
-</div>
-
-### Step 2: Enable the Plugin
-
-![Frequency Scanner Plugin Location](/assets/images/freq-scanner-plugin-location.png)
-*Figure 1: Accessing the Frequency Scanner via the Plugins menu*
-
-1. Click the **hamburger menu** (☰) top-left
-2. Select **"Frequency Scanner Entry"**
-3. The plugin appears as a new tab/panel
+![Frequency Scanner Plugin Location]({{ site.baseurl }}/assets/images/frequency-scanner-plugin-location.png)
+*It Should Look Like This...*
 
 ---
 
-## Interface Deep Dive
+## Understanding the Frequency Scanner Interface
 
-![Full Scanner Interface](/assets/images/freq-scanner-full-interface.png)
-*Figure 2: Complete Frequency Scanner interface with Channel Analyzer visible*
+![Frequency Scanner UI Breakdown]({{ site.baseurl }}/assets/images/frequency-scanner-ui-breakdown.png)
+*Frequency Scanner UI Breakdown*
 
-### Understanding the Layout
+### Scanning Modes
 
-The interface breaks down into four functional zones:
+At the top of the plug-in window, you can choose the **"Scanning Mode"** depending on your specific use case. The Frequency Scanner Plug-in offers various scan modes, allowing you to tailor your scanning experience:
 
-<div class="interface-grid">
-  <div class="zone">
-    <h4>🎯 Zone 1: Mode Control</h4>
-    <p>Scanning mode selector and range management</p>
-  </div>
-  <div class="zone">
-    <h4>📊 Zone 2: Channel Analyzer</h4>
-    <p>Visual spectrum representation of scan ranges</p>
-  </div>
-  <div class="zone">
-    <h4>⚙️ Zone 3: Configuration</h4>
-    <p>Detection thresholds, audio, logging settings</p>
-  </div>
-  <div class="zone">
-    <h4>▶️ Zone 4: Transport</h4>
-    <p>Start/Stop, Detect, Wait controls</p>
-  </div>
-</div>
+![Scan Modes]({{ site.baseurl }}/assets/images/scan-modes.png)
+*Scan Modes*
 
----
+| Mode | Description |
+|------|-------------|
+| **Scan Only Memorized** | This mode exclusively scans frequencies stored in your Frequency Manager database. It excludes any new or unidentified signals. |
+| **Scan Only New** | This mode ignores memorized frequencies and scans only for new, unidentified signals. |
+| **Scan All with Save New** | In this mode, the scanner scans all frequencies but saves new, unidentified ones to your Frequency Manager. |
+| **Scan All without Save New** | Similar to the previous mode, this scans all frequencies but doesn't save unidentified signals. |
+| **Scan Only Enabled in Manager** | This mode scans only the frequencies that are enabled in your Frequency Manager. |
 
-## Scanning Modes Explained
+### Setting Up Scan Ranges
 
-![Scan Mode Selector](/assets/images/scan-modes-dropdown.png)
-*Figure 3: The five scanning modes available*
+Next, you can see the **"Scan Ranges"** tab, you can maintain multiple scanning ranges and switch between them whenever you want. To edit or create a new scanning range, click on the "Edit Scan Ranges" button and it will open up a separate window.
 
-Choose your strategy based on what you're hunting:
+![Setting Up Scan Ranges]({{ site.baseurl }}/assets/images/setting-up-scan-ranges.png)
+*Setting Up Scan Ranges*
 
-| Mode | Use Case | Behavior |
-|------|----------|----------|
-| **Scan Only Memorized** | Monitoring known frequencies | Ignores new signals, focuses on your database |
-| **Scan Only New** | Spectrum discovery | Finds unidentified signals, ignores known ones |
-| **Scan All with Save** | Logging & discovery | Scans everything, adds new finds to database |
-| **Scan All without Save** | Temporary monitoring | Scans everything, no database changes |
-| **Scan Only Enabled** | Curated monitoring | Only frequencies you've marked as active |
+Be sure to input the correct values into the fields to define a scan range entry. Any incorrect entries will be highlighted in red, and you won't be able to move on from the field until it's corrected. All values should be specified in Hz, except for "Name," "Detector," and "Group":
 
-**Pro Tip:** Use "Scan Only New" during your initial spectrum survey of a new band. Switch to "Scan All with Save" for daily monitoring to build your local signal database.
+- **"Name"** — The label for the scan range, which will be displayed in the SDR# side panel.
+- **"Start"** — Indicates the starting point for scanning.
+- **"End"** — Specifies where the scanning should stop.
+- **"Detector"** — Specifies modulation (AM, NFM, WFM, LSB, USB, DSB, RAW, CW)
+- **"Bandwidth"** — Denotes the filter channel bandwidth that SDRSharp should use for the frequency range (if the bandwidth is greater than the step size, the step size value will be used instead.) The minimum value for bandwidth is 5000 Hz (5 kHz).
+- **"Step size"** — Represents the spacing between each channel assigned in a scanned frequency range. The minimum value for the step size is 3125 Hz (3.125 kHz).
+- **"Group"** — Used to filter the frequencies from the Frequency Manager for scanning. This functionality works with the scan mode "Scan only memorized - exclude new" to filter groups during scanning. Leaving this field blank will allow the scanner to detect all frequencies in all groups. Filling in this field will restrict the scanner to only display frequencies that match the specified group(s).
+
+&gt; **Note:** You won't be able to click "OK" until all fields contain valid entries. To delete an entry, highlight the row and click 'Delete row,' and please note that there will be no confirmation for this action. If you wish to exit without saving any changes, click "Cancel."
 
 ---
 
-## Setting Up Scan Ranges
+## Configuration Settings
 
-![Scan Range Editor](/assets/images/scan-range-editor.png)
-*Figure 4: The Scan Range Editor dialog*
+Subsequently, locate the **"Configure"** button, and upon clicking it, a new window will appear, encompassing all the configuration choices for the frequency scanner plugin. While most of these options are self-explanatory, I won't delve into each one in this article, as it falls outside the article's intended focus. Below, I'll highlight the key and crucial settings you should be aware of.
 
-### Creating Your First Range
+### Scanner Tab
 
-Click **"Edit Scan Ranges"** to open the editor. Here's how to configure a typical aviation band scan:
+![Scanner Tab Configuration]({{ site.baseurl }}/assets/images/scanner-tab-configuration.png)
+*Scanner Tab Configuration*
 
-<div class="config-table">
+Frequency Scanner utilizes two modes to identify active signals, each with its own advantages and drawbacks:
 
-| Field | Value | Notes |
-|-------|-------|-------|
-| **Name** | `Airband VHF` | Descriptive label |
-| **Start** | `118000000` | 118.000 MHz in Hz |
-| **End** | `137000000` | 137.000 MHz in Hz |
-| **Detector** | `AM` | Aviation uses AM modulation |
-| **Bandwidth** | `10000` | 10 kHz filter |
-| **Step Size** | `50000` | 50 kHz steps (8.33 kHz for modern airband) |
-| **Group** | `Aviation` | Optional categorization |
+#### Static Noise Floor
+- Utilizes peak level values for scanning, but this approach may occasionally pause on random noise.
+- It can be combined with the 'Channel bandwidth for signal level detection' option to enhance signal selectivity.
 
-</div>
+#### Dynamic Noise Floor
+- Relies on signal-to-noise ratio level values for scanning.
+- **Note:** When the scanner is initially started, reset, or modified, it requires one pass through all ranges to establish the baseline noise floor.
+- **Note:** In most cases, it's recommended to use this mode to identify signals.
 
-> ⚠️ **Validation:** Invalid entries highlight in red. The OK button remains disabled until all fields are valid. Step size minimum is **3125 Hz**; bandwidth minimum is **5000 Hz**.
+#### Other Scanner Settings
 
-### Advanced: Multiple Ranges
+| Setting | Description |
+|---------|-------------|
+| **Auto Skip** | Automatically skips active transmissions and continues scanning if a signal remains active for more than the specified time. Useful for automatically skipping long transmissions and scanning for more signals in the meantime. |
+| **Auto Lock** | Automatically locks out the currently active frequency and resumes scanning if a signal remains active for more than the specified time. Useful to filter out constantly active beacons, spurs, or digital carriers. |
+| **Reset Noise Floor** | Periodically resets the noise floor reference level values at specified intervals. Useful to detect signals if you live in a noisy neighborhood. |
+| **Use Audio Mute** | Mutes audio when the scanner starts. Unmutes audio when the scanner stops or pauses on an active frequency. Mutes audio when the scanner continues scanning. **It is recommended to enable this option.** |
 
-Create separate ranges for:
-- **Marine VHF**: 156-174 MHz (NFM, 25 kHz steps)
-- **2m Amateur**: 144-148 MHz (NFM, 12.5 kHz steps)
-- **Pager Bands**: 152-158 MHz (POCSAG/FLEX detection)
-- **Military UHF**: 225-380 MHz (AM/NFM mixed)
+### Channel Analyser Tab
 
----
+![Channel Analyser Tab Configuration]({{ site.baseurl }}/assets/images/channel-analyser-tab-configuration.png)
+*Channel Analyser Tab Configuration*
 
-## Configuration Mastery
+| Setting | Description |
+|---------|-------------|
+| **Channel Analyzer Position** | Allows you to specify the position of the channel analyzer within the SDRSharp. |
+| **Auto suspend draw & suspend level** | Stops the drawing of any channel analyzer activity when not needed after the interval specified. The suspend level determines what will still be shown/updated in the channel analyzer when suspended. Enabling this option can save CPU usage. |
+| **Show Session Hits** | Appends hit count to the frequency label line displayed in the channel analyzer for the active frequencies. Clicking 'Stop scan' clears these values and can be logged with the "Log Totals at the End of Each Session" option. Recommended if you wish to observe and record the frequency of occurrences when a specific signal remains active during a scanning session. |
+| **Show Active SNR** | Adds the SNR value to the end of the label for the active frequency in the channel analyzer. Recommended if you wish to view and log SNR values for active signals. |
+| **Log Totals at the End of Each Session** | At the conclusion of a session, if any frequencies have a hit count greater than 0, they will be recorded in a log file. The log file contains the start and end date/times of the session, scan mode, ranges used in the session, scanned frequency range name, hit counts, and SNR values. Useful to log signal activities for future use. |
+| **Show Active Channel Spectrum** | Displays a small spectrum view in the channel analyzer next to the active frequency marker. The spectrum size matches the channel bandwidth used to detect a signal. Recommended to view more info about the scanning process. |
+| **Show Debug Info** | Reveals additional scanner information such as number of segments used to scan all defined scan ranges, time taken to scan all segments, scan speed, and activity time. Recommended to view more info about the scanning process. |
 
-![Scanner Configuration Tab](/assets/images/scanner-config-tab.png)
-*Figure 5: Scanner tab with detection settings*
+### General Tab
 
-### Detection Modes: The Critical Choice
+![General Tab Configuration]({{ site.baseurl }}/assets/images/general-tab-configuration.png)
+*General Tab Configuration*
 
-**Static Noise Floor**
-- Uses absolute signal strength (dBFS)
-- ⚠️ Prone to pausing on noise spikes
-- Good for: Quiet bands, strong signals only
+| Setting | Description |
+|---------|-------------|
+| **Use 8.33 Khz selector** | Enable this option if you're scanning airband to help correctly tune the VFO to 8.33 Khz frequency allocation. |
+| **Display 8.33 KHz Channel Name** | Associates the VFO frequency with an 8.33 kHz channel name. This feature functions exclusively when scanning the airband (118-137 MHz). Be aware that other plugins may utilize the same space to display information and use "Y Offset" to adjust the position. |
 
-**Dynamic Noise Floor** ⭐ Recommended
-- Uses Signal-to-Noise Ratio (SNR)
-- Adapts to changing band conditions
-- Requires one full scan pass to establish baseline
-- Good for: Noisy environments, weak signal detection
-
-### Essential Settings
-
-<details>
-<summary><strong>Auto Skip vs Auto Lock</strong></summary>
-
-**Auto Skip**: "This transmission is too long, move on"
-- Set to 30-60 seconds for voice communications
-- Prevents getting stuck on control channels or data bursts
-
-**Auto Lock**: "This frequency is always active, ignore it"
-- Set to 2-5 minutes for persistent carriers
-- Filters out: Birdies, digital beacons, interference
-
-</details>
-
-<details>
-<summary><strong>Audio Management</strong></summary>
-
-**Use Audio Mute**: ✅ **Always Enable This**
-- Mutes during scanning (no noise fatigue)
-- Unmutes when signal detected
-- Re-mutes when scanning resumes
-
-**Reset Noise Floor**: Enable if you have:
-- Variable local interference
-- Changing propagation conditions
-- Neighborhood noise sources (LED lights, power supplies)
-
-</details>
+&gt; **Note:** All remaining configuration options are straightforward and should only be adjusted based on specific, unique needs. For more detailed information, please consult the user manual, which is accessible in the SDR# folder at the following location: `SDRSharp\\Plugins\\FrequencyScanner\\Frequency_scanner_plug-in.pdf`.
 
 ---
 
-## Channel Analyzer Visualization
+## Main Controls
 
-![Channel Analyzer Detail](/assets/images/channel-analyzer-detail.png)
-*Figure 6: Channel Analyzer showing active signals and lockout status*
+Moving on, we have the **"Scan"** button, which, when clicked, initiates or halts the scanning process based on the predefined scan ranges.
 
-The Channel Analyzer is your **spectrum cockpit**. Understanding the visual language:
+Next in line is the **"Detect"** button, which reduces the scan speed to enhance the detection of an active signal. The value specified serves as a delay, allowing the receiver to stabilize and ensuring that active signals are not missed during detection.
 
-### Color Coding
-
-<div class="color-legend">
-  <div class="color-item">
-    <span class="color-box" style="background: #00ff88;"></span>
-    <span><strong>Green</strong>: Active signal currently receiving</span>
-  </div>
-  <div class="color-item">
-    <span class="color-box" style="background: #ffaa00;"></span>
-    <span><strong>Orange</strong>: Recent activity (hit count > 0)</span>
-  </div>
-  <div class="color-item">
-    <span class="color-box" style="background: #666;"></span>
-    <span><strong>Grey</strong>: Permanently locked out</span>
-  </div>
-  <div class="color-item">
-    <span class="color-box" style="background: #ff3333;"></span>
-    <span><strong>Red</strong>: Temporarily locked out</span>
-  </div>
-  <div class="color-item">
-    <span class="color-box" style="background: #444;"></span>
-    <span><strong>Dark</strong>: No activity detected</span>
-  </div>
-</div>
-
-### Interactive Features
-
-**Zooming:**
-- **Z1 Mode**: Scroll wheel zooms to last active frequency
-- **Z2 Mode**: Scroll wheel zooms to cursor position (more intuitive)
-- **Reset**: Click center mouse button to return to full view
-
-**Lockout Management:**
-- **Click** a frequency: Toggle lockout
-- **Click-Drag** range: Select multiple frequencies
-- **Left-click** in selection: Lock all selected
-- **Right-click** in selection: Unlock all selected
+Following that, we have the **"Wait"** button, which determines the duration of the delay after a transmission has concluded before the scan resumes.
 
 ---
 
-## Trigger and Hysteresis
+## Channel Analyser Pane
 
-![Trigger Levels](/assets/images/trigger-hysteresis-levels.png)
-*Figure 7: Red (trigger) and Yellow (hysteresis) threshold lines*
+The channel analyzer serves as a visual representation of all the predefined frequency ranges that are currently under scanning. Here are its key functions:
 
-These two lines control the scanner's behavior:
+- It provides real-time updates on the Signal-to-Noise Ratio (SNR) levels of the frequencies within the scanning range during each scan cycle.
+- The lockout status of each frequency within the scanning range is visibly indicated by specific colors.
+- It displays detailed information such as Group and Name, hit count, SNR, and a spectrum view for the currently active frequency.
+- The Group and Name of the frequency, along with its hit count, are displayed at the location where the mouse cursor is positioned.
+- Optionally, it can display a compact spectrum view of the active channel's bandwidth.
+- Users have the choice to optionally view debugging information.
+- The channel analyzer panel is also where you can configure and set permanent or temporary lockout states for individual frequencies.
 
-### Detection Trigger (Red Line)
-When signal strength crosses **above** this line:
-- Scanning pauses
-- Audio unmutes
-- Signal analysis begins
+### Lockout Controls
 
-### Hysteresis Level (Yellow Line)
-Once triggered, signal must drop **below** this line to begin "Wait" countdown:
-- Prevents rapid stop/start on fluttery signals
-- Creates stable hold behavior
-- If signal re-crosses red line during wait, timer resets
+The Lockout and Remove Lockout buttons specifically apply to the frequency that is currently active or has been paused. They provide a means to stop the scanning process for particular frequencies or a range of frequencies.
 
-**Setting Guidelines:**
-- **Quiet band**: Trigger at -50 dB, Hysteresis at -60 dB
-- **Noisy band**: Trigger at -40 dB, Hysteresis at -50 dB
-- **Digital modes**: Tighter gap (5-10 dB between lines)
-- **Voice modes**: Wider gap (10-15 dB between lines)
+- These buttons are automatically deactivated while the scanning process is ongoing.
+- The user can switch between permanent and temporary lockout modes by right-clicking on either button.
+- The button's background color serves as an indicator of the chosen lockout mode:
+  - **Permanent lockout** is represented by Grey.
+  - **Temporary lockout** is denoted by Red.
 
----
+#### Modifying Lockout Status
 
-## Practical Scanning Profiles
+To modify the lockout status of a frequency:
 
-### Profile 1: Aviation Monitoring
+- Users can left-click on either the Lockout or Remove Lockout buttons corresponding to the active or playing frequency.
+- Alternatively, they can directly click on the channel analyzer panel itself, away from other buttons, at the position where the frequency of interest resides. Zoom functionality can be employed if necessary to pinpoint the frequency more accurately.
 
-```
-Range: 118-137 MHz
-Mode: AM
-Step: 8.33 kHz (enable 8.33 kHz selector in General tab)
-Bandwidth: 10 kHz
-Detector: Dynamic Noise Floor
-Auto Skip: 45 seconds
-```
+&gt; **Note:** When it comes to altering the lockout state for a range of frequencies, it's important to exercise caution. Please take note that the clickable area on the screen depends on the 'Restrict lockout click area' option.
 
-**What you'll hear:**
-- ATC clearances
-- Approach/Departure
-- ATIS broadcasts
-- ACARS data bursts (sound like fax machines)
+#### Locking Out a Range of Frequencies
 
-### Profile 2: Public Safety Trunking
+To lock out or remove lockouts from a range of frequencies simultaneously:
 
-```
-Range: 851-869 MHz (US) or 380-400 MHz (EU TETRA)
-Mode: NFM
-Step: 12.5 kHz
-Bandwidth: 12.5 kHz
-Detector: Dynamic Noise Floor
-Auto Skip: 15 seconds
-```
+- Users should initiate a left-click and hold action, then drag to select the desired range of frequencies.
+- Upon releasing the left mouse button, the selected range of frequencies will be affected.
+- When left-clicking inside the marked range, it will lock out all frequencies within that range.
+- Conversely, right-clicking inside the marked range will remove lockouts from all frequencies within the specified range.
 
-**Note:** For trunked systems, you'll need Unitrunker or similar for talkgroup following. The Frequency Scanner identifies active control channels.
+### Zooming
 
-### Profile 3: Satellite Downlink Hunting
+Zooming within the Channel Analyzer panel can be accomplished using the mouse scroll wheel. This action centers the frequency within the Channel Analyzer and functions in one of two ways, depending on the selected Zoom Type:
 
-```
-Range: 137-138 MHz (NOAA/Meteor) or 240-270 MHz (Military SATCOM)
-Mode: NFM/WFM depending on satellite
-Step: 5 kHz
-Bandwidth: 15-40 kHz
-Detector: Static Noise Floor (weak signals)
-Auto Skip: Disabled (record everything)
-```
+**Z1 Mode:** This mode zooms in on the last active frequency. To activate Z1, place the mouse cursor anywhere in the Channel Analyzer panel and utilize the scroll wheel (up or down). Alternatively, you can perform a quick zoom by clicking the scroll wheel (center button). Please note that you must return to a non-zoomed view before you can begin zooming in on a new frequency.
+
+**Z2 Mode:** In this mode, zooming is directed to the frequency at the position of the mouse cursor. To activate Z2, place the mouse cursor precisely at the frequency you intend to zoom in on, and then use the scroll wheel (up or down) or click the scroll wheel (center button) for a quick zoom.
 
 ---
 
-## Logging and Analysis
+## Configuring Trigger and Hysteresis Levels
 
-![Logging Settings](/assets/images/logging-configuration.png)
-*Figure 8: Session logging configuration*
+![Configuring Trigger and Hysteresis Levels]({{ site.baseurl }}/assets/images/trigger-and-hysteresis.png)
+*Configuring Trigger and Hysteresis Levels*
 
-Enable **"Log Totals at the End of Each Session"** to generate CSV files containing:
-- Session start/end timestamps
-- Frequency and hit count
-- SNR values at detection
-- Scan mode and ranges used
+These two parameters govern when the scanner suspends scanning and when it resumes its scanning operation. The red button adjusts the detection trigger level, while the yellow button adjusts the hysteresis level.
 
-**Analysis workflow:**
-1. Scan overnight with "Scan All with Save"
-2. Import CSV into Excel/Python
-3. Identify patterns: "146.520 MHz active at 02:00 daily"
-4. Add discovered frequencies to memorized list
+### Detection Trigger Level (Red Horizontal Line)
+
+When a received signal surpasses the red line, scanning halts, and the scanner transitions to listening mode.
+
+### Hysteresis Level (Yellow Horizontal Line)
+
+Following the occurrence described above, once a received signal drops below the yellow line, a countdown begins for a waiting (delay) period.
+
+- When this countdown expires, scanning resumes.
+- Alternatively, if the signal exceeds the red line again during the waiting (delay) period, the waiting counter resets and the scanner remains on the current frequency.
+- Once a signal has triggered the scanner to pause by surpassing the red line, it can remain paused as long as it remains above the yellow line, avoiding the waiting (delay) state, or it can continue scanning if it falls below the yellow line.
 
 ---
 
 ## Troubleshooting
 
-<details class="troubleshoot">
-<summary>Scanner pauses on noise/static</summary>
+### Common Issues and Solutions
 
-**Cause:** Static noise floor mode with threshold too low
+| Issue | Possible Cause | Solution |
+|-------|---------------|----------|
+| **Scanner stops on noise/static** | Static Noise Floor mode selected; trigger level too low | Switch to Dynamic Noise Floor mode, or raise the detection trigger level (red line) |
+| **Missing active signals** | Scan speed too fast; step size too large | Reduce scan speed using the "Detect" button, or decrease step size in scan range settings |
+| **Scanner won't start** | Invalid scan range values; missing required fields | Check that all scan range fields are filled correctly (red highlights indicate errors) |
+| **No audio output** | Audio Mute not configured properly | Enable "Use Audio Mute" in Scanner tab configuration |
+| **Frequencies not being saved** | Wrong scan mode selected | Ensure you're using "Scan All with Save New" mode to capture new frequencies |
+| **High CPU usage** | Channel analyzer drawing continuously | Enable "Auto suspend draw" in Channel Analyser tab settings |
+| **Noise floor constantly changing** | Environment has variable interference | Enable "Reset Noise Floor" with appropriate interval timing |
+| **Can't lock out frequencies** | Scanner is currently running | Stop the scan first before attempting to lock out frequencies |
+| **8.33 kHz channels not displaying correctly** | 8.33 kHz selector not enabled | Enable "Use 8.33 Khz selector" in General tab when scanning airband |
 
-**Fix:**
-1. Switch to Dynamic Noise Floor
-2. Raise trigger level by 5-10 dB
-3. Enable "Use Audio Mute" to confirm it's actually stopping
+### Tips for Optimal Scanning
 
-</details>
+1. **Start with a known active frequency** — Test your setup on a frequency you know is active (like a local FM broadcast station) to verify everything is working.
 
-<details class="troubleshoot">
-<summary>Missing weak signals</summary>
+2. **Use appropriate bandwidth settings** — Match your bandwidth to the signal type: narrower for NFM/AM voice, wider for WFM broadcasts.
 
-**Cause:** Bandwidth too narrow or step size too large
+3. **Monitor the noise floor** — If you live in an RF-noisy environment, use Dynamic Noise Floor mode and enable periodic reset.
 
-**Fix:**
-1. Reduce step size to 3.125 kHz minimum
-2. Increase bandwidth to match signal width
-3. Lower trigger level gradually
-4. Check "Reset Noise Floor" interval isn't too aggressive
+4. **Save your scan ranges** — Create different scan range profiles for different bands of interest (Airband, Marine, Amateur, etc.).
 
-</details>
+5. **Check your antenna** — Poor reception is often an antenna issue, not an SDR issue. Ensure your discone or wideband antenna is properly installed and has good line of sight.
 
-<details class="troubleshoot">
-<summary>Scanner stuck on one frequency</summary>
-
-**Cause:** Auto Skip disabled or set too long
-
-**Fix:**
-1. Enable Auto Skip (30s for voice, 10s for data)
-2. Check if frequency is a control channel
-3. Use Auto Lock instead to permanently ignore
-
-</details>
-
-<details class="troubleshoot">
-<summary>Channel Analyzer not updating</summary>
-
-**Cause:** "Auto Suspend Draw" enabled with short timeout
-
-**Fix:**
-1. Go to Channel Analyser tab
-2. Disable "Auto Suspend Draw" OR increase timeout
-3. Check "Show Active Channel Spectrum" is enabled
-
-</details>
-
----
-
-## Advanced Tips
-
-<div class="tip-box">
-<strong>💡 Tip: Spectrum Survey Technique</strong><br>
-Run "Scan Only New" for 24 hours on a wide range (e.g., 144-146 MHz). Then analyze the log to find the quietest frequency for your QRP operations.
-</div>
-
-<div class="tip-box">
-<strong>💡 Tip: Interference Hunting</strong><br>
-Set a narrow bandwidth (5 kHz) and small step (3.125 kHz). Scan your problem band with "Show Debug Info" enabled. The "activity time" metric reveals interference duty cycles.
-</div>
-
-<div class="tip-box">
-<strong>💡 Tip: Satellite Pass Prediction</strong><br>
-Combine Frequency Scanner with Orbitron. Set Auto Lock on persistent terrestrial signals, then scan the satellite band only during predicted passes.
-</div>
+6. **Log your sessions** — Enable "Log Totals at the End of Each Session" to build a database of active frequencies in your area.
 
 ---
 
 ## Conclusion
 
-The Frequency Scanner Plugin transforms SDRSharp from a manual tuning tool into an automated spectrum monitoring station. Whether you're building a signal database, monitoring emergency services, or hunting for satellite downlinks, the key is understanding the relationship between:
+The Frequency Scanner plugin transforms SDRSharp from a simple receiver into a powerful scanning platform capable of rivaling dedicated hardware scanners. By understanding the various scanning modes, properly configuring your scan ranges, and utilizing the channel analyzer effectively, you can efficiently monitor large portions of the spectrum with minimal effort.
 
-- **Detection modes** (Static vs Dynamic)
-- **Thresholds** (Trigger and Hysteresis)
-- **Time management** (Auto Skip/Lock)
+Whether you're hunting for new signals, monitoring public safety communications, or simply exploring the RF landscape, this setup provides an incredibly flexible and cost-effective solution. The ability to log hits, analyze SNR values, and customize lockout behaviors makes it an invaluable tool for any serious radio enthusiast.
 
-Start with conservative settings, observe behavior, then optimize for your specific environment. The best scanner configuration is the one that catches what you're looking for while ignoring what you're not.
+Remember: the spectrum is always changing. What you find today might be gone tomorrow, and new signals appear constantly. Happy scanning!
 
-**In the noise, we find signals.**
+---
+
+&lt;div class="post-footer" style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #333; text-align: center; color: #666; font-size: 0.9rem;"&gt;
+  &lt;p&gt;&lt;em&gt;Last updated: March 2026&lt;/em&gt;&lt;/p&gt;
+  &lt;p&gt;Questions or comments? Reach out via &lt;a href="https://www.qrz.com/db/A65KJ" target="_blank"&gt;QRZ&lt;/a&gt; or check out more articles on &lt;a href="{{ site.baseurl }}"&gt;Noise Floor Nomad&lt;/a&gt;.&lt;/p&gt;
+  &lt;p style="margin-top: 1rem; font-style: italic; color: #ff6b35;"&gt;"In the noise, we find signals"&lt;/p&gt;
+&lt;/div&gt;
