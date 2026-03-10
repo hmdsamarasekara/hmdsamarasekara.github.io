@@ -4,7 +4,6 @@ title: "Testing the USB2Rig Interface with APRSdroid"
 date: 2025-05-17 12:00:00 +0530
 categories: [digital-modes, aprs, equipment-review]
 tags: [usb2rig, digirig, aprsdroid, android, packet-radio, portable]
-image: /assets/images/USB2Rig.png
 excerpt: "A hands-on review of the USB2Rig digital interface - a DigiRig-compatible USB audio solution for portable APRS operations with Android and APRSdroid."
 ---
 
@@ -365,6 +364,7 @@ After configuring everything, I transmitted a few APRS beacons.
   </div>
   <div class="use-case wide">
     <span class="use-icon">💬</span>
+    <h5><code>A65KJ-7&gt;APDR13,WIDE1-1,WIDE2-1::A61BN-10 :USB2Rig APRS test via Android{01</code></h5>
     <h5>APRS Messaging (No Internet Required)</h5>
   </div>
 </div>
