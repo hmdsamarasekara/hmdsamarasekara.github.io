@@ -415,18 +415,6 @@ After configuring everything, I transmitted a few APRS beacons.
 
 ---
 
-<div class="post-footer">
-  <div class="callsign-badge">
-    <span class="label">Tested by</span>
-    <span class="callsign">A65KJ</span>
-  </div>
-  <div class="post-meta-footer">
-    <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
-    <span class="separator">•</span>
-    <span class="category">{{ page.categories | join: ", " }}</span>
-  </div>
-</div>
-
 <style>
 /* Post-specific styling that complements your existing theme */
 .post-intro .lead {
