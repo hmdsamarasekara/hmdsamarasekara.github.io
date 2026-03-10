@@ -364,7 +364,7 @@ After configuring everything, I transmitted a few APRS beacons.
   </div>
   <div class="use-case wide">
     <span class="use-icon">💬</span>
-    <h5><code>A65KJ-7&gt;APDR13,WIDE1-1,WIDE2-1::A61BN-10 :USB2Rig APRS test via Android{01</code></h5>
+    <h5><code>A65KJ-7&gt;APDR13,WIDE1-1,WIDE2-1::A61BN-10 :USB2Rig APRS test via Android{01</code></h5><br>
     <h5>APRS Messaging (No Internet Required)</h5>
   </div>
 </div>
