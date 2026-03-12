@@ -8,8 +8,6 @@ tags: [satellite-tv, fta, c-band, ku-band, card-sharing, hellobox, tiger, starsa
 description: "Comprehensive database of 30+ TV satellites receivable from Sri Lanka with orbital positions, FTA availability, encryption status, and card-sharing server compatibility"
 ---
 
-*A comprehensive database of geostationary satellites visible from the Pearl of the Indian Ocean*
-
 ![Satellite Arc Visualization](/assets/images/sri_lanka_satellite_arc.png)
 *Geostationary arc visible from Sri Lanka (40°E - 140°E). Color coding: Green = FTA Available, Orange = Encrypted (IKS/CS supported), Blue = Encrypted (No CS available)*
 
@@ -584,4 +582,5 @@ Many channels are FTA, and some encrypted ones work with **Forever IKS**. Essent
 
 
 *73 de A65KJ* 📡
+
 
