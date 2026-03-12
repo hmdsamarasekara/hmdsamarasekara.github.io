@@ -8,8 +8,6 @@ tags: [satellite-tv, fta, c-band, ku-band, card-sharing, hellobox, tiger, starsa
 description: "Comprehensive database of 30+ TV satellites receivable from Sri Lanka with orbital positions, FTA availability, encryption status, and card-sharing server compatibility"
 ---
 
-# 🛰️ Complete Satellite Reception Guide from Sri Lanka
-
 *A comprehensive database of geostationary satellites visible from the Pearl of the Indian Ocean*
 
 ![Satellite Arc Visualization](/assets/images/sri_lanka_satellite_arc.png)
@@ -586,3 +584,4 @@ Many channels are FTA, and some encrypted ones work with **Forever IKS**. Essent
 
 
 *73 de A65KJ* 📡
+
