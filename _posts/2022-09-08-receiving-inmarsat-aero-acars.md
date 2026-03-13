@@ -47,29 +47,31 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 
 .section-header {
   display: flex;
-  align-items: center; /* This should vertically center both */
+  align-items: center;
   gap: 0.75rem;
   margin-bottom: 1rem;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid #00d4ff33;
-  justify-content: flex-start; /* Keep them left-aligned together */
 }
 
 .section-icon {
   font-size: 1.5rem;
   color: #00d4ff;
   filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.5));
-  line-height: 1; /* Add this - prevents extra line height space */
-  display: flex; /* Add this */
-  align-items: center; /* Add this */
+  height: 1.5rem; /* Match font-size */
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Prevent icon from shrinking */
 }
 
 .section-title {
   font-size: 1.5rem;
   font-weight: 700;
   color: #f9fafb;
-  margin: 0; /* Ensure no default margins pushing things around */
-  line-height: 1.2; /* Consistent line height */
+  margin: 0;
+  line-height: 1.5rem; /* Match icon height */
 }
 
 .info-box {
