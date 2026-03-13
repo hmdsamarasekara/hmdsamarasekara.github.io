@@ -240,7 +240,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 <div class="section-card">
   <div class="section-header">
     <i class="fas fa-broadcast-tower section-icon"></i>
-    <h2 class="section-title">Introduction</h2>
+    <h1 class="section-title">Introduction</h1>
   </div>
 
   <p>Inmarsat operates a global network of <strong>geostationary satellites</strong> that provide communication services for aviation, maritime, and other remote industries. Unlike terrestrial networks, geostationary satellites remain fixed over a specific point on the Earth's surface, allowing continuous coverage of a region. This makes them ideal for applications where real-time communications are critical, such as aircraft operations and ship navigation.</p>
@@ -291,7 +291,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 <div class="section-card">
   <div class="section-header">
     <i class="fas fa-globe-asia section-icon"></i>
-    <h2 class="section-title">Satellite Coverage</h2>
+    <h1 class="section-title">Satellite Coverage</h1>
   </div>
 
   <p>The <strong>Indian Ocean region (IOR)</strong> is served by the geostationary satellite located at <strong>143°E longitude</strong>, currently the <strong>Alphasat-4 F1</strong>. Geostationary satellites orbit at approximately 35,786 km above the equator, allowing them to remain fixed relative to the Earth's surface. This provides continuous coverage of a large area, unlike low-Earth orbit satellites, which move quickly across the sky.</p>
@@ -354,7 +354,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 <div class="section-card">
   <div class="section-header">
     <i class="fas fa-wave-square section-icon"></i>
-    <h2 class="section-title">AERO ACARS Channel Types</h2>
+    <h1 class="section-title">AERO ACARS Channel Types</h1>
   </div>
 
   <p>Inmarsat AERO uses L-band channels to transmit ACARS messages and other data. Each channel has a defined bitrate and typical usage, which affects both traffic volume and decoding difficulty.</p>
@@ -520,7 +520,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 <div class="section-card">
   <div class="section-header">
     <i class="fas fa-tools section-icon"></i>
-    <h2 class="section-title">Hardware Setup</h2>
+    <h1 class="section-title">Hardware Setup</h1>
   </div>
 
   <p>My setup looked like this:</p>
@@ -611,7 +611,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 <div class="section-card">
   <div class="section-header">
     <i class="fas fa-laptop-code section-icon"></i>
-    <h2 class="section-title">Software Setup</h2>
+    <h1 class="section-title">Software Setup</h1>
   </div>
 
   <p>Three pieces of software are required:</p>
@@ -711,7 +711,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 <div class="section-card">
   <div class="section-header">
     <i class="fas fa-layer-group section-icon"></i>
-    <h2 class="section-title">Decoding Multiple Channels Simultaneously</h2>
+    <h1 class="section-title">Decoding Multiple Channels Simultaneously</h1>
   </div>
 
   <p>Decoding a single channel works well, but the Inmarsat band contains <strong>many active channels</strong>. To monitor several channels simultaneously, a different approach is needed.</p>
@@ -754,7 +754,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 <div class="section-card">
   <div class="section-header">
     <i class="fas fa-microphone-alt section-icon"></i>
-    <h2 class="section-title">Voice Channels</h2>
+    <h1 class="section-title">Voice Channels</h1>
   </div>
 
   <p>The <strong>8400 bps channels</strong> typically carry voice communications.</p>
@@ -800,7 +800,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 <div class="section-card" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-color: #00d4ff33;">
   <div class="section-header">
     <i class="fas fa-flag-checkered section-icon" style="color: #ff6b35;"></i>
-    <h2 class="section-title" style="color: #ff6b35;">Final Thoughts</h2>
+    <h1 class="section-title" style="color: #ff6b35;">Final Thoughts</h1>
   </div>
 
   <p style="font-size: 1.125rem; line-height: 1.8;">Inmarsat AERO ACARS signals are one of the <strong style="color: #00d4ff;">easiest satellite communications</strong> to receive using inexpensive SDR hardware.</p>
