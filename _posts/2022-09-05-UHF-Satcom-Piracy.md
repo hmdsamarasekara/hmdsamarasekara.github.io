@@ -157,6 +157,7 @@ This makes it ideal for satellite reception since it does not require precise po
   </iframe>
 </div>
 
+<br>
 ---
 
 ## <i class="fas fa-shield-alt" style="color: #00d4ff;"></i> Disclaimer
@@ -179,4 +180,5 @@ This makes it ideal for satellite reception since it does not require precise po
   </span>
 
 </div>
+
 
