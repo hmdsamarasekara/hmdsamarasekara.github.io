@@ -47,10 +47,6 @@ layout: default
                     <span>300</span>
                 </div>
             </div>
-            <div class="spectrum-info">
-                <span class="freq-range">0.0 - 300.0 MHz</span>
-                <span class="mode">FFT Spectrum</span>
-            </div>
         </div>
 
         <p class="hero-subtitle">{{ site.description }}</p>
@@ -68,7 +64,7 @@ layout: default
         </div>
 
         <div class="posts-grid">
-            {% for post in site.posts limit:6 %}
+            {% for post in site.posts limit:8 %}
             <article class="post-card">
                 <div class="post-card-meta">
                     <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
