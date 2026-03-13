@@ -296,6 +296,8 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 
   <p>The <strong>Indian Ocean region (IOR)</strong> is served by the geostationary satellite located at <strong>143°E longitude</strong>, currently the <strong>Alphasat-4 F1</strong>. Geostationary satellites orbit at approximately 35,786 km above the equator, allowing them to remain fixed relative to the Earth's surface. This provides continuous coverage of a large area, unlike low-Earth orbit satellites, which move quickly across the sky.</p>
 
+<br>
+
   <h3 style="color: #00d4ff; font-size: 1.125rem; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
     <i class="fas fa-map-marked-alt"></i> Coverage Area
   </h3>
@@ -328,6 +330,8 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
       Inmarsat geostationary satellite coverage (IOR region)
     </div>
   </div>
+
+<br>
 
   <h3 style="color: #00d4ff; font-size: 1.125rem; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
     <i class="fas fa-history"></i> Historical Context
@@ -396,6 +400,8 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
     Higher bitrate channels carry more traffic but require better signal quality and wider SDR bandwidth to decode reliably.
   </div>
 
+<br>
+
   <h3 style="color: #00d4ff; font-size: 1.125rem; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
     <i class="fas fa-broadcast-tower"></i> AERO ACARS Frequencies (143°E IOR)
   </h3>
@@ -405,6 +411,8 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
   <div class="image-container">
     <img src="/assets/images/AERO-Low-Channels.jpg" alt="600bps and 1200bps Channels">
   </div>
+
+<br>
 
   <h4 style="color: #f9fafb; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
     <i class="fas fa-signal" style="color: #22c55e;"></i> 600 bps Channels
@@ -436,6 +444,8 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
     600 bps channels are typically the most stable and easiest to decode with small patch antennas and low-cost SDRs.
   </div>
 
+<br>
+
   <h4 style="color: #f9fafb; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
     <i class="fas fa-signal" style="color: #eab308;"></i> 1200 bps Channels
   </h4>
@@ -457,6 +467,8 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
   <div class="image-container">
     <img src="/assets/images/AERO-High-Channels.jpg" alt="10500bps Channels">
   </div>
+
+<br>
 
   <h4 style="color: #f9fafb; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
     <i class="fas fa-signal" style="color: #ff6b35;"></i> 10500 bps Channels
@@ -482,6 +494,8 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
   <div class="tip-box">
     These high-speed channels require wideband SDR reception and a high SNR. They are more sensitive to cable loss, interference, and antenna quality.
   </div>
+
+<br>
 
   <h4 style="color: #f9fafb; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
     <i class="fas fa-microphone-alt" style="color: #ff6b35;"></i> 8400 bps Voice Channels
