@@ -821,25 +821,6 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
     <h1 class="section-title" style="color: #ff6b35;">Final Thoughts</h1>
   </div>
 
-  <p style="font-size: 1.125rem; line-height: 1.8;">Inmarsat AERO ACARS signals are one of the <strong style="color: #00d4ff;">easiest satellite communications</strong> to receive using inexpensive SDR hardware.</p>
+  <p style="font-size: 1.125rem; line-height: 1.8;">Inmarsat AERO ACARS signals are one of the <strong style="color: #00d4ff;">easiest & rewarding</strong> satellite communications to receive using inexpensive SDR hardware.</p>
 
-  <p>With a modest antenna, an SDR receiver, and freely available software, it is possible to monitor aviation data links transmitted <strong style="color: #ff6b35;">thousands of kilometers away</strong> from geostationary satellites.</p>
-
-  <div style="background: #0a0e1a; border: 1px solid #00d4ff33; border-radius: 8px; padding: 1.5rem; margin-top: 1.5rem; text-align: center;">
-    <i class="fas fa-satellite" style="font-size: 2rem; color: #00d4ff; margin-bottom: 0.5rem; display: block;"></i>
-    <p style="margin: 0; font-style: italic; color: #9ca3af;">For radio enthusiasts interested in satellite monitoring, this is an excellent introduction to the world of <strong style="color: #00d4ff;">L-band satellite communications</strong>.</p>
-  </div>
-</div>
-
-<div style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #1f2937; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-  <span style="color: #6b7280; font-size: 0.875rem; margin-right: 1rem;">
-    <i class="fas fa-tags" style="margin-right: 0.5rem;"></i>Tags:
-  </span>
-  <span class="tag-pill">satellite</span>
-  <span class="tag-pill">radio</span>
-  <span class="tag-pill">sdr</span>
-  <span class="tag-pill">aviation</span>
-  <span class="tag-pill">inmarsat</span>
-  <span class="tag-pill">acars</span>
-  <span class="tag-pill">l-band</span>
-</div>
+  <p>With a modest antenna, low cost SDR, and freely available software, it is possible to monitor aviation data links transmitted <strong style="color: #ff6b35;">thousands of kilometers away</strong> from geostationary satellites.</p>
