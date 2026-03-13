@@ -283,7 +283,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
     </div>
   </div>
 
-  <p>Ground-to-aircraft transmissions also occur in the L-band around <strong>1.5 GHz</strong>, which makes them relatively accessible to radio enthusiasts using inexpensive SDR (Software-Defined Radio) hardware. While the uplink from aircraft requires higher power and more specialized antennas, the downlink signals are sufficiently strong that hobbyists can monitor them with directional L-band antennas and low-noise amplifiers.</p>
+  <p>Ground-to-aircraft transmissions also occur in the L-band around <strong>1.5 GHz</strong>, which makes them relatively accessible to radio enthusiasts using inexpensive Software-Defined Radio hardware.</p>
 
   <p>In addition to basic ACARS data, Inmarsat AERO channels can carry higher-bitrate transmissions for voice communications (such as pilot-to-ground calls) and more data-intensive applications, making them a rich source of real-time aviation telemetry for SDR enthusiasts.</p>
 </div>
@@ -380,7 +380,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
       <tr>
         <td><span class="bandwidth-badge">1200 bps</span></td>
         <td>Standard ACARS messages</td>
-        <td>Higher throughput for more frequent messages or slightly larger payloads.</td>
+        <td>Higher throughput for more frequent messages or slightly larger payloads. Easy to decode even with a small directional antenna.</td>
       </tr>
       <tr>
         <td><span class="bandwidth-badge" style="background: #ff6b3522; color: #ff6b35; border-color: #ff6b3533;">8400 bps</span></td>
@@ -397,7 +397,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 
   <div class="info-box">
     <i class="fas fa-info-circle" style="color: #00d4ff; margin-right: 0.5rem;"></i>
-    Higher bitrate channels carry more traffic but require better signal quality and wider SDR bandwidth to decode reliably.
+    Higher bitrate channels carry more traffic but require better signal-to-noise ratio to decode reliably.
   </div>
 
 <br>
@@ -462,7 +462,9 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
     </tbody>
   </table>
 
-  <p style="color: #9ca3af; font-size: 0.875rem;">1200 bps channels are slightly busier than 600 bps, carrying more frequent or larger ACARS messages.</p>
+  <div class="tip-box">
+    1200 bps channels are slightly busier than 600 bps, carrying more frequent or larger ACARS messages, and are easy to decode with small patch antennas and low-cost SDRs.
+  </div>
 
   <div class="image-container">
     <img src="/assets/images/AERO-High-Channels.jpg" alt="10500bps Channels">
@@ -492,7 +494,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
   </table>
 
   <div class="tip-box">
-    These high-speed channels require wideband SDR reception and a high SNR. They are more sensitive to cable loss, interference, and antenna quality.
+    These high-speed channels require a higher signal-to-noise ratio (SNR) for reliable decoding and are more sensitive to cable loss, interference, and antenna performance.
   </div>
 
 <br>
@@ -520,10 +522,6 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
       <i class="fas fa-layer-group" style="color: #9ca3af;"></i>
       Channels may appear simultaneously or overlap, depending on satellite traffic
     </li>
-    <li style="margin: 0.5rem 0; display: flex; align-items: center; gap: 0.5rem;">
-      <i class="fas fa-cog" style="color: #9ca3af;"></i>
-      Decoding these requires flexible SDR software (e.g., JAERO) and voice decoding enabled
-    </li>
   </ul>
 
   <div class="warning-box">
@@ -543,7 +541,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
     <img src="/assets/images/Inmarsat-Setup.JPG" alt="Antenna Setup">
     <div class="image-caption">
       <i class="fas fa-camera" style="margin-right: 0.5rem;"></i>
-      Complete L-band reception setup with active antenna and SDR
+      L-band reception setup
     </div>
   </div>
 
@@ -559,8 +557,10 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 
   <div class="info-box">
     <i class="fas fa-info-circle" style="color: #00d4ff; margin-right: 0.5rem;"></i>
-    This antenna works well for decoding <strong>600 bps and 1200 bps channels</strong>, but in my experience it struggles with the higher bitrate channels such as <strong>8400 bps and 10500 bps</strong> due to lower signal-to-noise ratio.
+    RTL-SDR L-band Active Patch Antenna works well for decoding <strong>600 bps and 1200 bps channels</strong>, but in my experience, it struggles with the higher bitrate channels such as <strong>8400 bps and 10500 bps</strong> due to lower signal-to-noise ratio.
   </div>
+
+<br>
 
   <h3 style="color: #00d4ff; font-size: 1.125rem; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
     <i class="fas fa-level-up-alt"></i> Advanced Setup
@@ -579,25 +579,25 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
     <div class="hardware-item">
       <i class="fas fa-broadcast-tower hardware-icon"></i>
       <div>
-        <strong style="color: #f9fafb;">Helical Feed Antenna</strong><br>
+        <strong style="color: #f9fafb;">Helical Feed</strong><br>
         <span style="color: #9ca3af; font-size: 0.875rem;">3D-printable design for L-band</span>
       </div>
     </div>
     <div class="hardware-item">
       <i class="fas fa-bolt hardware-icon"></i>
       <div>
-        <strong style="color: #f9fafb;">LNA at Feed</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Low noise amplification at antenna</span>
+        <strong style="color: #f9fafb;">Filtered LNA</strong><br>
+        <span style="color: #9ca3af; font-size: 0.875rem;">Improve signal SNR</span>
       </div>
     </div>
   </div>
 
   <div class="warning-box">
-    Inmarsat signals use <strong>right-hand circular polarization</strong>, so when using a dish the feed must be <strong>left-hand circularly polarized</strong>.
+    Inmarsat signals use <strong>right-hand circular polarization</strong>, so when using a dish, the feed must be <strong>left-hand circularly polarized</strong>.
   </div>
 
   <div class="tip-box">
-    I used Derekcz's 3D-printable helical scaffolding from Thingiverse. The recommended model for Inmarsat is <code style="background: #0f172a; padding: 0.125rem 0.375rem; border-radius: 3px;">"1700L_5.5T_0.14S_4D_10-90M.stl"</code> — <a href="https://www.thingiverse.com/thing:4980180/files" style="color: #00d4ff;">Download here</a>
+    I used Derekcz's 3D-printable helical scaffolding from Thingiverse. The recommended model for Inmarsat is <code style="background: #0f172a; padding: 0.125rem 0.375rem; border-radius: 3px;">"1700L_5.5T_0.14S_4D_10-90M.stl"</code> <a href="https://www.thingiverse.com/thing:4980180/files" style="color: #00d4ff;">Download here</a>
   </div>
 
   <div class="image-container">
@@ -610,7 +610,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 
   <div class="info-box">
     <i class="fas fa-microchip" style="color: #00d4ff; margin-right: 0.5rem;"></i>
-    The <strong>Nooelec SAWbird IO</strong> series provides low-noise amplification for L-band signals centered at <strong>1.542 GHz</strong>, with the standard module offering <strong>20 dB gain</strong> and the <strong>SAWbird+ IO</strong> providing <strong>30 dB gain</strong>, along with built-in SAW filtering to reduce out-of-band interference.
+    The <strong>Nooelec SAWbird IO</strong> series provides low-noise amplification for L-band signals centered at <strong>1.542 GHz</strong>, with the standard module offering <strong>20 dB gain</strong> and the <strong>SAWbird+ IO</strong> providing <strong>30 dB gain</strong>, both units feature built-in SAW filtering to reduce out-of-band interference.
   </div>
 
   <div class="image-container">
@@ -736,13 +736,17 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 </div>
 
   <div class="tip-box">
-    I followed a guide created by <strong>@thebaldgeek</strong> — <a href="https://thebaldgeek.github.io/SDRReceiver.html" target="_blank" rel="noopener" style="color: #00d4ff;"> How to use SDRReceiver to send data to JAERO </a> — which explains the process in detail.
+    I followed a guide created by <strong>@thebaldgeek</strong> <a href="https://thebaldgeek.github.io/SDRReceiver.html" target="_blank" rel="noopener" style="color: #00d4ff;"> How to use SDRReceiver to send data to JAERO </a> which explains the process in detail.
   </div>
 
   <div style="background: #0f172a; border: 1px solid #1f2937; border-radius: 8px; padding: 1rem; margin: 1rem 0;">
   <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
     <i class="fas fa-download" style="color: #00d4ff;"></i>
     <strong style="color: #f9fafb;">Configuration File</strong>
+  </div>
+
+<div class="tip-box">
+    I created a custom configuration file for the <strong>143°E IOR satellite (Inmarsat-4 F1)</strong> with the correct frequencies to decode all channels using SDRReceiver.
   </div>
 
   <a href="/downloads/143E.ini" download style="text-decoration: none;">
@@ -756,7 +760,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
     <img src="/assets/images/SDRReceiver.jpg" alt="SDRReceiver Example">
     <div class="image-caption">
       <i class="fas fa-desktop" style="margin-right: 0.5rem;"></i>
-      SDRReceiver decoding multiple channels simultaneously
+      SDRReceiver with multiple JAERO instances
     </div>
   </div>
 
