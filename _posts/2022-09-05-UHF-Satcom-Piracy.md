@@ -7,40 +7,29 @@ tags: [satcom, satellite, radio, piracy]
 excerpt: "Listening to pirate radio activity on UHF military communication satellites"
 ---
 
-<div class="post-intro" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); padding: 2rem; border-radius: 12px; margin-bottom: 2rem; border-left: 4px solid #00d4ff;">
-  <p style="text-align: justify; margin: 0; color: #e0e0e0; font-size: 1.1rem; line-height: 1.8;">
-    <i class="fas fa-satellite" style="color: #00d4ff; margin-right: 8px;"></i>
-    The United States military operates a worldwide UHF geostationary satellite communication network using the <strong style="color: #ff6b35;">243–270 MHz</strong> band for downlinks and <strong style="color: #ff6b35;">292–318 MHz</strong> for uplinks. These satellites act as simple bent-pipe repeaters, relaying FM voice communications between military ground stations, ships, aircraft, and other assets around the world.
-  </p>
-</div>
+<p style="text-align: justify;">
+The United States military operates a worldwide UHF geostationary satellite communication network using the <strong style="color: #ff6b35;">243–270 MHz</strong> band for downlinks and <strong style="color: #ff6b35;">292–318 MHz</strong> for uplinks. These satellites act as simple bent-pipe repeaters, relaying FM voice communications between military ground stations, ships, aircraft, and other assets around the world.
+</p>
 
-<div class="info-box" style="background: rgba(0, 212, 255, 0.1); border: 1px solid rgba(0, 212, 255, 0.3); border-radius: 8px; padding: 1.5rem; margin: 1.5rem 0;">
-  <p style="text-align: justify; margin: 0; color: #c0c0c0;">
-    <i class="fas fa-exclamation-triangle" style="color: #ffb347; margin-right: 8px;"></i>
-    Because these satellites function much like radio repeaters and historically lacked strict access control on the uplink, they have occasionally been misused by unauthorized users. For decades, radio monitoring hobbyists have reported hearing pirate activity on these channels, ranging from truck drivers and fishermen to illegal loggers and various other groups who discovered their radios could reach the satellites.
-  </p>
-</div>
+<p style="text-align: justify;">
+Because these satellites function much like radio repeaters and historically lacked strict access control on the uplink, they have occasionally been misused by unauthorized users. For decades, radio monitoring hobbyists have reported hearing pirate activity on these channels, ranging from truck drivers and fishermen to illegal loggers and various other groups who discovered their radios could reach the satellites.
+</p>
 
 ---
 
 ## <i class="fas fa-history" style="color: #00d4ff;"></i> A Brief History of UHF Military Satcom
 
-<div class="section-content">
-  <p style="text-align: justify;">
-    <i class="fas fa-rocket" style="color: #ff6b35; margin-right: 8px;"></i>
-    The modern UHF military satellite network traces its origins back to the late 1970s with the launch of the <strong>Fleet Satellite Communications System (FLTSATCOM)</strong>. These satellites were designed primarily for the United States Navy to provide reliable global communications for ships operating far from shore.
-  </p>
+<p style="text-align: justify;">
+The modern UHF military satellite network traces its origins back to the late 1970s with the launch of the <strong>Fleet Satellite Communications System (FLTSATCOM)</strong>. These satellites were designed primarily for the United States Navy to provide reliable global communications for ships operating far from shore.
+</p>
 
-  <p style="text-align: justify;">
-    <i class="fas fa-satellite-dish" style="color: #00d4ff; margin-right: 8px;"></i>
-    FLTSATCOM satellites were placed in geostationary orbit and carried multiple UHF transponders that acted as simple repeaters. UHF frequencies were chosen because they propagate well through foliage and require only small antennas, making them ideal for mobile platforms such as ships, aircraft, and ground vehicles.
-  </p>
+<p style="text-align: justify;">
+FLTSATCOM satellites were placed in geostationary orbit and carried multiple UHF transponders that acted as simple repeaters. UHF frequencies were chosen because they propagate well through foliage and require only small antennas, making them ideal for mobile platforms such as ships, aircraft, and ground vehicles.
+</p>
 
-  <p style="text-align: justify;">
-    <i class="fas fa-sync-alt" style="color: #ffb347; margin-right: 8px;"></i>
-    In the 1990s the system was expanded with the <strong>UHF Follow-On (UFO)</strong> satellite constellation, and later the newer <strong>MUOS</strong> system began replacing legacy services. However, several older analog transponders remain active, which is why these signals can still be received by hobbyists today.
-  </p>
-</div>
+<p style="text-align: justify;">
+In the 1990s the system was expanded with the <strong>UHF Follow-On (UFO)</strong> satellite constellation, and later the newer <strong>MUOS</strong> system began replacing legacy services. However, several older analog transponders remain active, which is why these signals can still be received by hobbyists today.
+</p>
 
 ---
 
@@ -79,17 +68,13 @@ excerpt: "Listening to pirate radio activity on UHF military communication satel
 
 ## <i class="fas fa-question-circle" style="color: #00d4ff;"></i> Why an Eggbeater Antenna Works Well
 
-<div class="tech-explanation" style="display: grid; gap: 1rem;">
-  <p style="text-align: justify;">
-    <i class="fas fa-sync" style="color: #00d4ff; margin-right: 8px;"></i>
-    Many satellite transmissions use circular polarization. The eggbeater antenna is well suited for this because it naturally produces circular polarization and has a wide radiation pattern pointed toward the sky.
-  </p>
+<p style="text-align: justify;">
+Many satellite transmissions use circular polarization. The eggbeater antenna is well suited for this because it naturally produces circular polarization and has a wide radiation pattern pointed toward the sky.
+</p>
 
-  <p style="text-align: justify;">
-    <i class="fas fa-expand-arrows-alt" style="color: #ff6b35; margin-right: 8px;"></i>
-    This makes it ideal for satellite reception since it does not require precise pointing and can receive signals from a large portion of the sky.
-  </p>
-</div>
+<p style="text-align: justify;">
+This makes it ideal for satellite reception since it does not require precise pointing and can receive signals from a large portion of the sky.
+</p>
 
 <figure style="margin: 2rem 0; text-align: center;">
   <img src="/assets/images/Eggbeater.JPG" alt="Homebrew UHF Eggbeater Antenna" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px; box-shadow: 0 4px 20px rgba(255, 107, 53, 0.2);">
@@ -97,27 +82,6 @@ excerpt: "Listening to pirate radio activity on UHF military communication satel
     <i class="fas fa-home" style="color: #ff6b35; margin-right: 5px;"></i> My homebrew UHF eggbeater antenna
   </figcaption>
 </figure>
-
----
-
-## <i class="fas fa-toolbox" style="color: #00d4ff;"></i> Equipment Used
-
-<div class="equipment-list" style="background: rgba(26, 26, 46, 0.8); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0;">
-  <ul style="list-style: none; padding: 0; margin: 0;">
-    <li style="padding: 0.8rem 0; border-bottom: 1px solid rgba(0, 212, 255, 0.2); display: flex; align-items: center;">
-      <i class="fas fa-microchip" style="color: #00d4ff; width: 30px; margin-right: 10px;"></i>
-      <span>RTL-SDR receiver</span>
-    </li>
-    <li style="padding: 0.8rem 0; border-bottom: 1px solid rgba(0, 212, 255, 0.2); display: flex; align-items: center;">
-      <i class="fas fa-broadcast-tower" style="color: #ff6b35; width: 30px; margin-right: 10px;"></i>
-      <span>Homebrew UHF eggbeater antenna</span>
-    </li>
-    <li style="padding: 0.8rem 0; display: flex; align-items: center;">
-      <i class="fas fa-laptop-code" style="color: #ffb347; width: 30px; margin-right: 10px;"></i>
-      <span>SDR# software for reception and recording</span>
-    </li>
-  </ul>
-</div>
 
 ---
 
@@ -213,4 +177,5 @@ excerpt: "Listening to pirate radio activity on UHF military communication satel
     <span style="background: rgba(255, 179, 71, 0.2); color: #ffb347; padding: 0.2rem 0.6rem; border-radius: 12px; margin: 0 0.3rem; font-size: 0.85rem;">radio</span>
     <span style="background: rgba(0, 212, 255, 0.2); color: #00d4ff; padding: 0.2rem 0.6rem; border-radius: 12px; margin: 0 0.3rem; font-size: 0.85rem;">piracy</span>
   </span>
+
 </div>
