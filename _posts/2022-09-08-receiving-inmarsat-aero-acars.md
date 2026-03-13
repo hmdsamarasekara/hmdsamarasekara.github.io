@@ -8,28 +8,6 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 ---
 
 <style>
-/* Custom styling for this post */
-.post-hero {
-  background: linear-gradient(135deg, #0a0e1a 0%, #1a1f2e 100%);
-  border: 1px solid #00d4ff33;
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.post-hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, #00d4ff, #ff6b35, #00d4ff);
-  background-size: 200% 100%;
-  animation: shimmer 3s infinite;
-}
 
 @keyframes shimmer {
   0% { background-position: -200% 0; }
@@ -264,21 +242,6 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 }
 
 </style>
-
-<div class="post-hero">
-  <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-    <i class="fas fa-satellite-dish" style="font-size: 2.5rem; color: #00d4ff; filter: drop-shadow(0 0 12px rgba(0, 212, 255, 0.6));"></i>
-    <div>
-      <span class="tag-pill">L-BAND</span>
-      <span class="tag-pill">AVIATION</span>
-      <span class="tag-pill">ACARS</span>
-    </div>
-  </div>
-  <p style="font-size: 1.125rem; color: #9ca3af; margin: 0; line-height: 1.6;">
-    Receiving and decoding Inmarsat AERO ACARS messages using inexpensive SDR hardware. 
-    A practical guide to tapping into aviation satellite communications from geostationary orbit.
-  </p>
-</div>
 
 <div class="section-card">
   <div class="section-header">
