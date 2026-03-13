@@ -52,6 +52,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
   margin-bottom: 1rem;
   padding-bottom: 0.75rem;
   border-bottom: 1px solid #00d4ff33;
+  justify-content: flex-start; /* Add this to ensure left alignment */
 }
 
 .section-icon {
