@@ -193,14 +193,40 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 }
 
 .bandwidth-badge {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 80px;
+  padding: 10px 14px;
+
+  border-radius: 999px;
+  border: 1px solid #00d4ff33;
+
   background: #00d4ff22;
   color: #00d4ff;
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
+
   font-weight: 600;
-  border: 1px solid #00d4ff33;
+  text-align: center;
+}
+
+.bitrate-number {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.bitrate-unit {
+  font-size: 11px;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+.bandwidth-badge.high {
+  background: #ff6b3522;
+  color: #ff6b35;
+  border-color: #ff6b3533;
 }
 
 .video-container {
@@ -364,36 +390,61 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
   <p>Inmarsat AERO uses L-band channels to transmit ACARS messages and other data. Each channel has a defined bitrate and typical usage, which affects both traffic volume and decoding difficulty.</p>
 
   <table class="freq-table">
-    <thead>
-      <tr>
-        <th>Bitrate</th>
-        <th>Typical Usage</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="bandwidth-badge">600 bps</span></td>
-        <td>Low-rate ACARS messages</td>
-        <td>Usually used for routine position reports and simple operational messages. Easy to decode even with a small directional antenna.</td>
-      </tr>
-      <tr>
-        <td><span class="bandwidth-badge">1200 bps</span></td>
-        <td>Standard ACARS messages</td>
-        <td>Higher throughput for more frequent messages or slightly larger payloads. Easy to decode even with a small directional antenna.</td>
-      </tr>
-      <tr>
-        <td><span class="bandwidth-badge" style="background: #ff6b3522; color: #ff6b35; border-color: #ff6b3533;">8400 bps</span></td>
-        <td>Voice communications (AERO phone)</td>
-        <td>Primarily used for pilot-to-ground voice calls or satellite phone traffic. Frequencies may shift dynamically, making reception unpredictable.</td>
-      </tr>
-      <tr>
-        <td><span class="bandwidth-badge" style="background: #ff6b3522; color: #ff6b35; border-color: #ff6b3533;">10500 bps</span></td>
-        <td>High-speed data</td>
-        <td>Used for bulk data transmissions, maintenance logs, or airline operations systems. Requires good SNR and clean reception.</td>
-      </tr>
-    </tbody>
-  </table>
+  <thead>
+    <tr>
+      <th>Bitrate</th>
+      <th>Typical Usage</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr>
+      <td>
+        <span class="bandwidth-badge">
+          <span class="bitrate-number">600</span>
+          <span class="bitrate-unit">bps</span>
+        </span>
+      </td>
+      <td>Low-rate ACARS messages</td>
+      <td>Usually used for routine position reports and simple operational messages. Easy to decode even with a small directional antenna.</td>
+    </tr>
+
+    <tr>
+      <td>
+        <span class="bandwidth-badge">
+          <span class="bitrate-number">1200</span>
+          <span class="bitrate-unit">bps</span>
+        </span>
+      </td>
+      <td>Standard ACARS messages</td>
+      <td>Higher throughput for more frequent messages or slightly larger payloads. Easy to decode even with a small directional antenna.</td>
+    </tr>
+
+    <tr>
+      <td>
+        <span class="bandwidth-badge high">
+          <span class="bitrate-number">8400</span>
+          <span class="bitrate-unit">bps</span>
+        </span>
+      </td>
+      <td>Voice communications (AERO phone)</td>
+      <td>Primarily used for pilot-to-ground voice calls or satellite phone traffic. Frequencies may shift dynamically, making reception unpredictable.</td>
+    </tr>
+
+    <tr>
+      <td>
+        <span class="bandwidth-badge high">
+          <span class="bitrate-number">10500</span>
+          <span class="bitrate-unit">bps</span>
+        </span>
+      </td>
+      <td>High-speed data</td>
+      <td>Used for bulk data transmissions, maintenance logs, or airline operations systems. Requires good SNR and clean reception.</td>
+    </tr>
+
+  </tbody>
+</table>
 
   <div class="info-box">
     <i class="fas fa-info-circle" style="color: #00d4ff; margin-right: 0.5rem;"></i>
