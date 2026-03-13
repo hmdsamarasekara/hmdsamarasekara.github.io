@@ -3,7 +3,7 @@ layout: post
 title: "Receiving Inmarsat AERO ACARS"
 date: 2022-09-08 12:00:00 +0530
 categories: [Inmarsat]
-tags: [satellite, radio, sdr, aviation]
+tags: [satellite, radio, sdr, aviation, Inmarsat]
 excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive SDR hardware."
 ---
 
