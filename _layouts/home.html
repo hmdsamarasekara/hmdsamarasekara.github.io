@@ -64,7 +64,7 @@ layout: default
         </div>
 
         <div class="posts-grid">
-            {% for post in site.posts limit:8 %}
+            {% for post in site.posts %}
             <article class="post-card">
                 <div class="post-card-meta">
                     <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
