@@ -4,7 +4,7 @@ title: "Testing the USB2Rig Interface with APRSdroid"
 date: 2025-05-17 12:00:00 +0530
 categories: [digital-modes, aprs, equipment-review]
 tags: [usb2rig, digirig, aprsdroid, android, packet-radio, portable]
-excerpt: "A hands-on review of the USB2Rig digital interface - a DigiRig-compatible USB audio solution for portable APRS operations with Android and APRSdroid."
+excerpt: "A hands-on review of the USB2Rig digital interface, DigiRig-compatible USB audio/serial solution for Digi Modes."
 ---
 
 <div class="post-intro">
