@@ -147,14 +147,14 @@ This makes it ideal for satellite reception since it does not require precise po
   </h4>
 
   <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; margin-top: 1rem;">
-    <iframe
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
-      src="https://www.youtube.com/embed/-4OtyN1FBRA"
-      title="YouTube video player"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
+  <iframe
+    loading="lazy"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+    src="https://www.youtube.com/embed/-4OtyN1FBRA?autoplay=1&mute=1&loop=1&playlist=-4OtyN1FBRA&playsinline=1"
+    title="YouTube video player"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
 </div>
 
 ---
@@ -179,3 +179,4 @@ This makes it ideal for satellite reception since it does not require precise po
   </span>
 
 </div>
+
