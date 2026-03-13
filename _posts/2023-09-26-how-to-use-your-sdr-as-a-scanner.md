@@ -4,7 +4,7 @@ title: "How to Use Your SDR as a Scanner"
 date: 2023-09-26 12:00:00 +0530
 categories: [sdr, tutorial, sdrsharp]
 tags: [rtl-sdr, airspy, frequency-scanner, radio, scanning, guide]
-excerpt: "Transform your SDR into a comprehensive frequency scanner using SDRSharp and the Frequency Scanner Plugin. From hardware setup to advanced scanning techniques."
+excerpt: "Transform your SDR into a comprehensive frequency scanner using SDRSharp and the Frequency Scanner Plugin."
 ---
 
 ## Introduction
