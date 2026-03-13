@@ -24,12 +24,12 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 }
 
 .section-header {
-  display: flex;
-  align-items: center; /* This should vertically center both */
+  display: inline-flex;
+  align-items: center;
   gap: 0.75rem;
   margin-bottom: 1rem;
-  padding-bottom: 0.75rem;
-  justify-content: flex-start; /* Keep them left-aligned together */
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0,212,255,0.25);
 }
 
 .section-icon {
@@ -253,7 +253,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
   <p>In the aviation sector, airlines and air traffic services rely on Inmarsat satellites to exchange messages, voice calls, and data between aircraft and ground stations. These communications cover everything from routine position reporting and flight planning to weather updates, maintenance alerts, and safety-critical messages.</p>
 
   <div class="info-box">
-    <strong>ACARS</strong> — a digital datalink that allows aircraft to automatically send and receive operational messages. ACARS messages are transmitted in packetized form, typically including information such as the aircraft identifier, message type, and content. The system reduces reliance on voice communication over VHF or HF and ensures timely delivery of flight-critical data.
+    <strong>ACARS</strong> — a digital datalink that allows aircraft to automatically send and receive operational messages. ACARS messages are transported over the Inmarsat AERO data link using packetized digital channels, typically including information such as the aircraft identifier, message type, and content. The system reduces reliance on voice communication over VHF or HF and ensures timely delivery of flight-critical data.
   </div>
 
   <p><strong>Inmarsat AERO channels</strong> are the satellite-based extension of ACARS. These channels provide global coverage by relaying ACARS messages through Inmarsat satellites:</p>
@@ -290,7 +290,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 
   <p>Ground-to-aircraft transmissions also occur in the L-band around <strong>1.5 GHz</strong>, which makes them relatively accessible to radio enthusiasts using inexpensive SDR (Software-Defined Radio) hardware. While the uplink from aircraft requires higher power and more specialized antennas, the downlink signals are sufficiently strong that hobbyists can monitor them with directional L-band antennas and low-noise amplifiers.</p>
 
-  <p>In addition to basic ACARS data, Inmarsat AERO channels can carry higher-bitrate transmissions for voice communications (such as pilot-to-ground calls) and more data-intensive applications, making them a rich source of live aviation information for SDR enthusiasts.</p>
+  <p>In addition to basic ACARS data, Inmarsat AERO channels can carry higher-bitrate transmissions for voice communications (such as pilot-to-ground calls) and more data-intensive applications, making them a rich source of real-time aviation telemetry for SDR enthusiasts.</p>
 </div>
 
 <div class="section-card">
@@ -299,7 +299,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
     <h2 class="section-title">Satellite Coverage</h2>
   </div>
 
-  <p>The <strong>Indian Ocean region (IOR)</strong> is served by the geostationary satellite located at <strong>143°E longitude</strong>, currently the <strong>Inmarsat-4 F1</strong>. Geostationary satellites orbit at approximately 35,786 km above the equator, allowing them to remain fixed relative to the Earth's surface. This provides continuous coverage of a large area, unlike low-Earth orbit satellites, which move quickly across the sky.</p>
+  <p>The <strong>Indian Ocean region (IOR)</strong> is served by the geostationary satellite located at <strong>143°E longitude</strong>, currently the <strong>Alphasat-4 F1</strong>. Geostationary satellites orbit at approximately 35,786 km above the equator, allowing them to remain fixed relative to the Earth's surface. This provides continuous coverage of a large area, unlike low-Earth orbit satellites, which move quickly across the sky.</p>
 
   <h3 style="color: #00d4ff; font-size: 1.125rem; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
     <i class="fas fa-map-marked-alt"></i> Coverage Area
@@ -749,7 +749,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
   </div>
 
   <div class="warning-box">
-    Running multiple decoders requires significant CPU resources. My <strong>8th-generation Intel i7</strong> system was able to decode all <strong>600 bps and 1200 bps channels simultaneously</strong>, but struggled when the <strong>10500 bps channels</strong> were added.
+    Running multiple decoders can be CPU-intensive, especially when monitoring wideband AERO channels simultaneously. My <strong>8th-generation Intel i7</strong> system was able to decode all <strong>600 bps and 1200 bps channels simultaneously</strong>, but struggled when the <strong>10500 bps channels</strong> were added.
   </div>
 </div>
 
