@@ -593,7 +593,7 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
   </div>
 
   <div class="image-container">
-    <img src="assets/images/ACARS-Diagram.png" alt="Signal Path Diagram">
+    <img src="/assets/images/ACARS-Diagram.png" alt="Signal Path Diagram">
     <div class="image-caption">
       <i class="fas fa-project-diagram" style="margin-right: 0.5rem;"></i>
       Complete signal path from antenna to decoder
