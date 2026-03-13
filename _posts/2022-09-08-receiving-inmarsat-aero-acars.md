@@ -717,23 +717,26 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
   <p>Decoding a single channel works well, but the Inmarsat band contains <strong>many active channels</strong>. To monitor several channels simultaneously, a different approach is needed.</p>
 
   <div class="info-box">
-    <i class="fas fa-code-branch" style="color: #00d4ff; margin-right: 0.5rem;"></i>
-    A useful tool for this purpose is <strong>SDRReceiver</strong> — <a href="https://github.com/jeroenbeijer/SDRReceiver" style="color: #00d4ff;">github.com/jeroenbeijer/SDRReceiver</a>
-  </div>
-
-  <p>This software can demodulate multiple signals from a wideband SDR stream and send each one to its own decoder instance.</p>
+  <i class="fas fa-code-branch" style="color: #00d4ff; margin-right: 0.5rem;"></i>
+  A useful tool for this purpose is <a href="https://github.com/jeroenbeijer/SDRReceiver" target="_blank" rel="noopener" style="color:#00d4ff; text-decoration:none;">SDRReceiver</a>. This software can demodulate multiple signals from a wideband SDR stream and send each one to its own decoder instance.
+</div>
 
   <div class="tip-box">
-    I followed a guide created by <strong>@thebaldgeek</strong> — <a href="https://thebaldgeek.github.io/SDRReceiver.html" style="color: #00d4ff;">thebaldgeek.github.io/SDRReceiver.html</a> — which explains the process in detail.
+    I followed a guide created by <strong>@thebaldgeek</strong> — <a href="https://thebaldgeek.github.io/SDRReceiver.html" target="_blank" rel="noopener" style="color: #00d4ff;"> How to use SDRReceiver to send data to JAERO </a> — which explains the process in detail.
   </div>
 
   <div style="background: #0f172a; border: 1px solid #1f2937; border-radius: 8px; padding: 1rem; margin: 1rem 0;">
-    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
-      <i class="fas fa-download" style="color: #00d4ff;"></i>
-      <strong style="color: #f9fafb;">Configuration File</strong>
-    </div>
-    <code style="background: #1f2937; padding: 0.5rem 1rem; border-radius: 4px; color: #00d4ff; display: block; margin-top: 0.5rem;">/downloads/143E.ini</code>
+  <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+    <i class="fas fa-download" style="color: #00d4ff;"></i>
+    <strong style="color: #f9fafb;">Configuration File</strong>
   </div>
+
+  <a href="/downloads/143E.ini" download style="text-decoration: none;">
+    <code style="background: #1f2937; padding: 0.5rem 1rem; border-radius: 4px; color: #00d4ff; display: block; margin-top: 0.5rem; cursor: pointer;">
+      Download 143E.ini
+    </code>
+  </a>
+</div>
 
   <div class="image-container">
     <img src="/assets/images/SDRReceiver.jpg" alt="SDRReceiver Example">
