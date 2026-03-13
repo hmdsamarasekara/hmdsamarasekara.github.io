@@ -562,9 +562,9 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 
 <br>
 
-  <h3 style="color: #00d4ff; font-size: 1.125rem; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
+  <h2 style="color: #00d4ff; font-size: 1.125rem; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
     <i class="fas fa-level-up-alt"></i> Advanced Setup
-  </h3>
+  </h2>
 
   <p>A more capable setup involves:</p>
 
