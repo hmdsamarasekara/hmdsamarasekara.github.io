@@ -43,11 +43,8 @@ excerpt: "Receiving and decoding Inmarsat AERO ACARS messages using inexpensive 
 }
 
 .section-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #f9fafb;
-  margin: 0; /* Ensure no default margins pushing things around */
-  line-height: 1.2; /* Consistent line height */
+  border-bottom: none !important;
+  text-decoration: none;
 }
 
 .info-box {
