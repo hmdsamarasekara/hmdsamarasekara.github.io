@@ -618,12 +618,12 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
   <p>Open SDR++ and navigate to the <strong>Module Manager</strong>. Under the <strong>Radio</strong> module:</p>
 
   <div class="image-container">
-    <img src="{{ '/assets/images/SDR++ Radio Setup.png' | relative_url }}" alt="Add new VFO" loading="lazy">
+    <img src="{{ '/assets/images/SDR++ Radio Setup.png' | relative_url }}" alt="Add new VFO" loading="lazy" style="width: auto; max-width: 100%; margin: 0 auto; display: block;">
     <div class="image-caption">
       <i class="fas fa-image" style="margin-right: 0.5rem;"></i>
       Add new VFO
     </div>
-  </div>
+</div>
 
   <div class="steps-list">
     <div>Create a new receiver instance and assign it a name (for example <strong>CH01</strong>).</div>
@@ -641,12 +641,12 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
   <p>Next, configure the network output:</p>
 
   <div class="image-container">
-    <img src="{{ '/assets/images/SDR++ Sinks Setup.png' | relative_url }}" alt="Audio Routing" loading="lazy">
+    <img src="{{ '/assets/images/SDR++ Sinks Setup.png' | relative_url }}" alt="Audio Routing" loading="lazy" style="width: auto; max-width: 100%; margin: 0 auto; display: block;">
     <div class="image-caption">
       <i class="fas fa-image" style="margin-right: 0.5rem;"></i>
       Audio Routing
     </div>
-  </div>
+</div>
 
   <div class="steps-list">
     <div>Open the <strong>Sinks</strong> tab in SDR++.</div>
@@ -677,12 +677,12 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
   <p>Extract the <strong>Skytale-C</strong> archive into a separate folder for each channel and rename the folder to match the corresponding VFO (for example <em>CH01</em>).</p>
 
   <div class="image-container">
-    <img src="{{ '/assets/images/Folder Structure.png' | relative_url }}" alt="Folder structure should look like this" loading="lazy">
+    <img src="{{ '/assets/images/Folder Structure.png' | relative_url }}" alt="Folder structure should look like this" loading="lazy" style="width: auto; max-width: 100%; margin: 0 auto; display: block;">
     <div class="image-caption">
       <i class="fas fa-image" style="margin-right: 0.5rem;"></i>
       Folder structure should look like this
     </div>
-  </div>
+</div>
 
   <p>Inside Skytale-C:</p>
 
@@ -696,12 +696,12 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
   </div>
 
   <div class="image-container">
-    <img src="{{ '/assets/images/Skytale-C-Setup.png' | relative_url }}" alt="Skytale-C Setup" loading="lazy">
+    <img src="{{ '/assets/images/Skytale-C-Setup.png' | relative_url }}" alt="Skytale-C Setup" loading="lazy" style="width: auto; max-width: 100%; margin: 0 auto; display: block;">
     <div class="image-caption">
       <i class="fas fa-image" style="margin-right: 0.5rem;"></i>
       Skytale-C Setup
     </div>
-  </div>
+</div>
 
   <p>Next configure the output settings:</p>
 
@@ -725,12 +725,12 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
   <p>Finally, extract and launch the <strong>Skytale-C Quick UI</strong> application.</p>
 
   <div class="image-container">
-    <img src="{{ '/assets/images/Skytale-C-Quick-UI-Setup.png' | relative_url }}" alt="Skytale-C Quick-UI Configuration" loading="lazy">
+    <img src="{{ '/assets/images/Skytale-C-Quick-UI-Setup.png' | relative_url }}" alt="Skytale-C Quick-UI Configuration" loading="lazy" style="width: auto; max-width: 100%; margin: 0 auto; display: block;">
     <div class="image-caption">
       <i class="fas fa-image" style="margin-right: 0.5rem;"></i>
       Skytale-C Quick-UI Configuration
     </div>
-  </div>
+</div>
 
   <div class="steps-list">
     <div>Open the <strong>Sources</strong> tab.</div>
