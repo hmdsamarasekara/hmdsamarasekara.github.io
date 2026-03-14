@@ -382,7 +382,7 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
     <h1 class="section-title">Introduction</h1>
   </div>
 
-  <p>In a previous post I explored <strong>Inmarsat AERO ACARS reception</strong>, demonstrating how aviation datalink traffic can be received from the Inmarsat satellite network using inexpensive Software Defined Radio (SDR) hardware. While AERO channels primarily serve aircraft communications, the Inmarsat system also supports a number of services designed for the maritime sector.</p>
+  <p>In a previous post I explored <strong><a href="https://hmdsamarasekara.github.io/posts/receiving-inmarsat-aero-acars/">Inmarsat AERO ACARS reception</a></strong>, demonstrating how aviation datalink traffic can be received from the Inmarsat satellite network using inexpensive Software Defined Radio hardware. While AERO channels primarily serve aircraft communications, the Inmarsat system also supports a number of services designed for the maritime sector.</p>
 
   <p>One of the most widely used of these services is <strong>Inmarsat STD-C</strong>, a low-bandwidth messaging system used by ships, offshore platforms, and maritime authorities to exchange short text messages, operational data, and safety information. STD-C terminals are installed on thousands of vessels worldwide and are a core component of the <strong>Global Maritime Distress and Safety System (GMDSS)</strong>.</p>
 
@@ -399,7 +399,7 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
     <img src="{{ '/assets/images/STD-C-Full-Range.jpg' | relative_url }}" alt="STD-C Channels View" loading="lazy">
     <div class="image-caption">
       <i class="fas fa-image" style="margin-right: 0.5rem;"></i>
-      STD-C Channels View
+      STD-C Channels Alphasat-4 F1
     </div>
   </div>
 
@@ -476,12 +476,12 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
       <i class="fas fa-satellite-dish hardware-icon"></i>
       <div>
         <strong style="color: #f9fafb;">RTL-SDR Blog L-Band Patch Antenna</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Includes integrated LNA and filter. Can be powered directly from SDR bias-tee. Compact for continuous outdoor operation.</span>
+        <span style="color: #9ca3af; font-size: 0.875rem;">Includes integrated LNA and filter. Can be powered directly from the SDR bias-tee. Compact and weatherproof for continuous outdoor operation.</span>
       </div>
     </div>
   </div>
 
-  <p>For improved signal quality, a <strong>small satellite dish with an L-band helical feed</strong> can also be used. A dish provides additional gain and better signal-to-noise ratio, which becomes especially useful when attempting to monitor multiple channels simultaneously or when operating in environments with higher RF noise.</p>
+  <p>For improved signal quality, a <strong>small satellite dish with an L-band helical feed</strong> can also be used. A dish provides additional gain and a better signal-to-noise ratio, which becomes especially useful when attempting to monitor multiple channels simultaneously or when operating in environments with higher RF noise.</p>
 
   <p>Reception can be further improved by adding an <strong>external L-band filtered LNA</strong>, such as the Nooelec SAWbird IO or SAWbird+ IO. These devices provide additional amplification while filtering out strong out-of-band signals that might otherwise degrade reception.</p>
 
@@ -494,7 +494,7 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
   </div>
 
   <div class="tip-box">
-    More details on antenna construction can be found in my previous post on <strong>Inmarsat AERO ACARS reception</strong>, where the antenna setup is discussed in greater depth.
+    More details on antenna construction can be found in my previous post on <strong><a href="https://hmdsamarasekara.github.io/posts/receiving-inmarsat-aero-acars/">Inmarsat AERO ACARS reception</a></strong>, where the antenna setup is discussed in greater depth.
   </div>
 </div>
 
