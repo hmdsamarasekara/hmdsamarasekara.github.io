@@ -386,7 +386,7 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
 
   <p>One of the most widely used of these services is <strong>Inmarsat STD-C</strong>, a low-bandwidth messaging system used by ships, offshore platforms, and maritime authorities to exchange short text messages, operational data, and safety information. STD-C terminals are installed on thousands of vessels worldwide and are a core component of the <strong>Global Maritime Distress and Safety System (GMDSS)</strong>.</p>
 
-  <p>STD-C transmissions operate in the <strong>L-band around 1.5 GHz</strong> and use a relatively narrow <strong>1200 bps BPSK data channel</strong>, which makes them surprisingly easy to receive with modest antennas and common SDR hardware.</p>
+  <p>STD-C transmissions operate in the <strong>L-band around 1.5 GHz</strong> and use a <strong>1200 bps BPSK</strong> modulation scheme with an occupied bandwidth of roughly 2.4 kHz, which makes them surprisingly easy to receive with modest antennas and common SDR hardware.</p>
 </div>
 
 <div class="section-card">
@@ -445,7 +445,7 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
     </li>
   </ul>
 
-  <p>Because these signals are continuously transmitted and relatively strong across most of the satellite footprint, they provide an excellent target for SDR experimentation.</p>
+  <p>Because these signals are continuously transmitted and relatively strong across most of the satellite footprint, they make an excellent target for SDR experimentation.</p>
 
   <p>In this post I will demonstrate how <strong>Inmarsat STD-C signals can be received and decoded</strong>, and how multiple channels can be monitored simultaneously using <strong>SDR++ and Skytale-C</strong>.</p>
 
@@ -504,13 +504,13 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
     <h1 class="section-title">Software Setup</h1>
   </div>
 
-  <p>There are several software options available for decoding Inmarsat STD-C signals, although many of them are proprietary or commercial. A popular free option is <strong>Skytale-C</strong> by microp11, which provides reliable decoding and integrates directly with the <strong>SDR# community package</strong>.</p>
+  <p>There are several software options available for decoding Inmarsat STD-C signals, although many of them are proprietary or commercial. A popular free option is <strong>Skytale-C</strong> by <strong>microp11</strong>, which provides reliable decoding and integrates directly with the <strong>SDR# community package</strong>.</p>
 
   <h3 style="color: #00d4ff; font-size: 1.125rem; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
-    <i class="fas fa-cog"></i> Basic STD-C Decoding (SDR#)
+    <i class="fas fa-cog"></i> Basic STD-C Decoding
   </h3>
 
-  <p>The easiest way to get started is by using <strong>SDR# (SDRSharp)</strong> together with the Skytale-C plugin.</p>
+  <p>The easiest way to get started is by using <strong>SDRSharp</strong> together with the Skytale-C plugin.</p>
 
   <div class="image-container">
     <img src="{{ '/assets/images/Skytale-C-SDRSharp-Setup.png' | relative_url }}" alt="Skytale-C SDRSharp Plug-in" loading="lazy">
@@ -544,7 +544,7 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
 
   <div class="info-box">
     <i class="fab fa-youtube" style="color: #ff4444; margin-right: 0.5rem;"></i>
-    <strong>Note:</strong> The developer of Skytale-C, microp11, maintains a YouTube channel where he publishes detailed videos demonstrating many of the software's features, configuration options, and advanced usage scenarios. These tutorials are very helpful for understanding the full capabilities of the decoder and for troubleshooting setup issues.
+    <strong>Note:</strong> The developer of Skytale-C, microp11, maintains a YouTube channel where he publishes detailed videos demonstrating many of the software's features, configuration options, and advanced usage scenarios. These tutorials are very helpful for understanding the decoder's full capabilities and troubleshooting setup issues.
     <br><br>
     <a href="https://www.youtube.com/@Paul-microp11" target="_blank" style="color: #00d4ff; text-decoration: none;">
       <i class="fas fa-external-link-alt" style="margin-right: 0.3rem;"></i> youtube.com/@Paul-microp11
@@ -563,29 +563,47 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
 
   <p>First download the following software components:</p>
 
-  <div class="hardware-grid">
-    <div class="hardware-item">
-      <i class="fas fa-broadcast-tower hardware-icon"></i>
-      <div>
-        <strong style="color: #f9fafb;">SDR++</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Wideband SDR receiver with network streaming</span>
-      </div>
-    </div>
-    <div class="hardware-item">
-      <i class="fas fa-unlock-alt hardware-icon"></i>
-      <div>
-        <strong style="color: #f9fafb;">Skytale-C</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">STD-C decoder</span>
-      </div>
-    </div>
-    <div class="hardware-item">
-      <i class="fas fa-desktop hardware-icon"></i>
-      <div>
-        <strong style="color: #f9fafb;">Skytale-C Quick UI</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Message display interface</span>
-      </div>
+  <div class="hardware-grid" style="display: flex; flex-direction: column; gap: 12px;">
+  <div class="hardware-item">
+    <i class="fas fa-broadcast-tower hardware-icon"></i>
+    <div>
+      <strong style="color: #f9fafb;">SDR++</strong><br>
+      <span style="color: #9ca3af; font-size: 0.875rem;">Wideband SDR receiver with network streaming</span>
     </div>
   </div>
+
+  <div class="hardware-item">
+    <i class="fas fa-unlock-alt hardware-icon"></i>
+    <div>
+      <strong style="color: #f9fafb;">Skytale-C</strong><br>
+      <span style="color: #9ca3af; font-size: 0.875rem;">STD-C decoder</span>
+    </div>
+  </div>
+
+  <div class="hardware-item">
+    <i class="fas fa-desktop hardware-icon"></i>
+    <div>
+      <strong style="color: #f9fafb;">Skytale-C Quick UI</strong><br>
+      <span style="color: #9ca3af; font-size: 0.875rem;">Message display interface</span>
+    </div>
+  </div>
+</div>
+
+<div class="download-box">
+  <i class="fas fa-download"></i>
+  <div class="download-content">
+    <span>Download the <strong>Skytale-C Software & Tools</strong> here:</span>
+
+    <a href="/downloads/ScytaleC.1408.zip" class="download-link">
+      <i class="fas fa-file-archive"></i> ScytaleC.1408.zip
+    </a>
+
+    <a href="/downloads/x64-ScytaleC.QuickUI-17010.zip" class="download-link">
+      <i class="fas fa-file-archive"></i> x64-ScytaleC.QuickUI-17010.zip
+    </a>
+
+  </div>
+</div>
 
   <h4 style="color: #f9fafb; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
     <i class="fas fa-plus-circle" style="color: #00d4ff;"></i> Creating Virtual Receivers in SDR++
