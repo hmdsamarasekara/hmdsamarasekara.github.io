@@ -387,6 +387,14 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
   <p>One of the most widely used of these services is <strong>Inmarsat STD-C</strong>, a low-bandwidth messaging system used by ships, offshore platforms, and maritime authorities to exchange short text messages, operational data, and safety information. STD-C terminals are installed on thousands of vessels worldwide and are a core component of the <strong>Global Maritime Distress and Safety System (GMDSS)</strong>.</p>
 
   <p>STD-C transmissions operate in the <strong>L-band around 1.5 GHz</strong> and use a <strong>1200 bps BPSK</strong> modulation scheme with an occupied bandwidth of roughly 2.4 kHz, which makes them surprisingly easy to receive with modest antennas and common SDR hardware.</p>
+
+<div class="note-box">
+<i class="fas fa-balance-scale"></i>
+<p>
+The signals described in this article are unencrypted satellite broadcasts intended for maritime safety and operational messaging. Laws regarding the reception and redistribution of communications vary by country. This article is intended for educational and technical experimentation purposes only.
+</p>
+</div>
+  
 </div>
 
 <div class="section-card">
