@@ -555,7 +555,7 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
     <i class="fas fa-layer-group"></i> Decoding Multiple Channels Simultaneously
   </h3>
 
-  <p>It is also possible to decode <strong>multiple STD-C channels simultaneously</strong>. While several approaches exist, using <strong>SDR++ with its built-in network streaming features</strong> is one of the most efficient methods in terms of CPU usage.</p>
+  <p>It is also possible to decode <strong>multiple STD-C channels simultaneously</strong>. While several approaches exist, using <strong>SDR++ with its built-in network streaming features</strong> is amoung the most efficient methods in terms of CPU usage.</p>
 
   <div class="warning-box">
     Monitoring multiple channels requires an SDR with sufficient instantaneous bandwidth. Devices such as the <strong>Airspy R2</strong> work well for this purpose, whereas RTL-SDR receivers typically do not have enough bandwidth to cover all STD-C channels at once.
@@ -625,6 +625,8 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
     <div>A new <strong>VFO</strong> will appear in the spectrum display.</div>
     <div>Select the VFO and tune it to the first STD-C channel.</div>
   </div>
+
+<br>
 
   <h4 style="color: #f9fafb; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
     <i class="fas fa-network-wired" style="color: #00d4ff;"></i> Streaming IQ Data to Skytale-C
@@ -805,16 +807,8 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
 
   <p style="font-size: 1.125rem; line-height: 1.8;">Receiving and decoding Inmarsat STD-C signals is a <strong style="color: #00d4ff;">rewarding SDR project</strong> that demonstrates how accessible satellite communications monitoring has become with modern software-defined radio hardware. Because STD-C channels are relatively narrowband and strong across most of the satellite footprint, they can be received reliably with fairly modest equipment.</p>
 
-  <p>During my experiments in the <strong>Indian Ocean Region (IOR)</strong> I was able to monitor multiple STD-C channels simultaneously. In total, <strong>11 channels were observable</strong> in this region — consisting of one Network Control Station (NCS) channel and several Land Earth Station (LES) channels. Using an <strong>Airspy R2</strong>, it was possible to decode all LES channels at the same time by streaming each channel to a separate Skytale-C instance.</p>
+  <p>During my monitoring of the Indian Ocean Region satellite (IOR), which currently corresponds to the Alphasat-4 F1 located near 64°E, several STD-C channels were consistently active. In total, <strong>11 channels were observable</strong> in this region — consisting of one Network Control Station (NCS) channel and several Land Earth Station (LES) channels. Using an <strong>Airspy R2</strong>, it was possible to decode all LES channels at the same time by streaming each channel to a separate Skytale-C instance.</p>
 
   <p>The NCS channel, however, was located further away in the spectrum and could not be included within the same receiver bandwidth during my tests. With wider-band SDR hardware such as a <strong>HackRF</strong> or <strong>PlutoSDR</strong>, it may be possible to capture the entire STD-C channel set within a single spectrum window.</p>
 
-  <p>Overall, STD-C reception is an excellent introduction to <strong style="color: #ff6b35;">L-band satellite monitoring</strong> and provides a fascinating glimpse into real-world maritime communications. With the right antenna and a bit of experimentation, it is possible to continuously monitor satellite messaging traffic from ships operating across vast ocean regions.</p>
-
-  <div class="post-footer">
-    <div class="signature">
-      <i class="fas fa-satellite-dish"></i>
-      <span>73 de <strong>A65KJ</strong></span>
-    </div>
-  </div>
-</div>
+  <p>Overall, STD-C reception is an excellent introduction to <strong style="color: #ff6b35;">satellite communication monitoring</strong> and provides a fascinating glimpse into real-world maritime communications. With the right antenna and a bit of experimentation, it is possible to continuously monitor satellite messaging traffic from ships operating across vast ocean regions.</p>
