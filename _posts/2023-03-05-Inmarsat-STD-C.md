@@ -758,7 +758,7 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
   <p>Once the receiver and decoder are configured correctly, decoded messages should begin appearing in the Skytale-C Quick UI interface within a few seconds.</p>
 
   <div class="image-container">
-    <img src="{{ '/assets/images/STD-C Quick UI.JPG' | relative_url }}" alt="STD-C Quick UI populated with decoded messages" loading="lazy">
+    <img src="{{ '/assets/images/STD-C Quick UI.png' | relative_url }}" alt="STD-C Quick UI populated with decoded messages" loading="lazy">
     <div class="image-caption">
       <i class="fas fa-image" style="margin-right: 0.5rem;"></i>
       STD-C Quick UI populated with decoded messages
