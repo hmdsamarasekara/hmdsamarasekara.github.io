@@ -388,11 +388,9 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
 
   <p>STD-C transmissions operate in the <strong>L-band around 1.5 GHz</strong> and use a <strong>1200 bps BPSK</strong> modulation scheme with an occupied bandwidth of roughly 2.4 kHz, which makes them surprisingly easy to receive with modest antennas and common SDR hardware.</p>
 
-<div class="note-box">
-<i class="fas fa-balance-scale"></i>
-<p>
-The signals described in this article are unencrypted satellite broadcasts intended for maritime safety and operational messaging. Laws regarding the reception and redistribution of communications vary by country. This article is intended for educational and technical experimentation purposes only.
-</p>
+<div class="warning-box" style="--warning-prefix: '⚠️ Legal Notice: ';">
+  <i class="fas fa-balance-scale" style="color: #ff6b35; margin-right: 0.5rem;"></i>
+  The signals described in this article are unencrypted satellite broadcasts intended for maritime safety and operational messaging. Laws regarding the reception and redistribution of communications vary by country. This article is intended for educational and technical experimentation purposes only.
 </div>
   
 </div>
