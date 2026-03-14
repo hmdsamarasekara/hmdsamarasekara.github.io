@@ -96,23 +96,23 @@ The easiest way to get started is by using **SDR# (SDRSharp)** together with the
   </figcaption>
 </figure>
 
-<div class="steps-list">
-  1. Download the **SDRSharp Community Package**, which already includes the Skytale-C plugin.
-  2. Tune SDR# to an active STD-C channel in the L-band.
-  3. Set the receiver bandwidth to approximately **4 kHz**.
-  4. Open **Skytale-C** from the plugin menu.
-  5. Enable the **"Enabled"** and **"Auto Tracking"** options.
-</div>
+<ol class="steps-list">
+  <li>Download the <strong>SDRSharp Community Package</strong>, which already includes the Skytale-C plugin.</li>
+  <li>Tune SDR# to an active STD-C channel in the L-band.</li>
+  <li>Set the receiver bandwidth to approximately <strong>4 kHz</strong>.</li>
+  <li>Open <strong>Skytale-C</strong> from the plugin menu.</li>
+  <li>Enable the <strong>"Enabled"</strong> and <strong>"Auto Tracking"</strong> options.</li>
+</ol>
 
-When the decoder successfully locks onto the signal, the status indicator in the top-right corner will display **"Locked"**, and the constellation diagram will stabilize. Once locked, Skytale-C will begin decoding STD-C messages automatically.
+When the decoder successfully locks onto the signal, the status indicator in the top-right corner will display <strong>"Locked"</strong>, and the constellation diagram will stabilize. Once locked, Skytale-C will begin decoding STD-C messages automatically.
 
-Clicking the **"Quick UI"** button opens a separate window that displays decoded messages in real time.
+Clicking the <strong>"Quick UI"</strong> button opens a separate window that displays decoded messages in real time.
 
 <div class="download-box">
   <i class="fas fa-download"></i>
   <div class="download-content">
     <span>Download the <strong>Skytale-C SDRSharp Plug-in</strong> here:</span>
-    <a href="/downloads/x64-SDRSharp.ScytaleC-10213.zip" class="download-link">
+    <a href="{{ '/downloads/x64-SDRSharp.ScytaleC-10213.zip' | relative_url }}" class="download-link">
       <i class="fas fa-file-archive"></i> x64-SDRSharp.ScytaleC-10213.zip
     </a>
   </div>
@@ -120,17 +120,19 @@ Clicking the **"Quick UI"** button opens a separate window that displays decoded
 
 <div class="note-box youtube">
   <i class="fab fa-youtube"></i>
-  <p><strong>Note:</strong> The developer of Skytale-C, microp11, maintains a YouTube channel where he publishes detailed videos demonstrating many of the software's features, configuration options, and advanced usage scenarios. These tutorials are very helpful for understanding the full capabilities of the decoder and for troubleshooting setup issues.</p>
-  <a href="https://www.youtube.com/@Paul-microp11" target="_blank" class="external-link">
-    <i class="fas fa-external-link-alt"></i> youtube.com/@Paul-microp11
-  </a>
+  <div>
+    <p><strong>Note:</strong> The developer of Skytale-C, microp11, maintains a YouTube channel where he publishes detailed videos demonstrating many of the software's features, configuration options, and advanced usage scenarios. These tutorials are very helpful for understanding the full capabilities of the decoder and for troubleshooting setup issues.</p>
+    <a href="https://www.youtube.com/@Paul-microp11" target="_blank" class="external-link">
+      <i class="fas fa-external-link-alt"></i> youtube.com/@Paul-microp11
+    </a>
+  </div>
 </div>
 
 ---
 
 ### Decoding Multiple Channels Simultaneously
 
-It is also possible to decode **multiple STD-C channels simultaneously**. While several approaches exist, using **SDR++ with its built-in network streaming features** is one of the most efficient methods in terms of CPU usage.
+It is also possible to decode <strong>multiple STD-C channels simultaneously</strong>. While several approaches exist, using <strong>SDR++ with its built-in network streaming features</strong> is one of the most efficient methods in terms of CPU usage.
 
 <div class="warning-box">
   <i class="fas fa-exclamation-triangle"></i>
@@ -139,13 +141,15 @@ It is also possible to decode **multiple STD-C channels simultaneously**. While 
 
 First download the following software components:
 
-* **SDR++**
-* **Skytale-C**
-* **Skytale-C Quick UI**
+<ul>
+  <li><strong>SDR++</strong></li>
+  <li><strong>Skytale-C</strong></li>
+  <li><strong>Skytale-C Quick UI</strong></li>
+</ul>
 
 #### Creating Virtual Receivers in SDR++
 
-Open SDR++ and navigate to the **Module Manager**. Under the **Radio** module:
+Open SDR++ and navigate to the <strong>Module Manager</strong>. Under the <strong>Radio</strong> module:
 
 <figure class="image-container">
   <img src="{{ '/assets/images/SDR++ Radio Setup.png' | relative_url }}" alt="Add new VFO" loading="lazy">
@@ -154,12 +158,12 @@ Open SDR++ and navigate to the **Module Manager**. Under the **Radio** module:
   </figcaption>
 </figure>
 
-<div class="steps-list">
-  1. Create a new receiver instance and assign it a name (for example **CH01**).
-  2. Click the **"+"** button to add the receiver.
-  3. A new **VFO** will appear in the spectrum display.
-  4. Select the VFO and tune it to the first STD-C channel.
-</div>
+<ol class="steps-list">
+  <li>Create a new receiver instance and assign it a name (for example <strong>CH01</strong>).</li>
+  <li>Click the <strong>"+"</strong> button to add the receiver.</li>
+  <li>A new <strong>VFO</strong> will appear in the spectrum display.</li>
+  <li>Select the VFO and tune it to the first STD-C channel.</li>
+</ol>
 
 #### Streaming IQ Data to Skytale-C
 
@@ -172,15 +176,15 @@ Next, configure the network output:
   </figcaption>
 </figure>
 
-<div class="steps-list">
-  1. Open the **Sinks** tab in SDR++.
-  2. Select the newly created VFO.
-  3. Choose **Network** as the output type.
-  4. Enter **127.0.0.1** as the destination address.
-  5. Assign a unique **TCP port number**.
-  6. Set the protocol to **TCP**.
-  7. Click **Start**.
-</div>
+<ol class="steps-list">
+  <li>Open the <strong>Sinks</strong> tab in SDR++.</li>
+  <li>Select the newly created VFO.</li>
+  <li>Choose <strong>Network</strong> as the output type.</li>
+  <li>Enter <strong>127.0.0.1</strong> as the destination address.</li>
+  <li>Assign a unique <strong>TCP port number</strong>.</li>
+  <li>Set the protocol to <strong>TCP</strong>.</li>
+  <li>Click <strong>Start</strong>.</li>
+</ol>
 
 This will begin streaming the channel's IQ data through the selected TCP port to Skytale-C.
 
@@ -197,7 +201,7 @@ Repeat this process for each STD-C channel you want to monitor.
 
 ### Configuring Skytale-C
 
-Extract the **Skytale-C** archive into a separate folder for each channel and rename the folder to match the corresponding VFO (for example *CH01*).
+Extract the <strong>Skytale-C</strong> archive into a separate folder for each channel and rename the folder to match the corresponding VFO (for example <em>CH01</em>).
 
 <figure class="image-container">
   <img src="{{ '/assets/images/Folder Structure.png' | relative_url }}" alt="Folder structure should look like this" loading="lazy">
@@ -235,7 +239,7 @@ Next configure the output settings:
   </ul>
 </div>
 
-Press the **Play** button to start decoding.
+Press the <strong>Play</strong> button to start decoding.
 
 This configuration forwards decoded messages via UDP to the Skytale-C Quick UI interface.
 
@@ -243,7 +247,7 @@ This configuration forwards decoded messages via UDP to the Skytale-C Quick UI i
 
 ### Configuring Skytale-C Quick UI
 
-Finally, extract and launch the **Skytale-C Quick UI** application.
+Finally, extract and launch the <strong>Skytale-C Quick UI</strong> application.
 
 <figure class="image-container">
   <img src="{{ '/assets/images/Skytale-C-Quick-UI-Setup.png' | relative_url }}" alt="Skytale-C Quick-UI Configuration" loading="lazy">
@@ -252,13 +256,13 @@ Finally, extract and launch the **Skytale-C Quick UI** application.
   </figcaption>
 </figure>
 
-<div class="steps-list">
-  1. Open the **Sources** tab.
-  2. Enter the UDP port numbers previously configured in each Skytale-C instance.
-  3. Enable **Log Messages** if you wish to save decoded messages to a file.
-</div>
+<ol class="steps-list">
+  <li>Open the <strong>Sources</strong> tab.</li>
+  <li>Enter the UDP port numbers previously configured in each Skytale-C instance.</li>
+  <li>Enable <strong>Log Messages</strong> if you wish to save decoded messages to a file.</li>
+</ol>
 
-Click the **Play** button to begin receiving decoded traffic. Active STD-C channel IDs will appear at the top of the interface as messages are received.
+Click the <strong>Play</strong> button to begin receiving decoded traffic. Active STD-C channel IDs will appear at the top of the interface as messages are received.
 
 <figure class="image-container wide">
   <img src="{{ '/assets/images/Multiple Skytale Instances.png' | relative_url }}" alt="Running Multiple Instances of Skytale-C" loading="lazy">
@@ -282,10 +286,12 @@ Once the receiver and decoder are configured correctly, decoded messages should 
 
 During monitoring of the Indian Ocean Region satellite, several types of STD-C traffic can typically be observed, including:
 
-* **SafetyNET broadcasts** containing maritime safety information such as weather warnings and navigational alerts.
-* **FleetNET messages** used by commercial operators to communicate with groups of vessels.
-* **Routine messaging traffic** exchanged between vessels and shore-based Land Earth Stations (LES).
-* **System signalling messages** related to network control and terminal management.
+<ul>
+  <li><strong>SafetyNET broadcasts</strong> containing maritime safety information such as weather warnings and navigational alerts.</li>
+  <li><strong>FleetNET messages</strong> used by commercial operators to communicate with groups of vessels.</li>
+  <li><strong>Routine messaging traffic</strong> exchanged between vessels and shore-based Land Earth Stations (LES).</li>
+  <li><strong>System signalling messages</strong> related to network control and terminal management.</li>
+</ul>
 
 Depending on the satellite footprint and local RF conditions, multiple STD-C channels may be active simultaneously. When using a wideband SDR such as the Airspy R2, it is possible to monitor several of these channels at the same time.
 
@@ -297,11 +303,11 @@ Over extended monitoring periods, the message log can quickly accumulate a large
 
 Receiving and decoding Inmarsat STD-C signals is a rewarding SDR project that demonstrates how accessible satellite communications monitoring has become with modern software-defined radio hardware. Because STD-C channels are relatively narrowband and strong across most of the satellite footprint, they can be received reliably with fairly modest equipment.
 
-During my experiments in the **Indian Ocean Region (IOR)** I was able to monitor multiple STD-C channels simultaneously. In total, **11 channels were observable** in this region — consisting of one Network Control Station (NCS) channel and several Land Earth Station (LES) channels. Using an **Airspy R2**, it was possible to decode all LES channels at the same time by streaming each channel to a separate Skytale-C instance.
+During my experiments in the <strong>Indian Ocean Region (IOR)</strong> I was able to monitor multiple STD-C channels simultaneously. In total, <strong>11 channels were observable</strong> in this region — consisting of one Network Control Station (NCS) channel and several Land Earth Station (LES) channels. Using an <strong>Airspy R2</strong>, it was possible to decode all LES channels at the same time by streaming each channel to a separate Skytale-C instance.
 
-The NCS channel, however, was located further away in the spectrum and could not be included within the same receiver bandwidth during my tests. With wider-band SDR hardware such as a **HackRF** or **PlutoSDR**, it may be possible to capture the entire STD-C channel set within a single spectrum window.
+The NCS channel, however, was located further away in the spectrum and could not be included within the same receiver bandwidth during my tests. With wider-band SDR hardware such as a <strong>HackRF</strong> or <strong>PlutoSDR</strong>, it may be possible to capture the entire STD-C channel set within a single spectrum window.
 
-Overall, STD-C reception is an excellent introduction to **L-band satellite monitoring** and provides a fascinating glimpse into real-world maritime communications. With the right antenna and a bit of experimentation, it is possible to continuously monitor satellite messaging traffic from ships operating across vast ocean regions.
+Overall, STD-C reception is an excellent introduction to <strong>L-band satellite monitoring</strong> and provides a fascinating glimpse into real-world maritime communications. With the right antenna and a bit of experimentation, it is possible to continuously monitor satellite messaging traffic from ships operating across vast ocean regions.
 
 <div class="post-footer">
   <div class="signature">
@@ -313,7 +319,7 @@ Overall, STD-C reception is an excellent introduction to **L-band satellite moni
 </div>
 
 <style>
-/* Minimal styling that works around the content */
+/* Scoped styles for this post only */
 .content-wrapper {
   max-width: 800px;
   margin: 0 auto;
@@ -326,6 +332,14 @@ Overall, STD-C reception is an excellent introduction to **L-band satellite moni
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #333;
+}
+
+.image-container.wide {
+  max-width: 100%;
+}
+
+.image-container.featured {
+  border: 2px solid #00d4ff;
 }
 
 .image-container img {
@@ -347,7 +361,7 @@ Overall, STD-C reception is an excellent introduction to **L-band satellite moni
   margin-right: 0.3rem;
 }
 
-/* Note box - styled but not card-like */
+/* Note box */
 .note-box {
   display: flex;
   gap: 1rem;
@@ -356,9 +370,10 @@ Overall, STD-C reception is an excellent introduction to **L-band satellite moni
   padding: 1.5rem;
   margin: 2rem 0;
   border-radius: 0 8px 8px 0;
+  align-items: flex-start;
 }
 
-.note-box i {
+.note-box > i {
   font-size: 1.3rem;
   color: #00d4ff;
   flex-shrink: 0;
@@ -376,7 +391,7 @@ Overall, STD-C reception is an excellent introduction to **L-band satellite moni
   flex-direction: column;
 }
 
-.note-box.youtube i {
+.note-box.youtube > i {
   color: #ff4444;
 }
 
@@ -393,7 +408,7 @@ Overall, STD-C reception is an excellent introduction to **L-band satellite moni
   color: #00d4ff;
 }
 
-/* Steps list - clean numbering */
+/* Steps list - properly structured as ordered list */
 .steps-list {
   counter-reset: step;
   list-style: none;
@@ -401,14 +416,15 @@ Overall, STD-C reception is an excellent introduction to **L-band satellite moni
   margin: 1.5rem 0;
 }
 
-.steps-list > * {
+.steps-list li {
   position: relative;
   padding-left: 2.5rem;
   margin-bottom: 1rem;
   line-height: 1.6;
+  list-style: none;
 }
 
-.steps-list > *::before {
+.steps-list li::before {
   counter-increment: step;
   content: counter(step);
   position: absolute;
@@ -471,9 +487,10 @@ Overall, STD-C reception is an excellent introduction to **L-band satellite moni
   padding: 1.5rem;
   margin: 2rem 0;
   border-radius: 0 8px 8px 0;
+  align-items: flex-start;
 }
 
-.warning-box i {
+.warning-box > i {
   font-size: 1.3rem;
   color: #ff4444;
   flex-shrink: 0;
@@ -535,7 +552,7 @@ Overall, STD-C reception is an excellent introduction to **L-band satellite moni
   font-size: 1.3rem;
 }
 
-/* Headers with icons */
+/* Headers */
 h2 {
   color: #00d4ff;
   border-bottom: 2px solid #333;
@@ -599,11 +616,11 @@ hr {
     text-align: center;
   }
 
-  .steps-list > * {
+  .steps-list li {
     padding-left: 2rem;
   }
 
-  .steps-list > *::before {
+  .steps-list li::before {
     width: 1.5rem;
     height: 1.5rem;
     font-size: 0.8rem;
