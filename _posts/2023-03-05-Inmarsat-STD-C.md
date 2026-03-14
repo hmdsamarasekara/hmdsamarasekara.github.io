@@ -518,13 +518,13 @@ excerpt: "A comprehensive guide to receiving and decoding Inmarsat STD-C maritim
 
   <p>The easiest way to get started is by using <strong>SDRSharp</strong> together with the Skytale-C plugin.</p>
 
-  <div class="image-container">
-    <img src="{{ '/assets/images/Skytale-C-SDRSharp-Setup.png' | relative_url }}" alt="Skytale-C SDRSharp Plug-in" loading="lazy">
+ <div class="image-container">
+    <img src="{{ '/assets/images/Skytale-C-SDRSharp-Setup.png' | relative_url }}" alt="Skytale-C SDRSharp Plug-in" loading="lazy" style="width: auto; max-width: 100%; margin: 0 auto; display: block;">
     <div class="image-caption">
       <i class="fas fa-image" style="margin-right: 0.5rem;"></i>
       Skytale-C SDRSharp Plug-in
     </div>
-  </div>
+</div>
 
   <div class="steps-list">
     <div>Download the <strong>SDRSharp Community Package</strong>, which already includes the Skytale-C plugin.</div>
