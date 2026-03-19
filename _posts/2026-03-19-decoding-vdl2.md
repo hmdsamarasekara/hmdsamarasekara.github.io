@@ -459,7 +459,7 @@ excerpt: "A comprehensive guide to receiving and decoding VDL2 aviation communic
 
   <p>But as air traffic increased and the demand for data communications grew, legacy ACARS began to show its age. The system was relatively slow, inefficient in its use of spectrum, and increasingly congested in busy airspace. To address these limitations, the aviation industry introduced <strong>VDL Mode 2</strong> — short for <strong>VHF Data Link Mode 2</strong>.</p>
 
-  <div class="hardware-grid" style="margin: 1.5rem 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+  <div class="hardware-grid" style="margin: 1.5rem 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
   <div class="hardware-item" style="border: 1px solid #00d4ff33; border-radius: 8px; padding: 1.5rem; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); text-align: center; display: flex; flex-direction: column; align-items: center;">
     <i class="fas fa-exchange-alt hardware-icon" style="color: #ff6b35; font-size: 2rem; margin-bottom: 0.75rem; display: block;"></i>
     <strong style="color: #f9fafb; display: block; margin-bottom: 0.75rem; font-size: 1.1rem;">Legacy ACARS</strong>
@@ -471,6 +471,20 @@ excerpt: "A comprehensive guide to receiving and decoding VDL2 aviation communic
       <span class="modulation-badge" style="background: #ff6b3522; border: 1px solid #ff6b3533; color: #ff6b35; padding: 0.5rem 0.75rem; border-radius: 4px; font-size: 0.875rem; display: flex; align-items: center; justify-content: center; min-width: 60px;">MSK</span>
     </div>
   </div>
+  
+  <!-- Second card placeholder - duplicate and modify as needed -->
+  <div class="hardware-item" style="border: 1px solid #00d4ff33; border-radius: 8px; padding: 1.5rem; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); text-align: center; display: flex; flex-direction: column; align-items: center;">
+    <i class="fas fa-satellite hardware-icon" style="color: #22c55e; font-size: 2rem; margin-bottom: 0.75rem; display: block;"></i>
+    <strong style="color: #f9fafb; display: block; margin-bottom: 0.75rem; font-size: 1.1rem;">VDL Mode 2</strong>
+    <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+      <span class="bandwidth-badge" style="background: #22c55e22; border: 1px solid #22c55e33; color: #22c55e; padding: 0.5rem 0.75rem; border-radius: 4px; font-size: 0.875rem; display: flex; flex-direction: column; align-items: center; min-width: 60px;">
+        <span class="bitrate-number" style="font-size: 1.1rem; font-weight: bold; line-height: 1;">31.5</span>
+        <span class="bitrate-unit" style="font-size: 0.75rem; opacity: 0.9;">kbps</span>
+      </span>
+      <span class="modulation-badge" style="background: #22c55e22; border: 1px solid #22c55e33; color: #22c55e; padding: 0.5rem 0.75rem; border-radius: 4px; font-size: 0.875rem; display: flex; align-items: center; justify-content: center; min-width: 60px;">D8PSK</span>
+    </div>
+  </div>
+</div>
 
   <p>VDL2 was designed as a more modern and efficient replacement for conventional VHF ACARS data links. While it continues to support many of the same operational message types, the underlying technology is significantly more advanced. Instead of the older ACARS modulation scheme, VDL2 uses <strong>D8PSK (Differential 8-Phase Shift Keying)</strong> and operates at a much higher data rate of <strong>31.5 kbps</strong>, making it far better suited for the growing volume of airline and air traffic communication traffic. It typically operates in the civil aviation VHF band alongside traditional ACARS channels, but with a very different signal structure and protocol stack.</p>
 
