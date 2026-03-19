@@ -460,33 +460,33 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
   <p>But as air traffic increased and the demand for data communications grew, legacy ACARS began to show its age. The system was relatively slow, inefficient in its use of spectrum, and increasingly congested in busy airspace. To address these limitations, the aviation industry introduced <strong>VDL Mode 2</strong> — short for <strong>VHF Data Link Mode 2</strong>.</p>
 
   <div class="hardware-grid" style="margin: 1.5rem 0;">
-    <div class="hardware-item" style="border-color: #ff6b3533; background: linear-gradient(135deg, #2f1a1a 0%, #1f0f0f 100%);">
-      <i class="fas fa-exchange-alt hardware-icon"></i>
-      <div>
-        <strong style="color: #f9fafb;">Legacy ACARS</strong><br>
-        <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
-          <span class="bandwidth-badge">
-            <span class="bitrate-number">2400</span>
-            <span class="bitrate-unit">bps</span>
-          </span>
-          <span class="modulation-badge">MSK Modulation</span>
-        </div>
-      </div>
-    </div>
-    <div class="hardware-item" style="border-color: #00d4ff33; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
-      <i class="fas fa-rocket hardware-icon" style="color: #00d4ff;"></i>
-      <div>
-        <strong style="color: #f9fafb;">VDL Mode 2</strong><br>
-        <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
-          <span class="bandwidth-badge high">
-            <span class="bitrate-number">31.5</span>
-            <span class="bitrate-unit">kbps</span>
-          </span>
-          <span class="modulation-badge" style="background: #ff6b3522; border-color: #ff6b3533; color: #ff6b35;">D8PSK</span>
-        </div>
+  <div class="hardware-item" style="border-color: #00d4ff33; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+    <i class="fas fa-exchange-alt hardware-icon" style="color: #ff6b35;"></i>
+    <div>
+      <strong style="color: #f9fafb;">Legacy ACARS</strong><br>
+      <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+        <span class="bandwidth-badge">
+          <span class="bitrate-number">2400</span>
+          <span class="bitrate-unit">bps</span>
+        </span>
+        <span class="modulation-badge" style="background: #ff6b3522; border-color: #ff6b3533; color: #ff6b35;">MSK Modulation</span>
       </div>
     </div>
   </div>
+  <div class="hardware-item" style="border-color: #00d4ff33; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+    <i class="fas fa-rocket hardware-icon" style="color: #00d4ff;"></i>
+    <div>
+      <strong style="color: #f9fafb;">VDL Mode 2</strong><br>
+      <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
+        <span class="bandwidth-badge high">
+          <span class="bitrate-number">31.5</span>
+          <span class="bitrate-unit">kbps</span>
+        </span>
+        <span class="modulation-badge" style="background: #ff6b3522; border-color: #ff6b3533; color: #ff6b35;">D8PSK</span>
+      </div>
+    </div>
+  </div>
+</div>
 
   <p>VDL2 was designed as a more modern and efficient replacement for conventional VHF ACARS data links. While it continues to support many of the same operational message types, the underlying technology is significantly more advanced. Instead of the older ACARS modulation scheme, VDL2 uses <strong>D8PSK (Differential 8-Phase Shift Keying)</strong> and operates at a much higher data rate of <strong>31.5 kbps</strong>, making it far better suited for the growing volume of airline and air traffic communication traffic. It typically operates in the civil aviation VHF band alongside traditional ACARS channels, but with a very different signal structure and protocol stack.</p>
 
@@ -615,18 +615,18 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
     </ul>
   </div>
 
-  <div class="image-container">
+  <div class="warning-box">
+  <div class="image-container" style="margin: 0 0 1rem 0; border: 1px solid #ff6b3533;">
     <img src="{{ '/assets/images/VDL2-Database-Ref.png' | relative_url }}" alt="Database Files Loaded" loading="lazy" style="width: auto; max-width: 100%; margin: 0 auto; display: block;">
-    <div class="image-caption">
-      <i class="fas fa-check-circle" style="margin-right: 0.5rem;"></i>
+    <div class="image-caption" style="background: #2f1a1a; border-top: 1px solid #ff6b3533;">
+      <i class="fas fa-check-circle" style="margin-right: 0.5rem; color: #22c55e;"></i>
       Both basestation.sqb & groundstation.txt files loaded correctly
     </div>
   </div>
-
-  <div class="warning-box">
-    <i class="fas fa-database" style="margin-right: 0.5rem;"></i>
-    <strong>Database Files Required:</strong> To get the most useful aircraft and ground-station lookups in dumpvdl2, you will want both an up-to-date <strong>BaseStation database file (basestation.sqb)</strong> and a current <strong>ground station file (groundstation.txt)</strong>. The practical way to obtain a current basestation.sqb file is through <strong>COAA PlanePlotter</strong>, using Options > Script > Fetch registration and type database (NS). For the groundstation.txt file, an up-to-date copy can usually be found in the Files section of the <a href="https://acars-vdl2.groups.io/g/main/topics" target="_blank" style="color: #00d4ff;">acars-vdl2 groups.io group</a>.
-  </div>
+  
+  <i class="fas fa-database" style="margin-right: 0.5rem;"></i>
+  <strong>Database Files Required:</strong> To get the most useful aircraft and ground-station lookups in dumpvdl2, you will want both an up-to-date <strong>BaseStation database file (basestation.sqb)</strong> and a current <strong>ground station file (groundstation.txt)</strong>. The practical way to obtain a current basestation.sqb file is through <strong>COAA PlanePlotter</strong>, using Options > Script > Fetch registration and type database (NS). For the groundstation.txt file, an up-to-date copy can usually be found in the Files section of the <a href="https://acars-vdl2.groups.io/g/main/topics" target="_blank" style="color: #00d4ff;">acars-vdl2 groups.io group</a>.
+</div>
 
   <h4 style="color: #f9fafb; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
     <i class="fas fa-puzzle-piece" style="color: #00d4ff;"></i> Optional: Fragment Decoding
@@ -645,13 +645,13 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
     <h1 class="section-title">What Kind of Messages Can Be Received</h1>
   </div>
 
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/nRd6DhPBT3U" title="Live VDL2 Decoding" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-  <div class="image-caption" style="margin-top: -1rem; margin-bottom: 1.5rem;">
+  <div class="video-container" style="padding-bottom: 177.78%; max-width: 400px; margin: 1.5rem auto;">
+    <iframe src="https://www.youtube.com/embed/nRd6DhPBT3U?autoplay=1&mute=1&loop=1&playlist=nRd6DhPBT3U&playsinline=1" title="Live VDL2 Decoding" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop" allowfullscreen></iframe>
+</div>
+<div class="image-caption" style="margin-top: -1rem; margin-bottom: 1.5rem; max-width: 400px; margin-left: auto; margin-right: auto;">
     <i class="fas fa-video" style="margin-right: 0.5rem;"></i>
     This is how live decoded VDL2 messages appear in the terminal
-  </div>
+</div>
 
   <p>Once dumpvdl2 started running, the types of messages you'll see are quite diverse. Most traffic falls into familiar categories:</p>
 
