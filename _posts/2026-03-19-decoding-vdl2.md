@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Decoding VDL2 - The Next Generation Aviation Datalink"
+title: "Decoding VHF Data Link Mode-2"
 date: 2026-03-19 17:18:00 +0400
 tags: [vdl2, acars, aviation, sdr, vhf, aircraft, decoding, dumpvdl2]
 categories: [Aviation]
-excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (VDL2) aviation communications using RTL-SDR and dumpvdl2."
+excerpt: "A comprehensive guide to receiving and decoding VDL2 aviation communications using dumpvdl2."
 ---
 
 <style>
