@@ -646,18 +646,26 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
     <h1 class="section-title">What Kind of Messages Can Be Received</h1>
   </div>
 
-  <div class="video-container" style="position: relative; width: 100%; max-width: 400px; margin: 1.5rem auto; aspect-ratio: 9/16;">
+  <div class="video-container" style="position: relative; width: 100%; max-width: 700px; margin: 1.5rem auto; overflow: hidden;">
     <iframe
         src="https://www.youtube.com/embed/nRd6DhPBT3U?autoplay=1&mute=1&loop=1&playlist=nRd6DhPBT3U&playsinline=1"
         title="Live VDL2 Decoding"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop"
         allowfullscreen
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        style="
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 177.78%; /* 1920/1080 = 177.78% to match vertical aspect ratio */
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        ">
     </iframe>
 </div>
 
-<div class="image-caption" style="margin-top: 0.5rem; margin-bottom: 1.5rem; max-width: 400px; margin-left: auto; margin-right: auto; text-align: center;">
+<div class="image-caption" style="margin-top: 0.5rem; margin-bottom: 1.5rem; text-align: center;">
     <i class="fas fa-video" style="margin-right: 0.5rem;"></i>
     This is how live decoded VDL2 messages appear in the terminal
 </div>
