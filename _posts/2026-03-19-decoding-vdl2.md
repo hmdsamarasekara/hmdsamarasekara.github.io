@@ -642,20 +642,21 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
     <h1 class="section-title">What Kind of Messages Can Be Received</h1>
   </div>
 
-  <div class="video-container" style="position: relative; width: 100%; max-width: 400px; margin: 1.5rem auto; padding-bottom: 177.78%; /* 1920/1080 = 1.7778 aspect ratio for vertical video */ height: 0; overflow: hidden;">
+  <div class="video-container" style="position: relative; width: 100%; max-width: 500px; margin: 1.5rem auto; padding-bottom: 177.78%; height: 0; overflow: hidden; background: #000;">
     <iframe
-        src="https://www.youtube.com/embed/nRd6DhPBT3U?autoplay=1&mute=1&loop=1&playlist=nRd6DhPBT3U&playsinline=1"
+        src="https://www.youtube.com/embed/nRd6DhPBT3U?autoplay=1&mute=1&loop=1&playlist=nRd6DhPBT3U&playsinline=1&modestbranding=1&rel=0"
         title="Live VDL2 Decoding"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
         style="
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
+            top: 50%;
+            left: 50%;
+            width: 178%;
             height: 100%;
-            object-fit: cover;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
         ">
     </iframe>
 </div>
