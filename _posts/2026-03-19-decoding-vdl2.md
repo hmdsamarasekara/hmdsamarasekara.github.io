@@ -509,12 +509,12 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
   </div>
 
   <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/DagaeRzppbU" title="VDL2 Spectrum Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-  <div class="image-caption" style="margin-top: -1rem; margin-bottom: 1.5rem;">
+    <iframe src="https://www.youtube.com/embed/DagaeRzppbU?autoplay=1&mute=1&loop=1&playlist=DagaeRzppbU&playsinline=1" title="VDL2 Spectrum Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="image-caption" style="margin-top: -1rem; margin-bottom: 1.5rem;">
     <i class="fas fa-video" style="margin-right: 0.5rem;"></i>
     Here's how VDL2 transmissions appear when viewed on a spectrum analyzer and waterfall display
-  </div>
+</div>
 
   <p>On an SDR spectrum display, VDL2 appears as a relatively <strong>wide, solid-looking digital signal</strong> in the VHF airband, typically centered on one of the standard VDL2 channels such as <strong>136.725 MHz</strong> or <strong>136.975 MHz</strong>. Unlike the narrower appearance of classic ACARS, VDL2 occupies noticeably more bandwidth and often looks more "filled in" across its channel rather than showing a simple peaked carrier structure.</p>
 
@@ -565,9 +565,9 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
     </div>
   </div>
 
-  <p>However, while MultiPSK is powerful, it can feel dated, less intuitive, and not especially streamlined for continuous VDL2 monitoring. Its interface is quite old-school, setup can be a little awkward, and it is not as convenient when you want clean logging, easier filtering, or long-term unattended decoding. For casual experimentation it still has value, but for most people today it is no longer the most practical choice.</p>
+  <p>However, while MultiPSK is powerful, it can feel dated, less intuitive, and not especially streamlined for continuous VDL2 monitoring. Its interface is quite old-school, setup can be a little awkward, and it is not as convenient when you want clean logging, easier filtering, or long-term unattended decoding. For casual experimentation, it still has value, but for most people today, it is no longer the most practical choice.</p>
 
-  <p>That is where <strong>dumpvdl2</strong> really stands out. It is purpose-built for VDL2 decoding, and much better suited for modern SDR workflows. Paired with a basic RTL-SDR, airband antenna, and a stable signal source, dumpvdl2 can continuously decode VDL2 traffic with detailed output, flexible logging, and compatibility with tools that help visualize or process the received data further.</p>
+  <p>That is where <strong>dumpvdl2</strong> really stands out. It is purpose-built for VDL2 decoding and much better suited for modern SDR workflows. Paired with a basic RTL-SDR, airband antenna, and a stable signal source, dumpvdl2 can continuously decode VDL2 traffic with detailed output, flexible logging, and compatibility with tools that help visualize or process the received data further.</p>
 
   <p>Compared to MultiPSK, it feels far more focused and efficient, especially if your goal is to monitor VDL2 seriously rather than just briefly test it. In practice, if you want the easiest path to useful results, <strong>dumpvdl2 is usually the tool worth centering the setup around</strong>.</p>
 </div>
@@ -642,20 +642,19 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
     <h1 class="section-title">What Kind of Messages Can Be Received</h1>
   </div>
 
-  <div class="video-container" style="position: relative; width: 100%; max-width: 700px; margin: 1.5rem auto; overflow: hidden;">
+  <div class="video-container" style="position: relative; width: 100%; max-width: 400px; margin: 1.5rem auto; padding-bottom: 177.78%; /* 1920/1080 = 1.7778 aspect ratio for vertical video */ height: 0; overflow: hidden;">
     <iframe
         src="https://www.youtube.com/embed/nRd6DhPBT3U?autoplay=1&mute=1&loop=1&playlist=nRd6DhPBT3U&playsinline=1"
         title="Live VDL2 Decoding"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
         style="
             position: absolute;
-            top: 50%;
-            left: 50%;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 177.78%; /* 1920/1080 = 177.78% to match vertical aspect ratio */
-            transform: translate(-50%, -50%);
+            height: 100%;
             object-fit: cover;
         ">
     </iframe>
@@ -716,7 +715,7 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
   <p>In Dubai, I monitor <strong>136.725 MHz</strong> and <strong>136.975 MHz</strong>, the two VDL2 channels available locally. Both frequencies are <strong>extremely busy throughout the day</strong>, constantly broadcasting a large volume of data. The signal strength is generally strong, but the VHF airband in the area suffers from heavy interference from FM stations.</p>
 
   <div class="tip-box">
-    I use an <strong>FM bandstop filter</strong> to improve reception and get better decoding results. This is highly recommended in urban environments with strong broadcast FM presence.
+    I use an <strong>FM bandstop filter</strong> to improve reception and get better decoding results. This is highly recommended in urban environments with a strong broadcast FM presence.
   </div>
 
   <p>Compared to regular ACARS, VDL2 channels are not only busier but also carry much more structured and complex data. While some messages are readable, others appear as very long strings of letters and characters that don't immediately make sense. Occasionally, you'll see lengthy lists of numerical values that are technically interpretable but whose meaning isn't obvious without deep protocol knowledge. This mix of structured information and opaque fragments highlights both the <strong>richness and complexity</strong> of monitoring VDL2 in real-world conditions.</p>
