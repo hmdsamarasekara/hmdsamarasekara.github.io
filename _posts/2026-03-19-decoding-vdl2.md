@@ -646,10 +646,18 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
     <h1 class="section-title">What Kind of Messages Can Be Received</h1>
   </div>
 
-  <div class="video-container" style="padding-bottom: 177.78%; max-width: 400px; margin: 1.5rem auto;">
-    <iframe src="https://www.youtube.com/embed/nRd6DhPBT3U?autoplay=1&mute=1&loop=1&playlist=nRd6DhPBT3U&playsinline=1" title="Live VDL2 Decoding" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop" allowfullscreen></iframe>
+  <div class="video-container" style="position: relative; width: 100%; max-width: 400px; margin: 1.5rem auto; padding-bottom: 177.78%;">
+    <iframe 
+        src="https://www.youtube.com/embed/nRd6DhPBT3U?autoplay=1&mute=1&loop=1&playlist=nRd6DhPBT3U&playsinline=1" 
+        title="Live VDL2 Decoding" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop" 
+        allowfullscreen
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+    </iframe>
 </div>
-<div class="image-caption" style="margin-top: -1rem; margin-bottom: 1.5rem; max-width: 400px; margin-left: auto; margin-right: auto;">
+
+<div class="image-caption" style="margin-top: -1rem; margin-bottom: 1.5rem; max-width: 400px; margin-left: auto; margin-right: auto; text-align: center;">
     <i class="fas fa-video" style="margin-right: 0.5rem;"></i>
     This is how live decoded VDL2 messages appear in the terminal
 </div>
@@ -747,11 +755,3 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
   </div>
 
   <p>It combines <strong style="color: #00d4ff;">technical depth</strong>, <strong style="color: #22c55e;">practical usefulness</strong>, and a <strong style="color: #ff6b35;">steady stream of activity</strong> that makes it a rewarding mode to explore with an SDR and the right decoding tools.</p>
-
-  <div class="post-footer">
-    <div class="signature">
-      <i class="fas fa-satellite-dish"></i>
-      <span>73 de A65KJ — Noise Floor Nomad</span>
-    </div>
-  </div>
-</div>
