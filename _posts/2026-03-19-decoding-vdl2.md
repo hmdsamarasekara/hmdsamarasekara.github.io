@@ -605,8 +605,8 @@ excerpt: "A comprehensive guide to receiving and decoding VDL2 aviation communic
       <li><strong style="color: #ff6b35;">--utc & --milliseconds</strong> — Log timestamps in UTC with millisecond precision</li>
       <li><strong style="color: #ff6b35;">--prettify-xml --prettify-json</strong> — Make structured message contents easier to read</li>
       <li><strong style="color: #ff6b35;">--extended-header</strong> — Add extra detail to each decoded entry</li>
-      <li><strong style="color: #ff6b35;">--bs-db</strong> — Point to <strong style="color: #ff6b35;">basestation.sqb</strong> file for aircraft information resolution</li>
-      <li><strong style="color: #ff6b35;">--gs-file</strong> — Point to <strong style="color: #ff6b35;">groundstation.txt</strong> file for groundstation identification</li>
+      <li><strong style="color: #ff6b35;">--bs-db</strong> — Point to <strong>basestation.sqb</strong> file for aircraft information resolution</li>
+      <li><strong style="color: #ff6b35;">--gs-file</strong> — Point to <strong>groundstation.txt</strong> file for groundstation identification</li>
       <li><strong style="color: #ff6b35;">--addrinfo verbose</strong> — Show expanded aircraft & groundstation information</li>
       <li><strong style="color: #ff6b35;">--output decoded:text:file:path=...</strong> — Write decoded messages as plain text to log file</li>
     </ul>
@@ -639,7 +639,7 @@ excerpt: "A comprehensive guide to receiving and decoding VDL2 aviation communic
 <div class="section-card">
   <div class="section-header">
     <i class="fas fa-envelope-open-text section-icon"></i>
-    <h1 class="section-title">What Kind of Messages Can Be Received</h1>
+    <h1 class="section-title">VDL2 Message Categories</h1>
   </div>
 
   <div class="image-container" style="margin: 0 0 1rem 0; border: 1px solid transparent;">
