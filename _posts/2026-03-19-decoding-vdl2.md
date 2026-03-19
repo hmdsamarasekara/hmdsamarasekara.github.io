@@ -642,46 +642,12 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
     <h1 class="section-title">What Kind of Messages Can Be Received</h1>
   </div>
 
-  <div class="video-container">
-  <iframe 
-    src="https://www.youtube.com/embed/nRd6DhPBT3U" 
-    title="This is how live decoded VDL2 messages appear in the terminal" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" 
-    allowfullscreen>
-  </iframe>
-</div>
-
-<style>
-  .video-container {
-    position: relative;
-    width: 100%;
-    /* This creates a 16:9 aspect ratio container */
-    aspect-ratio: 16 / 9; 
-  }
-  .video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-  }
-  
-  /* Fallback for older browsers that don't support aspect-ratio */
-  @supports not (aspect-ratio: 16 / 9) {
-    .video-container {
-      padding-bottom: 56.25%; 
-      height: 0;
-    }
-  }
-</style>
-
-<div class="image-caption" style="margin-top: 0.5rem; margin-bottom: 1.5rem; text-align: center;">
-    <i class="fas fa-video" style="margin-right: 0.5rem;"></i>
-    This is how live decoded VDL2 messages appear in the terminal
-</div>
+  <div class="image-container" style="margin: 0 0 1rem 0; border: 1px solid #ff6b3533;">
+    <img src="{{ '/assets/images/VDL2-Decodes.webp' | relative_url }}" alt="VDL2-Decodes" loading="lazy" style="width: auto; max-width: 100%; margin: 0 auto; display: block;">
+    <div class="image-caption" style="background: #2f1a1a; border-top: 1px solid #ff6b3533;">
+      This is how live decoded VDL2 messages appear in the terminal
+    </div>
+  </div>
 
   <p>Once dumpvdl2 started running, the types of messages you'll see are quite diverse. Most traffic falls into familiar categories:</p>
 
