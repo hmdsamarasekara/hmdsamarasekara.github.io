@@ -459,8 +459,8 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
 
   <p>But as air traffic increased and the demand for data communications grew, legacy ACARS began to show its age. The system was relatively slow, inefficient in its use of spectrum, and increasingly congested in busy airspace. To address these limitations, the aviation industry introduced <strong>VDL Mode 2</strong> — short for <strong>VHF Data Link Mode 2</strong>.</p>
 
-  <div class="hardware-grid" style="margin: 1.5rem 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
-  <div class="hardware-item" style="border: 1px solid #00d4ff33; border-radius: 8px; padding: 1.5rem; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); text-align: center;">
+  <div class="hardware-grid" style="margin: 1.5rem 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; justify-content: center;">
+  <div class="hardware-item" style="border: 1px solid #00d4ff33; border-radius: 8px; padding: 1.5rem; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); text-align: center; max-width: 350px; margin: 0 auto;">
     <i class="fas fa-exchange-alt hardware-icon" style="color: #ff6b35; font-size: 2rem; margin-bottom: 0.75rem; display: block;"></i>
     <div>
       <strong style="color: #f9fafb; display: block; margin-bottom: 0.5rem;">Legacy ACARS</strong>
@@ -469,11 +469,11 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
           <span class="bitrate-number">2400</span>
           <span class="bitrate-unit">bps</span>
         </span>
-        <span class="modulation-badge" style="background: #ff6b3522; border: 1px solid #ff6b3533; color: #ff6b35; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.875rem;">MSK</span>
+        <span class="modulation-badge" style="background: #ff6b3522; border: 1px solid #ff6b3533; color: #ff6b35; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.875rem;">MSK Modulation</span>
       </div>
     </div>
   </div>
-  <div class="hardware-item" style="border: 1px solid #00d4ff33; border-radius: 8px; padding: 1.5rem; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); text-align: center;">
+  <div class="hardware-item" style="border: 1px solid #00d4ff33; border-radius: 8px; padding: 1.5rem; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); text-align: center; max-width: 350px; margin: 0 auto;">
     <i class="fas fa-rocket hardware-icon" style="color: #ff6b35; font-size: 2rem; margin-bottom: 0.75rem; display: block;"></i>
     <div>
       <strong style="color: #f9fafb; display: block; margin-bottom: 0.5rem;">VDL Mode 2</strong>
