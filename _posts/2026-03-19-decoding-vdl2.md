@@ -540,7 +540,7 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
     </div>
   </div>
 
-  <p>In busy regions, a VDL2 channel may also sound and look more active due to the higher volume of data traffic being carried. To the ear, when demodulated in narrow FM mode, it has a <strong>harsh, broadband digital sound</strong> rather than the characteristic chirpy tone many listeners associate with regular ACARS. Once you've seen both side by side on a waterfall, VDL2 becomes fairly easy to spot by its wider footprint, denser visual texture, and distinctly modern digital character.</p>
+  <p>To the ear, when demodulated in narrow FM mode, it has a <strong>harsh, broadband digital sound</strong> rather than the characteristic chirpy tone many listeners associate with regular ACARS. Once you've seen both side by side on a waterfall, VDL2 becomes fairly easy to spot by its wider footprint, denser visual texture, and distinctly modern digital character.</p>
 </div>
 
 <div class="section-card">
@@ -603,14 +603,14 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
   <div class="config-section">
     <ul>
       <li><strong>--rtlsdr 0</strong> — Use the first RTL-SDR connected to the system</li>
-      <li><strong>--gain 40.2</strong> — Set tuner gain to 40.2 dB (balance between sensitivity and overload resistance)</li>
+      <li><strong>--gain 40.2</strong> — Set tuner gain to 40.2 dB</li>
       <li><strong>--centerfreq 136.800M 136.725M 136.975M</strong> — Define monitoring range placing multiple VDL2 channels within sampled bandwidth</li>
-      <li><strong>--utc --milliseconds</strong> — Log timestamps in UTC with millisecond precision</li>
+      <li><strong>--utc & --milliseconds</strong> — Log timestamps in UTC with millisecond precision</li>
       <li><strong>--prettify-xml --prettify-json</strong> — Make structured message contents easier to read</li>
       <li><strong>--extended-header</strong> — Add extra detail to each decoded entry</li>
-      <li><strong>--bs-db</strong> — Point to Basestation aircraft database for aircraft information resolution</li>
-      <li><strong>--gs-file</strong> — Load ground station reference file for station identification</li>
-      <li><strong>--addrinfo verbose</strong> — Show expanded address-related information</li>
+      <li><strong>--bs-db</strong> — Point to <strong>basestation.sqb</strong>strong> file for aircraft information resolution</li>
+      <li><strong>--gs-file</strong> — Point to <strong>groundstation.txt</strong>strong> file for groundstation identification</li>
+      <li><strong>--addrinfo verbose</strong> — Show expanded aircraft & groundstation information</li>
       <li><strong>--output decoded:text:file:path=...</strong> — Write decoded messages as plain text to log file</li>
     </ul>
   </div>
@@ -625,7 +625,7 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
   </div>
   
   <i class="fas fa-database" style="margin-right: 0.5rem;"></i>
-  <strong>Database Files Required:</strong> To get the most useful aircraft and ground-station lookups in dumpvdl2, you will want both an up-to-date <strong>BaseStation database file (basestation.sqb)</strong> and a current <strong>ground station file (groundstation.txt)</strong>. The practical way to obtain a current basestation.sqb file is through <strong>COAA PlanePlotter</strong>, using Options > Script > Fetch registration and type database (NS). For the groundstation.txt file, an up-to-date copy can usually be found in the Files section of the <a href="https://acars-vdl2.groups.io/g/main/topics" target="_blank" style="color: #00d4ff;">acars-vdl2 groups.io group</a>.
+  <strong>Database Files Required:</strong> To get the most useful aircraft and ground-station lookups in dumpvdl2, you will want both an up-to-date <strong>BaseStation database file (basestation.sqb)</strong> and a current <strong>ground station file (groundstation.txt)</strong>. The practical way to obtain a current basestation.sqb file is through <a href="https://www.coaa.co.uk/planeplotter.htm#download" target="_blank" style="color: #00d4ff;">COAA PlanePlotter</a>, using Options > Script > Fetch registration and type database (NS). For the groundstation.txt file, an up-to-date copy can usually be found in the Files section of the <a href="https://acars-vdl2.groups.io/g/main/topics" target="_blank" style="color: #00d4ff;">acars-vdl2 groups.io</a> group.
 </div>
 
   <h4 style="color: #f9fafb; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
