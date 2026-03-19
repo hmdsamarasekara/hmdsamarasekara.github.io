@@ -599,16 +599,16 @@ excerpt: "A comprehensive guide to receiving and decoding VDL2 aviation communic
 
   <div class="config-section">
     <ul>
-      <li><strong>--rtlsdr 0</strong> — Use the first RTL-SDR connected to the system</li>
-      <li><strong>--gain 40.2</strong> — Set tuner gain to 40.2 dB</li>
-      <li><strong>--centerfreq 136.800M 136.725M 136.975M</strong> — Define monitoring range placing multiple VDL2 channels within sampled bandwidth</li>
-      <li><strong>--utc & --milliseconds</strong> — Log timestamps in UTC with millisecond precision</li>
-      <li><strong>--prettify-xml --prettify-json</strong> — Make structured message contents easier to read</li>
-      <li><strong>--extended-header</strong> — Add extra detail to each decoded entry</li>
-      <li><strong>--bs-db</strong> — Point to <strong>basestation.sqb</strong>strong> file for aircraft information resolution</li>
-      <li><strong>--gs-file</strong> — Point to <strong>groundstation.txt</strong>strong> file for groundstation identification</li>
-      <li><strong>--addrinfo verbose</strong> — Show expanded aircraft & groundstation information</li>
-      <li><strong>--output decoded:text:file:path=...</strong> — Write decoded messages as plain text to log file</li>
+      <li><strong style="color: #ff6b35;">--rtlsdr 0</strong> — Use the first RTL-SDR connected to the system</li>
+      <li><strong style="color: #ff6b35;">--gain 40.2</strong> — Set tuner gain to 40.2 dB</li>
+      <li><strong style="color: #ff6b35;">--centerfreq 136.800M 136.725M 136.975M</strong> — Define monitoring range placing multiple VDL2 channels within sampled bandwidth</li>
+      <li><strong style="color: #ff6b35;">--utc & --milliseconds</strong> — Log timestamps in UTC with millisecond precision</li>
+      <li><strong style="color: #ff6b35;">--prettify-xml --prettify-json</strong> — Make structured message contents easier to read</li>
+      <li><strong style="color: #ff6b35;">--extended-header</strong> — Add extra detail to each decoded entry</li>
+      <li><strong style="color: #ff6b35;">--bs-db</strong> — Point to <strong style="color: #ff6b35;">basestation.sqb</strong> file for aircraft information resolution</li>
+      <li><strong style="color: #ff6b35;">--gs-file</strong> — Point to <strong style="color: #ff6b35;">groundstation.txt</strong> file for groundstation identification</li>
+      <li><strong style="color: #ff6b35;">--addrinfo verbose</strong> — Show expanded aircraft & groundstation information</li>
+      <li><strong style="color: #ff6b35;">--output decoded:text:file:path=...</strong> — Write decoded messages as plain text to log file</li>
     </ul>
   </div>
 
