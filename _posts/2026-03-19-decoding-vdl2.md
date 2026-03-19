@@ -719,12 +719,11 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
   <p>In Dubai, I monitor <strong>136.725 MHz</strong> and <strong>136.975 MHz</strong>, the two VDL2 channels available locally. Both frequencies are <strong>extremely busy throughout the day</strong>, constantly broadcasting a large volume of data. The signal strength is generally strong, but the VHF airband in the area suffers from heavy interference from FM stations.</p>
 
   <div class="tip-box">
-    I use an <strong>FM bandstop filter</strong> to improve reception and get cleaner decoding results. This is highly recommended in urban environments with strong broadcast FM presence.
+    I use an <strong>FM bandstop filter</strong> to improve reception and get better decoding results. This is highly recommended in urban environments with strong broadcast FM presence.
   </div>
 
-  <p>Compared to regular ACARS, VDL2 channels are not only busier but also carry much more structured and complex data. While some messages are readable, others appear as very long strings of letters and characters that don't immediately make sense. Occasionally, you'll see lengthy lists of numerical values that are technically interpretable but whose meaning isn't obvious without deep protocol knowledge.</p>
+  <p>Compared to regular ACARS, VDL2 channels are not only busier but also carry much more structured and complex data. While some messages are readable, others appear as very long strings of letters and characters that don't immediately make sense. Occasionally, you'll see lengthy lists of numerical values that are technically interpretable but whose meaning isn't obvious without deep protocol knowledge. This mix of structured information and opaque fragments highlights both the <strong>richness and complexity</strong> of monitoring VDL2 in real-world conditions.</p>
 
-  <p>This mix of structured information and opaque fragments highlights both the <strong>richness and complexity</strong> of monitoring VDL2 in real-world conditions.</p>
 </div>
 
 <div class="section-card" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-color: #00d4ff33;">
@@ -733,32 +732,4 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
     <h1 class="section-title" style="color: #ff6b35;">Final Thoughts</h1>
   </div>
 
-  <p style="font-size: 1.125rem; line-height: 1.8;">VDL2 is a great example of how aviation communications have <strong style="color: #00d4ff;">evolved beyond traditional ACARS</strong>. It is faster, busier, and much more structured, making it far more capable for modern datalink traffic.</p>
-
-  <p>For the radio hobbyist, that also makes it <strong>more interesting to monitor</strong>, because there is always something happening on the channel and the decoded output often reveals just how much digital traffic is flowing between aircraft and ground stations in real time.</p>
-
-  <div class="hardware-grid" style="margin: 1.5rem 0;">
-    <div class="hardware-item" style="border-color: #00d4ff33;">
-      <i class="fas fa-microchip hardware-icon" style="color: #00d4ff;"></i>
-      <div>
-        <strong style="color: #f9fafb;">Technical Depth</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Complex protocols, structured data, modern modulation</span>
-      </div>
-    </div>
-    <div class="hardware-item" style="border-color: #22c55e33;">
-      <i class="fas fa-tools hardware-icon" style="color: #22c55e;"></i>
-      <div>
-        <strong style="color: #f9fafb;">Practical Usefulness</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Real aviation data, position reports, operational messages</span>
-      </div>
-    </div>
-    <div class="hardware-item" style="border-color: #ff6b3533;">
-      <i class="fas fa-broadcast-tower hardware-icon"></i>
-      <div>
-        <strong style="color: #f9fafb;">Constant Activity</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Busy channels with continuous traffic flow</span>
-      </div>
-    </div>
-  </div>
-
-  <p>It combines <strong style="color: #00d4ff;">technical depth</strong>, <strong style="color: #22c55e;">practical usefulness</strong>, and a <strong style="color: #ff6b35;">steady stream of activity</strong> that makes it a rewarding mode to explore with an SDR and the right decoding tools.</p>
+  <p style="font-size: 1.125rem; line-height: 1.8;">VDL2 is a great example of how aviation communications have evolved beyond traditional ACARS. It is faster, busier, and much more structured, making it far more capable for modern datalink traffic. Which makes it more interesting to monitor, because there is always something happening on the channel, and the decoded output often reveals just how much digital traffic is flowing between aircraft and ground stations in real time. The combined <strong style="color: #00d4ff;">technical depth</strong>, <strong style="color: #22c55e;">practical usefulness</strong>, and a <strong style="color: #ff6b35;">steady stream of activity</strong> that makes it a rewarding mode to explore with an SDR.</p>
