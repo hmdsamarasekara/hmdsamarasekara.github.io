@@ -642,16 +642,41 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
     <h1 class="section-title">What Kind of Messages Can Be Received</h1>
   </div>
 
-  <div class="video-container" style="position: relative; width: 100%; max-width: 500px; margin: 1.5rem auto; aspect-ratio: 9/16; overflow: hidden; background: #000; border-radius: 8px;">
-    <video
-        autoplay
-        muted
-        loop
-        playsinline
-        style="width: 100%; height: 100%; object-fit: cover;">
-        <source src="https://your-cdn.com/vdl2-terminal.mp4" type="video/mp4">
-    </video>
+  <div class="video-container">
+  <iframe 
+    src="https://www.youtube.com/embed/nRd6DhPBT3U" 
+    title="This is how live decoded VDL2 messages appear in the terminal" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen>
+  </iframe>
 </div>
+
+<style>
+  .video-container {
+    position: relative;
+    width: 100%;
+    /* This creates a 16:9 aspect ratio container */
+    aspect-ratio: 16 / 9; 
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+  /* Fallback for older browsers that don't support aspect-ratio */
+  @supports not (aspect-ratio: 16 / 9) {
+    .video-container {
+      padding-bottom: 56.25%; 
+      height: 0;
+    }
+  }
+</style>
 
 <div class="image-caption" style="margin-top: 0.5rem; margin-bottom: 1.5rem; text-align: center;">
     <i class="fas fa-video" style="margin-right: 0.5rem;"></i>
