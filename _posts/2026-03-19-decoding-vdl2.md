@@ -469,7 +469,7 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
           <span class="bitrate-number">2400</span>
           <span class="bitrate-unit">bps</span>
         </span>
-        <span class="modulation-badge" style="background: #ff6b3522; border: 1px solid #ff6b3533; color: #ff6b35; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.875rem;">MSK Modulation</span>
+        <span class="modulation-badge" style="background: #ff6b3522; border: 1px solid #ff6b3533; color: #ff6b35; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.875rem;">MSK</span>
       </div>
     </div>
   </div>
