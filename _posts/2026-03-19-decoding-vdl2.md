@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Decoding VHF Data Link Mode-2"
+title: "Decoding Aviation VHF Data Link Mode-2"
 date: 2026-03-19 17:18:00 +0400
 tags: [vdl2, acars, aviation, sdr, vhf, aircraft, decoding, dumpvdl2]
 categories: [Aviation]
@@ -459,7 +459,7 @@ excerpt: "A comprehensive guide to receiving and decoding VDL2 aviation communic
 
   <p>But as air traffic increased and the demand for data communications grew, legacy ACARS began to show its age. The system was relatively slow, inefficient in its use of spectrum, and increasingly congested in busy airspace. To address these limitations, the aviation industry introduced <strong>VDL Mode 2</strong> — short for <strong>VHF Data Link Mode 2</strong>.</p>
 
-  <div class="hardware-grid" style="margin: 1.5rem 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
+  <div class="hardware-grid" style="margin: 1.5rem 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
   <div class="hardware-item" style="border: 1px solid #00d4ff33; border-radius: 8px; padding: 1.5rem; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); text-align: center; display: flex; flex-direction: column; align-items: center;">
     <i class="fas fa-exchange-alt hardware-icon" style="color: #ff6b35; font-size: 2rem; margin-bottom: 0.75rem; display: block;"></i>
     <strong style="color: #f9fafb; display: block; margin-bottom: 0.75rem; font-size: 1.1rem;">Legacy ACARS</strong>
@@ -471,6 +471,18 @@ excerpt: "A comprehensive guide to receiving and decoding VDL2 aviation communic
       <span class="modulation-badge" style="background: #ff6b3522; border: 1px solid #ff6b3533; color: #ff6b35; padding: 0.5rem 0.75rem; border-radius: 4px; font-size: 0.875rem; display: flex; align-items: center; justify-content: center; min-width: 60px;">MSK</span>
     </div>
   </div>
+  <div class="hardware-item" style="border: 1px solid #00d4ff33; border-radius: 8px; padding: 1.5rem; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); text-align: center; display: flex; flex-direction: column; align-items: center;">
+    <i class="fas fa-exchange-alt hardware-icon" style="color: #ff6b35; font-size: 2rem; margin-bottom: 0.75rem; display: block;"></i>
+    <strong style="color: #f9fafb; display: block; margin-bottom: 0.75rem; font-size: 1.1rem;">Legacy ACARS</strong>
+    <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+      <span class="bandwidth-badge" style="background: #ff6b3522; border: 1px solid #ff6b3533; color: #ff6b35; padding: 0.5rem 0.75rem; border-radius: 4px; font-size: 0.875rem; display: flex; flex-direction: column; align-items: center; min-width: 60px;">
+        <span class="bitrate-number" style="font-size: 1.1rem; font-weight: bold; line-height: 1;">2400</span>
+        <span class="bitrate-unit" style="font-size: 0.75rem; opacity: 0.9;">bps</span>
+      </span>
+      <span class="modulation-badge" style="background: #ff6b3522; border: 1px solid #ff6b3533; color: #ff6b35; padding: 0.5rem 0.75rem; border-radius: 4px; font-size: 0.875rem; display: flex; align-items: center; justify-content: center; min-width: 60px;">MSK</span>
+    </div>
+  </div>
+</div>
   
   <div class="hardware-item" style="border: 1px solid #00d4ff33; border-radius: 8px; padding: 1.5rem; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); text-align: center; display: flex; flex-direction: column; align-items: center;">
     <i class="fas fa-rocket hardware-icon" style="color: #ff6b35; font-size: 2rem; margin-bottom: 0.75rem; display: block;"></i>
@@ -557,9 +569,9 @@ excerpt: "A comprehensive guide to receiving and decoding VDL2 aviation communic
       </div>
     </div>
     <div class="hardware-item" style="border-color: #22c55e33; background: linear-gradient(135deg, #1a2f1a 0%, #0f1f0f 100%);">
-      <i class="fas fa-star hardware-icon" style="color: #22c55e;"></i>
+      <i class="fas fa-star hardware-icon" style="color: #facc15;"></i>
       <div>
-        <strong style="color: #f9fafb;">dumpvdl2 ⭐ Recommended</strong><br>
+        <strong style="color: #f9fafb;">dumpvdl2</strong><br>
         <span style="color: #9ca3af; font-size: 0.875rem;">Purpose-built for VDL2, modern SDR workflows, detailed output, flexible logging, continuous monitoring</span>
       </div>
     </div>
@@ -568,8 +580,7 @@ excerpt: "A comprehensive guide to receiving and decoding VDL2 aviation communic
   <p>However, while MultiPSK is powerful, it can feel dated, less intuitive, and not especially streamlined for continuous VDL2 monitoring. Its interface is quite old-school, setup can be a little awkward, and it is not as convenient when you want clean logging, easier filtering, or long-term unattended decoding. For casual experimentation, it still has value, but for most people today, it is no longer the most practical choice.</p>
 
   <p>That is where <strong>dumpvdl2</strong> really stands out. It is purpose-built for VDL2 decoding and much better suited for modern SDR workflows. Paired with a basic RTL-SDR, airband antenna, and a stable signal source, dumpvdl2 can continuously decode VDL2 traffic with detailed output, flexible logging, and compatibility with tools that help visualize or process the received data further.</p>
-
-  <p>Compared to MultiPSK, it feels far more focused and efficient, especially if your goal is to monitor VDL2 seriously rather than just briefly test it. In practice, if you want the easiest path to useful results, <strong>dumpvdl2 is usually the tool worth centering the setup around</strong>.</p>
+  
 </div>
 
 <div class="section-card">
@@ -590,7 +601,7 @@ excerpt: "A comprehensive guide to receiving and decoding VDL2 aviation communic
   </h3>
 
   <div class="code-block">
-    <pre>dumpvdl2 --rtlsdr 0 --gain 40.2 --centerfreq 136.800M 136.725M 136.975M --utc --milliseconds --prettify-xml --prettify-json --extended-header --bs-db /home/dragonos/Desktop/VDL2/basestation.sqb --addrinfo verbose --gs-file /home/dragonos/Desktop/VDL2/groundstation.txt --addrinfo verbose --output decoded:text:file:path=/home/dragonos/Desktop/VDL2/dumpvdl2-decoded.log</pre>
+    <pre>dumpvdl2 --rtlsdr 0 --gain 40.2 --centerfreq 136.800M 136.725M 136.975M --utc --milliseconds --prettify-xml --prettify-json --extended-header --bs-db /home/dragonos/Desktop/VDL2/basestation.sqb --gs-file /home/dragonos/Desktop/VDL2/groundstation.txt --addrinfo verbose --output decoded:text:file:path=/home/dragonos/Desktop/VDL2/dumpvdl2-decoded.log</pre>
   </div>
 
   <h4 style="color: #f9fafb; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
