@@ -646,14 +646,14 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
     <h1 class="section-title">What Kind of Messages Can Be Received</h1>
   </div>
 
-  <div class="video-container" style="position: relative; width: 100%; max-width: 400px; height: 711px; margin: 1.5rem auto; overflow: hidden;">
-    <iframe 
-        src="https://www.youtube.com/embed/nRd6DhPBT3U?autoplay=1&mute=1&loop=1&playlist=nRd6DhPBT3U&playsinline=1" 
-        title="Live VDL2 Decoding" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop" 
+  <div class="video-container" style="position: relative; width: 100%; max-width: 400px; margin: 1.5rem auto; aspect-ratio: 9/16;">
+    <iframe
+        src="https://www.youtube.com/embed/nRd6DhPBT3U?autoplay=1&mute=1&loop=1&playlist=nRd6DhPBT3U&playsinline=1"
+        title="Live VDL2 Decoding"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; loop"
         allowfullscreen
-        style="position: absolute; top: 50%; left: 50%; width: 1920px; height: 1080px; transform: translate(-50%, -50%) scale(1.77);">
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
     </iframe>
 </div>
 
