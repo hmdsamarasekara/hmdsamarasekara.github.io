@@ -459,30 +459,31 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
 
   <p>But as air traffic increased and the demand for data communications grew, legacy ACARS began to show its age. The system was relatively slow, inefficient in its use of spectrum, and increasingly congested in busy airspace. To address these limitations, the aviation industry introduced <strong>VDL Mode 2</strong> — short for <strong>VHF Data Link Mode 2</strong>.</p>
 
-  <div class="hardware-grid" style="margin: 1.5rem 0;">
-  <div class="hardware-item" style="border-color: #00d4ff33; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
-    <i class="fas fa-exchange-alt hardware-icon" style="color: #ff6b35;"></i>
-    <div>
+  <div class="hardware-grid" style="margin: 1.5rem 0; display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+  <div class="hardware-item" style="border-color: #00d4ff33; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); display: flex; flex-direction: column; align-items: center; padding: 1rem;">
+    <i class="fas fa-exchange-alt hardware-icon" style="color: #ff6b35; font-size: 2rem; margin-bottom: 0.5rem;"></i>
+    <div style="text-align: center;">
       <strong style="color: #f9fafb;">Legacy ACARS</strong><br>
-      <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
-        <span class="bandwidth-badge">
+      <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem; justify-content: center;">
+        <span class="bandwidth-badge" style="color: #ff6b35; border: 1px solid #ff6b3533; padding: 0.25rem 0.5rem; border-radius: 0.25rem;">
           <span class="bitrate-number">2400</span>
           <span class="bitrate-unit">bps</span>
         </span>
-        <span class="modulation-badge" style="background: #ff6b3522; border-color: #ff6b3533; color: #ff6b35;">MSK Modulation</span>
+        <span class="modulation-badge" style="background: #ff6b3522; border-color: #ff6b3533; color: #ff6b35; padding: 0.25rem 0.5rem; border-radius: 0.25rem;">MSK Modulation</span>
       </div>
     </div>
   </div>
-  <div class="hardware-item" style="border-color: #00d4ff33; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
-    <i class="fas fa-rocket hardware-icon" style="color: #00d4ff;"></i>
-    <div>
+
+  <div class="hardware-item" style="border-color: #00d4ff33; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); display: flex; flex-direction: column; align-items: center; padding: 1rem;">
+    <i class="fas fa-rocket hardware-icon" style="color: #00d4ff; font-size: 2rem; margin-bottom: 0.5rem;"></i>
+    <div style="text-align: center;">
       <strong style="color: #f9fafb;">VDL Mode 2</strong><br>
-      <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
-        <span class="bandwidth-badge high">
+      <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem; justify-content: center;">
+        <span class="bandwidth-badge high" style="color: #00d4ff; border: 1px solid #00d4ff33; padding: 0.25rem 0.5rem; border-radius: 0.25rem;">
           <span class="bitrate-number">31.5</span>
           <span class="bitrate-unit">kbps</span>
         </span>
-        <span class="modulation-badge" style="background: #ff6b3522; border-color: #ff6b3533; color: #ff6b35;">D8PSK</span>
+        <span class="modulation-badge" style="background: #ff6b3522; border-color: #ff6b3533; color: #ff6b35; padding: 0.25rem 0.5rem; border-radius: 0.25rem;">D8PSK</span>
       </div>
     </div>
   </div>
