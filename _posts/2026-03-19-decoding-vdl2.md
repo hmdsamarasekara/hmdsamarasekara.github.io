@@ -642,9 +642,9 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
     <h1 class="section-title">What Kind of Messages Can Be Received</h1>
   </div>
 
-  <div class="image-container" style="margin: 0 0 1rem 0; border: 1px solid #333333;">
+  <div class="image-container" style="margin: 0 0 1rem 0; border: 1px solid transparent;">
     <img src="{{ '/assets/images/VDL2-Decodes.webp' | relative_url }}" alt="VDL2-Decodes" loading="lazy" style="width: auto; max-width: 100%; margin: 0 auto; display: block;">
-    <div class="image-caption" style="background: #1a1a1a; border-top: 1px solid #333333;">
+    <div class="image-caption" style="background: transparent; border-top: 1px solid transparent;">
       This is how live decoded VDL2 messages appear in the terminal
     </div>
   </div>
