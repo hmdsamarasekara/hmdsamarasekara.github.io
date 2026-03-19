@@ -653,7 +653,7 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 178%;
+            width: 300%;
             height: 100%;
             transform: translate(-50%, -50%);
             pointer-events: none;
