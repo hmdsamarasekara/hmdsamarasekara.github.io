@@ -653,11 +653,11 @@ excerpt: "A comprehensive guide to receiving and decoding VHF Data Link Mode 2 (
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 100vw;
-            height: 177.78vw;
-            transform: translate(-50%, -50%) scale(1.8);
-            transform-origin: center;
-            border: none;
+            width: 100%;
+            height: 56.25%;
+            transform: translate(-50%, -50%);
+            zoom: 1.8;
+            -moz-transform: translate(-50%, -50%) scale(1.8);
         ">
     </iframe>
 </div>
