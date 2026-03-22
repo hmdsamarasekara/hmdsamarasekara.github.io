@@ -601,7 +601,7 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
           <span style="color: #9ca3af; font-size: 0.875rem;">Higher data rates, more efficient spectrum usage</span>
         </div>
       </div>
-      <div class="hardware-item" style="border: 1px solid #00d4ff33; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+      <div class="hardware-item" style="border: 1px solid #00d4ff33; background: linear-gradient(135deg, #1a2f1a 0%, #0f1f0f 100%);">
         <i class="fas fa-headset hardware-icon" style="color: #00d4ff;"></i>
         <div>
           <strong style="color: #f9fafb;">CPDLC</strong><br>
@@ -696,18 +696,18 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
 
   <div class="config-section">
     <ul>
-      <li><strong style="color: #ff6b35;">-e</strong> — Enable error correction (improves decode reliability)</li>
-      <li><strong style="color: #ff6b35;">-t 1800</strong> — Message reassembly timeout (ms)</li>
+      <li><strong style="color: #ff6b35;">-e</strong> — Stop outputing empty messages</li>
+      <li><strong style="color: #ff6b35;">-t 1800</strong> — Set forget time in seconds on live monitor mode</li>
       <li><strong style="color: #ff6b35;">--output full:file:path=...</strong> — Save full decoded messages to log file</li>
       <li><strong style="color: #ff6b35;">--output monitor:file:</strong> — Display real-time output to terminal</li>
       <li><strong style="color: #ff6b35;">--rtlsdr 0</strong> — Use RTL-SDR device index 0</li>
       <li><strong style="color: #ff6b35;">-g 40.2</strong> — Set tuner gain (adjust for your environment)</li>
-      <li><strong style="color: #ff6b35;">-c ...</strong> — Monitor multiple ACARS frequencies simultaneously</li>
+      <li><strong style="color: #ff6b35;">-c 131.500</strong> — Set center frequency as 131.500Mhz</li>
     </ul>
   </div>
 
   <div class="tip-box">
-    The command above monitors five common ACARS frequencies: 131.500 MHz, 131.175 MHz, 131.475 MHz, 131.725 MHz, and 131.825 MHz. Adjust frequencies based on your local airband activity.
+    The command above monitors four ACARS frequencies: 131.175 MHz, 131.475 MHz, 131.725 MHz, and 131.825 MHz. Adjust frequencies based on your local airband activity.
   </div>
 </div>
 
