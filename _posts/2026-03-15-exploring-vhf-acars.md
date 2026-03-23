@@ -917,7 +917,7 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
 
   <div class="section-header">
     <i class="fas fa-cloud-sun section-icon"></i>
-    <h2 class="section-title" style="font-size: 1.25rem;">1. ATIS Information Message</h2>
+    <h2 class="section-title" style="font-size: 1.25rem;">Departure ATIS Information</h2>
   </div>
 
   <div class="code-block">
@@ -958,6 +958,41 @@ ADVS ATC COPIED Z.A400</pre>
     </p>
 </div>
 </div>
+
+  <div class="section-header">
+    <i class="fas fa-plane-arrival section-icon"></i>
+    <h2 class="section-title" style="font-size: 1.25rem;">2. Flight Summary Report</h2>
+  </div>
+
+  <div class="code-block">
+    <pre>[#1 (F:131.175 L:-58.6 E:1) 21/03/2026 13:20:52.059 --------------------------------
+Mode : 2 Label : 80 Id : 8 Nak
+Aircraft reg: VT-IWV Flight id: 6E032E
+No: M50B
+Reassembly: complete
+3501 SUMMRY 094V/21 VABB/OMDB .VT-IWV
+/OUT 0950/FOB 0167
+/OFF 1008/FOB 0166
+/ON  1307/FOB 0093
+/IN  1314/FOB 0093
+/TKO F.O. /CRW 
+/LND F.O. /CRW 
+/APP N  /RWY /RVR     /ALT    
+/ERR    /ERR    /ERR    
+/CPT 74484    /FO  74451    
+/SO1          /SO2          
+/CHK</pre>
+  </div>
+
+  <div class="info-box">
+    <i class="fas fa-lightbulb" style="color: #00d4ff; margin-right: 0.5rem;"></i>
+    <p>
+    This is a <strong>flight summary (post-flight report)</strong> sent via ACARS from aircraft <strong>VT-IWV</strong> operating flight <strong>6E032E</strong> on the route <strong>VABB (Mumbai) to OMDB (Dubai)</strong>. It logs key flight events including departure (OUT 0950, OFF 1008) and arrival times (ON 1307, IN 1314), along with fuel on board (FOB) at each stage.
+    </p>
+    <p>
+    Additional details include crew roles during takeoff and landing, crew IDs, and placeholders for approach data. This type of message is typically used by the airline for <strong>operational tracking, fuel monitoring, and post-flight analysis</strong>.
+    </p>
+  </div>
 
 <div class="section-card" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-color: #00d4ff33;">
   <div class="section-header">
