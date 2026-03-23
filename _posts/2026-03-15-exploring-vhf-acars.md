@@ -915,7 +915,6 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
 
   <p>The following are actual decoded messages received from Dubai International Airport (OMDB) and surrounding airspace using acarsdec. These examples demonstrate the variety of operational, maintenance, and navigational data flowing through VHF ACARS.</p>
 
-<div class="section-card">
   <div class="section-header">
     <i class="fas fa-cloud-sun section-icon"></i>
     <h2 class="section-title" style="font-size: 1.25rem;">1. ATIS Information Message</h2>
@@ -957,6 +956,7 @@ ADVS ATC COPIED Z.A400</pre>
     <p>
     It also includes operational instructions: contact delivery for pushback, squawk assigned code during taxi, and remain on tower frequency after departure. Additional notes include taxiway M/N restrictions, minimum runway occupancy, active flow control, and cautions for bird activity and tailwinds above 10 knots.
     </p>
+</div>
 </div>
 
 <div class="section-card" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-color: #00d4ff33;">
