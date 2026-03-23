@@ -674,7 +674,7 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
 
 <div class="tip-box">
   <i class="fas fa-external-link-alt" style="color: #22c55e; margin-right: 0.5rem;"></i>
-  Installation and build steps for acarsdec are already well documented on its GitHub page — please check <a href="https://github.com/f00b4r0/acarsdec/" target="_blank" style="color: #22c55e; text-decoration: underline;">https://github.com/f00b4r0/acarsdec/</a> for the latest compilation instructions and dependencies.
+  Installation and build steps for acarsdec are already well documented on its GitHub page. Please check :- <a href="https://github.com/f00b4r0/acarsdec/" target="_blank" style="color: #22c55e; text-decoration: underline;">https://github.com/f00b4r0/acarsdec/</a> for compilation and usage instructions.
 </div>
 
   <div class="hardware-grid" style="margin: 1.5rem 0;">
@@ -918,11 +918,4 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
   <p style="font-size: 1.125rem; line-height: 1.8;">You're not just receiving data—you're observing a system that has been evolving for decades, still doing its job. In practice, it's also a reminder that real-world RF rarely behaves perfectly. Some messages decode cleanly, others arrive incomplete, and many never make it through at all. Between overlapping transmissions, weak signals, and busy channels, what you see on your screen is only a fraction of what's actually on the air.</p>
 
   <p style="font-size: 1.125rem; line-height: 1.8;">ACARS sits in an interesting place: <strong>old, but still relevant; simple, but deeply integrated</strong>. Whether you're using it as a first step into SDR or as a way to explore aviation systems more deeply, it offers a direct look at how aircraft communicate beyond voice—imperfect, continuous, and very much alive.</p>
-</div>
-
-<div class="post-footer">
-  <div class="signature">
-    <i class="fas fa-satellite-dish"></i>
-    <span>73 de A65KJ — Noise Floor Nomad</span>
-  </div>
 </div>
