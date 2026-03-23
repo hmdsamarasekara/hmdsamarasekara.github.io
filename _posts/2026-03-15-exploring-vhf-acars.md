@@ -951,9 +951,12 @@ ADVS ATC COPIED Z.A400</pre>
 
   <div class="info-box">
     <i class="fas fa-lightbulb" style="color: #00d4ff; margin-right: 0.5rem;"></i>
-    <strong>Multi-Frame Reassembly:</strong> The full ATIS couldn't fit in one 220-character frame, so the aircraft transmitted four sequential blocks that acarsdec automatically stitched together. The "ADVS ATC COPIED Z" at the end confirms the crew acknowledged receiving information version "Z."
-  </div>
-</div>
+    <p>
+    This is a <strong>departure ATIS (Automatic Terminal Information Service)</strong> message transmitted via ACARS to the aircraft <strong>4R-EXQ</strong> for <strong>Dubai International Airport (OMDB)</strong>. It provides pilots with the latest pre-departure weather and operational information under <strong>Information “Z” (Zulu)</strong>, valid at <strong>1200 UTC</strong>. The report indicates departures are using <strong>Runway 30R</strong>, with light surface winds from 100° at 7 knots (variable between 060° and 130°), <strong>CAVOK conditions</strong>, a temperature of 29°C, a dew point of 19°C, and a QNH of 1009 hPa, with no significant weather changes expected.
+    </p>
+    <p>
+    In addition to weather data, the message includes key operational instructions: pilots must contact delivery when ready for pushback, squawk the assigned transponder code during taxi, and remain on tower frequency after departure. It also highlights airfield-specific procedures such as holding position restrictions on taxiways M and N, minimum runway occupancy requirements, active flow control, and cautions regarding bird activity and tailwinds exceeding 10 knots. Overall, this message ensures the flight crew has all necessary <strong>weather, runway, and procedural information</strong> for a safe and efficient departure.
+    </p>
 </div>
 
 <div class="section-card" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-color: #00d4ff33;">
