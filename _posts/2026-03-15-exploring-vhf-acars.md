@@ -961,7 +961,7 @@ ADVS ATC COPIED Z.A400</pre>
 
   <div class="section-header">
     <i class="fas fa-plane-arrival section-icon"></i>
-    <h2 class="section-title" style="font-size: 1.25rem;">2. Flight Summary Report</h2>
+    <h2 class="section-title" style="font-size: 1.25rem;">Flight Summary Report</h2>
   </div>
 
   <div class="code-block">
@@ -991,6 +991,67 @@ Reassembly: complete
     </p>
     <p>
     Additional details include crew roles during takeoff and landing, crew IDs, and placeholders for approach data. This type of message is typically used by the airline for <strong>operational tracking, fuel monitoring, and post-flight analysis</strong>.
+    </p>
+  </div>
+
+  <div class="section-header">
+    <i class="fas fa-file-alt section-icon"></i>
+    <h2 class="section-title" style="font-size: 1.25rem;">Precision Pilot Report</h2>
+  </div>
+
+  <div class="code-block">
+    <pre>[#2 (F:131.475 L:-40.6 E:0) 21/03/2026 11:41:34.751 --------------------------------
+Mode : 2 Label : H1 Id : 7 Nak
+Aircraft reg: A6-ENL Flight id: EK0514
+No: D42L
+Sublabel: DF
+Reassembly: complete
+&lt;REP512A PRECESION PILOT REPORT - GENERAL PAGE&gt;DATE:21-03-26
+
+LANDING:UAE527     VOHS/OMDB LAT: 25.237,LONG:  55.371,TIME:21,08:28:50,TEMP:  26.9
+ENG. SD:UAE527     OMDB/OMDB LAT: 25.244,LONG:  55.349,TIME:21,08:32:14,TEMP:  27.0
+TAXIOUT:UAE514     OMDB/VIDP LAT: 25.246,LONG:  55.372,TIME:21,11:19:52,TEMP:  28.4
+TO/ROLL:UAE514     OMDB/VIDP LAT: 25.253,LONG:  55.375,TIME:21,11:39:18,TEMP:  28.4
+
+PRI GRD PWR AVAIL    :21,08:39:48 ...
+PRI GRD PWR NOT AVAIL:21,10:58:31 ...
+SEC GRD PWR AVAIL    :21,08:39:14 ...
+SEC GRD PWR NOT AVAIL:21,10:58:32 ...
+
+PRI GRD PWR ON       :21,08:40:06 ...
+PRI GRD PWR OFF      :21,10:53:31 ...
+SEC GRD PWR ON       :21,08:40:03 ...
+SEC GRD PWR OFF      :21,10:44:49 ...
+
+LEFT ENGINE ON       :...
+LEFT ENGINE OFF      :21,08:28:50 ...
+RIGHT ENGINE ON      :...
+RIGHT ENGINE OFF     :21,08:28:50 ...
+
+PARKING BRAKE ON     :21,08:32:22 21,11:21:31 21,11:30:52 21,11:36:46 ...
+PARKING BRAKE OFF    :21,11:16:42 21,11:26:45 21,11:35:32 21,11:38:42 ...
+
+APU RUNNING          :21,08:31:38 21,10:44:45 ...
+APU NOT RUNNING      :21,08:40:55 21,11:21:47 ...
+APU BLEED VLV ON     :21,08:30:52 21,08:32:31 21,08:49:20 21,11:20:02 ...
+APU BLEED VLV OFF    :21,08:31:28 21,08:49:19 21,11:19:55 21,11:21:35 ...
+
+REFUELING MODE ON    :...
+REFUELING MODE OFF   :...
+
+BEACON LITE ON       :21,11:16:26 ...
+BEACON LITE OFF      :21,08:32:41 ...
+PWR INTERRUPT:...    :...
+****************************** END  OF  REPORT *************************************</pre>
+  </div>
+
+  <div class="info-box">
+    <i class="fas fa-lightbulb" style="color: #00d4ff; margin-right: 0.5rem;"></i>
+    <p>
+      This is a <strong>precision pilot report</strong> sent via ACARS from aircraft <strong>A6-ENL</strong> operating flight <strong>EK0514</strong>. It logs detailed events for <strong>21 March 2026</strong>, including landing and engine shutdown times, taxi-out and takeoff times, and temperatures at key positions (LAT/LONG included).
+    </p>
+    <p>
+      The report also tracks primary and secondary ground power availability and usage, engine start/stop times, parking brake operation, APU and bleed valve activity, refueling mode, and beacon lights. Such messages are used for <strong>operational monitoring, post-flight analysis, and aircraft system tracking</strong>.
     </p>
   </div>
 
