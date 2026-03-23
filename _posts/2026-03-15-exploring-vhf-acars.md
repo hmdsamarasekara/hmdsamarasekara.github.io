@@ -594,27 +594,28 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
   </div>
 
   <div class="timeline-item">
-    <div class="timeline-year">2000s to Present: The Digital Shift</div>
-    <p>The original ACARS system uses MSK modulation at 2400 bps—reliable, but limited. Modern aviation has gradually evolved beyond this constraint:</p>
-
-    <div class="hardware-grid" style="margin: 1rem 0;">
-      <div class="hardware-item" style="border: 1px solid #22c55e33; background: linear-gradient(135deg, #1a2f1a 0%, #0f1f0f 100%);">
-        <i class="fas fa-satellite-dish hardware-icon" style="color: #22c55e;"></i>
-        <div>
-          <strong style="color: #f9fafb;">VDL Mode 2</strong><br>
-          <span style="color: #9ca3af; font-size: 0.875rem;">Higher data rates, more efficient spectrum usage</span>
-        </div>
-      </div>
-      <div class="hardware-item" style="border: 1px solid #00d4ff33; background: linear-gradient(135deg, #1a2f1a 0%, #0f1f0f 100%);">
-        <i class="fas fa-headset hardware-icon" style="color: #00d4ff;"></i>
-        <div>
-          <strong style="color: #f9fafb;">CPDLC</strong><br>
-          <span style="color: #9ca3af; font-size: 0.875rem;">Controller–Pilot Data Link Communications</span>
-        </div>
+  <div class="timeline-year">2000s to Present: The Digital Shift</div>
+  <p>The original ACARS system uses MSK modulation at 2400 bps—reliable, but limited. Modern aviation has gradually evolved beyond this constraint:</p>
+  
+  <div class="hardware-grid" style="margin: 1rem 0;">
+    <div class="hardware-item" style="border: 1px solid #22c55e33; background: linear-gradient(135deg, #1a2f1a 0%, #0f1f0f 100%);">
+      <i class="fas fa-satellite-dish hardware-icon" style="color: #22c55e;"></i>
+      <div>
+        <strong style="color: #f9fafb;">VDL Mode 2</strong><br>
+        <span style="color: #9ca3af; font-size: 0.875rem;">Higher data rates, more efficient spectrum usage</span>
       </div>
     </div>
+    <div class="hardware-item" style="border: 1px solid #00d4ff33; background: linear-gradient(135deg, #1a2f1a 0%, #0f1f0f 100%);">
+      <i class="fas fa-headset hardware-icon" style="color: #00d4ff;"></i>
+      <div>
+        <strong style="color: #f9fafb;">CPDLC</strong><br>
+        <span style="color: #9ca3af; font-size: 0.875rem;">Controller–Pilot Data Link Communications</span>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <div class="info-box">
+<div class="info-box">
   <i class="fas fa-headset" style="color: #00d4ff; margin-right: 0.5rem;"></i>
   <strong>CPDLC</strong> represents a major advancement: ATC instructions sent as digital messages (e.g., "Climb and maintain FL350" delivered as text). Pilots can accept or reject messages and load instructions directly into flight systems. In essence, this is "texting with ATC," reducing voice congestion and miscommunication.
 </div>
