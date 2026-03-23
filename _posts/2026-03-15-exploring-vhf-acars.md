@@ -907,6 +907,91 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
 </div>
 </div>
 
+<div class="section-card">
+  <div class="section-header">
+    <i class="fas fa-terminal section-icon"></i>
+    <h1 class="section-title">Sample Received Messages</h1>
+  </div>
+
+  <p>The following are actual decoded messages received from Dubai International Airport (OMDB) and surrounding airspace using acarsdec. These examples demonstrate the variety of operational, maintenance, and navigational data flowing through VHF ACARS.</p>
+
+<div class="section-card">
+  <div class="section-header">
+    <i class="fas fa-cloud-sun section-icon"></i>
+    <h2 class="section-title" style="font-size: 1.25rem;">1. ATIS Information Message</h2>
+  </div>
+
+  <div class="code-block">
+    <pre>[#3 (F:131.725 L:-47.8 E:0) 21/03/2026 12:09:37.734 --------------------------------
+Mode : 2 Label : A9 Id : D Nak
+Aircraft reg: 4R-EXQ 
+Reassembly: complete
+/GVACBYA.TI2/OMDB DEP ATIS Z
+1201Z OMDB DEP Z.
+AT TIME 1200.
+DEP RWY 30 RIGHT.
+SFC WIND 100 DEG, 7 KT, VRB BTN 060 AND 130 DEG.
+VIS CAVOK.
+T 29.
+DP 19.
+QNH 1009 HPA.
+NOSIG.
+ADZ ACFT TYPE ON FST CTC.
+PILOTS MUST REPORT READY FOR PUSHBACK ON DELIVERY 120. 35.
+DURING PUSHBACK AND TAXI SQUAWK ASSIGNED TRANSPONDER CODE.
+DEPARTURES MUST REMAIN ON TOWER FREQ AFTER TAKEOFF.
+DXB VFR FREQ 126. 775.
+TWY M AND N HLDG POSITION RESTRICTIONS AS PER AERONAUTICAL INFO,,,,,,,,,,,,,, PUBLICATION SECTION 2 POINT 8 AND AIRFIELD CHARTS
+MNM RWY OCCUPANCY REQUIRED.
+FLOW CONTROL IN FORCE.
+CAUTION BIRD ACT IN THE VICINITY OF THE AERODROME.
+TAILWINDS IN EXCESS OF 10 KT REP.
+ADVS ATC COPIED Z.A400</pre>
+  </div>
+
+  <table class="freq-table" style="margin: 1rem 0;">
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Value</th>
+        <th>Explanation</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Channel/Frequency</strong></td>
+        <td>131.725 MHz</td>
+        <td>Standard VHF ACARS frequency used in the Middle East</td>
+      </tr>
+      <tr>
+        <td><strong>Signal Level</strong></td>
+        <td>-47.8 dB</td>
+        <td>Moderate signal strength, sufficient for clean decoding</td>
+      </tr>
+      <tr>
+        <td><strong>Label</strong></td>
+        <td><span class="label-badge">A9</span></td>
+        <td>Downlink application for ATIS/weather information</td>
+      </tr>
+      <tr>
+        <td><strong>Aircraft</strong></td>
+        <td>4R-EXQ</td>
+        <td>Airbus A320 operated by Sri Lankan Airlines</td>
+      </tr>
+      <tr>
+        <td><strong>Reassembly</strong></td>
+        <td>Complete</td>
+        <td>Reconstructed from 4 individual ACARS frames (Id A, B, C, D)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info-box">
+    <i class="fas fa-lightbulb" style="color: #00d4ff; margin-right: 0.5rem;"></i>
+    <strong>Multi-Frame Reassembly:</strong> The full ATIS couldn't fit in one 220-character frame, so the aircraft transmitted four sequential blocks that acarsdec automatically stitched together. The "ADVS ATC COPIED Z" at the end confirms the crew acknowledged receiving information version "Z."
+  </div>
+</div>
+
 <div class="section-card" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-color: #00d4ff33;">
   <div class="section-header">
     <i class="fas fa-flag-checkered section-icon" style="color: #ff6b35;"></i>
