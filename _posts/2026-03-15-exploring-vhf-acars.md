@@ -952,10 +952,10 @@ ADVS ATC COPIED Z.A400</pre>
   <div class="info-box">
     <i class="fas fa-lightbulb" style="color: #00d4ff; margin-right: 0.5rem;"></i>
     <p>
-    This is a <strong>departure ATIS (Automatic Terminal Information Service)</strong> message transmitted via ACARS to the aircraft <strong>4R-EXQ</strong> for <strong>Dubai International Airport (OMDB)</strong>. It provides pilots with the latest pre-departure weather and operational information under <strong>Information “Z” (Zulu)</strong>, valid at <strong>1200 UTC</strong>. The report indicates departures are using <strong>Runway 30R</strong>, with light surface winds from 100° at 7 knots (variable between 060° and 130°), <strong>CAVOK conditions</strong>, a temperature of 29°C, a dew point of 19°C, and a QNH of 1009 hPa, with no significant weather changes expected.
+    This is a <strong>departure ATIS</strong> message sent via ACARS to <strong>4R-EXQ</strong> for <strong>Dubai International Airport (OMDB)</strong>, Information <strong>Z</strong> valid at <strong>1200 UTC</strong>. Departures are on <strong>Runway 30R</strong> with winds 100° at 7 knots (variable 060°–130°), <strong>CAVOK</strong>, temperature 29°C, dew point 19°C, and QNH 1009 hPa, with no significant changes expected.
     </p>
     <p>
-    In addition to weather data, the message includes key operational instructions: pilots must contact delivery when ready for pushback, squawk the assigned transponder code during taxi, and remain on tower frequency after departure. It also highlights airfield-specific procedures such as holding position restrictions on taxiways M and N, minimum runway occupancy requirements, active flow control, and cautions regarding bird activity and tailwinds exceeding 10 knots. Overall, this message ensures the flight crew has all necessary <strong>weather, runway, and procedural information</strong> for a safe and efficient departure.
+    It also includes operational instructions: contact delivery for pushback, squawk assigned code during taxi, and remain on tower frequency after departure. Additional notes include taxiway M/N restrictions, minimum runway occupancy, active flow control, and cautions for bird activity and tailwinds above 10 knots.
     </p>
 </div>
 
