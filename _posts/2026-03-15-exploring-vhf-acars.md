@@ -619,6 +619,7 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
   <i class="fas fa-headset" style="color: #00d4ff; margin-right: 0.5rem;"></i>
   <strong>CPDLC</strong> represents a major advancement: ATC instructions sent as digital messages (e.g., "Climb and maintain FL350" delivered as text). Pilots can accept or reject messages and load instructions directly into flight systems. In essence, this is "texting with ATC," reducing voice congestion and miscommunication.
 </div>
+</div>
 
 <div class="section-card">
   <div class="section-header">
