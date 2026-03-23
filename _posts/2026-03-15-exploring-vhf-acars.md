@@ -614,8 +614,9 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
       </div>
     </div>
 
-    <p><strong>CPDLC</strong> represents a major advancement: ATC instructions sent as digital messages (e.g., "Climb and maintain FL350" delivered as text). Pilots can accept or reject messages and load instructions directly into flight systems. In essence, this is "texting with ATC," reducing voice congestion and miscommunication.</p>
-  </div>
+    <div class="info-box">
+  <i class="fas fa-headset" style="color: #00d4ff; margin-right: 0.5rem;"></i>
+  <strong>CPDLC</strong> represents a major advancement: ATC instructions sent as digital messages (e.g., "Climb and maintain FL350" delivered as text). Pilots can accept or reject messages and load instructions directly into flight systems. In essence, this is "texting with ATC," reducing voice congestion and miscommunication.
 </div>
 
 <div class="section-card">
@@ -650,44 +651,49 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
       <i class="fas fa-rocket hardware-icon"></i>
       <div>
         <strong style="color: #f9fafb;">VDL Mode 2</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">118 – 137 MHz, D8PSK modulation, up to 31.5 kbps, packet-based</span>
+        <span style="color: #9ca3af; font-size: 0.875rem;">118 – 137 MHz, D8PSK modulation, up to 31.5 kbps, packet-based, line-of-sight (~200-300 km range)</span>
       </div>
     </div>
   </div>
 
   <div class="info-box" style="margin-top: 1.5rem;">
     <i class="fas fa-network-wired" style="color: #00d4ff; margin-right: 0.5rem;"></i>
-    <strong>Multi-Link Operation:</strong> Modern aircraft dynamically switch between available links based on signal strength, availability, cost (SATCOM is expensive), and message priority. On ground → VHF. Climbing → VHF. Over ocean → SATCOM or HF. Near destination → back to VHF.
+    <strong>Multi-Link Operation:</strong> Modern aircraft dynamically switch between available links based on signal strength, availability, cost, and message priority. On ground → VHF. Climbing → VHF. Over ocean → SATCOM or HF. Near destination → back to VHF.
   </div>
 </div>
 
 <div class="section-card">
   <div class="section-header">
     <i class="fas fa-laptop-code section-icon"></i>
-    <h1 class="section-title">Software Setup – Decoding with acarsdec</h1>
+    <h1 class="section-title">Decoding with acarsdec</h1>
   </div>
 
   <p>For decoding VHF ACARS, one of the most reliable and lightweight tools available is <strong>acarsdec</strong>. It is a fast, command-line decoder capable of handling multiple channels simultaneously while maintaining excellent performance—even in busy RF environments like Dubai International Airport.</p>
+
+<div class="tip-box">
+  <i class="fas fa-external-link-alt" style="color: #22c55e; margin-right: 0.5rem;"></i>
+  Installation and build steps for acarsdec are already well documented on its GitHub page — please check <a href="https://github.com/f00b4r0/acarsdec/" target="_blank" style="color: #22c55e; text-decoration: underline;">https://github.com/f00b4r0/acarsdec/</a> for the latest compilation instructions and dependencies.
+</div>
 
   <div class="hardware-grid" style="margin: 1.5rem 0;">
     <div class="hardware-item">
       <i class="fas fa-microchip hardware-icon"></i>
       <div>
         <strong style="color: #f9fafb;">Hardware</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">RTL-SDR Blog V3 dongle with telescopic antenna kit configured as a dipole</span>
+        <span style="color: #9ca3af; font-size: 0.875rem;">RTL-SDR Blog V3 dongle with telescopic antenna kit configured as a simple dipole</span>
       </div>
     </div>
     <div class="hardware-item">
       <i class="fas fa-filter hardware-icon"></i>
       <div>
         <strong style="color: #f9fafb;">Filtering</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">RTL-SDR Blog FM band-stop filter to suppress strong local broadcast interference</span>
+        <span style="color: #9ca3af; font-size: 0.875rem;">RTL-SDR Blog FM band-stop filter to suppress fm broadcast interference on air band</span>
       </div>
     </div>
   </div>
 
   <h4 style="color: #f9fafb; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
-    <i class="fas fa-terminal" style="color: #ff6b35;"></i> Recommended Command
+    <i class="fas fa-terminal" style="color: #ff6b35;"></i> Command Worked Best for My Setup
   </h4>
 
   <div class="code-block">
@@ -695,7 +701,7 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
   </div>
 
   <h4 style="color: #f9fafb; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
-    <i class="fas fa-cogs" style="color: #ff6b35;"></i> Option Breakdown
+    <i class="fas fa-cogs" style="color: #ff6b35;"></i> Command Breakdown
   </h4>
 
   <div class="config-section">
@@ -880,9 +886,23 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
   </table>
 
   <div class="info-box" style="margin-top: 1.5rem;">
-    <i class="fas fa-lightbulb" style="color: #00d4ff; margin-right: 0.5rem;"></i>
-    <strong>Common Combinations:</strong> <span class="mode-badge">Mode 2</span> + <span class="label-badge">H1</span> = Flight progress | <span class="mode-badge">Mode 2</span> + <span class="label-badge">A9</span> = Weather/ATIS | <span class="mode-badge">Mode 2</span> + <span class="label-badge">Q0</span> = Position reports | <span class="mode-badge">Mode 2</span> + <span class="label-badge">B9</span> = ATC communication
-  </div>
+  <i class="fas fa-lightbulb" style="color: #00d4ff; margin-right: 0.5rem;"></i>
+  <strong>Common Combinations:</strong>
+  <ul style="margin-top: 0.75rem; margin-bottom: 0; padding-left: 0; color: #e5e7eb; list-style: none;">
+    <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+      <span class="mode-badge">Mode 2</span> + <span class="label-badge">H1</span> = Flight progress
+    </li>
+    <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+      <span class="mode-badge">Mode 2</span> + <span class="label-badge">A9</span> = Weather/ATIS
+    </li>
+    <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+      <span class="mode-badge">Mode 2</span> + <span class="label-badge">Q0</span> = Position reports
+    </li>
+    <li style="margin-bottom: 0; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+      <span class="mode-badge">Mode 2</span> + <span class="label-badge">B9</span> = ATC communication
+    </li>
+  </ul>
+</div>
 </div>
 
 <div class="section-card" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-color: #00d4ff33;">
