@@ -674,7 +674,7 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
 
 <div class="tip-box">
   <i class="fas fa-external-link-alt" style="color: #22c55e; margin-right: 0.5rem;"></i>
-  Installation and build steps for acarsdec are already well documented on its GitHub page. Please check :- <a href="https://github.com/f00b4r0/acarsdec/" target="_blank" style="color: #22c55e; text-decoration: underline;">https://github.com/f00b4r0/acarsdec/</a> for compilation and usage instructions.
+  Installation and build steps for acarsdec are already well documented on its GitHub page.<br>Please check :- <a href="https://github.com/f00b4r0/acarsdec/" target="_blank" style="color: #22c55e; text-decoration: underline;">https://github.com/f00b4r0/acarsdec/</a> for compilation and usage instructions.
 </div>
 
   <div class="hardware-grid" style="margin: 1.5rem 0;">
