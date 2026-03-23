@@ -949,47 +949,11 @@ TAILWINDS IN EXCESS OF 10 KT REP.
 ADVS ATC COPIED Z.A400</pre>
   </div>
 
-  <table class="freq-table" style="margin: 1rem 0;">
-    <thead>
-      <tr>
-        <th>Field</th>
-        <th>Value</th>
-        <th>Explanation</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Channel/Frequency</strong></td>
-        <td>131.725 MHz</td>
-        <td>Standard VHF ACARS frequency used in the Middle East</td>
-      </tr>
-      <tr>
-        <td><strong>Signal Level</strong></td>
-        <td>-47.8 dB</td>
-        <td>Moderate signal strength, sufficient for clean decoding</td>
-      </tr>
-      <tr>
-        <td><strong>Label</strong></td>
-        <td><span class="label-badge">A9</span></td>
-        <td>Downlink application for ATIS/weather information</td>
-      </tr>
-      <tr>
-        <td><strong>Aircraft</strong></td>
-        <td>4R-EXQ</td>
-        <td>Airbus A320 operated by Sri Lankan Airlines</td>
-      </tr>
-      <tr>
-        <td><strong>Reassembly</strong></td>
-        <td>Complete</td>
-        <td>Reconstructed from 4 individual ACARS frames (Id A, B, C, D)</td>
-      </tr>
-    </tbody>
-  </table>
-
   <div class="info-box">
     <i class="fas fa-lightbulb" style="color: #00d4ff; margin-right: 0.5rem;"></i>
     <strong>Multi-Frame Reassembly:</strong> The full ATIS couldn't fit in one 220-character frame, so the aircraft transmitted four sequential blocks that acarsdec automatically stitched together. The "ADVS ATC COPIED Z" at the end confirms the crew acknowledged receiving information version "Z."
   </div>
+</div>
 </div>
 
 <div class="section-card" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-color: #00d4ff33;">
