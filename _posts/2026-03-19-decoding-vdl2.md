@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Decoding Aviation VHF Data Link Mode-2"
+title: "Exploring Aviation VHF Data Link Mode-2"
 date: 2026-03-19 17:18:00 +0400
 tags: [vdl2, acars, aviation, sdr, vhf, aircraft, decoding, dumpvdl2]
 categories: [Aviation]
