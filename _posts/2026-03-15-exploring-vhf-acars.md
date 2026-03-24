@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Exploring VHF ACARS: Decoding Aircraft Communications"
+title: "Exploring Aviation VHF ACARS"
 date: 2026-03-15 12:00:00 +0530
 tags: [acars, aviation, sdr, vhf, aircraft, decoding, acarsdec]
 categories: [Aviation]
@@ -941,7 +941,7 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
     <h1 class="section-title">Sample Received Messages</h1>
   </div>
 
-  <p>The following are actual decoded messages received from Dubai International Airport (OMDB) and surrounding airspace using acarsdec. These examples demonstrate the variety of operational, maintenance, and navigational data flowing through VHF ACARS.</p>
+  <p>The following are actual decoded messages received from Dubai International Airport (OMDB) and the surrounding airspace using acarsdec. These examples demonstrate the variety of operational, maintenance, and navigational data flowing through VHF ACARS.</p>
 
   <div class="section-header">
     <i class="fas fa-cloud-sun section-icon"></i>
@@ -1015,7 +1015,7 @@ Reassembly: complete
   <div class="info-box">
     <i class="fas fa-lightbulb" style="color: #00d4ff; margin-right: 0.5rem;"></i>
     <p>
-    This is a <strong>flight summary (post-flight report)</strong> sent via ACARS from aircraft <strong>VT-IWV</strong> operating flight <strong>6E032E</strong> on the route <strong>VABB (Mumbai) to OMDB (Dubai)</strong>. It logs key flight events including departure (OUT 0950, OFF 1008) and arrival times (ON 1307, IN 1314), along with fuel on board (FOB) at each stage.
+    This is a <strong>flight summary (post-flight report)</strong> sent via ACARS from aircraft <strong>VT-IWV</strong> operating flight <strong>6E032E</strong> on the route <strong>VABB (Mumbai) to OMDB (Dubai)</strong>. It logs key flight events, including departure (OUT 0950, OFF 1008) and arrival times (ON 1307, IN 1314), along with fuel on board (FOB) at each stage.
     </p>
     <p>
     Additional details include crew roles during takeoff and landing, crew IDs, and placeholders for approach data. This type of message is typically used by the airline for <strong>operational tracking, fuel monitoring, and post-flight analysis</strong>.
