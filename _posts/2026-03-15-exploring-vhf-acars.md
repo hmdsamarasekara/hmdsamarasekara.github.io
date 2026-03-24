@@ -673,19 +673,19 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
   <p>For decoding VHF ACARS, one of the most reliable and lightweight tools available is <strong>acarsdec</strong>. It is a fast, command-line decoder capable of handling multiple channels simultaneously while maintaining excellent performance—even in busy RF environments like Dubai International Airport.</p>
 
 <div class="tip-box">
-  <i class="fas fa-external-link-alt" style="color: #22c55e; margin-right: 0.5rem;"></i>
-  Installation and build steps for acarsdec are already well documented on its GitHub page.<br>Please check :- <a href="https://github.com/f00b4r0/acarsdec/" target="_blank" style="color: #22c55e; text-decoration: underline;">https://github.com/f00b4r0/acarsdec/</a> for compilation and usage instructions.
-</div>
-
-<div class="tip-box">
   <strong>RF Chain Setup</strong><br>
   <img src="/assets/images/acars-antenna.png" alt="ACARS Antenna Setup" style="max-width: 100%; border-radius: 8px; margin: 10px 0; border: 1px solid #00d4ff;"><br>
-  For this reception setup, I used the <strong>RTL-SDR Blog V3 dongle</strong> paired with their <strong>FM Broadcast Band-Stop Filter</strong> to eliminate strong local FM interference. The antenna is their <strong>Dipole Antenna Kit</strong>, adjusted for the airband around <span style="color: #ff6b35; font-weight: bold;">137 MHz</span> — perfect for ACARS and satellite downlinks.
+  I used the <strong>RTL-SDR Blog's RTL-SDR v3 dongle</strong> paired with their <strong>FM Broadcast Band-Stop Filter</strong> to reduce FM interference. The antenna is their <strong>Dipole Antenna Kit</strong>, adjusted for the airband frequency around <span style="color: #ff6b35; font-weight: bold;">137 MHz</span>. Even without any LNAs, ACARS downlinks were very strong.
 </div>
 
   <h4 style="color: #f9fafb; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
     <i class="fas fa-terminal" style="color: #ff6b35;"></i> Command Worked Best for My Setup
   </h4>
+
+<div class="tip-box">
+  <i class="fas fa-external-link-alt" style="color: #22c55e; margin-right: 0.5rem;"></i>
+  Installation and build steps for acarsdec are already well documented on its GitHub page.<br>Please check :- <a href="https://github.com/f00b4r0/acarsdec/" target="_blank" style="color: #22c55e; text-decoration: underline;">https://github.com/f00b4r0/acarsdec/</a> for compilation and usage instructions.
+</div>
 
   <div class="code-block">
     <pre>acarsdec -e -t 1800 --output full:file:path=/home/dragonos/Desktop/decoded-acars.log --output monitor:file: --rtlsdr 0 -g 40.2 -c 131.500 131.175 131.475 131.725 131.825</pre>
@@ -838,63 +838,6 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
     <i class="fas fa-exclamation-circle" style="margin-right: 0.5rem;"></i>
     Labels are not strictly standardized—meanings can vary slightly by airline and region.
   </div>
-
-  <h4 style="color: #00d4ff; margin-top: 2rem; display: flex; align-items: center; gap: 0.5rem;">
-    <i class="fas fa-code"></i> ACARS Mode Types
-  </h4>
-
-  <p>In addition to labels, each message includes a <strong>mode</strong>, indicating its general format:</p>
-
-  <table class="freq-table">
-    <thead>
-      <tr>
-        <th>Mode</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="mode-badge">Mode 2</span></td>
-        <td>Standard air-to-ground messages (most common)</td>
-      </tr>
-      <tr>
-        <td><span class="mode-badge">Mode A</span></td>
-        <td>Ground-to-air broadcasts</td>
-      </tr>
-      <tr>
-        <td><span class="mode-badge">Mode B</span></td>
-        <td>Broadcast/network messaging</td>
-      </tr>
-      <tr>
-        <td><span class="mode-badge">Mode C</span></td>
-        <td>Control/system-level communication</td>
-      </tr>
-      <tr>
-        <td><span class="mode-badge">Mode D</span></td>
-        <td>Air-to-ground with extended routing</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="info-box" style="margin-top: 1.5rem;">
-  <i class="fas fa-lightbulb" style="color: #00d4ff; margin-right: 0.5rem;"></i>
-  <strong>Common Combinations:</strong>
-  <ul style="margin-top: 0.75rem; margin-bottom: 0; padding-left: 0; color: #e5e7eb; list-style: none;">
-    <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-      <span class="mode-badge">Mode 2</span> + <span class="label-badge">H1</span> = Flight progress
-    </li>
-    <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-      <span class="mode-badge">Mode 2</span> + <span class="label-badge">A9</span> = Weather/ATIS
-    </li>
-    <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-      <span class="mode-badge">Mode 2</span> + <span class="label-badge">Q0</span> = Position reports
-    </li>
-    <li style="margin-bottom: 0; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-      <span class="mode-badge">Mode 2</span> + <span class="label-badge">B9</span> = ATC communication
-    </li>
-  </ul>
-</div>
-</div>
 
 <div class="section-card">
   <div class="section-header">
