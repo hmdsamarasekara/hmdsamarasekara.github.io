@@ -675,7 +675,7 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
 <div class="tip-box">
   <strong>RF Chain Setup</strong><br>
   <img src="/assets/images/acars-antenna.png" alt="ACARS Antenna Setup" style="max-width: 100%; border-radius: 8px; margin: 10px 0; border: 1px solid #00d4ff;"><br>
-  I used the <strong>RTL-SDR Blog's RTL-SDR v3 dongle</strong> paired with their <strong>FM Broadcast Band-Stop Filter</strong> to reduce FM interference. The antenna is their <strong>Dipole Antenna Kit</strong>, adjusted for the airband frequency around <span style="color: #ff6b35; font-weight: bold;">137 MHz</span>. Even without any LNAs, ACARS downlinks were very strong.
+  I used the <strong>RTL-SDR Blog's RTL-SDR v3 dongle</strong> paired with their <strong>FM Broadcast Band-Stop Filter</strong> to reduce FM interference. The antenna is their <strong>Dipole Antenna Kit</strong>, adjusted for the airband frequency around <span style="color: #ff6b35; font-weight: bold;">131 MHz</span>. Even without any LNAs, ACARS downlinks were very strong.
 </div>
 
 <div class="tip-box">
@@ -932,6 +932,7 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
       <span>Internal airline ops and misc system data</span>
     </div>
   </div>
+</div>
 </div>
 
 <div class="section-card">
