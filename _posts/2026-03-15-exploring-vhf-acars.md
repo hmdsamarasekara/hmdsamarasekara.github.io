@@ -715,7 +715,7 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
 <div class="section-card">
   <div class="section-header">
     <i class="fas fa-envelope-open-text section-icon"></i>
-    <h1 class="section-title">ACARS Message Types & Labels</h1>
+    <h1 class="section-title">ACARS Message Types</h1>
   </div>
 
   <p>ACARS carries a wide range of operational, technical, and control data between aircraft and ground systems. Here's what you can expect to receive:</p>
@@ -724,249 +724,220 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
     <div class="message-type-card">
       <i class="fas fa-clock"></i>
       <div>
-        <strong style="color: #f9fafb;">OOOI (Flight Progress)</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Gate departure, takeoff, landing, and arrival timestamps</span>
+        <strong>OOOI (Flight Progress)</strong><br>
+        <span>Gate departure, takeoff, landing, and arrival timestamps</span>
       </div>
     </div>
     <div class="message-type-card">
       <i class="fas fa-file-alt"></i>
       <div>
-        <strong style="color: #f9fafb;">Operational / Dispatch</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Load sheets, fuel data, delays</span>
+        <strong>Operational / Dispatch</strong><br>
+        <span>Load sheets, fuel data, delays</span>
       </div>
     </div>
     <div class="message-type-card">
       <i class="fas fa-tools"></i>
       <div>
-        <strong style="color: #f9fafb;">Maintenance Messages</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Faults, warnings, and system performance data</span>
+        <strong>Maintenance Messages</strong><br>
+        <span>Faults, warnings, and system performance data</span>
       </div>
     </div>
     <div class="message-type-card">
       <i class="fas fa-tachometer-alt"></i>
       <div>
-        <strong style="color: #f9fafb;">Telemetry Reports</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Engine status, APU usage, system data</span>
+        <strong>Telemetry Reports</strong><br>
+        <span>Engine status, APU usage, system data</span>
       </div>
     </div>
     <div class="message-type-card">
       <i class="fas fa-comments"></i>
       <div>
-        <strong style="color: #f9fafb;">Free Text Messages</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Pilot–dispatch communication</span>
+        <strong>Free Text Messages</strong><br>
+        <span>Pilot–dispatch communication</span>
       </div>
     </div>
     <div class="message-type-card">
       <i class="fas fa-cloud-sun"></i>
       <div>
-        <strong style="color: #f9fafb;">ATIS / Weather</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Airport weather and operational info, METARs</span>
+        <strong>ATIS / Weather</strong><br>
+        <span>Airport weather and operational info, METARs</span>
       </div>
     </div>
     <div class="message-type-card">
       <i class="fas fa-clipboard-check"></i>
       <div>
-        <strong style="color: #f9fafb;">Pre-Departure Clearance (PDC)</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Digital ATC clearances</span>
+        <strong>Pre-Departure Clearance (PDC)</strong><br>
+        <span>Digital ATC clearances</span>
       </div>
     </div>
     <div class="message-type-card">
       <i class="fas fa-headset"></i>
       <div>
-        <strong style="color: #f9fafb;">CPDLC Messages</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Digital ATC instructions</span>
+        <strong>CPDLC Messages</strong><br>
+        <span>Digital ATC instructions</span>
       </div>
     </div>
     <div class="message-type-card">
       <i class="fas fa-map-marker-alt"></i>
       <div>
-        <strong style="color: #f9fafb;">Position Reports</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Location, altitude, speed</span>
+        <strong>Position Reports</strong><br>
+        <span>Location, altitude, speed</span>
       </div>
     </div>
     <div class="message-type-card">
       <i class="fas fa-check-double"></i>
       <div>
-        <strong style="color: #f9fafb;">ACK/NAK</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Acknowledgments and retransmission requests</span>
+        <strong>ACK/NAK</strong><br>
+        <span>Acknowledgments and retransmission requests</span>
       </div>
     </div>
   </div>
+</div>
 
-  <h4 style="color: #00d4ff; margin-top: 2rem; display: flex; align-items: center; gap: 0.5rem;">
-    <i class="fas fa-tags"></i> Understanding Message Labels
-  </h4>
+<div class="section-card">
+  <div class="section-header">
+    <i class="fas fa-tags section-icon"></i>
+    <h1 class="section-title">ACARS Message Labels</h1>
+  </div>
 
   <p>Each ACARS message includes a two-character <strong>label</strong>, which indicates its purpose:</p>
 
-  <div class="acars-label-grid" style="
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px;
-  margin-top: 20px;
-">
-
-  <!-- H1 -->
-  <div class="acars-card">
-    <i class="fas fa-cloud"></i>
-    <strong>H1 – Pilot Weather Report</strong>
-    <span>PIREPs, turbulence, winds, precision pilot reports</span>
+  <div class="message-type-grid">
+    <div class="message-type-card">
+      <i class="fas fa-cloud"></i>
+      <div>
+        <strong>H1 – Pilot Weather Report</strong><br>
+        <span>PIREPs, turbulence, winds, precision pilot reports</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-plane-departure"></i>
+      <div>
+        <strong>SA – Movement / OOOI</strong><br>
+        <span>OUT/OFF/ON/IN, gate, takeoff, landing timestamps</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-tools"></i>
+      <div>
+        <strong>A4 – Maintenance Status</strong><br>
+        <span>Fault codes, system health, BITE/CMC reports</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-tachometer-alt"></i>
+      <div>
+        <strong>A6 – Engine & Performance</strong><br>
+        <span>Trend data, fuel burn, engine parameters</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-weight"></i>
+      <div>
+        <strong>A9 – Load / Fuel / Payload</strong><br>
+        <span>Load sheet, fuel, weight & balance</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-warehouse"></i>
+      <div>
+        <strong>B6 – Ground Handling</strong><br>
+        <span>Gate services, load control, service requests</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-map-marked-alt"></i>
+      <div>
+        <strong>QP – Position Report</strong><br>
+        <span>Lat/long, ETA, speed, auto SATCOM reporting</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-font"></i>
+      <div>
+        <strong>QQ – General Text</strong><br>
+        <span>Free-text and general-purpose messages</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-cloud-sun"></i>
+      <div>
+        <strong>RA – Weather / ATIS</strong><br>
+        <span>METAR, airport weather, WX requests</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-file-alt"></i>
+      <div>
+        <strong>12 – Airline Ops Message</strong><br>
+        <span>Dispatch communications, operational data</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-route"></i>
+      <div>
+        <strong>13 – Flight Plan / ATC</strong><br>
+        <span>Flight plan changes, slots, ATC requests</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-clock"></i>
+      <div>
+        <strong>14 – Delays</strong><br>
+        <span>Delay codes, ETD changes, disruption info</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-cogs"></i>
+      <div>
+        <strong>16 – Technical Data</strong><br>
+        <span>Detailed maintenance & engine data</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-user-friends"></i>
+      <div>
+        <strong>17 – Crew Info</strong><br>
+        <span>Crew messages, roster, rest data</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-wind"></i>
+      <div>
+        <strong>18 – Weather Uplink</strong><br>
+        <span>Winds aloft, turbulence forecasts, SIGMET</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-water"></i>
+      <div>
+        <strong>19 – Oceanic / ATC</strong><br>
+        <span>Oceanic clearances, HF/SAT position control</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-exclamation-triangle"></i>
+      <div>
+        <strong>1B – Safety / Alert</strong><br>
+        <span>Emergency notifications, unusual events</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-satellite"></i>
+      <div>
+        <strong>30 – FMS / Navigation</strong><br>
+        <span>Route, performance & waypoint uplinks</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-cogs"></i>
+      <div>
+        <strong>80 – Utility / Airline Data</strong><br>
+        <span>Internal airline ops and misc system data</span>
+      </div>
+    </div>
   </div>
-
-  <!-- SA -->
-  <div class="acars-card">
-    <i class="fas fa-plane-departure"></i>
-    <strong>SA – Movement / OOOI</strong>
-    <span>OUT/OFF/ON/IN, gate, takeoff, landing timestamps</span>
-  </div>
-
-  <!-- A4 -->
-  <div class="acars-card">
-    <i class="fas fa-tools"></i>
-    <strong>A4 – Maintenance Status</strong>
-    <span>Fault codes, system health, BITE/CMC reports</span>
-  </div>
-
-  <!-- A6 -->
-  <div class="acars-card">
-    <i class="fas fa-tachometer-alt"></i>
-    <strong>A6 – Engine & Performance</strong>
-    <span>Trend data, fuel burn, engine parameters</span>
-  </div>
-
-  <!-- A9 -->
-  <div class="acars-card">
-    <i class="fas fa-weight"></i>
-    <strong>A9 – Load / Fuel / Payload</strong>
-    <span>Load sheet, fuel, weight & balance</span>
-  </div>
-
-  <!-- B6 -->
-  <div class="acars-card">
-    <i class="fas fa-warehouse"></i>
-    <strong>B6 – Ground Handling</strong>
-    <span>Gate services, load control, service requests</span>
-  </div>
-
-  <!-- QP -->
-  <div class="acars-card">
-    <i class="fas fa-map-marked-alt"></i>
-    <strong>QP – Position Report</strong>
-    <span>Lat/long, ETA, speed, auto SATCOM reporting</span>
-  </div>
-
-  <!-- QQ -->
-  <div class="acars-card">
-    <i class="fas fa-font"></i>
-    <strong>QQ – General Text</strong>
-    <span>Free-text and general-purpose messages</span>
-  </div>
-
-  <!-- RA -->
-  <div class="acars-card">
-    <i class="fas fa-cloud-sun"></i>
-    <strong>RA – Weather / ATIS</strong>
-    <span>METAR, airport weather, WX requests</span>
-  </div>
-
-  <!-- 12 -->
-  <div class="acars-card">
-    <i class="fas fa-file-alt"></i>
-    <strong>12 – Airline Ops Message</strong>
-    <span>Dispatch communications, operational data</span>
-  </div>
-
-  <!-- 13 -->
-  <div class="acars-card">
-    <i class="fas fa-route"></i>
-    <strong>13 – Flight Plan / ATC</strong>
-    <span>Flight plan changes, slots, ATC requests</span>
-  </div>
-
-  <!-- 14 -->
-  <div class="acars-card">
-    <i class="fas fa-clock"></i>
-    <strong>14 – Delays</strong>
-    <span>Delay codes, ETD changes, disruption info</span>
-  </div>
-
-  <!-- 16 -->
-  <div class="acars-card">
-    <i class="fas fa-cogs"></i>
-    <strong>16 – Technical Data</strong>
-    <span>Detailed maintenance & engine data</span>
-  </div>
-
-  <!-- 17 -->
-  <div class="acars-card">
-    <i class="fas fa-user-friends"></i>
-    <strong>17 – Crew Info</strong>
-    <span>Crew messages, roster, rest data</span>
-  </div>
-
-  <!-- 18 -->
-  <div class="acars-card">
-    <i class="fas fa-wind"></i>
-    <strong>18 – Weather Uplink</strong>
-    <span>Winds aloft, turbulence forecasts, SIGMET</span>
-  </div>
-
-  <!-- 19 -->
-  <div class="acars-card">
-    <i class="fas fa-water"></i>
-    <strong>19 – Oceanic / ATC</strong>
-    <span>Oceanic clearances, HF/SAT position control</span>
-  </div>
-
-  <!-- 1B -->
-  <div class="acars-card">
-    <i class="fas fa-exclamation-triangle"></i>
-    <strong>1B – Safety / Alert</strong>
-    <span>Emergency notifications, unusual events</span>
-  </div>
-
-  <!-- 30 -->
-  <div class="acars-card">
-    <i class="fas fa-satellite"></i>
-    <strong>30 – FMS / Navigation</strong>
-    <span>Route, performance & waypoint uplinks</span>
-  </div>
-
-  <!-- 80 -->
-  <div class="acars-card">
-    <i class="fas fa-cogs"></i>
-    <strong>80 – Utility / Airline Data</strong>
-    <span>Internal airline ops and misc system data</span>
-  </div>
-
 </div>
-
-<style>
-.acars-card {
-  background: #1f2937;
-  border-radius: 12px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  box-shadow: 0 0 0 1px #374151;
-}
-
-.acars-card i {
-  font-size: 26px;
-  color: #60a5fa;
-}
-
-.acars-card strong {
-  color: #f9fafb;
-  font-size: 1rem;
-}
-
-.acars-card span {
-  color: #9ca3af;
-  font-size: 0.85rem;
-}
-</style>
 
 <div class="section-card">
   <div class="section-header">
