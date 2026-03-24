@@ -720,7 +720,86 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
 
   <p>ACARS carries a wide range of operational, technical, and control data between aircraft and ground systems. Here's what you can expect to receive:</p>
 
-<div class="acars-label-grid" style="
+  <div class="message-type-grid">
+    <div class="message-type-card">
+      <i class="fas fa-clock"></i>
+      <div>
+        <strong style="color: #f9fafb;">OOOI (Flight Progress)</strong><br>
+        <span style="color: #9ca3af; font-size: 0.875rem;">Gate departure, takeoff, landing, and arrival timestamps</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-file-alt"></i>
+      <div>
+        <strong style="color: #f9fafb;">Operational / Dispatch</strong><br>
+        <span style="color: #9ca3af; font-size: 0.875rem;">Load sheets, fuel data, delays</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-tools"></i>
+      <div>
+        <strong style="color: #f9fafb;">Maintenance Messages</strong><br>
+        <span style="color: #9ca3af; font-size: 0.875rem;">Faults, warnings, and system performance data</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-tachometer-alt"></i>
+      <div>
+        <strong style="color: #f9fafb;">Telemetry Reports</strong><br>
+        <span style="color: #9ca3af; font-size: 0.875rem;">Engine status, APU usage, system data</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-comments"></i>
+      <div>
+        <strong style="color: #f9fafb;">Free Text Messages</strong><br>
+        <span style="color: #9ca3af; font-size: 0.875rem;">Pilot–dispatch communication</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-cloud-sun"></i>
+      <div>
+        <strong style="color: #f9fafb;">ATIS / Weather</strong><br>
+        <span style="color: #9ca3af; font-size: 0.875rem;">Airport weather and operational info, METARs</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-clipboard-check"></i>
+      <div>
+        <strong style="color: #f9fafb;">Pre-Departure Clearance (PDC)</strong><br>
+        <span style="color: #9ca3af; font-size: 0.875rem;">Digital ATC clearances</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-headset"></i>
+      <div>
+        <strong style="color: #f9fafb;">CPDLC Messages</strong><br>
+        <span style="color: #9ca3af; font-size: 0.875rem;">Digital ATC instructions</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-map-marker-alt"></i>
+      <div>
+        <strong style="color: #f9fafb;">Position Reports</strong><br>
+        <span style="color: #9ca3af; font-size: 0.875rem;">Location, altitude, speed</span>
+      </div>
+    </div>
+    <div class="message-type-card">
+      <i class="fas fa-check-double"></i>
+      <div>
+        <strong style="color: #f9fafb;">ACK/NAK</strong><br>
+        <span style="color: #9ca3af; font-size: 0.875rem;">Acknowledgments and retransmission requests</span>
+      </div>
+    </div>
+  </div>
+
+  <h4 style="color: #00d4ff; margin-top: 2rem; display: flex; align-items: center; gap: 0.5rem;">
+    <i class="fas fa-tags"></i> Understanding Message Labels
+  </h4>
+
+  <p>Each ACARS message includes a two-character <strong>label</strong>, which indicates its purpose:</p>
+
+  <div class="acars-label-grid" style="
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 16px;
@@ -888,52 +967,6 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
   font-size: 0.85rem;
 }
 </style>
-
-  <h4 style="color: #00d4ff; margin-top: 2rem; display: flex; align-items: center; gap: 0.5rem;">
-    <i class="fas fa-tags"></i> Understanding Message Labels
-  </h4>
-
-  <p>Each ACARS message includes a two-character <strong>label</strong>, which indicates its purpose:</p>
-
-  <table class="freq-table">
-    <thead>
-      <tr>
-        <th>Label</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="label-badge">H1</span></td>
-        <td>Flight progress (OOOI and related reports)</td>
-      </tr>
-      <tr>
-        <td><span class="label-badge">A9</span></td>
-        <td>ATIS / weather information</td>
-      </tr>
-      <tr>
-        <td><span class="label-badge">Q0</span></td>
-        <td>Position reports</td>
-      </tr>
-      <tr>
-        <td><span class="label-badge">B9</span></td>
-        <td>ATC-related messages</td>
-      </tr>
-      <tr>
-        <td><span class="label-badge">5U</span></td>
-        <td>Weather requests</td>
-      </tr>
-      <tr>
-        <td><span class="label-badge">_d</span></td>
-        <td>Acknowledgment / control messages</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <div class="warning-box">
-    <i class="fas fa-exclamation-circle" style="margin-right: 0.5rem;"></i>
-    Labels are not strictly standardized—meanings can vary slightly by airline and region.
-  </div>
 
 <div class="section-card">
   <div class="section-header">
