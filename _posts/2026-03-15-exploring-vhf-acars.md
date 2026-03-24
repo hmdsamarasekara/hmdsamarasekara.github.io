@@ -677,22 +677,11 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
   Installation and build steps for acarsdec are already well documented on its GitHub page.<br>Please check :- <a href="https://github.com/f00b4r0/acarsdec/" target="_blank" style="color: #22c55e; text-decoration: underline;">https://github.com/f00b4r0/acarsdec/</a> for compilation and usage instructions.
 </div>
 
-  <div class="hardware-grid" style="margin: 1.5rem 0;">
-    <div class="hardware-item">
-      <i class="fas fa-microchip hardware-icon"></i>
-      <div>
-        <strong style="color: #f9fafb;">Hardware</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">RTL-SDR Blog V3 dongle with telescopic antenna kit configured as a simple dipole</span>
-      </div>
-    </div>
-    <div class="hardware-item">
-      <i class="fas fa-filter hardware-icon"></i>
-      <div>
-        <strong style="color: #f9fafb;">Filtering</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">RTL-SDR Blog FM band-stop filter to suppress fm broadcast interference on air band</span>
-      </div>
-    </div>
-  </div>
+<div class="tip-box">
+  <strong>RF Chain Setup</strong><br>
+  <img src="/assets/images/acars-antenna.png" alt="ACARS Antenna Setup" style="max-width: 100%; border-radius: 8px; margin: 10px 0; border: 1px solid #00d4ff;"><br>
+  For this reception setup, I used the <strong>RTL-SDR Blog V3 dongle</strong> paired with their <strong>FM Broadcast Band-Stop Filter</strong> to eliminate strong local FM interference. The antenna is their <strong>Dipole Antenna Kit</strong>, adjusted for the airband around <span style="color: #ff6b35; font-weight: bold;">137 MHz</span> — perfect for ACARS and satellite downlinks.
+</div>
 
   <h4 style="color: #f9fafb; margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
     <i class="fas fa-terminal" style="color: #ff6b35;"></i> Command Worked Best for My Setup
