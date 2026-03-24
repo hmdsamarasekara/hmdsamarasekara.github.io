@@ -472,7 +472,6 @@ excerpt: "A comprehensive guide to receiving and decoding VDL2 aviation communic
     </div>
   </div>
   
-  <!-- Second card placeholder - duplicate and modify as needed -->
   <div class="hardware-item" style="border: 1px solid #00d4ff33; border-radius: 8px; padding: 1.5rem; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); text-align: center; display: flex; flex-direction: column; align-items: center;">
     <i class="fas fa-satellite hardware-icon" style="color: #22c55e; font-size: 2rem; margin-bottom: 0.75rem; display: block;"></i>
     <strong style="color: #f9fafb; display: block; margin-bottom: 0.75rem; font-size: 1.1rem;">VDL Mode 2</strong>
@@ -539,6 +538,13 @@ excerpt: "A comprehensive guide to receiving and decoding VDL2 aviation communic
   </div>
 
   <p>To the ear, when demodulated in narrow FM mode, it has a <strong>harsh, broadband digital sound</strong> rather than the characteristic chirpy tone many listeners associate with regular ACARS. Once you've seen both side by side on a waterfall, VDL2 becomes fairly easy to spot by its wider footprint, denser visual texture, and distinctly modern digital character.</p>
+
+<div class="tip-box">
+  <strong>RF Chain Setup</strong><br>
+  <img src="/assets/images/acars-antenna.png" alt="ACARS Antenna Setup" style="max-width: 100%; border-radius: 8px; margin: 10px 0; border: 1px solid #00d4ff;"><br>
+  I used the <strong>RTL-SDR Blog's RTL-SDR v3 dongle</strong> paired with their <strong>FM Broadcast Band-Stop Filter</strong> to reduce FM interference. The antenna is their <strong>Dipole Antenna Kit</strong>, adjusted for the airband frequency around <span style="color: #ff6b35; font-weight: bold;">137 MHz</span>. Even without any LNAs, ACARS downlinks were very strong.
+</div>
+  
 </div>
 
 <div class="section-card">
