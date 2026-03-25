@@ -672,7 +672,7 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
   </div>
 
 <div class="image-container" style="margin: 0 0 1rem 0; border: 1px solid transparent;">
-  <img src="{{ '/assets/images/acars.webp' | relative_url }}" alt="ACARS spectrum and waterfall display" loading="lazy" style="width: auto; max-width: 100%; margin: 0 auto; display: block;">
+  <img src="{{ '/assets/images/acars-signal.webp' | relative_url }}" alt="ACARS spectrum and waterfall display" loading="lazy" style="width: auto; max-width: 100%; margin: 0 auto; display: block;">
   <div class="image-caption" style="background: transparent; border-top: 1px solid transparent;">
     Here's how ACARS transmissions appear when viewed on a spectrum analyzer and waterfall display
   </div>
