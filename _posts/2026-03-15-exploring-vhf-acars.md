@@ -540,6 +540,7 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
     <li style="margin-bottom: 0;"><strong>SATCOM (Satellite Communication)</strong> — Provides global coverage via systems such as Inmarsat</li>
   </ul>
 </div>
+</div>
 
 <div class="section-card">
   <div class="section-header">
@@ -669,6 +670,13 @@ excerpt: "A comprehensive guide to understanding and decoding VHF ACARS aviation
     <i class="fas fa-laptop-code section-icon"></i>
     <h1 class="section-title">Decoding with acarsdec</h1>
   </div>
+
+<div class="image-container" style="margin: 0 0 1rem 0; border: 1px solid transparent;">
+  <img src="{{ '/assets/images/acars.webp' | relative_url }}" alt="ACARS spectrum and waterfall display" loading="lazy" style="width: auto; max-width: 100%; margin: 0 auto; display: block;">
+  <div class="image-caption" style="background: transparent; border-top: 1px solid transparent;">
+    Here's how ACARS transmissions appear when viewed on a spectrum analyzer and waterfall display
+  </div>
+</div>
 
   <p>For decoding VHF ACARS, one of the most reliable and lightweight tools available is <strong>acarsdec</strong>. It is a fast, command-line decoder capable of handling multiple channels simultaneously while maintaining excellent performance—even in busy RF environments like Dubai International Airport.</p>
 
