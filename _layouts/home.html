@@ -8,7 +8,9 @@ layout: default
             <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Noise Floor Nomad" class="site-logo-img">
         </div>
 
-        <h1 class="hero-title">{{ site.title }}</h1>
+        <h1 class="hero-title" data-text="{{ site.title }}">
+          {{ site.title }}
+        </h1>
 
         <!-- Spectrum Analyzer Animation -->
         <div class="spectrum-container">
