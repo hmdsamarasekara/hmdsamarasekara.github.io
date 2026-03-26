@@ -12,6 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Copy code buttons
   initCopyCode();
+
+  initGlitchEffects();
+  
 });
 
 // Theme Toggle
@@ -259,4 +262,70 @@ function initCopyCode() {
     
     pre.appendChild(button);
   });
+}
+
+// ===============================
+// Glitch Effects (CRT / Signal Lost)
+// ===============================
+
+function initGlitchEffects() {
+  const title = document.querySelector(".hero-title");
+  const overlay = document.getElementById("glitch-overlay");
+
+  if (!title && !overlay) return;
+
+  const messages = [
+    "SIGNAL LOST",
+    "NO INPUT",
+    "TRANSMISSION ERROR",
+    "SYSTEM FAILURE",
+    "GAME OVER"
+  ];
+
+  function triggerTitleGlitch() {
+    if (!title) return;
+
+    title.classList.add("glitch-active");
+
+    const duration = Math.random() * 200 + 100;
+
+    setTimeout(() => {
+      title.classList.remove("glitch-active");
+    }, duration);
+  }
+
+  function triggerOverlayGlitch() {
+    if (!overlay) return;
+
+    const text = overlay.querySelector(".glitch-text");
+    if (text) {
+      text.textContent = messages[Math.floor(Math.random() * messages.length)];
+    }
+
+    overlay.classList.add("active");
+
+    const duration = Math.random() * 800 + 400;
+
+    setTimeout(() => {
+      overlay.classList.remove("active");
+    }, duration);
+  }
+
+  function glitchLoop() {
+    const delay = Math.random() * 6000 + 2000;
+
+    setTimeout(() => {
+      // 80% chance: small title glitch
+      if (Math.random() < 0.8) {
+        triggerTitleGlitch();
+      } else {
+        // 20% chance: full screen glitch
+        triggerOverlayGlitch();
+      }
+
+      glitchLoop();
+    }, delay);
+  }
+
+  glitchLoop();
 }
