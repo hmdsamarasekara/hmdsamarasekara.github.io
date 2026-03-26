@@ -1,9 +1,6 @@
 ---
 ---
-// Noise Floor Nomad - Main Stylesheet
-// Dark mode first, cyan/orange accents
 
-// CSS Variables
 :root {
   // Colors - Dark Mode (default)
   --bg-primary: #0a0a0f;
@@ -367,7 +364,6 @@ a {
   clip-path: inset(0 0 0 0);
 }
 
-/* Random glitch state (subtle, short) */
 .hero-title.glitching::before {
   opacity: 0.8;
   animation: glitch-random-1 0.3s linear;
@@ -378,26 +374,23 @@ a {
   animation: glitch-random-2 0.3s linear;
 }
 
-/* Intense hover state (continuous, aggressive) */
 .hero-title.intense::before,
 .hero-title:hover::before {
-  opacity: 1;
-  animation: glitch-intense-1 0.15s infinite linear alternate-reverse;
+  opacity: 0.7;
+  animation: glitch-hover-1 0.4s infinite linear alternate-reverse;
 }
 
 .hero-title.intense::after,
 .hero-title:hover::after {
-  opacity: 1;
-  animation: glitch-intense-2 0.15s infinite linear alternate-reverse;
+  opacity: 0.7;
+  animation: glitch-hover-2 0.4s infinite linear alternate-reverse;
 }
 
-/* Subtle text flicker on hover */
 .hero-title.intense,
 .hero-title:hover {
-  animation: text-flicker-fast 0.5s infinite;
+  animation: text-flicker-subtle 2s infinite;
 }
 
-/* Random glitch keyframes (subtle movements) */
 @keyframes glitch-random-1 {
   0% { clip-path: inset(20% 0 60% 0); transform: translate(-3px, 2px); }
   25% { clip-path: inset(40% 0 40% 0); transform: translate(3px, -1px); }
@@ -414,31 +407,27 @@ a {
   100% { clip-path: inset(0 0 0 0); transform: translate(0); }
 }
 
-/* Intense hover keyframes (chaotic, fast) */
-@keyframes glitch-intense-1 {
-  0% { clip-path: inset(10% 0 80% 0); transform: translate(-4px, 3px); }
-  20% { clip-path: inset(30% 0 50% 0); transform: translate(4px, -2px); }
-  40% { clip-path: inset(60% 0 20% 0); transform: translate(-3px, 1px); }
-  60% { clip-path: inset(20% 0 60% 0); transform: translate(3px, -3px); }
-  80% { clip-path: inset(80% 0 5% 0); transform: translate(-2px, 2px); }
-  100% { clip-path: inset(40% 0 30% 0); transform: translate(2px, 0); }
+/* Hover keyframes - gentler movements, smaller offsets */
+@keyframes glitch-hover-1 {
+  0% { clip-path: inset(15% 0 70% 0); transform: translate(-2px, 1px); }
+  25% { clip-path: inset(35% 0 45% 0); transform: translate(2px, -1px); }
+  50% { clip-path: inset(60% 0 25% 0); transform: translate(-1px, 0); }
+  75% { clip-path: inset(25% 0 55% 0); transform: translate(1px, 1px); }
+  100% { clip-path: inset(45% 0 35% 0); transform: translate(-2px, -1px); }
 }
 
-@keyframes glitch-intense-2 {
-  0% { clip-path: inset(70% 0 10% 0); transform: translate(3px, -3px); }
-  20% { clip-path: inset(20% 0 60% 0); transform: translate(-4px, 2px); }
-  40% { clip-path: inset(50% 0 30% 0); transform: translate(2px, -1px); }
-  60% { clip-path: inset(10% 0 70% 0); transform: translate(-3px, 3px); }
-  80% { clip-path: inset(40% 0 40% 0); transform: translate(4px, -2px); }
-  100% { clip-path: inset(60% 0 20% 0); transform: translate(-2px, 1px); }
+@keyframes glitch-hover-2 {
+  0% { clip-path: inset(65% 0 15% 0); transform: translate(2px, -1px); }
+  25% { clip-path: inset(40% 0 40% 0); transform: translate(-2px, 1px); }
+  50% { clip-path: inset(20% 0 60% 0); transform: translate(1px, 0); }
+  75% { clip-path: inset(50% 0 30% 0); transform: translate(-1px, -1px); }
+  100% { clip-path: inset(30% 0 50% 0); transform: translate(2px, 1px); }
 }
 
-/* Flicker animations */
-@keyframes text-flicker-fast {
-  0%, 100% { opacity: 1; }
-  25% { opacity: 0.8; }
-  50% { opacity: 1; }
-  75% { opacity: 0.9; }
+@keyframes text-flicker-subtle {
+  0%, 90%, 100% { opacity: 1; }
+  92% { opacity: 0.95; }
+  96% { opacity: 0.98; }
 }
 
 .hero-subtitle {
