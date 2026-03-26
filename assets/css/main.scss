@@ -331,6 +331,9 @@ a {
 }
 
 .hero-title {
+  position: relative;
+  display: inline-block;
+
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
@@ -351,13 +354,73 @@ a {
   background-clip: text;
 
   animation: gradientFlow 4s linear infinite;
-
-  text-shadow: 0 0 15px rgba(0, 255, 180, 0.2);
 }
 
+/* Glitch layers */
+.hero-title::before,
+.hero-title::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Cyan offset */
+.hero-title::before {
+  background: linear-gradient(120deg, #00d9ff, transparent);
+  transform: translate(2px, 0);
+  opacity: 0.3;
+  animation: glitch1 3s infinite;
+}
+
+/* Magenta/purple offset */
+.hero-title::after {
+  background: linear-gradient(120deg, #7a5cff, transparent);
+  transform: translate(-2px, 0);
+  opacity: 0.3;
+  animation: glitch2 2.5s infinite;
+}
+
+/* Gradient animation */
 @keyframes gradientFlow {
   to {
     background-position: 200% center;
+  }
+}
+
+/* Glitch animations (subtle flicker) */
+@keyframes glitch1 {
+  0%, 90%, 100% {
+    transform: translate(2px, 0);
+    opacity: 0.3;
+  }
+  92% {
+    transform: translate(4px, -1px);
+    opacity: 0.6;
+  }
+  94% {
+    transform: translate(-2px, 1px);
+    opacity: 0.2;
+  }
+}
+
+@keyframes glitch2 {
+  0%, 88%, 100% {
+    transform: translate(-2px, 0);
+    opacity: 0.3;
+  }
+  90% {
+    transform: translate(-4px, 1px);
+    opacity: 0.6;
+  }
+  92% {
+    transform: translate(2px, -1px);
+    opacity: 0.2;
   }
 }
 
