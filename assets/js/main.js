@@ -13,9 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // Copy code buttons
   initCopyCode();
   
+  // Hero title glitch effect
+  initHeroGlitch();
+  
 });
 
-// Theme Toggle
+// ========== THEME TOGGLE ==========
 function initThemeToggle() {
   const themeToggle = document.getElementById('theme-toggle');
   const html = document.documentElement;
@@ -63,7 +66,45 @@ function updateThemeIcon(theme) {
   }
 }
 
-// Search functionality
+// ========== HERO GLITCH EFFECT ==========
+function initHeroGlitch() {
+  const title = document.querySelector('.hero-title');
+  if (!title) return;
+
+  // Random glitch trigger
+  function triggerRandomGlitch() {
+    // Only glitch if not hovering (hover has its own animation)
+    if (!title.matches(':hover')) {
+      title.classList.add('glitching');
+      
+      // Random duration between 100-400ms
+      const duration = Math.random() * 300 + 100;
+      
+      setTimeout(() => {
+        title.classList.remove('glitching');
+      }, duration);
+    }
+    
+    // Schedule next glitch (random interval between 2-7 seconds)
+    const nextGlitch = Math.random() * 5000 + 2000;
+    setTimeout(triggerRandomGlitch, nextGlitch);
+  }
+
+  // Start the random glitch loop after initial delay
+  setTimeout(triggerRandomGlitch, 3000);
+  
+  // Add intense class on hover for CSS to pick up
+  title.addEventListener('mouseenter', () => {
+    title.classList.add('intense');
+    title.classList.remove('glitching');
+  });
+  
+  title.addEventListener('mouseleave', () => {
+    title.classList.remove('intense');
+  });
+}
+
+// ========== SEARCH ==========
 function initSearch() {
   const searchToggle = document.getElementById('search-toggle');
   const searchOverlay = document.getElementById('search-overlay');
@@ -160,7 +201,7 @@ function initSearch() {
   }
 }
 
-// Table of Contents
+// ========== TABLE OF CONTENTS ==========
 function initTOC() {
   const toc = document.getElementById('toc');
   if (!toc) return;
@@ -233,7 +274,7 @@ function initTOC() {
   headings.forEach(heading => observer.observe(heading));
 }
 
-// Copy code functionality
+// ========== COPY CODE ==========
 function initCopyCode() {
   const codeBlocks = document.querySelectorAll('pre code');
   
