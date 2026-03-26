@@ -27,11 +27,14 @@ layout: default
                         <polyline points="12 6 12 12 16 14"></polyline>
                     </svg>
                     {% assign words = page.content | number_of_words %}
-                    {% if words < 360 %}
-                        1 min read
-                    {% else %}
-                        {{ words | divided_by: 180 }} mins read
-                    {% endif %}
+                    {% assign minutes = words | divided_by: 180.0 | ceil %}
+
+                    <span class="stat">
+                        {% if minutes <= 1 %}
+                            1 min read
+                        {% else %}
+                            {{ minutes }} mins read
+                        {% endif %}
                 </span>
                 {% if page.tags %}
                 <span class="stat">
