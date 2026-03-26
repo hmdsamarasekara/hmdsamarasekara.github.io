@@ -333,88 +333,72 @@ a {
 .hero-title {
   position: relative;
   display: inline-block;
-
   font-size: 3rem;
   font-weight: 800;
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: -1px;
-
   color: #00ffb4;
+  
+  /* Base subtle glow */
+  text-shadow: 0 0 10px rgba(0, 255, 180, 0.3);
 }
 
-/* Base glitch layers */
+/* Glitch layers using your data-text attribute */
 .hero-title::before,
 .hero-title::after {
   content: attr(data-text);
   position: absolute;
+  top: 0;
   left: 0;
   width: 100%;
-  overflow: hidden;
+  height: 100%;
+  background: var(--bg-primary, #0a0a0a); /* Matches your dark theme */
 }
 
-/* Cyan layer */
+/* Cyan layer - shifted left */
 .hero-title::before {
-  color: #00d9ff;
-  z-index: -1;
+  left: -2px;
+  text-shadow: 2px 0 #00d9ff;
+  clip-path: inset(0 0 0 0);
+  animation: glitch-1 3s infinite linear alternate-reverse;
 }
 
-/* Magenta layer */
+/* Magenta layer - shifted right */
 .hero-title::after {
-  color: #ff00c8;
-  z-index: -2;
+  left: 2px;
+  text-shadow: -2px 0 #ff00c8;
+  clip-path: inset(0 0 0 0);
+  animation: glitch-2 2s infinite linear alternate-reverse;
 }
 
-/* ACTIVE glitch state (this is key) */
-.hero-title.glitch-active::before {
-  animation: glitchSliceTop 0.15s infinite;
+/* Random slicing animations */
+@keyframes glitch-1 {
+  0%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
+  20% { clip-path: inset(20% 0 60% 0); transform: translate(-3px, 2px); }
+  40% { clip-path: inset(40% 0 40% 0); transform: translate(3px, -1px); }
+  60% { clip-path: inset(80% 0 5% 0); transform: translate(-2px, 0); }
+  80% { clip-path: inset(10% 0 70% 0); transform: translate(2px, 1px); }
 }
 
-.hero-title.glitch-active::after {
-  animation: glitchSliceBottom 0.15s infinite;
+@keyframes glitch-2 {
+  0%, 100% { clip-path: inset(0 0 0 0); transform: translate(0); }
+  15% { clip-path: inset(60% 0 20% 0); transform: translate(2px, -2px); }
+  35% { clip-path: inset(30% 0 50% 0); transform: translate(-3px, 1px); }
+  55% { clip-path: inset(70% 0 10% 0); transform: translate(3px, 0); }
+  75% { clip-path: inset(5% 0 80% 0); transform: translate(-2px, -1px); }
 }
 
-.hero-title.glitch-active {
-  animation: glitchJitter 0.1s infinite;
+/* Occasional heavy glitch burst */
+.hero-title {
+  animation: text-flicker 4s infinite;
 }
 
-/* Horizontal slicing */
-@keyframes glitchSliceTop {
-  0% {
-    clip-path: inset(0 0 70% 0);
-    transform: translate(-6px, -2px);
-  }
-  50% {
-    clip-path: inset(0 0 50% 0);
-    transform: translate(6px, 2px);
-  }
-  100% {
-    clip-path: inset(0 0 80% 0);
-    transform: translate(-3px, 1px);
-  }
-}
-
-@keyframes glitchSliceBottom {
-  0% {
-    clip-path: inset(70% 0 0 0);
-    transform: translate(6px, 2px);
-  }
-  50% {
-    clip-path: inset(60% 0 0 0);
-    transform: translate(-6px, -2px);
-  }
-  100% {
-    clip-path: inset(80% 0 0 0);
-    transform: translate(3px, -1px);
-  }
-}
-
-/* Jitter (whole text shake) */
-@keyframes glitchJitter {
-  0% { transform: translate(0); }
-  25% { transform: translate(-2px, 1px); }
-  50% { transform: translate(2px, -1px); }
-  75% { transform: translate(-1px, -1px); }
-  100% { transform: translate(1px, 1px); }
+@keyframes text-flicker {
+  0%, 90%, 100% { opacity: 1; }
+  92% { opacity: 0.8; }
+  94% { opacity: 1; }
+  96% { opacity: 0.9; }
+  98% { opacity: 1; }
 }
 
 .hero-subtitle {
