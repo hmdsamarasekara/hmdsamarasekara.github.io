@@ -1181,57 +1181,25 @@ a {
 }
 
 // ============================================
-// FIXED FOOTER STYLES - Better Alignment & 2x2 Contact Grid
+// 3-COLUMN FOOTER - Weather | Clocks | Contacts
 // ============================================
 
-// Logo with glow effect
-.footer-logo-img {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--accent-cyan);
-  box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
-  transition: all 0.3s ease;
-  
-  &:hover {
-    transform: rotate(15deg) scale(1.1);
-    box-shadow: 0 0 25px rgba(0, 212, 255, 0.6);
-  }
-}
-
-// Station Info Container - Weather Left, Clocks Right
-.footer-station-info {
+// 3-Column Grid Layout
+.footer-content {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
   align-items: start;
   
   @media (max-width: 968px) {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 }
 
-// Section Title Style (WX Report / Station Clocks)
-.section-title {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--accent-cyan);
-  margin-bottom: 0.75rem;
-  font-weight: 700;
-  
-  svg {
-    color: var(--accent-orange);
-  }
-}
-
-// Weather Section (Left Side)
-.footer-weather-section {
+// Section Base Styles
+.footer-section {
   background: var(--bg-tertiary);
   border: 1px solid var(--border-color);
   border-radius: 0.75rem;
@@ -1251,6 +1219,23 @@ a {
   }
 }
 
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent-cyan);
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  
+  svg {
+    color: var(--accent-orange);
+  }
+}
+
+// Weather Section
 .weather-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1261,11 +1246,9 @@ a {
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
-  padding: 0.875rem 0.5rem;
+  padding: 0.75rem 0.5rem;
   text-align: center;
   transition: all 0.3s ease;
-  position: relative;
-  min-width: 0; // Prevent overflow
   
   &:hover {
     transform: translateY(-3px);
@@ -1295,11 +1278,6 @@ a {
 .weather-icon {
   margin: 0.25rem 0;
   filter: drop-shadow(0 0 8px rgba(255, 107, 53, 0.3));
-  
-  svg {
-    max-width: 100%;
-    height: auto;
-  }
 }
 
 .weather-details {
@@ -1328,10 +1306,10 @@ a {
 .weather-meta {
   display: flex;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 0.5rem;
   padding-top: 0.5rem;
   border-top: 1px solid var(--border-color);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   color: var(--text-muted);
   
   .weather-wind, .weather-humidity {
@@ -1352,27 +1330,7 @@ a {
   }
 }
 
-// Clocks Section (Right Side)
-.footer-clocks-section {
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border-color);
-  border-radius: 0.75rem;
-  padding: 1rem;
-  position: relative;
-  overflow: hidden;
-  min-width: 0; // Prevent overflow
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-orange), var(--accent-cyan));
-  }
-}
-
+// Clocks Section - FIXED
 .clock-list {
   display: flex;
   flex-direction: column;
@@ -1389,6 +1347,7 @@ a {
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   transition: all 0.2s ease;
+  min-width: 0; // Prevent overflow
   
   &:hover {
     border-color: var(--accent-cyan);
@@ -1400,12 +1359,7 @@ a {
     color: var(--text-secondary);
     font-weight: 500;
     white-space: nowrap;
-  }
-  
-  .clock-display {
-    display: flex;
-    align-items: baseline;
-    gap: 0.5rem;
+    flex-shrink: 0;
   }
   
   .clock-time {
@@ -1415,6 +1369,7 @@ a {
     color: var(--accent-orange);
     text-shadow: 0 0 8px rgba(255, 107, 53, 0.3);
     letter-spacing: 1px;
+    flex-shrink: 0;
   }
   
   .clock-date {
@@ -1423,28 +1378,11 @@ a {
     font-family: var(--font-mono);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    flex-shrink: 0;
   }
 }
 
-// Contact Section with 2x2 Grid
-.footer-contact-section {
-  h4 {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--accent-cyan);
-    margin-bottom: 1rem;
-    font-weight: 700;
-    
-    svg {
-      color: var(--accent-orange);
-    }
-  }
-}
-
+// Contact Section
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1455,15 +1393,15 @@ a {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.875rem;
-  background: var(--bg-tertiary);
+  padding: 0.75rem;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  min-width: 0; // Prevent overflow
+  min-width: 0;
   
   &::before {
     content: '';
@@ -1499,12 +1437,8 @@ a {
     
     .contact-value {
       color: var(--accent-cyan);
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 700;
-    }
-    
-    &:hover {
-      box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
     }
   }
   
@@ -1518,27 +1452,27 @@ a {
     
     .satnogs-status {
       position: absolute;
-      top: 0.5rem;
-      right: 0.5rem;
+      top: 0.4rem;
+      right: 0.4rem;
       display: flex;
       align-items: center;
-      gap: 0.35rem;
-      padding: 0.2rem 0.5rem;
+      gap: 0.3rem;
+      padding: 0.15rem 0.4rem;
       background: rgba(0, 212, 255, 0.1);
       border-radius: 1rem;
       border: 1px solid var(--accent-cyan);
       
       .status-dot {
-        width: 6px;
-        height: 6px;
+        width: 5px;
+        height: 5px;
         background: #00ff88;
         border-radius: 50%;
-        box-shadow: 0 0 6px #00ff88;
+        box-shadow: 0 0 5px #00ff88;
         animation: pulse 2s infinite;
       }
       
       .status-text {
-        font-size: 0.65rem;
+        font-size: 0.6rem;
         color: var(--accent-cyan);
         font-weight: 600;
         text-transform: uppercase;
@@ -1554,12 +1488,12 @@ a {
 }
 
 .contact-icon {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-secondary);
+  background: var(--bg-tertiary);
   border: 1px solid var(--border-color);
   border-radius: 0.5rem;
   color: var(--text-secondary);
@@ -1567,26 +1501,26 @@ a {
   flex-shrink: 0;
   
   svg {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 0.15rem;
-  min-width: 0; // Prevent overflow
+  gap: 0.1rem;
+  min-width: 0;
   
   .contact-label {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
   
   .contact-value {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--text-primary);
     font-weight: 600;
     font-family: var(--font-mono);
@@ -1596,60 +1530,26 @@ a {
   }
 }
 
-// Footer Content Grid Adjustment
-.footer-content {
-  display: grid;
-  grid-template-columns: 1.5fr 0.8fr 1fr;
-  gap: 2rem;
-  margin-bottom: 2rem;
-  align-items: start;
-  
-  @media (max-width: 968px) {
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-// Responsive adjustments
+// Responsive
 @media (max-width: 968px) {
-  .footer-station-info {
-    grid-template-columns: 1fr;
-  }
-  
-  .weather-cards {
-    grid-template-columns: 1fr 1fr;
-  }
-  
-  .contact-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 768px) {
   .footer-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
   
   .weather-cards {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   
   .contact-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .contact-card.satnogs .satnogs-status {
-    position: static;
-    margin-left: auto;
-    margin-top: 0;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 480px) {
+  .weather-cards {
+    grid-template-columns: 1fr;
+  }
+  
   .contact-grid {
     grid-template-columns: 1fr;
   }
@@ -1658,5 +1558,10 @@ a {
     .clock-date {
       display: none;
     }
+  }
+  
+  .contact-card.satnogs .satnogs-status {
+    position: static;
+    margin-left: auto;
   }
 }
