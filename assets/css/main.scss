@@ -9,23 +9,23 @@
   --bg-secondary: #12121a;
   --bg-tertiary: #1a1a25;
   --bg-card: #151520;
-  
+
   --text-primary: #e0e0ff;
   --text-secondary: #9090b0;
   --text-muted: #606080;
-  
+
   --accent-cyan: #00d4ff;
   --accent-cyan-dim: #00a8cc;
   --accent-orange: #ff6b35;
   --accent-orange-dim: #cc5529;
-  
+
   --border-color: #2a2a3a;
   --grid-color: rgba(0, 212, 255, 0.05);
-  
+
   // Typography
   --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  
+
   // Spacing
   --container-width: 1200px;
   --container-padding: 2rem;
@@ -37,11 +37,11 @@
   --bg-secondary: #ffffff;
   --bg-tertiary: #e8e8f0;
   --bg-card: #ffffff;
-  
+
   --text-primary: #1a1a2e;
   --text-secondary: #4a4a6a;
   --text-muted: #7a7a9a;
-  
+
   --border-color: #d0d0e0;
   --grid-color: rgba(0, 212, 255, 0.03);
 }
@@ -112,7 +112,7 @@ a {
   color: var(--accent-cyan);
   text-decoration: none;
   transition: color 0.2s ease;
-  
+
   &:hover {
     color: var(--accent-orange);
   }
@@ -133,7 +133,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  
+
   .header-content {
     display: flex;
     align-items: center;
@@ -153,11 +153,11 @@ a {
   font-weight: 700;
   font-size: 1.25rem;
   color: #00d4ff;
-  
+
   .brand-icon {
     font-size: 1.5rem;
   }
-  
+
   &:hover {
     color: var(--accent-cyan);
   }
@@ -167,13 +167,13 @@ a {
   display: flex;
   align-items: center;
   gap: 2rem;
-  
+
   a {
     color: var(--text-secondary);
     font-weight: 500;
     font-size: 0.95rem;
     position: relative;
-    
+
     &::after {
       content: '';
       position: absolute;
@@ -184,10 +184,10 @@ a {
       background: var(--accent-cyan);
       transition: width 0.3s ease;
     }
-    
+
     &:hover {
       color: var(--text-primary);
-      
+
       &::after {
         width: 100%;
       }
@@ -210,7 +210,7 @@ a {
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.2s ease;
-  
+
   &:hover {
     border-color: var(--accent-cyan);
     color: var(--accent-cyan);
@@ -226,7 +226,7 @@ a {
   border-radius: 0.5rem;
   cursor: pointer;
   transition: all 0.2s ease;
-  
+
   &:hover {
     border-color: var(--accent-cyan);
     color: var(--accent-cyan);
@@ -246,7 +246,7 @@ a {
   align-items: flex-start;
   justify-content: center;
   padding-top: 10vh;
-  
+
   &.active {
     display: flex;
   }
@@ -255,7 +255,7 @@ a {
 .search-container {
   width: 90%;
   max-width: 600px;
-  
+
   input {
     width: 100%;
     padding: 1rem 1.5rem;
@@ -265,12 +265,12 @@ a {
     border-radius: 0.5rem;
     color: var(--text-primary);
     font-family: var(--font-mono);
-    
+
     &:focus {
       outline: none;
       border-color: var(--accent-cyan);
     }
-    
+
     &::placeholder {
       color: var(--text-muted);
     }
@@ -281,7 +281,7 @@ a {
   margin-top: 1rem;
   max-height: 60vh;
   overflow-y: auto;
-  
+
   .result-item {
     padding: 1rem;
     background: var(--bg-card);
@@ -290,17 +290,17 @@ a {
     margin-bottom: 0.5rem;
     cursor: pointer;
     transition: all 0.2s ease;
-    
+
     &:hover {
       border-color: var(--accent-cyan);
       transform: translateX(5px);
     }
-    
+
     h4 {
       margin-bottom: 0.25rem;
       color: var(--accent-cyan);
     }
-    
+
     p {
       color: var(--text-secondary);
       font-size: 0.9rem;
@@ -323,7 +323,7 @@ a {
 
 .hero-icon {
   margin-bottom: 1.5rem;
-  
+
   .site-logo-img {
     max-width: 200px;
     height: auto;
@@ -572,7 +572,7 @@ a {
   align-items: center;
   gap: 0.5rem;
   margin: 0;
-  
+
   .title-icon {
     font-size: 1.25rem;
   }
@@ -581,7 +581,7 @@ a {
 .view-all {
   font-size: 0.9rem;
   color: var(--accent-cyan);
-  
+
   &:hover {
     color: var(--accent-orange);
   }
@@ -602,7 +602,7 @@ a {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -614,12 +614,12 @@ a {
     transform: scaleX(0);
     transition: transform 0.3s ease;
   }
-  
+
   &:hover {
     transform: translateY(-5px);
     border-color: var(--accent-cyan);
     box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
-    
+
     &::before {
       transform: scaleX(1);
     }
@@ -654,10 +654,10 @@ a {
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
   line-height: 1.3;
-  
+
   a {
     color: var(--text-primary);
-    
+
     &:hover {
       color: var(--accent-cyan);
     }
@@ -685,7 +685,7 @@ a {
   gap: 0.5rem;
   color: var(--text-muted);
   font-size: 0.85rem;
-  
+
   svg {
     opacity: 0.7;
   }
@@ -695,7 +695,7 @@ a {
   color: var(--accent-orange);
   font-weight: 600;
   font-size: 0.9rem;
-  
+
   &:hover {
     color: var(--accent-cyan);
   }
@@ -743,7 +743,7 @@ a {
 .post-stats {
   display: flex;
   gap: 1.5rem;
-  
+
   .stat {
     display: flex;
     align-items: center;
@@ -762,7 +762,7 @@ a {
 .post-content {
   font-size: 1.1rem;
   line-height: 1.8;
-  
+
   h2 {
     margin-top: 2.5rem;
     margin-bottom: 1rem;
@@ -770,16 +770,16 @@ a {
     border-bottom: 1px solid var(--border-color);
     color: var(--accent-cyan);
   }
-  
+
   h3 {
     margin-top: 2rem;
     color: var(--text-primary);
   }
-  
+
   p {
     margin-bottom: 1.5rem;
   }
-  
+
   code {
     background: var(--bg-tertiary);
     padding: 0.2rem 0.5rem;
@@ -788,7 +788,7 @@ a {
     font-size: 0.9em;
     color: var(--accent-orange);
   }
-  
+
   pre {
     background: var(--bg-secondary);
     border: 1px solid var(--border-color);
@@ -797,7 +797,7 @@ a {
     overflow-x: auto;
     margin: 1.5rem 0;
     position: relative;
-    
+
     code {
       background: none;
       padding: 0;
@@ -805,7 +805,7 @@ a {
       font-size: 0.9rem;
       line-height: 1.6;
     }
-    
+
     .copy-code-btn {
       position: absolute;
       top: 0.5rem;
@@ -819,18 +819,18 @@ a {
       cursor: pointer;
       opacity: 0;
       transition: opacity 0.2s ease;
-      
+
       &:hover {
         border-color: var(--accent-cyan);
         color: var(--accent-cyan);
       }
     }
-    
+
     &:hover .copy-code-btn {
       opacity: 1;
     }
   }
-  
+
   img {
     max-width: 100%;
     height: auto;
@@ -838,7 +838,7 @@ a {
     margin: 1.5rem 0;
     border: 1px solid var(--border-color);
   }
-  
+
   blockquote {
     border-left: 4px solid var(--accent-cyan);
     padding-left: 1.5rem;
@@ -846,33 +846,33 @@ a {
     color: var(--text-secondary);
     font-style: italic;
   }
-  
+
   ul, ol {
     margin: 1.5rem 0;
     padding-left: 2rem;
-    
+
     li {
       margin-bottom: 0.5rem;
     }
   }
-  
+
   table {
     width: 100%;
     border-collapse: collapse;
     margin: 1.5rem 0;
-    
+
     th, td {
       padding: 0.75rem;
       border: 1px solid var(--border-color);
       text-align: left;
     }
-    
+
     th {
       background: var(--bg-secondary);
       font-weight: 600;
       color: var(--accent-cyan);
     }
-    
+
     tr:nth-child(even) {
       background: var(--bg-tertiary);
     }
@@ -883,12 +883,12 @@ a {
   margin-top: 2rem;
   padding-top: 2rem;
   border-top: 1px solid var(--border-color);
-  
+
   .tags-label {
     color: var(--text-muted);
     margin-right: 0.5rem;
   }
-  
+
   .tag {
     display: inline-block;
     background: var(--bg-tertiary);
@@ -899,7 +899,7 @@ a {
     margin-right: 0.5rem;
     margin-bottom: 0.5rem;
     border: 1px solid var(--border-color);
-    
+
     &:hover {
       border-color: var(--accent-cyan);
       color: var(--accent-cyan);
@@ -912,11 +912,11 @@ a {
   display: flex;
   align-items: center;
   gap: 1rem;
-  
+
   .share-label {
     color: var(--text-muted);
   }
-  
+
   .share-btn {
     width: 40px;
     height: 40px;
@@ -928,19 +928,19 @@ a {
     justify-content: center;
     color: var(--text-secondary);
     transition: all 0.2s ease;
-    
+
     &:hover {
       transform: translateY(-3px);
       border-color: var(--accent-cyan);
       color: var(--accent-cyan);
     }
-    
+
     &.twitter:hover {
       background: #1da1f2;
       color: white;
       border-color: #1da1f2;
     }
-    
+
     &.reddit:hover {
       background: #ff4500;
       color: white;
@@ -957,7 +957,7 @@ a {
     border-radius: 0.75rem;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    
+
     h3 {
       font-size: 1rem;
       margin-bottom: 1rem;
@@ -970,29 +970,29 @@ a {
 
 #toc {
   font-size: 0.9rem;
-  
+
   ul {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  
+
   li {
     margin-bottom: 0.5rem;
-    
+
     a {
       color: var(--text-secondary);
       display: block;
       padding: 0.25rem 0;
       border-left: 2px solid transparent;
       padding-left: 0.75rem;
-      
+
       &:hover, &.active {
         color: var(--accent-cyan);
         border-left-color: var(--accent-cyan);
       }
     }
-    
+
     ul {
       margin-top: 0.5rem;
       margin-left: 1rem;
@@ -1003,29 +1003,29 @@ a {
 .related-posts {
   list-style: none;
   padding: 0;
-  
+
   li {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--border-color);
-    
+
     &:last-child {
       border-bottom: none;
       margin-bottom: 0;
       padding-bottom: 0;
     }
-    
+
     a {
       display: block;
       color: var(--text-primary);
       font-weight: 500;
       margin-bottom: 0.25rem;
-      
+
       &:hover {
         color: var(--accent-cyan);
       }
     }
-    
+
     time {
       font-size: 0.8rem;
       color: var(--text-muted);
@@ -1040,13 +1040,13 @@ a {
   border-top: 1px solid var(--border-color);
   padding: 2rem 0;
   margin-top: 3rem;
-  
+
   .container {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
   }
-  
+
   a {
     display: flex;
     flex-direction: column;
@@ -1054,11 +1054,11 @@ a {
     padding: 1rem;
     border-radius: 0.5rem;
     transition: all 0.2s ease;
-    
+
     &:hover {
       background: var(--bg-tertiary);
     }
-    
+
     .nav-label {
       font-size: 0.8rem;
       color: var(--text-muted);
@@ -1066,13 +1066,13 @@ a {
       letter-spacing: 1px;
       margin-bottom: 0.25rem;
     }
-    
+
     .nav-title {
       color: var(--text-primary);
       font-weight: 600;
     }
   }
-  
+
   .post-nav-next {
     text-align: right;
     margin-left: auto;
@@ -1087,58 +1087,370 @@ a {
   margin-top: 4rem;
 }
 
+// ============================================
+// 3-COLUMN FOOTER - Weather | Clocks | Contacts
+// ============================================
+
+// 3-Column Grid Layout - Adjusted column widths
 .footer-content {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1.5rem;
   margin-bottom: 2rem;
+  align-items: start;
+
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
-.footer-brand {
-  .footer-logo {
+// Section Base Styles
+.footer-section {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-orange));
+  }
+}
+
+// Centered section titles
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent-cyan);
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  text-align: center;
+
+  svg {
+    color: var(--accent-orange);
+  }
+}
+
+// Weather Section - unchanged as it was perfect
+.weather-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.weather-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent-cyan);
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.15);
+  }
+}
+
+.weather-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+
+  .weather-flag {
+    font-size: 1rem;
+  }
+
+  .weather-location {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+}
+
+.weather-icon {
+  margin: 0.25rem 0;
+  filter: drop-shadow(0 0 8px rgba(255, 107, 53, 0.3));
+}
+
+.weather-details {
+  .weather-temp {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-cyan);
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+    margin-bottom: 0.15rem;
+  }
+
+  .weather-desc {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.weather-meta {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-color);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+
+  .weather-wind, .weather-humidity {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-  }
-  
-  p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.6;
+    gap: 0.2rem;
+
+    svg {
+      color: var(--accent-orange);
+      width: 10px;
+      height: 10px;
+    }
+
+    span {
+      color: var(--accent-cyan);
+      font-weight: 600;
+    }
   }
 }
 
-.footer-section {
-  h4 {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--accent-cyan);
-    margin-bottom: 1rem;
+// Clocks Section - Compact width
+.footer-clocks-section {
+  width: fit-content;
+  min-width: 220px;
+  max-width: 260px;
+}
+
+.clock-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.clock-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+
+  &:hover {
+    border-color: var(--accent-cyan);
+    background: rgba(0, 212, 255, 0.05);
   }
-  
-  ul {
-    list-style: none;
-    
-    li {
-      margin-bottom: 0.5rem;
-      
-      a {
-        color: var(--text-secondary);
-        font-size: 0.9rem;
-        
-        &:hover {
-          color: var(--accent-cyan);
-        }
+
+  .clock-name {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+
+  .clock-time {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent-orange);
+    text-shadow: 0 0 8px rgba(255, 107, 53, 0.3);
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  }
+
+  .clock-date {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
+  }
+}
+
+// Contact Section - Wider to show all details
+.footer-contact-section {
+  min-width: 280px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--accent-cyan);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    border-color: var(--accent-cyan);
+    background: rgba(0, 212, 255, 0.08);
+    transform: translateX(3px);
+
+    &::before {
+      transform: scaleY(1);
+    }
+
+    .contact-icon {
+      background: var(--accent-cyan);
+      color: var(--bg-primary);
+      transform: rotate(10deg) scale(1.1);
+    }
+  }
+
+  &.primary {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(255, 107, 53, 0.1));
+    border-color: var(--accent-cyan);
+
+    .contact-value {
+      color: var(--accent-cyan);
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+  }
+
+  &.satnogs {
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 212, 255, 0.05));
+
+    .contact-icon {
+      background: rgba(0, 212, 255, 0.2);
+      color: var(--accent-cyan);
+    }
+
+    .satnogs-status {
+      position: absolute;
+      top: 0.4rem;
+      right: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.15rem 0.4rem;
+      background: rgba(0, 212, 255, 0.1);
+      border-radius: 1rem;
+      border: 1px solid var(--accent-cyan);
+
+      .status-dot {
+        width: 5px;
+        height: 5px;
+        background: #00ff88;
+        border-radius: 50%;
+        box-shadow: 0 0 5px #00ff88;
+        animation: pulse 2s infinite;
+      }
+
+      .status-text {
+        font-size: 0.6rem;
+        color: var(--accent-cyan);
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
       }
     }
   }
 }
 
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.contact-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+  overflow: hidden;
+
+  .contact-label {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .contact-value {
+    font-size: 0.8rem;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-family: var(--font-mono);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+// Footer bottom
 .footer-bottom {
   border-top: 1px solid var(--border-color);
   padding-top: 2rem;
@@ -1169,364 +1481,14 @@ a {
 .posts-list-header {
   text-align: center;
   margin-bottom: 3rem;
-  
+
   h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
   }
-  
+
   p {
     color: var(--text-secondary);
-  }
-}
-
-// ============================================
-// 3-COLUMN FOOTER - Weather | Clocks | Contacts
-// ============================================
-
-// 3-Column Grid Layout
-.footer-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  align-items: start;
-  
-  @media (max-width: 968px) {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-}
-
-// Section Base Styles
-.footer-section {
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border-color);
-  border-radius: 0.75rem;
-  padding: 1rem;
-  position: relative;
-  overflow: hidden;
-  min-width: 0; // Prevent overflow
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-cyan), var(--accent-orange));
-  }
-}
-
-.section-title {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--accent-cyan);
-  margin-bottom: 0.75rem;
-  font-weight: 700;
-  
-  svg {
-    color: var(--accent-orange);
-  }
-}
-
-// Weather Section
-.weather-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
-}
-
-.weather-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 0.5rem;
-  padding: 0.75rem 0.5rem;
-  text-align: center;
-  transition: all 0.3s ease;
-  
-  &:hover {
-    transform: translateY(-3px);
-    border-color: var(--accent-cyan);
-    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.15);
-  }
-}
-
-.weather-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-  margin-bottom: 0.5rem;
-  
-  .weather-flag {
-    font-size: 1rem;
-  }
-  
-  .weather-location {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--text-primary);
-  }
-}
-
-.weather-icon {
-  margin: 0.25rem 0;
-  filter: drop-shadow(0 0 8px rgba(255, 107, 53, 0.3));
-}
-
-.weather-details {
-  .weather-temp {
-    display: block;
-    font-family: var(--font-mono);
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--accent-cyan);
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
-    margin-bottom: 0.15rem;
-  }
-  
-  .weather-desc {
-    display: block;
-    font-size: 0.7rem;
-    color: var(--text-secondary);
-    margin-bottom: 0.5rem;
-    font-style: italic;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-.weather-meta {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  padding-top: 0.5rem;
-  border-top: 1px solid var(--border-color);
-  font-size: 0.65rem;
-  color: var(--text-muted);
-  
-  .weather-wind, .weather-humidity {
-    display: flex;
-    align-items: center;
-    gap: 0.2rem;
-    
-    svg {
-      color: var(--accent-orange);
-      width: 10px;
-      height: 10px;
-    }
-    
-    span {
-      color: var(--accent-cyan);
-      font-weight: 600;
-    }
-  }
-}
-
-// Clocks Section - FIXED
-.clock-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.clock-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  padding: 0.625rem 0.75rem;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 0.5rem;
-  transition: all 0.2s ease;
-  min-width: 0; // Prevent overflow
-  
-  &:hover {
-    border-color: var(--accent-cyan);
-    background: rgba(0, 212, 255, 0.05);
-  }
-  
-  .clock-name {
-    font-size: 0.75rem;
-    color: var(--text-secondary);
-    font-weight: 500;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-  
-  .clock-time {
-    font-family: var(--font-mono);
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--accent-orange);
-    text-shadow: 0 0 8px rgba(255, 107, 53, 0.3);
-    letter-spacing: 1px;
-    flex-shrink: 0;
-  }
-  
-  .clock-date {
-    font-size: 0.65rem;
-    color: var(--text-muted);
-    font-family: var(--font-mono);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    flex-shrink: 0;
-  }
-}
-
-// Contact Section
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
-}
-
-.contact-card {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0.75rem;
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  min-width: 0;
-  
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 3px;
-    height: 100%;
-    background: var(--accent-cyan);
-    transform: scaleY(0);
-    transition: transform 0.3s ease;
-  }
-  
-  &:hover {
-    border-color: var(--accent-cyan);
-    background: rgba(0, 212, 255, 0.08);
-    transform: translateX(3px);
-    
-    &::before {
-      transform: scaleY(1);
-    }
-    
-    .contact-icon {
-      background: var(--accent-cyan);
-      color: var(--bg-primary);
-      transform: rotate(10deg) scale(1.1);
-    }
-  }
-  
-  &.primary {
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(255, 107, 53, 0.1));
-    border-color: var(--accent-cyan);
-    
-    .contact-value {
-      color: var(--accent-cyan);
-      font-size: 0.95rem;
-      font-weight: 700;
-    }
-  }
-  
-  &.satnogs {
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 212, 255, 0.05));
-    
-    .contact-icon {
-      background: rgba(0, 212, 255, 0.2);
-      color: var(--accent-cyan);
-    }
-    
-    .satnogs-status {
-      position: absolute;
-      top: 0.4rem;
-      right: 0.4rem;
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-      padding: 0.15rem 0.4rem;
-      background: rgba(0, 212, 255, 0.1);
-      border-radius: 1rem;
-      border: 1px solid var(--accent-cyan);
-      
-      .status-dot {
-        width: 5px;
-        height: 5px;
-        background: #00ff88;
-        border-radius: 50%;
-        box-shadow: 0 0 5px #00ff88;
-        animation: pulse 2s infinite;
-      }
-      
-      .status-text {
-        font-size: 0.6rem;
-        color: var(--accent-cyan);
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-    }
-  }
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
-}
-
-.contact-icon {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border-color);
-  border-radius: 0.5rem;
-  color: var(--text-secondary);
-  transition: all 0.3s ease;
-  flex-shrink: 0;
-  
-  svg {
-    width: 16px;
-    height: 16px;
-  }
-}
-
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-  min-width: 0;
-  
-  .contact-label {
-    font-size: 0.6rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
-  
-  .contact-value {
-    font-size: 0.8rem;
-    color: var(--text-primary);
-    font-weight: 600;
-    font-family: var(--font-mono);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 }
 
@@ -1534,12 +1496,23 @@ a {
 @media (max-width: 968px) {
   .footer-content {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-  
+
+  .footer-clocks-section {
+    width: 100%;
+    max-width: 100%;
+    min-width: unset;
+  }
+
+  .footer-contact-section {
+    min-width: unset;
+  }
+
   .weather-cards {
     grid-template-columns: 1fr 1fr;
   }
-  
+
   .contact-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1549,17 +1522,17 @@ a {
   .weather-cards {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .clock-row {
     .clock-date {
       display: none;
     }
   }
-  
+
   .contact-card.satnogs .satnogs-status {
     position: static;
     margin-left: auto;
