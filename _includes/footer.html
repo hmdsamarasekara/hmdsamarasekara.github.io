@@ -3,10 +3,56 @@
     <div class="footer-content">
       <div class="footer-brand">
         <div class="footer-logo">
-          <span>📻</span>
+          <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Noise Floor Nomad" class="footer-logo-img">
           <span>Noise Floor Nomad</span>
         </div>
         <p>Documenting practical ham radio, SDR, and satellite reception experiments from imperfect setups and real RF environments.</p>
+        
+        <!-- World Clocks -->
+        <div class="footer-clocks">
+          <h4 class="clocks-title">📡 Station Clocks</h4>
+          <div class="clock-grid">
+            <div class="clock-item">
+              <span class="clock-label">UTC</span>
+              <span class="clock-time" id="clock-utc">--:--</span>
+            </div>
+            <div class="clock-item">
+              <span class="clock-label">🇱🇰 Colombo</span>
+              <span class="clock-time" id="clock-lk">--:--</span>
+            </div>
+            <div class="clock-item">
+              <span class="clock-label">🇦🇪 Dubai</span>
+              <span class="clock-time" id="clock-uae">--:--</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Weather -->
+        <div class="footer-weather">
+          <h4 class="weather-title">🌤️ WX Report</h4>
+          <div class="weather-grid">
+            <div class="weather-item" id="weather-lk">
+              <span class="weather-location">🇱🇰 Sri Lanka</span>
+              <span class="weather-temp">--°C</span>
+              <span class="weather-desc">Loading...</span>
+            </div>
+            <div class="weather-item" id="weather-uae">
+              <span class="weather-location">🇦🇪 UAE</span>
+              <span class="weather-temp">--°C</span>
+              <span class="weather-desc">Loading...</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- SatNOGS -->
+        <div class="footer-satnogs">
+          <a href="https://network.satnogs.org/stations/2768/" target="_blank" rel="noopener" class="satnogs-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+            SatNOGS Station 2768
+          </a>
+        </div>
       </div>
       
       <div class="footer-section">
@@ -36,3 +82,94 @@
     </div>
   </div>
 </footer>
+
+<script>
+// World Clocks
+function updateClocks() {
+  const now = new Date();
+  
+  // UTC
+  const utc = now.toLocaleTimeString('en-US', { 
+    timeZone: 'UTC', 
+    hour: '2-digit', 
+    minute: '2-digit',
+    hour12: false 
+  });
+  document.getElementById('clock-utc').textContent = utc;
+  
+  // Sri Lanka (Colombo) - UTC+5:30
+  const lk = now.toLocaleTimeString('en-US', { 
+    timeZone: 'Asia/Colombo', 
+    hour: '2-digit', 
+    minute: '2-digit',
+    hour12: false 
+  });
+  document.getElementById('clock-lk').textContent = lk;
+  
+  // Dubai - UTC+4
+  const uae = now.toLocaleTimeString('en-US', { 
+    timeZone: 'Asia/Dubai', 
+    hour: '2-digit', 
+    minute: '2-digit',
+    hour12: false 
+  });
+  document.getElementById('clock-uae').textContent = uae;
+}
+
+updateClocks();
+setInterval(updateClocks, 1000);
+
+// Weather Fetch
+async function fetchWeather() {
+  try {
+    // Open-Meteo API (free, no key required)
+    // Sri Lanka - Colombo coordinates
+    const lkResponse = await fetch('https://api.open-meteo.com/v1/forecast?latitude=6.9271&longitude=79.8612&current_weather=true');
+    const lkData = await lkResponse.json();
+    
+    if (lkData.current_weather) {
+      document.querySelector('#weather-lk .weather-temp').textContent = Math.round(lkData.current_weather.temperature) + '°C';
+      document.querySelector('#weather-lk .weather-desc').textContent = getWeatherDesc(lkData.current_weather.weathercode);
+    }
+    
+    // UAE - Dubai coordinates
+    const uaeResponse = await fetch('https://api.open-meteo.com/v1/forecast?latitude=25.2048&longitude=55.2708&current_weather=true');
+    const uaeData = await uaeResponse.json();
+    
+    if (uaeData.current_weather) {
+      document.querySelector('#weather-uae .weather-temp').textContent = Math.round(uaeData.current_weather.temperature) + '°C';
+      document.querySelector('#weather-uae .weather-desc').textContent = getWeatherDesc(uaeData.current_weather.weathercode);
+    }
+  } catch (error) {
+    console.log('Weather fetch failed:', error);
+    document.querySelector('#weather-lk .weather-desc').textContent = 'Unavailable';
+    document.querySelector('#weather-uae .weather-desc').textContent = 'Unavailable';
+  }
+}
+
+function getWeatherDesc(code) {
+  const codes = {
+    0: 'Clear sky',
+    1: 'Mainly clear',
+    2: 'Partly cloudy',
+    3: 'Overcast',
+    45: 'Foggy',
+    48: 'Depositing rime fog',
+    51: 'Light drizzle',
+    53: 'Moderate drizzle',
+    55: 'Dense drizzle',
+    61: 'Slight rain',
+    63: 'Moderate rain',
+    65: 'Heavy rain',
+    71: 'Slight snow',
+    73: 'Moderate snow',
+    75: 'Heavy snow',
+    95: 'Thunderstorm'
+  };
+  return codes[code] || 'Unknown';
+}
+
+fetchWeather();
+// Refresh weather every 10 minutes
+setInterval(fetchWeather, 600000);
+</script>
