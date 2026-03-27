@@ -8,50 +8,203 @@
         </div>
         <p>Documenting practical ham radio, SDR, and satellite reception experiments from imperfect setups and real RF environments.</p>
         
-        <!-- World Clocks -->
-        <div class="footer-clocks">
-          <h4 class="clocks-title">📡 Station Clocks</h4>
-          <div class="clock-grid">
-            <div class="clock-item">
-              <span class="clock-label">UTC</span>
-              <span class="clock-time" id="clock-utc">--:--</span>
+        <!-- Weather & Clocks Side by Side -->
+        <div class="footer-station-info">
+          <!-- Weather on Left -->
+          <div class="footer-weather-section">
+            <h4 class="section-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="5"/>
+                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+              </svg>
+              WX Report
+            </h4>
+            
+            <div class="weather-cards">
+              <!-- Sri Lanka Weather -->
+              <div class="weather-card" id="weather-lk">
+                <div class="weather-header">
+                  <span class="weather-flag">🇱🇰</span>
+                  <span class="weather-location">Colombo</span>
+                </div>
+                <div class="weather-icon" id="icon-lk">
+                  <svg viewBox="0 0 64 64" width="48" height="48">
+                    <circle cx="32" cy="32" r="14" fill="#ff6b35"/>
+                    <g stroke="#ff6b35" stroke-width="3" stroke-linecap="round">
+                      <line x1="32" y1="4" x2="32" y2="12"/>
+                      <line x1="32" y1="52" x2="32" y2="60"/>
+                      <line x1="4" y1="32" x2="12" y2="32"/>
+                      <line x1="52" y1="32" x2="60" y2="32"/>
+                      <line x1="12.2" y1="12.2" x2="17.8" y2="17.8"/>
+                      <line x1="46.2" y1="46.2" x2="51.8" y2="51.8"/>
+                      <line x1="12.2" y1="51.8" x2="17.8" y2="46.2"/>
+                      <line x1="46.2" y1="17.8" x2="51.8" y2="12.2"/>
+                    </g>
+                  </svg>
+                </div>
+                <div class="weather-details">
+                  <span class="weather-temp">--°C</span>
+                  <span class="weather-desc">Loading...</span>
+                  <div class="weather-meta">
+                    <span class="weather-wind">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/>
+                      </svg>
+                      <span class="wind-val">--</span> km/h
+                    </span>
+                    <span class="weather-humidity">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                      </svg>
+                      <span class="humidity-val">--</span>%
+                    </span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- UAE Weather -->
+              <div class="weather-card" id="weather-uae">
+                <div class="weather-header">
+                  <span class="weather-flag">🇦🇪</span>
+                  <span class="weather-location">Dubai</span>
+                </div>
+                <div class="weather-icon" id="icon-uae">
+                  <svg viewBox="0 0 64 64" width="48" height="48">
+                    <circle cx="32" cy="32" r="14" fill="#ff6b35"/>
+                    <g stroke="#ff6b35" stroke-width="3" stroke-linecap="round">
+                      <line x1="32" y1="4" x2="32" y2="12"/>
+                      <line x1="32" y1="52" x2="32" y2="60"/>
+                      <line x1="4" y1="32" x2="12" y2="32"/>
+                      <line x1="52" y1="32" x2="60" y2="32"/>
+                      <line x1="12.2" y1="12.2" x2="17.8" y2="17.8"/>
+                      <line x1="46.2" y1="46.2" x2="51.8" y2="51.8"/>
+                      <line x1="12.2" y1="51.8" x2="17.8" y2="46.2"/>
+                      <line x1="46.2" y1="17.8" x2="51.8" y2="12.2"/>
+                    </g>
+                  </svg>
+                </div>
+                <div class="weather-details">
+                  <span class="weather-temp">--°C</span>
+                  <span class="weather-desc">Loading...</span>
+                  <div class="weather-meta">
+                    <span class="weather-wind">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/>
+                      </svg>
+                      <span class="wind-val">--</span> km/h
+                    </span>
+                    <span class="weather-humidity">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                      </svg>
+                      <span class="humidity-val">--</span>%
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="clock-item">
-              <span class="clock-label">🇱🇰 Colombo</span>
-              <span class="clock-time" id="clock-lk">--:--</span>
-            </div>
-            <div class="clock-item">
-              <span class="clock-label">🇦🇪 Dubai</span>
-              <span class="clock-time" id="clock-uae">--:--</span>
+          </div>
+          
+          <!-- Clocks on Right -->
+          <div class="footer-clocks-section">
+            <h4 class="section-title">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+              Station Clocks
+            </h4>
+            
+            <div class="clock-list">
+              <div class="clock-row">
+                <span class="clock-name">UTC</span>
+                <span class="clock-time" id="clock-utc">--:--</span>
+                <span class="clock-date" id="date-utc">--</span>
+              </div>
+              <div class="clock-row">
+                <span class="clock-name">🇱🇰 Colombo</span>
+                <span class="clock-time" id="clock-lk">--:--</span>
+                <span class="clock-date" id="date-lk">--</span>
+              </div>
+              <div class="clock-row">
+                <span class="clock-name">🇦🇪 Dubai</span>
+                <span class="clock-time" id="clock-uae">--:--</span>
+                <span class="clock-date" id="date-uae">--</span>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+      
+      <!-- Beautified Contact Section with SatNOGS -->
+      <div class="footer-section footer-contact-section">
+        <h4>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          Contact & QSO
+        </h4>
         
-        <!-- Weather -->
-        <div class="footer-weather">
-          <h4 class="weather-title">🌤️ WX Report</h4>
-          <div class="weather-grid">
-            <div class="weather-item" id="weather-lk">
-              <span class="weather-location">🇱🇰 Sri Lanka</span>
-              <span class="weather-temp">--°C</span>
-              <span class="weather-desc">Loading...</span>
+        <div class="contact-cards">
+          <!-- Callsign Card -->
+          <a href="{{ site.theme_settings.qrz_url }}" target="_blank" rel="noopener" class="contact-card primary">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
             </div>
-            <div class="weather-item" id="weather-uae">
-              <span class="weather-location">🇦🇪 UAE</span>
-              <span class="weather-temp">--°C</span>
-              <span class="weather-desc">Loading...</span>
+            <div class="contact-info">
+              <span class="contact-label">Callsign</span>
+              <span class="contact-value">{{ site.theme_settings.callsign }}</span>
             </div>
-          </div>
-        </div>
-        
-        <!-- SatNOGS -->
-        <div class="footer-satnogs">
-          <a href="https://network.satnogs.org/stations/2768/" target="_blank" rel="noopener" class="satnogs-link">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-            </svg>
-            SatNOGS Station 2768
           </a>
+          
+          <!-- QRZ Card -->
+          <a href="{{ site.theme_settings.qrz_url }}" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                <line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="9" y1="21" x2="9" y2="9"/>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">QRZ Database</span>
+              <span class="contact-value">qrz.com/db/{{ site.theme_settings.callsign }}</span>
+            </div>
+          </a>
+          
+          <!-- SatNOGS Card -->
+          <a href="https://network.satnogs.org/stations/2768/" target="_blank" rel="noopener" class="contact-card satnogs">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">SatNOGS Station</span>
+              <span class="contact-value">#2768</span>
+            </div>
+            <div class="satnogs-status">
+              <span class="status-dot"></span>
+              <span class="status-text">Active</span>
+            </div>
+          </a>
+          
+          <!-- GitHub Card -->
+          {% if site.theme_settings.github %}
+          <a href="https://github.com/{{ site.theme_settings.github }}" target="_blank" rel="noopener" class="contact-card">
+            <div class="contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </div>
+            <div class="contact-info">
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">@{{ site.theme_settings.github }}</span>
+            </div>
+          </a>
+          {% endif %}
         </div>
       </div>
       
@@ -61,17 +214,6 @@
           {% for link in site.theme_settings.nav_links %}
             <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
           {% endfor %}
-        </ul>
-      </div>
-      
-      <div class="footer-section">
-        <h4>Contact</h4>
-        <ul>
-          <li>Callsign: <a href="{{ site.theme_settings.qrz_url }}" target="_blank" rel="noopener">{{ site.theme_settings.callsign }}</a></li>
-          <li>QRZ: <a href="{{ site.theme_settings.qrz_url }}" target="_blank" rel="noopener">qrz.com/db/{{ site.theme_settings.callsign }}</a></li>
-          {% if site.theme_settings.github %}
-            <li>GitHub: <a href="https://github.com/{{ site.theme_settings.github }}" target="_blank" rel="noopener">@{{ site.theme_settings.github }}</a></li>
-          {% endif %}
         </ul>
       </div>
     </div>
@@ -84,92 +226,113 @@
 </footer>
 
 <script>
-// World Clocks
+// World Clocks with Dates
 function updateClocks() {
   const now = new Date();
   
+  const timeOptions = { 
+    hour: '2-digit', 
+    minute: '2-digit',
+    hour12: false 
+  };
+  
+  const dateOptions = {
+    month: 'short',
+    day: 'numeric'
+  };
+  
   // UTC
-  const utc = now.toLocaleTimeString('en-US', { 
-    timeZone: 'UTC', 
-    hour: '2-digit', 
-    minute: '2-digit',
-    hour12: false 
-  });
-  document.getElementById('clock-utc').textContent = utc;
+  const utcTime = now.toLocaleTimeString('en-US', { ...timeOptions, timeZone: 'UTC' });
+  const utcDate = now.toLocaleDateString('en-US', { ...dateOptions, timeZone: 'UTC' });
+  document.getElementById('clock-utc').textContent = utcTime;
+  document.getElementById('date-utc').textContent = utcDate;
   
-  // Sri Lanka (Colombo) - UTC+5:30
-  const lk = now.toLocaleTimeString('en-US', { 
-    timeZone: 'Asia/Colombo', 
-    hour: '2-digit', 
-    minute: '2-digit',
-    hour12: false 
-  });
-  document.getElementById('clock-lk').textContent = lk;
+  // Sri Lanka
+  const lkTime = now.toLocaleTimeString('en-US', { ...timeOptions, timeZone: 'Asia/Colombo' });
+  const lkDate = now.toLocaleDateString('en-US', { ...dateOptions, timeZone: 'Asia/Colombo' });
+  document.getElementById('clock-lk').textContent = lkTime;
+  document.getElementById('date-lk').textContent = lkDate;
   
-  // Dubai - UTC+4
-  const uae = now.toLocaleTimeString('en-US', { 
-    timeZone: 'Asia/Dubai', 
-    hour: '2-digit', 
-    minute: '2-digit',
-    hour12: false 
-  });
-  document.getElementById('clock-uae').textContent = uae;
+  // Dubai
+  const uaeTime = now.toLocaleTimeString('en-US', { ...timeOptions, timeZone: 'Asia/Dubai' });
+  const uaeDate = now.toLocaleDateString('en-US', { ...dateOptions, timeZone: 'Asia/Dubai' });
+  document.getElementById('clock-uae').textContent = uaeTime;
+  document.getElementById('date-uae').textContent = uaeDate;
 }
 
 updateClocks();
 setInterval(updateClocks, 1000);
 
-// Weather Fetch
+// Weather Icons SVG Map
+const weatherIcons = {
+  0: { name: 'Clear sky', svg: `<svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="32" r="14" fill="#ff6b35"/><g stroke="#ff6b35" stroke-width="3" stroke-linecap="round"><line x1="32" y1="4" x2="32" y2="12"/><line x1="32" y1="52" x2="32" y2="60"/><line x1="4" y1="32" x2="12" y2="32"/><line x1="52" y1="32" x2="60" y2="32"/><line x1="12.2" y1="12.2" x2="17.8" y2="17.8"/><line x1="46.2" y1="46.2" x2="51.8" y2="51.8"/><line x1="12.2" y1="51.8" x2="17.8" y2="46.2"/><line x1="46.2" y1="17.8" x2="51.8" y2="12.2"/></g></svg>` },
+  1: { name: 'Mainly clear', svg: `<svg viewBox="0 0 64 64" width="48" height="48"><circle cx="32" cy="32" r="14" fill="#ff6b35"/><g stroke="#ff6b35" stroke-width="3" stroke-linecap="round"><line x1="32" y1="4" x2="32" y2="12"/><line x1="32" y1="52" x2="32" y2="60"/><line x1="4" y1="32" x2="12" y2="32"/><line x1="52" y1="32" x2="60" y2="32"/><line x1="12.2" y1="12.2" x2="17.8" y2="17.8"/><line x1="46.2" y1="46.2" x2="51.8" y2="51.8"/><line x1="12.2" y1="51.8" x2="17.8" y2="46.2"/><line x1="46.2" y1="17.8" x2="51.8" y2="12.2"/></g></svg>` },
+  2: { name: 'Partly cloudy', svg: `<svg viewBox="0 0 64 64" width="48" height="48"><circle cx="24" cy="24" r="10" fill="#ff6b35" opacity="0.8"/><path d="M46 46a10 10 0 1 1-20 0 10 10 0 0 1 20 0z" fill="#00d4ff"/><path d="M38 38a8 8 0 1 1-16 0 8 8 0 0 1 16 0z" fill="#00a8cc"/></svg>` },
+  3: { name: 'Overcast', svg: `<svg viewBox="0 0 64 64" width="48" height="48"><path d="M20 40a10 10 0 1 1 20 0H20z" fill="#00d4ff"/><path d="M30 35a10 10 0 1 1 20 0H30z" fill="#00a8cc"/><path d="M15 42a8 8 0 1 1 16 0H15z" fill="#606080"/></svg>` },
+  45: { name: 'Foggy', svg: `<svg viewBox="0 0 64 64" width="48" height="48"><path d="M8 24h48M12 32h40M16 40h32" stroke="#606080" stroke-width="3" stroke-linecap="round"/></svg>` },
+  48: { name: 'Foggy', svg: `<svg viewBox="0 0 64 64" width="48" height="48"><path d="M8 24h48M12 32h40M16 40h32" stroke="#606080" stroke-width="3" stroke-linecap="round"/></svg>` },
+  51: { name: 'Light drizzle', svg: `<svg viewBox="0 0 64 64" width="48" height="48"><path d="M20 30a10 10 0 1 1 20 0h-20z" fill="#00d4ff"/><path d="M22 38l-2 8M32 38l-2 8M42 38l-2 8" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/></svg>` },
+  53: { name: 'Drizzle', svg: `<svg viewBox="0 0 64 64" width="48" height="48"><path d="M18 28a12 12 0 1 1 24 0h-24z" fill="#00d4ff"/><path d="M20 38l-2 8M30 38l-2 8M40 38l-2 8M25 42l-2 8M35 42l-2 8" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/></svg>` },
+  55: { name: 'Heavy drizzle', svg: `<svg viewBox="0 0 64 64" width="48" height="48"><path d="M16 26a14 14 0 1 1 28 0h-28z" fill="#00a8cc"/><path d="M18 36l-2 8M28 36l-2 8M38 36l-2 8M23 40l-2 8M33 40l-2 8" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/></svg>` },
+  61: { name: 'Slight rain', svg: `<svg viewBox="0 0 64 64" width="48" height="48"><path d="M18 28a12 12 0 1 1 24 0h-24z" fill="#00d4ff"/><path d="M20 38l-3 10M30 38l-3 10M40 38l-3 10" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/></svg>` },
+  63: { name: 'Rain', svg: `<svg viewBox="0 0 64 64" width="48" height="48"><path d="M16 26a14 14 0 1 1 28 0h-28z" fill="#00a8cc"/><path d="M18 36l-3 10M28 36l-3 10M38 36l-3 10M23 40l-3 10M33 40l-3 10" stroke="#00d4ff" stroke-width="2.5" stroke-linecap="round"/></svg>` },
+  65: { name: 'Heavy rain', svg: `<svg viewBox="0 0 64 64" width="48" height="48"><path d="M14 24a16 16 0 1 1 32 0h-32z" fill="#00a8cc"/><path d="M16 34l-4 12M26 34l-4 12M36 34l-4 12M46 34l-4 12M21 38l-4 12M31 38l-4 12M41 38l-4 12" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/></svg>` },
+  71: { name: 'Slight snow', svg: `<svg viewBox="0 0 64 64" width="48" height="48"><path d="M18 28a12 12 0 1 1 24 0h-24z" fill="#00d4ff"/><circle cx="20" cy="42" r="2" fill="#e0e0ff"/><circle cx="30" cy="48" r="2" fill="#e0e0ff"/><circle cx="40" cy="42" r="2" fill="#e0e0ff"/></svg>` },
+  73: { name: 'Snow', svg: `<svg viewBox="0 0 64 64" width="48" height="48"><path d="M16 26a14 14 0 1 1 28 0h-28z" fill="#00a8cc"/><circle cx="18" cy="40" r="2.5" fill="#e0e0ff"/><circle cx="28" cy="46" r="2.5" fill="#e0e0ff"/><circle cx="38" cy="40" r="2.5" fill="#e0e0ff"/><circle cx="23" cy="50" r="2" fill="#e0e0ff"/><circle cx="33" cy="50" r="2" fill="#e0e0ff"/></svg>` },
+  95: { name: 'Thunderstorm', svg: `<svg viewBox="0 0 64 64" width="48" height="48"><path d="M16 26a14 14 0 1 1 28 0h-28z" fill="#606080"/><path d="M28 36l-6 12h8l-4 10 14-14h-8l6-8h-10z" fill="#ff6b35"/></svg>` }
+};
+
+// Weather Fetch with more details
 async function fetchWeather() {
   try {
-    // Open-Meteo API (free, no key required)
-    // Sri Lanka - Colombo coordinates
-    const lkResponse = await fetch('https://api.open-meteo.com/v1/forecast?latitude=6.9271&longitude=79.8612&current_weather=true');
+    // Open-Meteo API with additional parameters
+    const lkUrl = 'https://api.open-meteo.com/v1/forecast?latitude=6.9271&longitude=79.8612&current_weather=true&hourly=relativehumidity_2m,surface_pressure&timezone=Asia%2FColombo';
+    const uaeUrl = 'https://api.open-meteo.com/v1/forecast?latitude=25.2048&longitude=55.2708&current_weather=true&hourly=relativehumidity_2m,surface_pressure&timezone=Asia%2FDubai';
+    
+    // Sri Lanka
+    const lkResponse = await fetch(lkUrl);
     const lkData = await lkResponse.json();
     
     if (lkData.current_weather) {
+      const code = lkData.current_weather.weathercode;
+      const iconData = weatherIcons[code] || weatherIcons[0];
+      
       document.querySelector('#weather-lk .weather-temp').textContent = Math.round(lkData.current_weather.temperature) + '°C';
-      document.querySelector('#weather-lk .weather-desc').textContent = getWeatherDesc(lkData.current_weather.weathercode);
+      document.querySelector('#weather-lk .weather-desc').textContent = iconData.name;
+      document.querySelector('#weather-lk .wind-val').textContent = Math.round(lkData.current_weather.windspeed);
+      document.querySelector('#icon-lk').innerHTML = iconData.svg;
+      
+      // Get current hour humidity
+      const currentHour = new Date().getHours();
+      if (lkData.hourly && lkData.hourly.relativehumidity_2m) {
+        document.querySelector('#weather-lk .humidity-val').textContent = lkData.hourly.relativehumidity_2m[currentHour] || '--';
+      }
     }
     
-    // UAE - Dubai coordinates
-    const uaeResponse = await fetch('https://api.open-meteo.com/v1/forecast?latitude=25.2048&longitude=55.2708&current_weather=true');
+    // UAE
+    const uaeResponse = await fetch(uaeUrl);
     const uaeData = await uaeResponse.json();
     
     if (uaeData.current_weather) {
+      const code = uaeData.current_weather.weathercode;
+      const iconData = weatherIcons[code] || weatherIcons[0];
+      
       document.querySelector('#weather-uae .weather-temp').textContent = Math.round(uaeData.current_weather.temperature) + '°C';
-      document.querySelector('#weather-uae .weather-desc').textContent = getWeatherDesc(uaeData.current_weather.weathercode);
+      document.querySelector('#weather-uae .weather-desc').textContent = iconData.name;
+      document.querySelector('#weather-uae .wind-val').textContent = Math.round(uaeData.current_weather.windspeed);
+      document.querySelector('#icon-uae').innerHTML = iconData.svg;
+      
+      // Get current hour humidity
+      const currentHour = new Date().getHours();
+      if (uaeData.hourly && uaeData.hourly.relativehumidity_2m) {
+        document.querySelector('#weather-uae .humidity-val').textContent = uaeData.hourly.relativehumidity_2m[currentHour] || '--';
+      }
     }
   } catch (error) {
     console.log('Weather fetch failed:', error);
-    document.querySelector('#weather-lk .weather-desc').textContent = 'Unavailable';
-    document.querySelector('#weather-uae .weather-desc').textContent = 'Unavailable';
   }
 }
 
-function getWeatherDesc(code) {
-  const codes = {
-    0: 'Clear sky',
-    1: 'Mainly clear',
-    2: 'Partly cloudy',
-    3: 'Overcast',
-    45: 'Foggy',
-    48: 'Depositing rime fog',
-    51: 'Light drizzle',
-    53: 'Moderate drizzle',
-    55: 'Dense drizzle',
-    61: 'Slight rain',
-    63: 'Moderate rain',
-    65: 'Heavy rain',
-    71: 'Slight snow',
-    73: 'Moderate snow',
-    75: 'Heavy snow',
-    95: 'Thunderstorm'
-  };
-  return codes[code] || 'Unknown';
-}
-
 fetchWeather();
-// Refresh weather every 10 minutes
-setInterval(fetchWeather, 600000);
+setInterval(fetchWeather, 600000); // Refresh every 10 minutes
 </script>
