@@ -110,17 +110,14 @@
           <div class="clock-row">
             <span class="clock-name">UTC</span>
             <span class="clock-time" id="clock-utc">--:--:--</span>
-            <span class="clock-date" id="date-utc">--</span>
           </div>
           <div class="clock-row">
             <span class="clock-name">🇱🇰 Colombo</span>
             <span class="clock-time" id="clock-lk">--:--:--</span>
-            <span class="clock-date" id="date-lk">--</span>
           </div>
           <div class="clock-row">
             <span class="clock-name">🇦🇪 Dubai</span>
             <span class="clock-time" id="clock-uae">--:--:--</span>
-            <span class="clock-date" id="date-uae">--</span>
           </div>
         </div>
       </div>
@@ -204,7 +201,7 @@
 </footer>
 
 <script>
-// World Clocks with Dates and Seconds
+// World Clocks with Seconds (no dates)
 function updateClocks() {
   const now = new Date();
 
@@ -215,25 +212,14 @@ function updateClocks() {
     hour12: false 
   };
 
-  const dateOptions = {
-    month: 'short',
-    day: 'numeric'
-  };
-
   const utcTime = now.toLocaleTimeString('en-US', { ...timeOptions, timeZone: 'UTC' });
-  const utcDate = now.toLocaleDateString('en-US', { ...dateOptions, timeZone: 'UTC' });
   document.getElementById('clock-utc').textContent = utcTime;
-  document.getElementById('date-utc').textContent = utcDate;
 
   const lkTime = now.toLocaleTimeString('en-US', { ...timeOptions, timeZone: 'Asia/Colombo' });
-  const lkDate = now.toLocaleDateString('en-US', { ...dateOptions, timeZone: 'Asia/Colombo' });
   document.getElementById('clock-lk').textContent = lkTime;
-  document.getElementById('date-lk').textContent = lkDate;
 
   const uaeTime = now.toLocaleTimeString('en-US', { ...timeOptions, timeZone: 'Asia/Dubai' });
-  const uaeDate = now.toLocaleDateString('en-US', { ...dateOptions, timeZone: 'Asia/Dubai' });
   document.getElementById('clock-uae').textContent = uaeTime;
-  document.getElementById('date-uae').textContent = uaeDate;
 }
 
 updateClocks();
