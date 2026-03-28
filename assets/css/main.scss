@@ -701,6 +701,94 @@ a {
   }
 }
 
+// ============================================
+// POSTS ARCHIVE PAGE STYLES
+// ============================================
+
+// Posts Archive Hero
+.posts-hero {
+  padding: 4rem 0 3rem;
+  
+  .hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+  }
+  
+  .posts-stats {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    
+    .stat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(0, 212, 255, 0.1);
+      border: 1px solid rgba(0, 212, 255, 0.3);
+      color: var(--accent-cyan);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      font-weight: 600;
+      
+      svg {
+        stroke: var(--accent-orange);
+      }
+    }
+  }
+}
+
+// Posts Archive Grid
+.posts-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0 4rem;
+  
+  .archive-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-orange));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    &:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+      
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+// Remove old posts-list header styling
+.posts-list {
+  padding: 0;
+  
+  .posts-list-header {
+    display: none;
+  }
+}
+
 // Post Page Styles
 .post-hero {
   background: var(--bg-secondary);
@@ -1130,7 +1218,7 @@ a {
 }
 
 // Centered section titles
-.section-title {
+.footer-section-title {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1371,7 +1459,6 @@ a {
   &.dmr,
   &.allstar,
   &.satnogs {
-    // No gradient backgrounds - standard styling only
     background: var(--bg-secondary);
     border-color: var(--border-color);
 
@@ -1459,27 +1546,29 @@ a {
   font-size: 0.9rem;
 }
 
-// Posts List Page
-.posts-list {
-  padding: 2rem 0;
-}
-
-.posts-list-header {
-  text-align: center;
-  margin-bottom: 3rem;
-
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  p {
-    color: var(--text-secondary);
-  }
-}
-
 // Responsive
 @media (max-width: 968px) {
+  .site-nav {
+    display: none;
+  }
+
+  .post-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .post-sidebar {
+    order: -1;
+  }
+
+  .post-nav .container {
+    flex-direction: column;
+    gap: 1rem;
+
+    a {
+      max-width: 100%;
+    }
+  }
+
   .footer-content {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -1503,6 +1592,38 @@ a {
   .weather-cards {
     grid-template-columns: 1fr 1fr;
   }
+
+  .posts-archive-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .posts-hero {
+    padding: 3rem 0 2rem;
+    
+    .spectrum-container {
+      margin: 1.5rem auto;
+    }
+  }
+
+  .posts-archive-grid {
+    gap: 1rem;
+    padding: 1.5rem 0 3rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1513,5 +1634,9 @@ a {
   .contact-grid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, auto);
+  }
+
+  :root {
+    --container-padding: 1rem;
   }
 }
