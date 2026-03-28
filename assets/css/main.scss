@@ -154,8 +154,10 @@ a {
   font-size: 1.25rem;
   color: #00d4ff;
 
-  .brand-icon {
-    font-size: 1.5rem;
+  .brand-logo {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
   }
 
   &:hover {
