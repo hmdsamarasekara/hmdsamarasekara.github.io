@@ -1,16 +1,16 @@
 <header class="site-header">
   <div class="header-content">
     <a href="{{ '/' | relative_url }}" class="site-brand">
-      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Noise Floor Nomad" class="brand-logo">
+      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Noise Floor Nomad" class="brand-logo" width="32" height="32">
       <span class="brand-text">Noise Floor Nomad</span>
     </a>
-    
+
     <nav class="site-nav">
       {% for link in site.theme_settings.nav_links %}
         <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
       {% endfor %}
     </nav>
-    
+
     <div class="header-actions">
       <button class="search-toggle" id="search-toggle" aria-label="Search">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -18,7 +18,7 @@
           <path d="m21 21-4.35-4.35"></path>
         </svg>
       </button>
-      
+
       <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="12" cy="12" r="5"></circle>
@@ -42,5 +42,5 @@
     <input type="text" id="search-input" placeholder="Search posts..." autocomplete="off">
     <div class="search-results" id="search-results"></div>
   </div>
-  <button class="search-close" id="search-close" style="position: absolute; top: 2rem; right: 2rem; background: none; border: none; color: var(--text-secondary); cursor: pointer; font-size: 2rem;">&times;</button>
+  <button class="search-close" id="search-close" style="position: absolute; top: 2rem; right: 2rem; background: none; border: none; color: var(--text-secondary); cursor: pointer; font-size: 2rem;">×</button>
 </div>
