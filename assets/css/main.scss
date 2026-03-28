@@ -1189,7 +1189,9 @@ a {
   margin-bottom: 0.5rem;
 
   .weather-flag {
-    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .weather-location {
@@ -1257,8 +1259,8 @@ a {
 // Clocks Section - Compact, no date, fills height
 .footer-clocks-section {
   width: fit-content;
-  min-width: 200px;
-  max-width: 240px;
+  min-width: 220px;
+  max-width: 260px;
 }
 
 .clock-list {
@@ -1291,6 +1293,9 @@ a {
     color: var(--text-secondary);
     font-weight: 500;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
   }
 
   .clock-time {
@@ -1304,7 +1309,7 @@ a {
   }
 }
 
-// Contact Section - 6 cards (3x2 grid)
+// Contact Section - 6 cards (3x2 grid) - Standard styling
 .footer-contact-section {
   min-width: 320px;
 }
@@ -1318,6 +1323,7 @@ a {
   align-content: center;
 }
 
+// Standard contact card styling - NO gradients
 .contact-card {
   display: flex;
   align-items: center;
@@ -1360,23 +1366,23 @@ a {
     }
   }
 
-  &.primary {
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(255, 107, 53, 0.1));
-    border-color: var(--accent-cyan);
+  // All cards use standard styling - no special gradient backgrounds
+  &.primary,
+  &.dmr,
+  &.allstar,
+  &.satnogs {
+    // No gradient backgrounds - standard styling only
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
 
-    .contact-value {
-      color: var(--accent-cyan);
-      font-weight: 700;
+    &:hover {
+      background: rgba(0, 212, 255, 0.08);
+      border-color: var(--accent-cyan);
     }
-  }
-
-  // DMR ID card styling
-  &.dmr {
-    background: linear-gradient(135deg, rgba(0, 168, 204, 0.1), rgba(0, 212, 255, 0.05));
 
     .contact-icon {
-      background: rgba(0, 168, 204, 0.2);
-      color: var(--accent-cyan-dim);
+      background: var(--bg-tertiary);
+      color: var(--text-secondary);
     }
 
     &:hover .contact-icon {
@@ -1384,65 +1390,6 @@ a {
       color: var(--bg-primary);
     }
   }
-
-  // Allstar Node card styling
-  &.allstar {
-    background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(204, 85, 41, 0.05));
-
-    .contact-icon {
-      background: rgba(255, 107, 53, 0.2);
-      color: var(--accent-orange);
-    }
-
-    &:hover .contact-icon {
-      background: var(--accent-orange);
-      color: var(--bg-primary);
-    }
-  }
-
-  &.satnogs {
-    background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 212, 255, 0.05));
-
-    .contact-icon {
-      background: rgba(0, 212, 255, 0.2);
-      color: var(--accent-cyan);
-    }
-
-    .satnogs-status {
-      position: absolute;
-      top: 0.3rem;
-      right: 0.3rem;
-      display: flex;
-      align-items: center;
-      gap: 0.25rem;
-      padding: 0.1rem 0.3rem;
-      background: rgba(0, 212, 255, 0.1);
-      border-radius: 1rem;
-      border: 1px solid var(--accent-cyan);
-
-      .status-dot {
-        width: 4px;
-        height: 4px;
-        background: #00ff88;
-        border-radius: 50%;
-        box-shadow: 0 0 4px #00ff88;
-        animation: pulse 2s infinite;
-      }
-
-      .status-text {
-        font-size: 0.55rem;
-        color: var(--accent-cyan);
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-      }
-    }
-  }
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
 }
 
 .contact-icon {
@@ -1566,10 +1513,5 @@ a {
   .contact-grid {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, auto);
-  }
-
-  .contact-card.satnogs .satnogs-status {
-    position: static;
-    margin-left: auto;
   }
 }
