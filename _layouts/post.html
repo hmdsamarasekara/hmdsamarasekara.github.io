@@ -1,128 +1,120 @@
 ---
 layout: default
+title: All Posts
 ---
 
-<article class="post">
-    <div class="post-hero">
-        <div class="container">
-            <div class="post-meta-top">
-                {% if page.categories %}
-                <span class="post-category-badge">{{ page.categories[0] }}</span>
-                {% endif %}
-                <time datetime="{{ page.date | date_to_xmlschema }}">
-                    {{ page.date | date: "%B %d, %Y" }}
+<div class="hero posts-hero">
+    <div class="hero-content">
+        <h1 class="hero-title" data-text="All Posts">
+            All Posts
+        </h1>
+
+        <!-- Spectrum Analyzer Animation -->
+        <div class="spectrum-container">
+            <div class="spectrum-display">
+                <div class="spectrum-line"></div>
+                <div class="spectrum-bars">
+                    <div class="bar" style="--height: 20%; --delay: 0s"></div>
+                    <div class="bar" style="--height: 45%; --delay: 0.1s"></div>
+                    <div class="bar" style="--height: 80%; --delay: 0.2s"></div>
+                    <div class="bar" style="--height: 60%; --delay: 0.3s"></div>
+                    <div class="bar" style="--height: 90%; --delay: 0.4s"></div>
+                    <div class="bar" style="--height: 40%; --delay: 0.5s"></div>
+                    <div class="bar" style="--height: 70%; --delay: 0.6s"></div>
+                    <div class="bar" style="--height: 30%; --delay: 0.7s"></div>
+                    <div class="bar" style="--height: 85%; --delay: 0.8s"></div>
+                    <div class="bar" style="--height: 50%; --delay: 0.9s"></div>
+                    <div class="bar" style="--height: 65%; --delay: 1.0s"></div>
+                    <div class="bar" style="--height: 35%; --delay: 1.1s"></div>
+                    <div class="bar" style="--height: 75%; --delay: 1.2s"></div>
+                    <div class="bar" style="--height: 55%; --delay: 1.3s"></div>
+                    <div class="bar" style="--height: 95%; --delay: 1.4s"></div>
+                    <div class="bar" style="--height: 25%; --delay: 1.5s"></div>
+                    <div class="bar" style="--height: 60%; --delay: 1.6s"></div>
+                    <div class="bar" style="--height: 85%; --delay: 1.7s"></div>
+                    <div class="bar" style="--height: 40%; --delay: 1.8s"></div>
+                    <div class="bar" style="--height: 70%; --delay: 1.9s"></div>
+                </div>
+                <div class="spectrum-grid"></div>
+                <div class="spectrum-labels">
+                    <span>0</span>
+                    <span>50</span>
+                    <span>100</span>
+                    <span>150</span>
+                    <span>200</span>
+                    <span>250</span>
+                    <span>300</span>
+                </div>
+            </div>
+        </div>
+
+        <p class="hero-subtitle">Archive of experiments and reception logs</p>
+        
+        <div class="posts-stats">
+            <span class="stat-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                {{ site.posts.size }} posts
+            </span>
+            {% assign total_words = 0 %}
+            {% for post in site.posts %}
+                {% assign post_words = post.content | number_of_words %}
+                {% assign total_words = total_words | plus: post_words %}
+            {% endfor %}
+            <span class="stat-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                {{ total_words | divided_by: 180.0 | ceil }} mins read
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="posts-archive-grid">
+        {% for post in site.posts %}
+        <article class="post-card archive-card">
+            <div class="post-card-meta">
+                <time class="post-date" datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%b %d, %Y" }}
                 </time>
+                {% if post.categories %}
+                <span class="post-category">{{ post.categories[0] }}</span>
+                {% endif %}
             </div>
 
-            <h1 class="post-title">{{ page.title }}</h1>
+            <h3 class="post-card-title">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </h3>
 
-            {% if page.subtitle %}
-            <p class="post-subtitle">{{ page.subtitle }}</p>
+            {% if post.excerpt %}
+            <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
             {% endif %}
 
-            <div class="post-stats">
-                <span class="stat">
+            <div class="post-card-footer">
+                <span class="reading-time">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="10"></circle>
                         <polyline points="12 6 12 12 16 14"></polyline>
                     </svg>
-                    {% assign words = page.content | number_of_words %}
+                    {% assign words = post.content | number_of_words %}
                     {% assign minutes = words | divided_by: 180.0 | ceil %}
-
-                    <span class="stat">
-                        {% if minutes <= 1 %}
-                            1 min read
-                        {% else %}
-                            {{ minutes }} mins read
-                        {% endif %}
-                </span>
-                {% if page.tags %}
-                <span class="stat">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path>
-                        <line x1="7" y1="7" x2="7.01" y2="7"></line>
-                    </svg>
-                    {{ page.tags | size }} tags
-                </span>
-                {% endif %}
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="post-layout">
-            <div class="post-content-wrapper">
-                <div class="post-content">
-                    {{ content }}
-                </div>
-
-                {% if page.tags %}
-                <div class="post-tags">
-                    <span class="tags-label">Tags:</span>
-                    {% for tag in page.tags %}
-                    <span class="tag">{{ tag }}</span>
-                    {% endfor %}
-                </div>
-                {% endif %}
-
-                <div class="post-share">
-                    <span class="share-label">Share:</span>
-                    <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url | url_encode }}" 
-                       class="share-btn twitter" target="_blank" rel="noopener">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                        </svg>
-                    </a>
-                    <a href="https://www.reddit.com/submit?url={{ site.url }}{{ page.url | url_encode }}&title={{ page.title | url_encode }}" 
-                       class="share-btn reddit" target="_blank" rel="noopener">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <aside class="post-sidebar">
-                <div class="sidebar-section toc-section">
-                    <h3>Contents</h3>
-                    <nav id="toc"></nav>
-                </div>
-
-                <div class="sidebar-section">
-                    <h3>Related Posts</h3>
-                    {% assign related_posts = site.posts | where_exp: "post", "post.url != page.url" | limit: 3 %}
-                    {% if related_posts.size > 0 %}
-                    <ul class="related-posts">
-                        {% for post in related_posts %}
-                        <li>
-                            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-                            <time>{{ post.date | date: "%b %d, %Y" }}</time>
-                        </li>
-                        {% endfor %}
-                    </ul>
+                    {% if minutes <= 1 %}
+                        1 min read
                     {% else %}
-                    <p class="empty-state">More posts coming soon...</p>
+                        {{ minutes }} mins read
                     {% endif %}
-                </div>
-            </aside>
-        </div>
+                </span>
+                <a href="{{ post.url | relative_url }}" class="read-more">Read →</a>
+            </div>
+        </article>
+        {% endfor %}
     </div>
-</article>
-
-<nav class="post-nav">
-    <div class="container">
-        {% if page.previous %}
-        <a href="{{ page.previous.url | relative_url }}" class="post-nav-prev">
-            <span class="nav-label">← Previous</span>
-            <span class="nav-title">{{ page.previous.title }}</span>
-        </a>
-        {% endif %}
-
-        {% if page.next %}
-        <a href="{{ page.next.url | relative_url }}" class="post-nav-next">
-            <span class="nav-label">Next →</span>
-            <span class="nav-title">{{ page.next.title }}</span>
-        </a>
-        {% endif %}
-    </div>
-</nav>
+</div>
