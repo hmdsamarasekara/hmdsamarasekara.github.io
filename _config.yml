@@ -16,7 +16,6 @@ permalink: /:title/
 # Plugins (GitHub Pages compatible)
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
   - jekyll-seo-tag
 
 # Collections
