@@ -325,11 +325,9 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
   <p>Because the rig is a Xiegu, I chose to stick with their own <strong>DE-19 interface</strong>, and it's what I've been using for digital modes ever since. Despite the restricted environment, I've logged over <strong>7,000 contacts</strong> across FT8, FT4, RTTY, and Olivia.</p>
 
   <div class="tip-box">
-  <strong>Apartment Antenna Setup</strong><br>
-  <div class="image-container" style="margin: 0.75rem 0;">
+  <strong>Antenna Setup</strong><br>
     <img src="{{ '/assets/images/DP200.png' | relative_url }}" alt="DP200 Telescopic Dipole Antenna" loading="lazy">
     <div class="image-caption">DP200 Telescopic Dipole - Compact antenna for apartment operation</div>
-  </div>
   My main antenna is a <strong>DP200 telescopic dipole</strong> I picked up from AliExpress. Because of the space available, I can only extend it up to cover <strong>17m</strong> properly. Anything lower than that is basically impossible where I live. Even then, the G90's tuner ends up doing most of the heavy lifting.
 </div>
 
