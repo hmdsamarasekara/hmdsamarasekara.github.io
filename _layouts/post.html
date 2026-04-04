@@ -28,13 +28,11 @@ layout: default
                     </svg>
                     {% assign words = page.content | number_of_words %}
                     {% assign minutes = words | divided_by: 180.0 | ceil %}
-
-                    <span class="stat">
-                        {% if minutes <= 1 %}
-                            1 min read
-                        {% else %}
-                            {{ minutes }} mins read
-                        {% endif %}
+                    {% if minutes <= 1 %}
+                        1 min read
+                    {% else %}
+                        {{ minutes }} mins read
+                    {% endif %}
                 </span>
                 {% if page.tags %}
                 <span class="stat">
