@@ -339,14 +339,14 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
   </div>
 
   <div class="image-container">
-    <img src="{{ '/assets/images/de-19.png' | relative_url }}" alt="DE-19 Digital Interface" loading="lazy">
+    <img src="{{ '/assets/images/DE-19.png' | relative_url }}" alt="DE-19 Digital Interface" loading="lazy">
     <div class="image-caption">DE-19 Digital Interface - Xiegu's dedicated solution for digital modes</div>
   </div>
 
   <p>The <strong>DE-19</strong> is Xiegu's dedicated digital-mode interface for radios like the G90, G90S, G106, and XPA125B. Since my main rig is the G90, I chose to use Xiegu's own interface instead of third-party solutions, and I've been running all my digital modes through it ever since.</p>
 
   <div class="image-container">
-    <img src="{{ '/assets/images/de-19-labels.png' | relative_url }}" alt="DE-19 Layout and Labels" loading="lazy">
+    <img src="{{ '/assets/images/DE-19-Labels.png' | relative_url }}" alt="DE-19 Layout and Labels" loading="lazy">
     <div class="image-caption">DE-19 Layout - Connection ports and indicators</div>
   </div>
 
@@ -405,12 +405,12 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
   </div>
 
   <div class="image-container">
-    <img src="{{ '/assets/images/xiegu-g90-de-19.png' | relative_url }}" alt="DE-19 and Xiegu G90 Connection Guide" loading="lazy">
+    <img src="{{ '/assets/images/Xiegu-G90-DE-19.png' | relative_url }}" alt="DE-19 and Xiegu G90 Connection Guide" loading="lazy">
     <div class="image-caption">DE-19 connected to Xiegu G90 - Basic setup diagram</div>
   </div>
 
   <div class="image-container">
-    <img src="{{ '/assets/images/xiegu-g90-de-19-xpa125b.png' | relative_url }}" alt="DE-19, Xiegu G90 and XPA125B Connection Guide" loading="lazy">
+    <img src="{{ '/assets/images/Xiegu-G90-DE-19-XPA125B.png' | relative_url }}" alt="DE-19, Xiegu G90 and XPA125B Connection Guide" loading="lazy">
     <div class="image-caption">Full setup with DE-19, G90, and optional XPA125B amplifier</div>
   </div>
 </div>
@@ -521,7 +521,7 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
   <div class="config-section">
     <h4><i class="fas fa-volume-up"></i> Playback Device (PC → Radio)</h4>
     <div class="image-container">
-      <img src="{{ '/assets/images/playback-devices.png' | relative_url }}" alt="Playback Devices Configuration" loading="lazy">
+      <img src="{{ '/assets/images/Playback.webp' | relative_url }}" alt="Playback Devices Configuration" loading="lazy">
       <div class="image-caption">Windows Playback Device Configuration for DE-19</div>
     </div>
     <ol class="steps-list">
@@ -536,7 +536,7 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
   <div class="config-section">
     <h4><i class="fas fa-microphone"></i> Recording Device (Radio → PC)</h4>
     <div class="image-container">
-      <img src="{{ '/assets/images/recording-devices.png' | relative_url }}" alt="Recording Devices Configuration" loading="lazy">
+      <img src="{{ '/assets/images/Recording.webp' | relative_url }}" alt="Recording Devices Configuration" loading="lazy">
       <div class="image-caption">Windows Recording Device Configuration for DE-19</div>
     </div>
     <ol class="steps-list">
