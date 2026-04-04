@@ -320,15 +320,22 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
     <h1 class="section-title">Introduction</h1>
   </div>
 
-  <p>I've been using the <strong>Xiegu G90</strong> as my main HF rig for a while now. Living in an apartment means I can't put up large antennas or run high power, so my setup is pretty limited — but it works. For most of my operating I stay around <span class="value">15 watts</span>, and I rely heavily on digital modes to make the most of the band conditions.</p>
+  <p>I've been using the <strong>Xiegu G90</strong> as my main HF rig for a while now. Living in an apartment means I can't put up large antennas or run high power, so my setup is pretty limited — but it works. For most of my operating, I stay around <span class="value">15 watts</span>, and I rely heavily on digital modes to make the most of the band conditions and power limitations.</p>
 
   <p>Because the rig is a Xiegu, I chose to stick with their own <strong>DE-19 interface</strong>, and it's what I've been using for digital modes ever since. Despite the restricted environment, I've logged over <strong>7,000 contacts</strong> across FT8, FT4, RTTY, and Olivia.</p>
 
-  <p>My main antenna is a <strong>DP200 telescopic dipole</strong> I picked up from AliExpress. Because of the space available, I can only extend it up to cover <strong>17m</strong> properly. Anything lower than that is basically impossible where I live. Even then the G90's tuner ends up doing most of the heavy lifting.</p>
+  <div class="tip-box">
+  <strong>Apartment Antenna Setup</strong><br>
+  <div class="image-container" style="margin: 0.75rem 0;">
+    <img src="{{ '/assets/images/DP200.png' | relative_url }}" alt="DP200 Telescopic Dipole Antenna" loading="lazy">
+    <div class="image-caption">DP200 Telescopic Dipole - Compact antenna for apartment operation</div>
+  </div>
+  My main antenna is a <strong>DP200 telescopic dipole</strong> I picked up from AliExpress. Because of the space available, I can only extend it up to cover <strong>17m</strong> properly. Anything lower than that is basically impossible where I live. Even then, the G90's tuner ends up doing most of the heavy lifting.
+</div>
 
   <div class="info-box">
     <i class="fas fa-lightbulb" style="color: #00d4ff; margin-right: 0.5rem;"></i>
-    In this article, I'll walk through exactly how I configure the G90 for digital modes using the DE-19, based on this real-world, apartment-friendly setup.
+    The settings in this article are the ones that worked best for me with the G90 and DE-19 in my apartment environment. They should serve as a good starting point, but feel free to tweak them for your own setup.
   </div>
 </div>
 
@@ -347,10 +354,10 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
 
   <div class="image-container">
     <img src="{{ '/assets/images/DE-19-Labels.png' | relative_url }}" alt="DE-19 Layout and Labels" loading="lazy">
-    <div class="image-caption">DE-19 Layout - Connection ports and indicators</div>
+    <div class="image-caption">DE-19 Layout - Connection indicators</div>
   </div>
 
-  <p>Functionally, the DE-19 is simple but essential: it combines <strong>USB audio</strong>, <strong>PTT</strong>, and <strong>CAT control</strong> into one external box. You connect two cables to the radio and one USB cable to the PC, and the DE-19 handles everything automatically.</p>
+  <p>Functionally, the DE-19 is simple, it combines <strong>USB audio</strong>, <strong>PTT</strong>, and <strong>CAT control</strong> into one compact box. You connect two cables to the radio and one USB cable to the PC, and the DE-19 handles everything automatically.</p>
 
   <div class="hardware-grid">
     <div class="hardware-item">
@@ -371,7 +378,7 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
       <i class="fas fa-terminal hardware-icon"></i>
       <div>
         <strong style="color: #f9fafb;">CAT Control</strong><br>
-        <span style="color: #9ca3af; font-size: 0.875rem;">Computer-aided transceiver frequency/mode control</span>
+        <span style="color: #9ca3af; font-size: 0.875rem;">Frequency & Mode control</span>
       </div>
     </div>
   </div>
@@ -385,19 +392,19 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
 
   <ol class="steps-list">
     <li><strong>Install the CH342 driver</strong><br>
-    Enables both the virtual COM port (CAT) and the virtual sound card.</li>
+    Enables both the virtual COM port.</li>
 
     <li><strong>Connect DE-19 ACC → G90 ACC port</strong><br>
     Use the included 8-pin Mini-DIN cable. This carries the audio in/out.</li>
 
     <li><strong>Connect DE-19 CIV → G90 serial port (head unit)</strong><br>
-    Use the included 3.5mm TRS cable for CAT/PTT control.</li>
+    Use the included 3.5mm TRS 3.5mm cable for CAT/PTT control.</li>
 
     <li><strong>Connect DE-19 → PC via USB-C</strong><br>
     Provides USB audio + CAT control to the computer.</li>
 
     <li><strong>Optionally Connect PA OUT → XPA125B amplifier (ACC port)</strong><br>
-    Use the L4001 3.5mm TRRS to 8Pin Mini-DIN cable for external amplification.</li>
+    Use the L4001 3.5mm TRRS to 8Pin Mini-DIN cable for external amplifier.</li>
   </ol>
 
   <div class="tip-box">
@@ -445,27 +452,26 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
         <tr>
           <td>Input Source</td>
           <td class="value">LINE</td>
-          <td>Use line-level input from DE-19</td>
+          <td>Use line-in input instead of mic-in input</td>
         </tr>
         <tr>
           <td>AUX IN</td>
           <td class="value">8</td>
-          <td>Audio level from PC → radio</td>
+          <td>Audio input level from PC → radio</td>
         </tr>
         <tr>
           <td>AUX OUT</td>
           <td class="value">15</td>
-          <td>Audio level from radio → PC</td>
+          <td>Audio output level from radio → PC</td>
         </tr>
       </tbody>
     </table>
-    <p style="color: #9ca3af; font-size: 0.875rem; margin-top: 0.5rem;">These values are a solid baseline for clean transmit and decode.</p>
   </div>
 
   <div class="config-section">
     <h4><i class="fas fa-broadcast-tower"></i> RF & Power Settings</h4>
     <ul>
-      <li><strong>RF Gain:</strong> <span class="value">~80%</span> — Optimal drive level for digital modes</li>
+      <li><strong>RF Gain:</strong> <span class="value">~80%</span> — Adjust according to the specific band conditions</li>
       <li><strong>Power:</strong> <span class="value">10–15W</span> — Safe and efficient for continuous-duty digital modes</li>
     </ul>
   </div>
@@ -494,12 +500,12 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
         <tr>
           <td>Preamp</td>
           <td class="value">OFF</td>
-          <td>Avoid overloading in urban environments</td>
+          <td>Avoid overloading frontend</td>
         </tr>
         <tr>
           <td>AGC</td>
           <td class="value">OFF</td>
-          <td>Maintain stable audio chain</td>
+          <td>Maintain stable audio levels</td>
         </tr>
       </tbody>
     </table>
@@ -519,10 +525,10 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
   <p>To avoid distortion and ensure clean audio between the DE-19 and digital-mode software, it's important to configure the USB audio device properly in Windows. These settings help keep proper audio levels and prevent Windows from "enhancing" or altering the signal.</p>
 
   <div class="config-section">
-    <h4><i class="fas fa-volume-up"></i> Playback Device (PC → Radio)</h4>
+    <h4><i class="fas fa-volume-up"></i> Playback Device</h4>
     <div class="image-container">
       <img src="{{ '/assets/images/Playback.webp' | relative_url }}" alt="Playback Devices Configuration" loading="lazy">
-      <div class="image-caption">Windows Playback Device Configuration for DE-19</div>
+      <div class="image-caption">Windows Playback Device Configuration</div>
     </div>
     <ol class="steps-list">
       <li>Open Windows Sound Settings → Playback devices</li>
@@ -534,10 +540,10 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
   </div>
 
   <div class="config-section">
-    <h4><i class="fas fa-microphone"></i> Recording Device (Radio → PC)</h4>
+    <h4><i class="fas fa-microphone"></i> Recording Device</h4>
     <div class="image-container">
       <img src="{{ '/assets/images/Recording.webp' | relative_url }}" alt="Recording Devices Configuration" loading="lazy">
-      <div class="image-caption">Windows Recording Device Configuration for DE-19</div>
+      <div class="image-caption">Windows Recording Device Configuration</div>
     </div>
     <ol class="steps-list">
       <li>Open Windows Sound Settings → Recording devices</li>
@@ -548,10 +554,10 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
     </ol>
   </div>
 
-  <div class="info-box">
-    <i class="fas fa-info-circle" style="color: #00d4ff; margin-right: 0.5rem;"></i>
-    Keeping both playback and recording levels at 50% provides headroom and prevents clipping. You can fine-tune within your digital mode software (WSJT-X, fldigi, etc.) if needed.
-  </div>
+  <div class="tip-box">
+  <strong>Audio Level Starting Point</strong><br>
+  Begin with playback and recording levels at 50%, then adjust as needed in your digital-mode software to optimize transmit audio and decoding.
+</div>
 </div>
 
 <div class="section-card" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-color: #00d4ff33;">
@@ -565,11 +571,3 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
   <p style="font-size: 1.125rem; line-height: 1.8;">The key is in the details: proper audio levels, clean signal chain, and understanding that the G90's internal tuner is your friend when dealing with compromise antennas. The DE-19 simplifies the connection process by integrating audio, CAT, and PTT into a single USB interface—no additional sound cards or serial adapters needed.</p>
 
   <p style="font-size: 1.125rem; line-height: 1.8;">Whether you're in a high-rise apartment, a HOA-restricted neighborhood, or just prefer a minimal shack, this configuration demonstrates that <strong>you don't need a tower and a kilowatt to enjoy HF digital modes</strong>. The bands are there—sometimes you just need to listen a bit more carefully and let the software do the heavy lifting.</p>
-
-  <div class="post-footer">
-    <div class="signature">
-      <i class="fas fa-satellite-dish"></i>
-      <span>73, A65KJ</span>
-    </div>
-  </div>
-</div>
