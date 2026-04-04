@@ -327,7 +327,6 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
   <div class="tip-box">
   <strong>Antenna Setup</strong><br>
     <img src="{{ '/assets/images/DP200.png' | relative_url }}" alt="DP200 Telescopic Dipole Antenna" loading="lazy">
-    <div class="image-caption">DP200 Telescopic Dipole - Compact antenna for apartment operation</div>
   My main antenna is a <strong>DP200 telescopic dipole</strong> I picked up from AliExpress. Because of the space available, I can only extend it up to cover <strong>17m</strong> properly. Anything lower than that is basically impossible where I live. Even then, the G90's tuner ends up doing most of the heavy lifting.
 </div>
 
