@@ -557,6 +557,22 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
 </div>
 </div>
 
+<div class="config-section">
+  <h4><i class="fas fa-laptop-code"></i> Configuring Digital Software</h4>
+  <div class="image-container">
+    <img src="{{ '/assets/images/WSJTx.webp' | relative_url }}" alt="WSJT-X Software Configuration" loading="lazy">
+    <div class="image-caption">WSJT-X radio settings for the IC-7300 with DE-19 interface</div>
+  </div>
+  <p>Now that the radio, interface, and PC audio settings are done, the next step is configuring your digital-mode software to communicate with the whole setup. The important settings for any digi software are straightforward:</p>
+  <ol class="steps-list">
+    <li>Set baud rate to <span class="value">19200</span></li>
+    <li>Select the <strong>COM port</strong> used by the DE-19</li>
+    <li>Choose <span class="value">8 data bits, no parity, 1 stop bit</span></li>
+    <li>Set both <strong>DTR</strong> and <strong>RTS</strong> to <span class="value">Low</span></li>
+    <li>Set <strong>PTT mode</strong> to <span class="value">CAT</span></li>
+  </ol>
+</div>
+
 <div class="section-card" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-color: #00d4ff33;">
   <div class="section-header">
     <i class="fas fa-flag-checkered section-icon" style="color: #00d4ff;"></i>
