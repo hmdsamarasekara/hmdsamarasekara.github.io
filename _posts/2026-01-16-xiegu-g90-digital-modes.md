@@ -523,7 +523,7 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
 
   <div class="config-section">
     <h4><i class="fas fa-volume-up"></i> Playback Device</h4>
-    <div class="image-container">
+    <div class="image-container" style="max-width: 80%; margin: 0 auto;">
       <img src="{{ '/assets/images/Playback.webp' | relative_url }}" alt="Playback Devices Configuration" loading="lazy">
       <div class="image-caption">Windows Playback Device Configuration</div>
     </div>
@@ -538,7 +538,7 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
 
   <div class="config-section">
     <h4><i class="fas fa-microphone"></i> Recording Device</h4>
-    <div class="image-container">
+    <div class="image-container" style="max-width: 80%; margin: 0 auto;">
       <img src="{{ '/assets/images/Recording.webp' | relative_url }}" alt="Recording Devices Configuration" loading="lazy">
       <div class="image-caption">Windows Recording Device Configuration</div>
     </div>
@@ -571,6 +571,12 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
     <li>Set both <strong>DTR</strong> and <strong>RTS</strong> to <span class="value">Low</span></li>
     <li>Set <strong>PTT mode</strong> to <span class="value">CAT</span></li>
   </ol>
+
+<div class="tip-box">
+  <strong>Audio Device Selection</strong><br>
+  Also, make sure to select the correct input and output devices. Set both the speaker and microphone to the <span class="value">"USB Audio Device"</span> associated with the DE-19 interface.
+</div>
+  
 </div>
 
 <div class="section-card" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-color: #00d4ff33;">
@@ -579,8 +585,8 @@ excerpt: "A comprehensive guide to configuring the Xiegu G90 for digital modes u
     <h1 class="section-title" style="color: #00d4ff;">Final Thoughts</h1>
   </div>
 
-  <p style="font-size: 1.125rem; line-height: 1.8;">The Xiegu G90 paired with the DE-19 interface is a compact, effective solution for apartment-based HF digital operation. Despite the limitations of restricted antenna space and QRP power levels, this setup has proven capable of working the world on FT8, RTTY, and other digital modes.</p>
+  <p style="font-size: 1.125rem; line-height: 1.8;">The Xiegu G90 & DE-19 combo makes for a compact and efficient setup for HF digital modes. Despite the limitations of restricted antenna space and QRP power levels, this setup has proven capable of working the world on FT8, RTTY, and other digital modes.</p>
 
-  <p style="font-size: 1.125rem; line-height: 1.8;">The key is in the details: proper audio levels, clean signal chain, and understanding that the G90's internal tuner is your friend when dealing with compromise antennas. The DE-19 simplifies the connection process by integrating audio, CAT, and PTT into a single USB interface—no additional sound cards or serial adapters needed.</p>
+  <p style="font-size: 1.125rem; line-height: 1.8;">The key is in the details: proper audio levels, clean signal chain, and understanding that the G90's fantastic internal tuner is your friend when dealing with compromise antennas. The DE-19 simplifies the connection process by integrating audio, CAT, and PTT into a single USB interface—no additional sound cards or serial adapters needed.</p>
 
-  <p style="font-size: 1.125rem; line-height: 1.8;">Whether you're in a high-rise apartment, a HOA-restricted neighborhood, or just prefer a minimal shack, this configuration demonstrates that <strong>you don't need a tower and a kilowatt to enjoy HF digital modes</strong>. The bands are there—sometimes you just need to listen a bit more carefully and let the software do the heavy lifting.</p>
+  <p style="font-size: 1.125rem; line-height: 1.8;">Whether you're in a high-rise apartment, an HOA-restricted neighborhood, or simply prefer a minimal shack, this setup proves <strong>you don’t need a tower or a kilowatt to enjoy HF digital modes</strong>. It’s even more suited for mobile and portable operation, thanks to its compact size and low power requirements. So fire it up, make some contacts, and enjoy, because radio is supposed to be fun, not complicated.</p>
