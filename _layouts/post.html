@@ -81,16 +81,19 @@ layout: default
             </div>
 
             {% if page.comments != false %}
-            <div id="cusdis_thread"
-              data-host="https://cusdis.com"
-              data-app-id="40e3382a-219d-4128-8286-40cd9be8f0cd"
-              data-page-id="{{ page.url }}"
-              data-page-url="{{ page.url | absolute_url }}"
-              data-page-title="{{ page.title }}">
+            <div class="comments-section">
+              <div id="cusdis_thread"
+                data-host="https://cusdis.com"
+                data-app-id="40e3382a-219d-4128-8286-40cd9be8f0cd"
+                data-page-id="{{ page.url }}"
+                data-page-url="{{ page.url | absolute_url }}"
+                data-page-title="{{ page.title }}"
+                data-theme="dark">
+              </div>
             </div>
 
-<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
-{% endif %}
+            <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+            {% endif %}
             
             <aside class="post-sidebar">
                 <div class="sidebar-section toc-section">
