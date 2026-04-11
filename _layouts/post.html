@@ -79,22 +79,22 @@ layout: default
                     </a>
                 </div>
 
-                <!-- CUSDIS COMMENTS - Moved inside post-content-wrapper -->
-                <section class="comments-section">
-                    <div class="comments-wrapper">
-                        <div class="comments-header">
-                            <span class="comments-icon">📡</span>
-                            <h3 class="comments-title">Signal Reports</h3>
-                        </div>
-                        <div id="cusdis_thread"
-                            data-host="https://cusdis.com"
-                            data-app-id="YOUR_APP_ID"
-                            data-page-id="{{ page.url }}"
-                            data-page-url="{{ page.url | absolute_url }}"
-                            data-page-title="{{ page.title }}"
-                        ></div>
-                    </div>
-                </section>
+                <!-- CUSDIS COMMENTS -->
+<section class="comments-section">
+    <div class="comments-wrapper">
+        <div class="comments-header">
+            <span class="comments-icon">📡</span>
+            <h3 class="comments-title">Signal Reports</h3>
+        </div>
+        <div id="cusdis_thread"
+            data-host="https://cusdis.com"
+            data-app-id="40e3382a-219d-4128-8286-40cd9be8f0cd"
+            data-page-id="{{ page.url }}"
+            data-page-url="{{ page.url | absolute_url }}"
+            data-page-title="{{ page.title }}"
+        ></div>
+    </div>
+</section>
             </div>
             
             <aside class="post-sidebar">
@@ -149,44 +149,30 @@ layout: default
             const thread = document.getElementById('cusdis_thread');
             if (!thread) return;
             
-            // Force container to maintain height
+            // Force container dimensions
             thread.style.minHeight = '400px';
             thread.style.display = 'block';
             
-            // Find iframe and force visibility
             const iframe = thread.querySelector('iframe');
             if (iframe) {
-                // Reset all possible hiding mechanisms
-                iframe.style.cssText = 'display: block !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; height: 600px !important; min-height: 400px !important; border: none !important; background: #0d1117 !important; position: relative !important; z-index: 10 !important;';
-                
-                // Force reload if src exists but iframe is hidden
-                if (iframe.src && iframe.offsetHeight === 0) {
-                    const currentSrc = iframe.src;
-                    iframe.src = '';
-                    setTimeout(() => { iframe.src = currentSrc; }, 100);
-                }
+                // Force all styles inline with !important equivalent via cssText
+                iframe.setAttribute('style', 'display: block !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; height: 600px !important; min-height: 400px !important; border: none !important; background: #0d1117 !important;');
             }
         }
         
-        // Run immediately
+        // Run multiple times to catch async injection
         fixCusdis();
-        
-        // Run after short delays to catch async injection
+        setTimeout(fixCusdis, 100);
         setTimeout(fixCusdis, 500);
         setTimeout(fixCusdis, 1000);
         setTimeout(fixCusdis, 2000);
-        setTimeout(fixCusdis, 3000);
         
         // Watch for iframe being added
         const thread = document.getElementById('cusdis_thread');
-        if (thread) {
-            const observer = new MutationObserver(function(mutations) {
-                fixCusdis();
-            });
+        if (thread && window.MutationObserver) {
+            const observer = new MutationObserver(fixCusdis);
             observer.observe(thread, { childList: true, subtree: true });
         }
-        
-        // Also run on window load
-        window.addEventListener('load', fixCusdis);
     })();
 </script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
