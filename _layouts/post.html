@@ -143,54 +143,50 @@ layout: default
 </nav>
 
 <script>
-    // Cusdis visibility fix - prevents iframe from disappearing
+    // Cusdis visibility fix - aggressive monitoring
     (function() {
         function fixCusdis() {
             const thread = document.getElementById('cusdis_thread');
             if (!thread) return;
             
-            // Force minimum height to prevent collapse
+            // Force container to maintain height
             thread.style.minHeight = '400px';
+            thread.style.display = 'block';
             
-            // Watch for iframe creation
-            const observer = new MutationObserver(function(mutations) {
-                const iframe = thread.querySelector('iframe');
-                if (iframe) {
-                    iframe.style.display = 'block';
-                    iframe.style.visibility = 'visible';
-                    iframe.style.opacity = '1';
-                    iframe.style.height = '600px';
-                    iframe.style.width = '100%';
-                    iframe.style.border = 'none';
-                    
-                    // Stop observing once fixed
-                    observer.disconnect();
+            // Find iframe and force visibility
+            const iframe = thread.querySelector('iframe');
+            if (iframe) {
+                // Reset all possible hiding mechanisms
+                iframe.style.cssText = 'display: block !important; visibility: visible !important; opacity: 1 !important; width: 100% !important; height: 600px !important; min-height: 400px !important; border: none !important; background: #0d1117 !important; position: relative !important; z-index: 10 !important;';
+                
+                // Force reload if src exists but iframe is hidden
+                if (iframe.src && iframe.offsetHeight === 0) {
+                    const currentSrc = iframe.src;
+                    iframe.src = '';
+                    setTimeout(() => { iframe.src = currentSrc; }, 100);
                 }
-            });
-            
-            observer.observe(thread, { childList: true, subtree: true });
-            
-            // Fallback: check periodically
-            let attempts = 0;
-            const interval = setInterval(function() {
-                const iframe = thread.querySelector('iframe');
-                if (iframe) {
-                    iframe.style.display = 'block';
-                    iframe.style.visibility = 'visible';
-                    iframe.style.height = '600px';
-                    clearInterval(interval);
-                }
-                attempts++;
-                if (attempts > 20) clearInterval(interval);
-            }, 500);
+            }
         }
         
-        // Run on load
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', fixCusdis);
-        } else {
-            fixCusdis();
+        // Run immediately
+        fixCusdis();
+        
+        // Run after short delays to catch async injection
+        setTimeout(fixCusdis, 500);
+        setTimeout(fixCusdis, 1000);
+        setTimeout(fixCusdis, 2000);
+        setTimeout(fixCusdis, 3000);
+        
+        // Watch for iframe being added
+        const thread = document.getElementById('cusdis_thread');
+        if (thread) {
+            const observer = new MutationObserver(function(mutations) {
+                fixCusdis();
+            });
+            observer.observe(thread, { childList: true, subtree: true });
         }
+        
+        // Also run on window load
+        window.addEventListener('load', fixCusdis);
     })();
 </script>
-<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
