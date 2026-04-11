@@ -1077,33 +1077,30 @@ a {
     margin: 0;
 }
 
-/* Force Cusdis container */
 #cusdis_thread {
     width: 100%;
-    min-height: 400px;
+    min-height: 280px; /* Reduced from 400px */
     display: block;
     background: var(--bg-secondary);
     border-radius: 8px;
 }
 
-/* Force iframe visibility - maximum specificity */
 #cusdis_thread iframe {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
     width: 100% !important;
-    height: 600px !important;
-    min-height: 400px !important;
+    height: 350px !important; /* Reduced from 600px - enough for empty form */
+    min-height: 280px !important; /* Reduced from 400px */
     border: none !important;
     background: var(--bg-secondary) !important;
 }
 
-/* Loading state */
 #cusdis_thread:empty::before {
     content: "Initializing comms array...";
     display: block;
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px 20px; /* Reduced from 60px */
     color: var(--text-muted);
     font-family: var(--font-mono);
     font-size: 0.9rem;
@@ -1123,7 +1120,7 @@ a {
     font-size: 1.5rem;
     letter-spacing: 4px;
     animation: pulse 1.5s infinite;
-    margin-top: -40px;
+    margin-top: -30px; /* Adjusted from -40px */
 }
 
 @media (max-width: 768px) {
@@ -1131,8 +1128,13 @@ a {
         padding: 16px;
     }
     
+    #cusdis_thread {
+        min-height: 260px;
+    }
+    
     #cusdis_thread iframe {
-        height: 500px !important;
+        height: 320px !important;
+        min-height: 260px !important;
     }
 }
 
