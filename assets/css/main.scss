@@ -1037,124 +1037,103 @@ a {
   }
 }
 
-/* ================
-   Cusdis Comments
-   ================ */
+/* =========================
+   Cusdis Comments Styling
+   ========================= */
 
 .comments-section {
-  margin-top: 60px;
-  width: 100%;
-  /* Match your post content width exactly */
-  max-width: 800px; /* or whatever your article container uses */
-  margin-left: auto;
-  margin-right: auto;
+    margin-top: 60px;
+    width: 100%;
+    /* No max-width here - let it fill the post-content-wrapper */
 }
 
 .comments-wrapper {
-  background: rgba(15, 20, 30, 0.6);
-  backdrop-filter: blur(10px);
-  border-radius: 12px;
-  padding: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(15, 20, 30, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .comments-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.comments-header::before {
-  content: "📡";
-  font-size: 1.2em;
-  filter: grayscale(100%) brightness(1.5);
+.comments-icon {
+    font-size: 1.2em;
+    filter: grayscale(100%) brightness(1.5);
 }
 
 .comments-title {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #00d4ff;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #00d4ff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0;
 }
 
-/* CRITICAL FIX: Ensure Cusdis container has defined height */
+/* Critical: Prevent collapse */
 #cusdis_thread {
-  width: 100%;
-  min-height: 400px; /* Prevent collapse */
-  position: relative;
+    width: 100%;
+    min-height: 400px;
+    position: relative;
 }
 
-/* Force iframe visibility and sizing */
 #cusdis_thread iframe {
-  width: 100% !important;
-  height: 600px !important; /* Fixed height to prevent collapse */
-  min-height: 400px;
-  border: none;
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  background: #0d1117;
+    width: 100% !important;
+    height: 600px !important;
+    min-height: 400px;
+    border: none !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background: #0d1117;
 }
 
-/* Prevent the "disappearing" bug - some themes hide iframes initially */
-#cusdis_thread iframe[src*="cusdis.com"] {
-  display: block !important;
-  position: relative;
-  z-index: 1;
+/* Loading state */
+#cusdis_thread:empty::before {
+    content: "Initializing comms array...";
+    display: block;
+    text-align: center;
+    padding: 60px 20px;
+    color: #8b949e;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
 }
 
-/* Loading animation while Cusdis initializes */
-#cusdis_thread:empty::before,
-#cusdis_thread iframe:not([src])::before {
-  content: "Initializing comms array...";
-  display: block;
-  text-align: center;
-  padding: 60px 20px;
-  color: #8b949e;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.9rem;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-}
-
-/* Alternative: Animated dots */
 @keyframes pulse {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 1; }
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
 }
 
 #cusdis_thread:empty::after {
-  content: "...";
-  display: block;
-  text-align: center;
-  color: #00d4ff;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 1.5rem;
-  letter-spacing: 4px;
-  animation: pulse 1.5s infinite;
-  margin-top: -40px;
+    content: "...";
+    display: block;
+    text-align: center;
+    color: #00d4ff;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    animation: pulse 1.5s infinite;
+    margin-top: -40px;
 }
 
-/* Mobile adjustments */
+/* Mobile */
 @media (max-width: 768px) {
-  .comments-section {
-    max-width: 100%;
-    padding: 0 16px;
-  }
-  
-  .comments-wrapper {
-    padding: 16px;
-  }
-  
-  #cusdis_thread iframe {
-    height: 500px !important;
-  }
+    .comments-wrapper {
+        padding: 16px;
+    }
+    
+    #cusdis_thread iframe {
+        height: 500px !important;
+    }
 }
 
 // Sidebar
