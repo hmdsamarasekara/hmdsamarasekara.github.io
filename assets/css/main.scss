@@ -1044,12 +1044,12 @@ a {
 .comments-section {
   margin-top: 60px;
   width: 100%;
-  max-width: 900px;
+  /* Match your post content width exactly */
+  max-width: 800px; /* or whatever your article container uses */
   margin-left: auto;
   margin-right: auto;
 }
 
-/* The glass container - applied to wrapper, not Cusdis itself */
 .comments-wrapper {
   background: rgba(15, 20, 30, 0.6);
   backdrop-filter: blur(10px);
@@ -1058,7 +1058,6 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Section header to match your blog style */
 .comments-header {
   display: flex;
   align-items: center;
@@ -1084,54 +1083,77 @@ a {
   margin: 0;
 }
 
-/* Cusdis container - clean, borderless integration */
+/* CRITICAL FIX: Ensure Cusdis container has defined height */
 #cusdis_thread {
   width: 100%;
-  /* Remove any background/border - let wrapper handle it */
-  background: transparent;
+  min-height: 400px; /* Prevent collapse */
+  position: relative;
 }
 
-/* Force iframe to behave */
+/* Force iframe visibility and sizing */
 #cusdis_thread iframe {
   width: 100% !important;
-  min-height: 500px; /* Give it more breathing room */
+  height: 600px !important; /* Fixed height to prevent collapse */
+  min-height: 400px;
   border: none;
-  display: block;
-  /* Dark mode base to prevent white flash */
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
   background: #0d1117;
 }
 
-/* Hide Cusdis branding/footer if possible (sometimes blocked by CSP) */
+/* Prevent the "disappearing" bug - some themes hide iframes initially */
 #cusdis_thread iframe[src*="cusdis.com"] {
-  /* The background color helps mask loading states */
-  background: #0d1117;
+  display: block !important;
+  position: relative;
+  z-index: 1;
 }
 
-/* Loading state styling */
-#cusdis_thread:empty::before {
+/* Loading animation while Cusdis initializes */
+#cusdis_thread:empty::before,
+#cusdis_thread iframe:not([src])::before {
   content: "Initializing comms array...";
   display: block;
   text-align: center;
-  padding: 40px;
+  padding: 60px 20px;
   color: #8b949e;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
 }
 
-/* Error state */
-#cusdis_thread iframe[src=""] {
-  display: none;
+/* Alternative: Animated dots */
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
 }
 
-/* Responsive adjustments */
+#cusdis_thread:empty::after {
+  content: "...";
+  display: block;
+  text-align: center;
+  color: #00d4ff;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  animation: pulse 1.5s infinite;
+  margin-top: -40px;
+}
+
+/* Mobile adjustments */
 @media (max-width: 768px) {
+  .comments-section {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+  
   .comments-wrapper {
     padding: 16px;
-    border-radius: 8px;
   }
   
   #cusdis_thread iframe {
-    min-height: 400px;
+    height: 500px !important;
   }
 }
 
