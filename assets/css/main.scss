@@ -1037,15 +1037,73 @@ a {
   }
 }
 
+/* =========================
+   Cusdis Comments Styling
+   ========================= */
+
 .comments-section {
-  margin-top: 3rem;
+  margin-top: 60px;
+  width: 100%;
+  max-width: 900px; /* match your content width */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Glass style to match your UI */
+  background: rgba(15, 20, 30, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 24px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Ensure Cusdis fills container */
+#cusdis_thread {
   width: 100%;
 }
 
+/* Fix iframe sizing + remove scrollbars */
+#cusdis_thread iframe {
+  width: 100% !important;
+  min-height: 420px;
+  border: none;
+  overflow: hidden;
+  display: block;
+}
+
+/* Cusdis theme variables (dark mode match) */
 #cusdis_thread {
-  width: 100%;
-  max-width: 800px; /* optional: keeps it readable */
-  margin: 0 auto;
+  --cusdis-bg: transparent;
+  --cusdis-text-color: #c9d1d9;
+  --cusdis-border-color: rgba(255, 255, 255, 0.1);
+  --cusdis-primary-color: #58a6ff;
+
+  --cusdis-input-bg: rgba(0, 0, 0, 0.3);
+  --cusdis-input-border-color: rgba(255, 255, 255, 0.15);
+
+  --cusdis-btn-bg: #238636;
+  --cusdis-btn-text-color: #ffffff;
+}
+
+/* Improve spacing inside */
+#cusdis_thread * {
+  font-family: inherit;
+}
+
+/* Optional: smoother look for inputs */
+#cusdis_thread input,
+#cusdis_thread textarea {
+  border-radius: 6px !important;
+}
+
+/* Optional: nicer button feel */
+#cusdis_thread button {
+  border-radius: 6px !important;
+  transition: all 0.2s ease;
+}
+
+#cusdis_thread button:hover {
+  opacity: 0.9;
 }
 
 // Sidebar
