@@ -78,6 +78,23 @@ layout: default
                         </svg>
                     </a>
                 </div>
+
+                <!-- CUSDIS COMMENTS - Moved inside post-content-wrapper -->
+                <section class="comments-section">
+                    <div class="comments-wrapper">
+                        <div class="comments-header">
+                            <span class="comments-icon">📡</span>
+                            <h3 class="comments-title">Signal Reports</h3>
+                        </div>
+                        <div id="cusdis_thread"
+                            data-host="https://cusdis.com"
+                            data-app-id="YOUR_APP_ID"
+                            data-page-id="{{ page.url }}"
+                            data-page-url="{{ page.url | absolute_url }}"
+                            data-page-title="{{ page.title }}"
+                        ></div>
+                    </div>
+                </section>
             </div>
             
             <aside class="post-sidebar">
@@ -107,36 +124,6 @@ layout: default
     </div>
 </article>
 
-            <section class="comments-section">
-  <div class="comments-wrapper">
-    <div class="comments-header">
-      <h3 class="comments-title">Signal Reports</h3>
-    </div>
-    <div id="cusdis_thread"
-      data-host="https://cusdis.com"
-      data-app-id="YOUR_APP_ID"
-      data-page-id="{{ page.url }}"
-      data-page-url="{{ page.url | absolute_url }}"
-      data-page-title="{{ page.title }}"
-    ></div>
-  </div>
-</section>
-
-<script>
-  // Force iframe to stay visible after load
-  window.addEventListener('load', function() {
-    setTimeout(function() {
-      const iframe = document.querySelector('#cusdis_thread iframe');
-      if (iframe) {
-        iframe.style.display = 'block';
-        iframe.style.visibility = 'visible';
-        iframe.style.height = '600px';
-      }
-    }, 1000);
-  });
-</script>
-<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
-
 <nav class="post-nav">
     <div class="container">
         {% if page.previous %}
@@ -154,3 +141,56 @@ layout: default
         {% endif %}
     </div>
 </nav>
+
+<script>
+    // Cusdis visibility fix - prevents iframe from disappearing
+    (function() {
+        function fixCusdis() {
+            const thread = document.getElementById('cusdis_thread');
+            if (!thread) return;
+            
+            // Force minimum height to prevent collapse
+            thread.style.minHeight = '400px';
+            
+            // Watch for iframe creation
+            const observer = new MutationObserver(function(mutations) {
+                const iframe = thread.querySelector('iframe');
+                if (iframe) {
+                    iframe.style.display = 'block';
+                    iframe.style.visibility = 'visible';
+                    iframe.style.opacity = '1';
+                    iframe.style.height = '600px';
+                    iframe.style.width = '100%';
+                    iframe.style.border = 'none';
+                    
+                    // Stop observing once fixed
+                    observer.disconnect();
+                }
+            });
+            
+            observer.observe(thread, { childList: true, subtree: true });
+            
+            // Fallback: check periodically
+            let attempts = 0;
+            const interval = setInterval(function() {
+                const iframe = thread.querySelector('iframe');
+                if (iframe) {
+                    iframe.style.display = 'block';
+                    iframe.style.visibility = 'visible';
+                    iframe.style.height = '600px';
+                    clearInterval(interval);
+                }
+                attempts++;
+                if (attempts > 20) clearInterval(interval);
+            }, 500);
+        }
+        
+        // Run on load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', fixCusdis);
+        } else {
+            fixCusdis();
+        }
+    })();
+</script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
