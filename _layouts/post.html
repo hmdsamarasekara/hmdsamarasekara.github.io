@@ -108,20 +108,34 @@ layout: default
 </article>
 
             <section class="comments-section">
-              <div class="comments-wrapper">
-                <div class="comments-header">
-                  <h3 class="comments-title">Signal Reports</h3>
-                </div>
-                <div id="cusdis_thread"
-                  data-host="https://cusdis.com"
-                  data-app-id="YOUR_APP_ID"
-                  data-page-id="{{ page.url }}"
-                  data-page-url="{{ page.url | absolute_url }}"
-                  data-page-title="{{ page.title }}"
-                ></div>
-                <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
-              </div>
-            </section>
+  <div class="comments-wrapper">
+    <div class="comments-header">
+      <h3 class="comments-title">Signal Reports</h3>
+    </div>
+    <div id="cusdis_thread"
+      data-host="https://cusdis.com"
+      data-app-id="YOUR_APP_ID"
+      data-page-id="{{ page.url }}"
+      data-page-url="{{ page.url | absolute_url }}"
+      data-page-title="{{ page.title }}"
+    ></div>
+  </div>
+</section>
+
+<script>
+  // Force iframe to stay visible after load
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      const iframe = document.querySelector('#cusdis_thread iframe');
+      if (iframe) {
+        iframe.style.display = 'block';
+        iframe.style.visibility = 'visible';
+        iframe.style.height = '600px';
+      }
+    }, 1000);
+  });
+</script>
+<script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
 
 <nav class="post-nav">
     <div class="container">
