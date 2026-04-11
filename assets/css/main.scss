@@ -1039,12 +1039,13 @@ a {
 
 .comments-section {
   margin-top: 3rem;
-  max-width: 100%;
-  overflow: hidden;
+  width: 100%;
 }
 
 #cusdis_thread {
   width: 100%;
+  max-width: 800px; /* optional: keeps it readable */
+  margin: 0 auto;
 }
 
 // Sidebar
