@@ -108,44 +108,18 @@ The available modes typically include:
 
 ## 🧪 Test Setup
 
-For my test, I kept the setup simple and portable.
+For my test, I kept the setup simple and straightforward.
 
 <div class="equipment-grid">
   <h4>📻 Equipment Used</h4>
   <div class="equipment-list">
-    <div class="equipment-item">📱 Android Tablet</div>
-    <div class="equipment-item">📡 APRSdroid</div>
-    <div class="equipment-item">🔌 USB2Rig interface</div>
-    <div class="equipment-item">📻 Amateur radio handheld</div>
-    <div class="equipment-item">🔋 USB OTG adapter</div>
+    <div class="equipment-item">🖥️ Mini PC Running Ubuntu</div>
+    <div class="equipment-item">📡 Direwolf</div>
+    <div class="equipment-item">🎛️ USB2Rig Interface</div>
+    <div class="equipment-item">📻 Handheld Radio (TYT MD UV-380)</div>
+    <div class="equipment-item">🔌 Homebrew Interface Cable</div>
   </div>
 </div>
-
----
-
-## 📲 Note on the APRSdroid Version Used
-
-<div class="special-box">
-  <h4>🌟 NA7Q Community Fork</h4>
-  <p>For my testing, I did not use the standard release of APRSdroid. Instead, I used a <strong>community fork maintained by NA7Q</strong>, which includes additional features and improvements.</p>
-</div>
-
-This version adds several useful capabilities, including:
-
-- Direct support for **DigiRig-style interfaces**
-- Improved hardware compatibility
-- Additional configuration options
-- Support for **OpenStreetMap (OSM)** tiles
-
-<div class="link-box">
-  <strong>🔗 Download:</strong> <a href="https://na7q.com/aprsdroid-osm/" target="_blank" rel="noopener noreferrer">https://na7q.com/aprsdroid-osm/</a>
-</div>
-
-<div class="success-box">
-  <strong>✅ Perfect Match:</strong> Since the <strong>USB2Rig behaves like a DigiRig-style interface</strong>, this modified version of APRSdroid worked very well for my setup and simplified configuration.
-</div>
-
-If you are experimenting with USB soundcard interfaces or DigiRig-compatible hardware, this version of APRSdroid may be worth trying.
 
 ---
 
