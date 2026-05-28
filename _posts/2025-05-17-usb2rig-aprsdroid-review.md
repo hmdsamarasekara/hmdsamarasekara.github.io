@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "Testing the USB2Rig Interface with APRSdroid"
+title: "Testing the USB2Rig Interface with Direwolf"
 date: 2025-05-17 12:00:00 +0530
 categories: [digital-modes, aprs, equipment-review]
-tags: [usb2rig, digirig, aprsdroid, android, packet-radio, portable]
+tags: [usb2rig, digirig, direwolf, audio-interface, packet-radio, aprs]
 excerpt: "A hands-on review of the USB2Rig digital interface, DigiRig-compatible USB audio/serial solution for Digi Modes."
 ---
 
 <div class="post-intro">
   <p class="lead">Digital interfaces are incredibly useful in modern amateur radio. They allow radios to communicate with computers and smartphones for modes like FT8, RTTY, Winlink, and <strong>APRS</strong>. One of the most well-known compact interfaces in this category is the <strong>DigiRig Mobile</strong>.</p>
 
-  <p>Recently I came across a device called <strong>USB2Rig</strong>, which appears to be a near-identical clone of the DigiRig concept. Curious about how well it works, I decided to try it with <strong>APRS</strong> using my Android Tablet and the APRSdroid application.</p>
+  <p>Recently, I came across a device called <strong>USB2Rig</strong>, which appears to be a near-identical clone of the DigiRig concept. Curious about how well it works, I decided to try it with <strong>APRS</strong> using my Mini-PC and Direwolf.</p>
 </div>
 
 ---
@@ -123,35 +123,64 @@ For my test, I kept the setup simple and straightforward.
 
 ---
 
-## ⚙️ Configuring APRSdroid
+## ⚙️ Configuring Direwolf
 
-Setting up APRSdroid with the USB2Rig was straightforward.
+Setting up APRSdroid with Direwolf was surprisingly straightforward, since the configuration is essentially identical to the setup used with the Digirig Mobile.
 
-<div class="steps-container">
-  <h4>Configuration Steps</h4>
-  <ol class="steps-list">
-    <li><span class="step-num">1</span> Connect the USB2Rig to the phone using a USB OTG adapter.</li>
-    <li><span class="step-num">2</span> Connect the radio cable between the interface and the transceiver.</li>
-    <li><span class="step-num">3</span> Open APRSdroid.</li>
-    <li><span class="step-num">4</span> Select <strong>AFSK via USB sound card</strong> as the connection type.</li>
-    <li><span class="step-num">5</span> Adjust audio levels if necessary.</li>
-  </ol>
+<div class="special-box">
+  <h4>📖 Direwolf Setup Guide</h4>
+  <p>There is already an in-depth guide for setting up Direwolf on the <a href="https://themodernham.com/ultimate-direwolf-tnc-installation-guide-for-windows-and-linux/" target="_blank">Modern Ham</a> website, covering both Windows and Linux installation, configuration, and troubleshooting.</p>
 </div>
 
-Once configured, APRSdroid handled the APRS modulation and demodulation using the USB audio interface.
+Once Direwolf is installed and the initial configuration is complete, the only remaining steps are to configure the correct audio input/output devices and the serial interface.
 
-### APRSdroid Configuration Screenshot
+### Direwolf Audio Devices
+
+Run the following command to get a list of sound cards: 
+<code style="background:#1e1e1e; color:#00ff00; padding:2px 6px; border-radius:4px; font-family:monospace;">
+arecord -l
+</code>
 
 <div class="image-container">
-  <img src="/assets/images/aprsdroid-configuration.jpeg" alt="APRSdroid Configuration Screen" class="post-image screenshot">
-  <span class="image-caption">APRSdroid configuration settings for USB2Rig</span>
+  <img src="/assets/images/Direwolf-Audio-Config.png" alt="Direwolf-Audio-Configuration" class="post-image screenshot">
+  <span class="image-caption">Identify USB2Rig audio interfaces</span>
 </div>
+
+Once the correct audio input and output devices are identified, add the corresponding values to the <code style="background:#1e1e1e; color:#00ff00; padding:2px 6px; border-radius:4px; font-family:monospace;">
+direwolf.conf</code> file. These should be the card number followed by the device number, in that order.
+
+<div class="image-container">
+  <img src="/assets/images/Direwolf-Audio.png" alt="Direwolf-Audio" class="post-image screenshot">
+  <span class="image-caption">Direwolf audio configuration settings for USB2Rig</span>
+</div>
+
+### Direwolf Serial Devices
+
+Type the following to list all /dev devices: 
+<code style="background:#1e1e1e; color:#00ff00; padding:2px 6px; border-radius:4px; font-family:monospace;">
+ls -l /dev
+</code>
+
+<div class="image-container">
+  <img src="/assets/images/Direwolf-Serial-Config.png" alt="Direwolf-Serial-Configuration" class="post-image screenshot">
+  <span class="image-caption">Identify USB2Rig serial interfaces</span>
+</div>
+
+Once the correct serial device is identified, add the corresponding entry to the <code style="background:#1e1e1e; color:#00ff00; padding:2px 6px; border-radius:4px; font-family:monospace;">
+direwolf.conf</code> file.
+
+<div class="image-container">
+  <img src="/assets/images/Direwolf-Serial.png" alt="Direwolf-Serial" class="post-image screenshot">
+  <span class="image-caption">Direwolf serial configuration settings for USB2Rig</span>
+</div>
+
+Once both settings have been correctly configured, the setup is complete, and no further changes are required.
 
 ---
 
 ## 📡 On-Air Testing
 
-After configuring everything, I transmitted a few APRS beacons.
+After completing the configuration, I transmitted a few APRS beacons. I then used the built-in APRS decoder on my HackRF PortaPack to verify the transmitted packets. The received audio levels appeared to be good as well, based on the successfully decoded frames.
 
 <div class="results-box">
   <h4>🎯 Test Results</h4>
@@ -164,13 +193,13 @@ After configuring everything, I transmitted a few APRS beacons.
 </div>
 
 <div class="conclusion-highlight">
-  From a functional standpoint, <strong>the interface behaved exactly like a DigiRig-style device</strong>.
+  From a functional standpoint, <strong>the interface behaved exactly like a "DigiRig Mobile"</strong>.
 </div>
 
 ### Example APRS Decodes
 
 <div class="image-container wide">
-  <img src="/assets/images/aprs-decode.jpeg" alt="APRS Packet Decodes" class="post-image">
+  <img src="/assets/images/Direwolf-Log.png" alt="APRS Packet Decodes" class="post-image">
   <span class="image-caption">Successful APRS packet decodes from on-air testing</span>
 </div>
 
@@ -241,7 +270,7 @@ After configuring everything, I transmitted a few APRS beacons.
 
   <div class="note-item">
     <span class="note-icon">🔌</span>
-    <p>Android detected the interface immediately as a <strong>USB audio device</strong>.</p>
+    <p>USB2Rig was detected immediately as a <strong>USB audio device</strong>.</p>
   </div>
 
   <div class="note-item">
@@ -251,7 +280,7 @@ After configuring everything, I transmitted a few APRS beacons.
 
   <div class="note-item">
     <span class="note-icon">🎚️</span>
-    <p>Audio levels were fairly forgiving, but transmit audio needed minor adjustment in APRSdroid.</p>
+    <p>Audio levels were fairly forgiving, but audio levels needed minor adjustments to get better results.</p>
   </div>
 
   <div class="note-item">
@@ -261,14 +290,8 @@ After configuring everything, I transmitted a few APRS beacons.
 
   <div class="note-item">
     <span class="note-icon">🔋</span>
-    <p>Power consumption was low enough that it worked well from a phone battery.</p>
+    <p>There were some isolation issues present, but they were effectively mitigated by adding a few ferrite beads to the setup.</p>
   </div>
-
-  <div class="note-item">
-    <span class="note-icon">🎒</span>
-    <p>The setup is compact enough to fit in a small pouch, making it suitable for portable APRS operation.</p>
-  </div>
-</div>
 
 ---
 
@@ -300,51 +323,19 @@ After configuring everything, I transmitted a few APRS beacons.
 
 <div class="steps-container numbered">
   <ol class="tuning-steps">
-    <li><span class="step-num">1</span> Start with the APRSdroid audio level around <strong>50%</strong>.</li>
-    <li><span class="step-num">2</span> Transmit a beacon.</li>
-    <li><span class="step-num">3</span> Monitor your signal with another receiver or SDR.</li>
-    <li><span class="step-num">4</span> Increase or decrease the level until the AFSK tones sound clean.</li>
+    <li><span class="step-num">1</span> Start with SPK audio level around <strong>60%</strong> and MIC level around <strong>10%</strong> on the PC.</li>
+    <li><span class="step-num">2</span> Disable all sound enhancement features, including microphone boost and AGC.</li>
+    <li><span class="step-num">3</span> Fine-tune the radio volume and keep it around the mid-range level to help prevent overdriving or saturating the sound card audio input.</li>
+    <li><span class="step-num">4</span> Adjust the squelch level to the lowest possible setting that still prevents the radio from continuously staying in receive mode.</li>
+    <li><span class="step-num">5</span> Make sure VOX is disabled, along with RX/TX CTCSS and DCS tones. Also, disable any PTT delays and remove any tail tones configured on the radio.</li>
+    <li><span class="step-num">6</span> Ensure the radio is set to FM wideband mode, if that option is available.</li>
+    <li><span class="step-num">7</span> Monitor your signal with another receiver or SDR.</li>
+    <li><span class="step-num">7</span> Finally, fine-tune the audio levels once more while monitoring Direwolf packet decodes, to achieve optimal audio levels and maximize successful decodes.</li>
   </ol>
 </div>
 
 <div class="success-box">
-  <strong>🎯 Target:</strong> The characteristic APRS tones should be <strong>clear and consistent</strong>, without clipping.
-</div>
-
----
-
-## 🗺️ Portable APRS Use Cases
-
-<div class="intro-text">
-  A setup like this is surprisingly versatile. Some potential uses include:
-</div>
-
-<div class="use-cases-grid">
-  <div class="use-case">
-    <span class="use-icon">📍</span>
-    <h5>Portable APRS Beacons</h5>
-  </div>
-  <div class="use-case">
-    <span class="use-icon">🏔️</span>
-    <h5>APRS During Hiking</h5>
-  </div>
-  <div class="use-case">
-    <span class="use-icon">🎒</span>
-    <h5>Field Operations</h5>
-  </div>
-  <div class="use-case">
-    <span class="use-icon">🔄</span>
-    <h5>Temporary Digipeater</h5>
-  </div>
-  <div class="use-case wide">
-    <span class="use-icon">💬</span>
-    <h5><code>A65KJ-7&gt;APDR13,WIDE1-1,WIDE2-1::A61BN-10 :USB2Rig APRS test via Android{01</code></h5><br>
-    <h5>APRS Messaging (No Internet Required)</h5>
-  </div>
-</div>
-
-<div class="highlight-box compact">
-  Since everything runs from a phone and a small interface, it makes a <strong>very compact digital station</strong>.
+  <strong>🎯 Target:</strong> The characteristic APRS tones should be clear and consistent, with no clipping when monitored via another radio or SDR. Packet decoding should occur reliably every time the radio switches into receive mode.
 </div>
 
 ---
@@ -356,19 +347,6 @@ After configuring everything, I transmitted a few APRS beacons.
   <span class="image-caption">Complete portable APRS station in action</span>
 </div>
 
-<div class="setup-breakdown">
-  <h4>🎒 What's in the Kit</h4>
-  <p>A small portable setup like this typically consists of:</p>
-  <ul class="setup-list">
-    <li>📱 Android phone running APRSdroid</li>
-    <li>🔌 USB2Rig interface</li>
-    <li>📻 Handheld radio</li>
-    <li>🔗 Short radio interface cable</li>
-    <li>🔋 USB OTG adapter</li>
-  </ul>
-  <p class="setup-conclusion">Everything can fit into a small pouch, making it easy to deploy during portable operations or experiments.</p>
-</div>
-
 ---
 
 ## 🏁 Final Thoughts
@@ -376,7 +354,7 @@ After configuring everything, I transmitted a few APRS beacons.
 <div class="final-thoughts">
   <p>After testing the USB2Rig with APRS and examining the hardware inside, it appears to be a <strong>functional and reasonably well-designed digital radio interface</strong>. The device combines a USB audio codec, a USB-to-serial converter, and supporting circuitry behind a small USB hub, allowing it to present itself to the computer as a <strong>USB speaker, microphone, and serial port simultaneously</strong>.</p>
 
-  <p>From a practical standpoint, the interface worked well with APRS using APRSdroid, and the setup process was straightforward once the audio levels were adjusted properly. The hardware design includes the essential components expected in this type of interface, such as <strong>audio isolation, serial level conversion, and configurable control signaling</strong>.</p>
+  <p>From a practical standpoint, the interface worked well with APRS using Direwolf, and the setup process was straightforward once the audio levels were adjusted properly. The hardware design includes the essential components expected in this type of interface, such as <strong>audio isolation, serial level conversion, and configurable control signaling</strong>.</p>
 
   <p>While the design clearly mirrors the concept of the DigiRig Mobile, the USB2Rig appears to implement the same basic architecture using lower-cost components such as the CH340 serial interface. In terms of functionality, however, it still provides the key features needed for digital operation, including audio input/output and serial-based PTT or CAT control.</p>
 
@@ -384,7 +362,7 @@ After configuring everything, I transmitted a few APRS beacons.
     <strong>⚠️ Documentation Gap:</strong> One notable drawback is the <strong>lack of official documentation</strong>. Important configuration details—such as serial mode selection, solder jumpers, and pinouts—are mostly discovered by examining the PCB or through community discussions. For operators comfortable with a bit of experimentation this may not be a major issue, but beginners might find it confusing.
   </div>
 
-  <p>Overall, the USB2Rig proved to be a <strong>useful and compact interface for digital radio experiments</strong>, particularly for portable setups using a smartphone or small computer. With the right cables and configuration, it can support a wide range of applications including APRS, packet radio, and other soundcard-based digital modes.</p>
+  <p>Overall, the USB2Rig proved to be a <strong>useful and compact interface for digital radio experiments</strong>. With the right cables and configuration, it can support a wide range of applications, including APRS, packet radio, and other soundcard-based digital modes.</p>
 </div>
 
 ---
