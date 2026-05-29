@@ -292,6 +292,7 @@ After completing the configuration, I transmitted a few APRS beacons. I then use
     <span class="note-icon">🔋</span>
     <p>There were some isolation issues present, but they were effectively mitigated by adding a few ferrite beads to the setup.</p>
   </div>
+</div>
 
 ---
 
