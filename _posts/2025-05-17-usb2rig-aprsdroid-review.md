@@ -8,9 +8,9 @@ excerpt: "A hands-on review of the USB2Rig digital interface, DigiRig-compatible
 ---
 
 <div class="post-intro">
-  <p class="lead">Digital interfaces are incredibly useful in modern amateur radio. They allow radios to communicate with computers and smartphones for modes like FT8, RTTY, Winlink, and <strong>APRS</strong>. One of the most well-known compact interfaces in this category is the <strong>DigiRig Mobile</strong>.</p>
+  <p class="lead">Digital interfaces are incredibly useful in modern amateur radio. They allow radios to communicate with computers and smartphones for modes like FT8, RTTY, Winlink, and APRS. One of the most well-known compact interfaces in this category is the <strong>DigiRig Mobile</strong>.</p>
 
-  <p>Recently, I came across a device called <strong>USB2Rig</strong>, which appears to be a near-identical clone of the DigiRig concept. Curious about how well it works, I decided to try it with <strong>APRS</strong> using my Mini-PC and Direwolf.</p>
+  <p>Recently, I came across a device called <strong>USB2Rig</strong>, which appears to be a near-identical clone of the DigiRig concept. Curious about how well it works, I decided to try it with APRS using my Mini-PC and Direwolf.</p>
 </div>
 
 ---
@@ -63,7 +63,7 @@ The Audio2Rig is designed as a **basic audio-only interface**, meaning it provid
 Because of this design, the Audio2Rig appears conceptually similar to the **DigiRig Lite**, which focuses on simple soundcard-based digital modes without the additional serial control features.
 
 <div class="success-box">
-  <strong>✅ For APRS Users:</strong> For modes like <strong>APRS using APRSdroid</strong>, an audio-only interface can still work perfectly well since the application handles modulation & demodulation and PTT through the sound card.
+  <strong>✅ For APRS Users:</strong> For modes like <strong>APRS using APRSdroid</strong>, an audio-only interface can still work perfectly well since the application handles modulation & demodulation and PTT through the sound card VOX.
 </div>
 
 Operators who need **CAT control** may prefer the full USB2Rig model instead.
@@ -113,7 +113,7 @@ For my test, I kept the setup simple and straightforward.
 <div class="equipment-grid">
   <h4>📻 Equipment Used</h4>
   <div class="equipment-list">
-    <div class="equipment-item">🖥️ Mini PC Running Ubuntu</div>
+    <div class="equipment-item">🖥️ Mini PC Running Dragon OS (Ubuntu)</div>
     <div class="equipment-item">📡 Direwolf</div>
     <div class="equipment-item">🎛️ USB2Rig Interface</div>
     <div class="equipment-item">📻 Handheld Radio (TYT MD UV-380)</div>
@@ -125,11 +125,11 @@ For my test, I kept the setup simple and straightforward.
 
 ## ⚙️ Configuring Direwolf
 
-Setting up APRSdroid with Direwolf was surprisingly straightforward, since the configuration is essentially identical to the setup used with the Digirig Mobile.
+Setting up Direwolf with USB2Rig was surprisingly straightforward, since the configuration is essentially identical to the setup used with the Digirig Mobile.
 
 <div class="special-box">
   <h4>📖 Direwolf Setup Guide</h4>
-  <p>There is already an in-depth guide for setting up Direwolf on the <a href="https://themodernham.com/ultimate-direwolf-tnc-installation-guide-for-windows-and-linux/" target="_blank">Modern Ham</a> website, covering both Windows and Linux installation, configuration, and troubleshooting.</p>
+  <p>There is already an in-depth guide for setting up Direwolf on the <a href="https://themodernham.com/ultimate-direwolf-tnc-installation-guide-for-windows-and-linux/" target="_blank">Modern Ham</a> website, covering both Windows and Linux installation, configuration, and troubleshooting. I will not be going into further detail regarding the Direwolf installation and setup process in this article.</p>
 </div>
 
 Once Direwolf is installed and the initial configuration is complete, the only remaining steps are to configure the correct audio input/output devices and the serial interface.
