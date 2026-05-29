@@ -344,17 +344,10 @@ After completing the configuration, I transmitted a few APRS beacons. I then use
 ## 📸 Station Setup
 
 <div class="image-container wide featured">
-  <iframe 
-    width="100%" 
-    height="500"
-    src="https://www.youtube.com/embed/h-IEqcFiDkU?autoplay=1&mute=1&loop=1&playlist=h-IEqcFiDkU"
-    title="Portable APRS Station Demo"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
-  <span class="image-caption">USB2Rig in action</span>
+  <img src="/assets/images/USB2Rig-PTT.webp" alt="USB2Rig in Action" class="post-image">
+  <span class="image-caption">USB2Rig in Action</span>
 </div>
+
 ---
 
 ## 🏁 Final Thoughts
