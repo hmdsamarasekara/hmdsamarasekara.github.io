@@ -280,7 +280,7 @@ After completing the configuration, I transmitted a few APRS beacons. I then use
 
   <div class="note-item">
     <span class="note-icon">🎚️</span>
-    <p>Audio levels were fairly forgiving, but audio levels needed minor adjustments to get better results.</p>
+    <p>Audio levels were fairly forgiving, but needed minor adjustments to get better results.</p>
   </div>
 
   <div class="note-item">
@@ -299,7 +299,7 @@ After completing the configuration, I transmitted a few APRS beacons. I then use
 ## 🎚️ Audio Level Tuning Tips
 
 <div class="warning-box">
-  <strong>🎛️ Critical:</strong> Proper audio levels are important when using soundcard-based packet systems.
+  <strong>🎛️ Critical:</strong> Proper audio levels are important when using soundcard-based packet systems. It took some careful fine-tuning to achieve the desired results.
 </div>
 
 ### Transmit Audio Issues
@@ -331,7 +331,7 @@ After completing the configuration, I transmitted a few APRS beacons. I then use
     <li><span class="step-num">5</span> Make sure VOX is disabled, along with RX/TX CTCSS and DCS tones. Also, disable any PTT delays and remove any tail tones configured on the radio.</li>
     <li><span class="step-num">6</span> Ensure the radio is set to FM wideband mode, if that option is available.</li>
     <li><span class="step-num">7</span> Monitor your signal with another receiver or SDR.</li>
-    <li><span class="step-num">7</span> Finally, fine-tune the audio levels once more while monitoring Direwolf packet decodes, to achieve optimal audio levels and maximize successful decodes.</li>
+    <li><span class="step-num">8</span> Finally, fine-tune the audio levels once more while monitoring Direwolf packet decodes, to achieve optimal audio levels and maximize successful decodes.</li>
   </ol>
 </div>
 
