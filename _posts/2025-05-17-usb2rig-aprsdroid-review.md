@@ -344,7 +344,7 @@ After completing the configuration, I transmitted a few APRS beacons. I then use
 ## 📸 Station Setup
 
 <div class="image-container wide featured">
-  <img src="/assets/images/USB2Rig-PTT.webp" alt="USB2Rig in Action" class="post-image">
+  <img src="/assets/images/USB2Rig-PTT.webp" alt="USB2Rig in Action" class="post-image" style="width:60%; display:block; margin:auto;">
   <span class="image-caption">USB2Rig in Action</span>
 </div>
 
