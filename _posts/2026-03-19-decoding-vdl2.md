@@ -508,13 +508,12 @@ excerpt: "A comprehensive guide to receiving and decoding VDL2 aviation communic
     <h1 class="section-title">VDL2 Signal Structure</h1>
   </div>
 
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/DagaeRzppbU?autoplay=1&mute=1&loop=1&playlist=DagaeRzppbU&playsinline=1" title="VDL2 Spectrum Analysis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<div class="image-caption" style="margin-top: -1rem; margin-bottom: 1.5rem;">
-    <i class="fas fa-video" style="margin-right: 0.5rem;"></i>
-    Here's how VDL2 transmissions appear when viewed on a spectrum analyzer and waterfall display
-</div>
+<div class="image-container" style="margin: 0 0 1rem 0; border: 1px solid transparent;">
+    <img src="{{ '/assets/images/vdl2_signal_structure.webp' | relative_url }}" alt="VDL2 Signal Structure" loading="lazy" style="width: auto; max-width: 100%; margin: 0 auto; display: block;">
+    <div class="image-caption" style="background: transparent; border-top: 1px solid transparent;">
+      Here's how VDL2 transmissions appear when viewed on a spectrum analyzer and waterfall display
+    </div>
+  </div>
 
   <p>On an SDR spectrum display, VDL2 appears as a relatively <strong>wide, solid-looking digital signal</strong> in the VHF airband, typically centered on one of the standard VDL2 channels such as <strong>136.725 MHz</strong> or <strong>136.975 MHz</strong>. Unlike the narrower appearance of classic ACARS, VDL2 occupies noticeably more bandwidth and often looks more "filled in" across its channel rather than showing a simple peaked carrier structure.</p>
 
