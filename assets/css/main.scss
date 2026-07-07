@@ -1085,7 +1085,8 @@ a {
 
 #cusdis_thread iframe {
     width: 100%;
-    height: 350px;
+    height: auto;
+    min-height: 350px;
     border: none;
     background: var(--bg-secondary);
     border-radius: 8px;
