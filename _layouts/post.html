@@ -96,6 +96,30 @@ layout: default
                         </div>
                     </div>
                 </section>
+
+                <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+                
+                <script>
+                window.addEventListener('load', function () {
+                
+                    const iframe = document.querySelector("#cusdis_thread iframe");
+                
+                    if (!iframe) return;
+                
+                    const resizeCusdis = () => {
+                        try {
+                            const height = iframe.contentWindow.document.body.scrollHeight;
+                            iframe.style.height = height + "px";
+                        } catch (e) {
+                            console.log("Cusdis resize error:", e);
+                        }
+                    };
+                
+                    setTimeout(resizeCusdis, 2000);
+                    setTimeout(resizeCusdis, 5000);
+                
+                });
+                </script>
             </div>
             
             <aside class="post-sidebar">
