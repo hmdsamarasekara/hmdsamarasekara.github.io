@@ -6,28 +6,43 @@ layout: none
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   {%- comment -%}
-  LOOP: STATIC PAGES
+  STATIC PAGES (excluding assets, sitemap itself, 404, and hidden pages)
   {%- endcomment -%}
   {%- for page in site.pages -%}
-    {%- unless page.sitemap == false or page.url contains "404" -%}
+    {%- assign url = page.url -%}
+    {%- assign ext = url | split: "." | last -%}
+    {%- unless page.sitemap == false
+              or url contains "404"
+              or url contains "/assets/"
+              or url contains "/css/"
+              or url contains "/js/"
+              or url contains "/images/"
+              or url contains ".css"
+              or url contains ".js"
+              or url contains ".json"
+              or url contains ".xml"
+              or url == "/sitemap.xml"
+              or url == "/feed.xml"
+              or url == "/robots.txt" -%}
       <url>
-        <loc>{{ site.url }}{{ page.url | replace: "index.html", "" }}</loc>
+        <loc>{{ site.url }}{{ url | replace: "index.html", "" }}</loc>
 
         {%- if page.last_modified_at -%}
           <lastmod>{{ page.last_modified_at | date_to_xmlschema }}</lastmod>
         {%- elsif page.date -%}
           <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+        {%- else -%}
+          <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
         {%- endif -%}
 
         <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
+        <priority>{% if url == "/" %}1.0{% else %}0.6{% endif %}</priority>
       </url>
     {%- endunless -%}
   {%- endfor -%}
 
-
   {%- comment -%}
-  LOOP: BLOG POSTS
+  BLOG POSTS (higher priority, always have dates)
   {%- endcomment -%}
   {%- for post in site.posts -%}
     {%- unless post.sitemap == false -%}
